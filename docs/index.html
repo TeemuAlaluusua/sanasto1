@@ -211,6 +211,37 @@ function renderList(){
   }).join("");
 }
 
+const src=(c.sources||[]).map(s=>`
+  <div>${s.lang?`<b>${s.lang.toUpperCase()}</b> `:""}${s.label}</div>
+`).join("") || "—";
+  
+const defs=(c.definitions||[]).map(d=>`
+  <div><b>${d.lang.toUpperCase()}</b> ${d.text}</div>
+`).join("") || "—";
+
+<div class="section">
+  <h3>${tUI.definition}</h3>
+  ${defs}
+</div>
+
+<div class="section">
+  <h3>Huomautus</h3>
+  ${notes}
+</div>
+
+<div class="section">
+  <h3>${tUI.sources}</h3>
+  ${src}
+</div>
+  
+ const notes=(c.notes||[]).map(n=>`
+  <div>
+    <b>${n.lang.toUpperCase()}</b>
+    ${n.text}
+    ${n.source?`<div style="color:#6b7280;font-size:12px">${n.source}${n.quote?" (suora lainaus)":""}</div>`:""}
+  </div>
+`).join("") || "—"; 
+  
 /* ===== CONCEPT VIEW ===== */
 function renderConcept(id){
   const c=concepts[map[id]];
@@ -289,6 +320,22 @@ function extractRelated(c){
   };
 }
 
+function extractNotes(c){
+  return (c["skos:note"]||[]).map(n=>({
+    lang:n["@language"],
+    text:n["@value"],
+    source:n.source||"",
+    quote:n.quote||false
+  }));
+}
+
+function extractSources(c){
+  return (c["dct:source"]||[]).map(s=>({
+    label:s["@value"]||s,
+    lang:s["@language"]||""
+  }));
+}
+  
 /* ===== EXPORT ===== */
 function conceptURI(id){return BASE_URI+id;}
 
@@ -309,6 +356,20 @@ function exportTTL(){
     out=out.replace(/;\n$/," .\n\n");
   });
 
+  concepts=(j["@graph"]||[]).map(c=>{
+  return{
+    id:c["@id"].split("/").pop(),
+    terms:extractTerms(c),
+    definitions:extractDefs(c),
+    notes:extractNotes(c),
+    sources:extractSources(c),
+    relations:extractRelated(c)
+  };
+});
+
+
+
+  
   download("sanasto.ttl",out);
 }
 
