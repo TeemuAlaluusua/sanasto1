@@ -1,0 +1,9 @@
+schemes:
+  - id: rakentamisen-tieto-ja-informaatiomallit
+    baseUri: "https://w3id.org/betk/sanasto/"
+    status: Luonnos
+    prefLabel:
+      fi: "Rakentamisen tieto- ja informaatiomallien sanasto"
+      sv: "Ordlista för data- och informationsmodeller inom byggande (utkast)"
+      en: "Glossary of Data and Information Models in Construction (draft)"
+    languages: [fi, sv, en]

@@ -1,0 +1,21 @@
+id: digitaalinen-kaksonen
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+
+terms:
+  - lang: fi
+    label: digitaalinen kaksonen
+    type: Suositettava termi
+  - lang: en
+    label: digital twin
+    type: Suositettava termi
+
+definitions:
+  - lang: fi
+    text: Digitaalinen esitys, joka mahdollistaa fyysisen ja digitaalisen kohteen tilan synkronoinnin.
+
+relations:
+  related: []
+
+notes: []
+sources: []

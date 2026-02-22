@@ -1,0 +1,8 @@
+collections:
+  - id: rakentamisen-tieto-ja-informaatiomallit
+    schemeId: rakentamisen-tieto-ja-informaatiomallit
+    prefLabel:
+      fi: "Rakentamisen tieto- ja informaatiomallit"
+      sv: "Data- och informationsmodeller inom byggande"
+      en: "Data and Information Models in Construction"
+    orderedMembers: []

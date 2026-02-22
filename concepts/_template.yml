@@ -1,0 +1,29 @@
+id: ""
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+
+terms:
+  - lang: fi
+    label: ""
+    type: Suositettava termi
+  - lang: sv
+    label: ""
+    type: Suositettava termi
+  - lang: en
+    label: ""
+    type: Suositettava termi
+
+definitions:
+  - lang: fi
+    text: ""
+
+notes: []
+
+relations:
+  broader: []
+  narrower: []
+  related: []
+  exactMatch: []
+  closeMatch: []
+
+sources: []
