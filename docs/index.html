@@ -342,7 +342,7 @@ function extractNotes(c){
 }
 
 function extractSources(c){
-  return (c["dct:source"]||[]).map(s=>({
+  return (c["dcterms:source"]||[]).map(s=>({
     label:s["@value"]||s,
     lang:s["@language"]||""
   }));
