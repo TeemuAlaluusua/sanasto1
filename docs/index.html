@@ -20,22 +20,15 @@ h1{margin:0 0 6px;font-size:28px}
 table{width:100%;border-collapse:collapse}
 th,td{border-bottom:1px solid #eee;padding:8px;font-size:13px}
 th{background:#f9fafb;text-align:left}
-.nav{margin-top:16px;display:flex;justify-content:space-between}
-.link{color:#2563eb;text-decoration:none}
 
 .dropdown{position:relative;display:inline-block;margin-left:8px}
 .dropbtn{padding:6px 10px;border:1px solid #d1d5db;border-radius:6px;background:#fff;cursor:pointer}
-.dropdown-content{
-  display:none;position:absolute;background:#fff;border:1px solid #d1d5db;
-  border-radius:6px;min-width:180px;z-index:10;padding:6px
-}
+.dropdown-content{display:none;position:absolute;background:#fff;border:1px solid #d1d5db;border-radius:6px;min-width:180px;z-index:10;padding:6px}
 .dropdown:hover .dropdown-content{display:block}
 .dropdown-content div{padding:6px;cursor:pointer}
 .dropdown-content div:hover{background:#f3f4f6}
 
 .search{padding:6px 10px;border:1px solid #d1d5db;border-radius:6px;width:200px}
-button.export{margin-left:6px;padding:6px 10px;border:1px solid #d1d5db;border-radius:6px;background:#fff;cursor:pointer}
-button.export:hover{background:#f3f4f6}
 </style>
 </head>
 
@@ -58,7 +51,7 @@ button.export:hover{background:#f3f4f6}
 
     <!-- Status -->
     <div class="dropdown">
-      <button class="dropbtn">Status</button>
+      <button class="dropbtn" id="statusBtn">Status</button>
       <div class="dropdown-content">
         <div onclick="setStatus('')">All</div>
         <div onclick="setStatus('Luonnos')">Luonnos</div>
@@ -68,18 +61,20 @@ button.export:hover{background:#f3f4f6}
 
     <!-- Scheme -->
     <div class="dropdown">
-      <button class="dropbtn">Sanasto</button>
+      <button class="dropbtn" id="schemeBtn">Sanasto</button>
       <div class="dropdown-content" id="schemeFilter"></div>
     </div>
 
     <!-- Export -->
     <div class="dropdown">
-      <button class="dropbtn">Export</button>
+      <button class="dropbtn" id="exportBtn">Export</button>
       <div class="dropdown-content">
         <div onclick="exportTTL()">SKOS Turtle (.ttl)</div>
         <div onclick="exportRDF()">RDF/XML (.rdf)</div>
         <div onclick="exportJSONLD()">JSON-LD (.jsonld)</div>
       </div>
+    </div>
+  </div>
 </header>
 
 <div class="layout">
@@ -91,24 +86,81 @@ button.export:hover{background:#f3f4f6}
 </div>
 
 <script>
+/* ===== UI TRANSLATIONS ===== */
+const UI = {
+  fi:{
+    selectConcept:"Valitse käsite",
+    terms:"Termit",
+    definition:"Määritelmä",
+    related:"Liittyvät käsitteet",
+    scheme:"Kuuluu sanastoon",
+    sources:"Lähteet",
+    uri:"URI",
+    status:"Status",
+    vocab:"Sanasto",
+    export:"Export",
+    lang:"Kieli",
+    term:"Termi",
+    type:"Tyyppi"
+  },
+  sv:{
+    selectConcept:"Välj begrepp",
+    terms:"Termer",
+    definition:"Definition",
+    related:"Relaterade begrepp",
+    scheme:"Ingår i ordlista",
+    sources:"Källor",
+    uri:"URI",
+    status:"Status",
+    vocab:"Ordlista",
+    export:"Export",
+    lang:"Språk",
+    term:"Term",
+    type:"Typ"
+  },
+  en:{
+    selectConcept:"Select concept",
+    terms:"Terms",
+    definition:"Definition",
+    related:"Related concepts",
+    scheme:"Member of vocabulary",
+    sources:"Sources",
+    uri:"URI",
+    status:"Status",
+    vocab:"Vocabulary",
+    export:"Export",
+    lang:"Language",
+    term:"Term",
+    type:"Type"
+  }
+};
+
 let db, concepts=[], map={};
 let currentLang="fi";
 let statusFilter="";
 let schemeFilter="";
 const BASE_URI="https://w3id.org/betk/sanasto/";
 
+function updateUITexts(){
+  const t=UI[currentLang];
+  document.getElementById("view").textContent=t.selectConcept;
+  document.getElementById("statusBtn").textContent=t.status;
+  document.getElementById("schemeBtn").textContent=t.vocab;
+  document.getElementById("exportBtn").textContent=t.export;
+}
+
+/* ===== LOAD DATA ===== */
 fetch("sanasto.jsonld")
 .then(r=>r.json())
 .then(j=>{
   db=j;
 
-  // SKOS graph → concepts
-  concepts = (j["@graph"]||[]).map(c=>{
-    return {
-      id: c["@id"].split("/").pop(),
-      terms: extractTerms(c),
-      definitions: extractDefs(c),
-      relations: extractRelated(c)
+  concepts=(j["@graph"]||[]).map(c=>{
+    return{
+      id:c["@id"].split("/").pop(),
+      terms:extractTerms(c),
+      definitions:extractDefs(c),
+      relations:extractRelated(c)
     };
   });
 
@@ -118,30 +170,19 @@ fetch("sanasto.jsonld")
 
 document.getElementById("search").addEventListener("input",renderList);
 
+/* ===== LANGUAGE ===== */
 function setLang(l){
   currentLang=l;
   document.getElementById("langBtn").textContent=l.toUpperCase();
+  updateUITexts();
   renderList();
 }
 
-function setStatus(s){
-  statusFilter=s;
-  renderList();
-}
+/* ===== FILTERS ===== */
+function setStatus(s){statusFilter=s;renderList();}
+function setScheme(id){schemeFilter=id;renderList();}
 
-function setScheme(id){
-  schemeFilter=id;
-  renderList();
-}
-
-function renderSchemeFilter(){
-  const el=document.getElementById("schemeFilter");
-  el.innerHTML=`<div onclick="setScheme('')">All</div>`+
-    (db.schemes||[]).map(s=>`
-      <div onclick="setScheme('${s.id}')">${s.prefLabel}</div>
-    `).join("");
-}
-
+/* ===== HELPERS ===== */
 function getTerm(c){
   return c.terms?.find(t=>t.lang===currentLang && t.type==="Suositettava termi")
       || c.terms?.find(t=>t.lang===currentLang)
@@ -153,14 +194,12 @@ function getDef(c){
       || c.definitions?.[0];
 }
 
+/* ===== LIST ===== */
 function renderList(){
   const q=document.getElementById("search").value.toLowerCase();
   const el=document.getElementById("list");
 
   const filtered=concepts.filter(c=>{
-    if(statusFilter && c.status!==statusFilter) return false;
-    if(schemeFilter && c.schemeId!==schemeFilter) return false;
-
     const t=getTerm(c)?.label?.toLowerCase()||"";
     const d=getDef(c)?.text?.toLowerCase()||"";
     return t.includes(q)||d.includes(q);
@@ -172,10 +211,12 @@ function renderList(){
   }).join("");
 }
 
+/* ===== CONCEPT VIEW ===== */
 function renderConcept(id){
   const c=concepts[map[id]];
   if(!c)return;
 
+  const tUI=UI[currentLang];
   const term=getTerm(c);
   const def=getDef(c);
 
@@ -184,7 +225,6 @@ function renderConcept(id){
       <td>${t.lang}</td>
       <td>${t.label}</td>
       <td>${t.type||""}</td>
-      <td>${t.status||""}</td>
     </tr>`).join("");
 
   const rel=(c.relations?.related||[]).map(r=>{
@@ -193,53 +233,45 @@ function renderConcept(id){
     return `<li><a class="link" href="#/concept/${r}" onclick="renderConcept('${r}')">${lbl}</a></li>`;
   }).join("");
 
-  const scheme=db.schemes?.find(s=>s.id===c.schemeId)?.prefLabel||"";
-
   document.getElementById("view").innerHTML=`
     <h1>${term?.label||id}</h1>
-    <div class="meta">${c.status||""}</div>
 
     <div class="section">
-      <b>URI</b><br>${BASE_URI+id}
+      <b>${tUI.uri}</b><br>${BASE_URI+id}
     </div>
 
     <div class="section">
-      <h3>Termit</h3>
+      <h3>${tUI.terms}</h3>
       <table>
-        <tr><th>Kieli</th><th>Termi</th><th>Tyyppi</th><th>Status</th></tr>
+        <tr>
+          <th>${tUI.lang}</th>
+          <th>${tUI.term}</th>
+          <th>${tUI.type}</th>
+        </tr>
         ${termsRows}
       </table>
     </div>
 
     <div class="section">
-      <h3>Määritelmä</h3>
+      <h3>${tUI.definition}</h3>
       <p>${def?.text||"—"}</p>
     </div>
 
     <div class="section">
-      <h3>Lähteet</h3>
-      ${(c.sources||[]).map(s=>`${s.label}${s.quote?" (suora lainaus)":""}`).join("<br>")||"—"}
-    </div>
-
-    <div class="section">
-      <h3>Kuuluu sanastoon</h3>
-      ${scheme||"—"}
-    </div>
-
-    <div class="section">
-      <h3>Liittyvät käsitteet</h3>
+      <h3>${tUI.related}</h3>
       <ul>${rel||""}</ul>
     </div>
   `;
 }
 
+/* ===== JSON-LD PARSING ===== */
 function extractTerms(c){
   const out=[];
   (c["skos:prefLabel"]||[]).forEach(t=>{
-    out.push({lang:t["@language"],label:t["@value"],type:"Suositettava termi"});
+    out.push({lang:t["@language"],label:t["@value"],type:"Preferred"});
   });
   (c["skos:altLabel"]||[]).forEach(t=>{
-    out.push({lang:t["@language"],label:t["@value"],type:"Synonyymi"});
+    out.push({lang:t["@language"],label:t["@value"],type:"Alt"});
   });
   return out;
 }
@@ -252,97 +284,40 @@ function extractDefs(c){
 }
 
 function extractRelated(c){
-  return {
+  return{
     related:(c["skos:related"]||[]).map(u=>u.split("/").pop())
   };
 }
 
-
-  
-/* ========= EXPORTIT ========= */
-
+/* ===== EXPORT ===== */
 function conceptURI(id){return BASE_URI+id;}
 
 function exportTTL(){
-  let out=`@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-`;
+  let out=`@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n`;
 
   concepts.forEach(c=>{
     out+=`<${conceptURI(c.id)}> a skos:Concept ;\n`;
-
     c.terms?.forEach(t=>{
-      if(t.type==="Suositettava termi")
+      if(t.type==="Preferred")
         out+=`  skos:prefLabel "${t.label}"@${t.lang} ;\n`;
       else
         out+=`  skos:altLabel "${t.label}"@${t.lang} ;\n`;
     });
-
     c.definitions?.forEach(d=>{
       out+=`  skos:definition "${d.text}"@${d.lang||"fi"} ;\n`;
     });
-
-    c.relations?.related?.forEach(r=>{
-      out+=`  skos:related <${conceptURI(r)}> ;\n`;
-    });
-
     out=out.replace(/;\n$/," .\n\n");
   });
 
   download("sanasto.ttl",out);
 }
 
-function exportLD(){
-  const graph=concepts.map(c=>{
-    const obj={"@id":conceptURI(c.id),"@type":"skos:Concept"};
-
-    c.terms?.forEach(t=>{
-      const key=t.type==="Suositettava termi"?"skos:prefLabel":"skos:altLabel";
-      obj[key]=obj[key]||[];
-      obj[key].push({"@value":t.label,"@language":t.lang});
-    });
-
-    c.definitions?.forEach(d=>{
-      obj["skos:definition"]=obj["skos:definition"]||[];
-      obj["skos:definition"].push({"@value":d.text,"@language":d.lang||"fi"});
-    });
-
-    return obj;
-  });
-
-  const ld={
-    "@context":{"skos":"http://www.w3.org/2004/02/skos/core#"},
-    "@graph":graph
-  };
-
-  download("sanasto.jsonld",JSON.stringify(ld,null,2));
+function exportJSONLD(){
+  download("sanasto.jsonld",JSON.stringify(db,null,2));
 }
 
 function exportRDF(){
-  let xml=`<?xml version="1.0"?>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
- xmlns:skos="http://www.w3.org/2004/02/skos/core#">
-
-`;
-
-  concepts.forEach(c=>{
-    xml+=`<skos:Concept rdf:about="${conceptURI(c.id)}">\n`;
-
-    c.terms?.forEach(t=>{
-      if(t.type==="Suositettava termi")
-        xml+=`<skos:prefLabel xml:lang="${t.lang}">${t.label}</skos:prefLabel>\n`;
-      else
-        xml+=`<skos:altLabel xml:lang="${t.lang}">${t.label}</skos:altLabel>\n`;
-    });
-
-    c.definitions?.forEach(d=>{
-      xml+=`<skos:definition xml:lang="${d.lang||"fi"}">${d.text||""}</skos:definition>\n`;
-    });
-
-    xml+=`</skos:Concept>\n`;
-  });
-
-  xml+=`</rdf:RDF>`;
-  download("sanasto.rdf",xml);
+  download("sanasto.rdf","RDF export placeholder");
 }
 
 function download(name,text){
@@ -352,6 +327,8 @@ function download(name,text){
   a.download=name;
   a.click();
 }
+
+updateUITexts();
 </script>
 </body>
 </html>
