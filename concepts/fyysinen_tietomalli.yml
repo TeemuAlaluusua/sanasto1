@@ -1,0 +1,31 @@
+id: fyysinen tietomalli
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+
+terms:
+  - lang: fi
+    label: fyysinen tietomalli
+    type: Suositettava termi
+  - lang: sv
+    label: fysisk datamodell
+    type: Suositettava termi
+  - lang: en
+    label: physical data model
+    type: Suositettava termi
+
+definitions:
+  - lang: fi
+    text: tietomalli, joka kuvaa tietojen tallentamisen teknisellä tasolla tietokantarakenteena
+
+notes:
+  - lang: fi
+    text: Fyysinen tietomalli on loogisesta tietomallista tarkemmalle tasolle viety kuvaus, jossa otetaan kantaa tietokannan käytännön tekniseen toteutukseen valitulla teknologialla.
+
+sources:
+  - lang: fi
+    label: ISO 12345:2020 Example standard
+
+relations:
+  broader: []
+  narrower: []
+  related: []

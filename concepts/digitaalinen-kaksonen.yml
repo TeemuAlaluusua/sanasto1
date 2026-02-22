@@ -6,16 +6,27 @@ terms:
   - lang: fi
     label: digitaalinen kaksonen
     type: Suositettava termi
+   - lang: fi
+    label: digikaksonen
+    type: Synonyymi
+  - lang: sv
+    label: digital tvilling
+    type: Suositettava termi
   - lang: en
     label: digital twin
     type: Suositettava termi
 
 definitions:
   - lang: fi
-    text: Digitaalinen esitys, joka mahdollistaa fyysisen ja digitaalisen kohteen tilan synkronoinnin.
+    text: digitaalinen esitys, joka mahdollistaa tietojen synkronisoinnin kohteen fyysisen ja digitaalisen tilan välillä tarpeen mukaan
+
+notes: [Digitaalisen kaksosen avulla voi hallita, muuttaa ja jakaa sen fyysiseen vastineeseen liittyvää tietoa erilaisia käyttötarkoituksia varten. Rakennuskohteen digitaalinen kaksonen voi sisältää kohteen elinkaaren eri vaiheissa käytettävien rakennuskohteen informaatiomallien tietoja. Rakennuksen käyttövaiheen digitaalinen kaksonen voi sisältää esimerkiksi rakennuksen ajantasaiset kulutustiedot ja -historian sekä tietoa rakennukseen tehdyistä korjauksista ja muutostöistä koko rakennuksen elinkaaren ajalta.]
+
+sources:
+  - lang: fi
+    label: ISO 12345:2020 Example standard
 
 relations:
+  broader: []
+  narrower: []
   related: []
-
-notes: []
-sources: []
