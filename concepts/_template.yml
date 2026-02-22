@@ -27,3 +27,7 @@ relations:
   broader: []
   narrower: []
   related: []
+
+metadata:
+  created: "YYYY-MM-DDThh:mm"
+  modified: "YYYY-MM-DDThh:mm"
