@@ -29,10 +29,6 @@ for f in concept_dir.glob("*.yml"):
     ids.add(cid)
 
     uri = base_uri + cid
-<<<<<<< HEAD
-    obj = {"@id": uri, "@type": "skos:Concept"}
-
-=======
 
     obj = {
         "@id": uri,
@@ -48,7 +44,6 @@ for f in concept_dir.glob("*.yml"):
         obj["skos:inScheme"] = base_uri + c["schemeId"]
 
     # TERMS
->>>>>>> e5a5584320286bfce67f0f1e3d9f0b98556dfd74
     pref = []
     alt = []
 
@@ -59,22 +54,10 @@ for f in concept_dir.glob("*.yml"):
         else:
             alt.append(lit)
 
-<<<<<<< HEAD
     if pref:
         obj["skos:prefLabel"] = pref
     if alt:
         obj["skos:altLabel"] = alt
-
-    defs = []
-    for d in c.get("definitions", []):
-        defs.append({"@value": d["text"], "@language": d["lang"]})
-
-    if defs:
-        obj["skos:definition"] = defs
-
-=======
-    if pref: obj["skos:prefLabel"] = pref
-    if alt: obj["skos:altLabel"] = alt
 
     # DEFINITIONS
     defs = []
@@ -112,7 +95,6 @@ for f in concept_dir.glob("*.yml"):
         obj["dct:source"] = srcs
 
     # RELATIONS
->>>>>>> e5a5584320286bfce67f0f1e3d9f0b98556dfd74
     rel = c.get("relations", {})
     for key in ["broader", "narrower", "related"]:
         vals = rel.get(key, [])
@@ -121,33 +103,18 @@ for f in concept_dir.glob("*.yml"):
 
     concepts.append(obj)
 
-<<<<<<< HEAD
-data = {
-    "@context": {"skos": "http://www.w3.org/2004/02/skos/core#"},
-=======
 out = {
     "@context": {
         "skos": "http://www.w3.org/2004/02/skos/core#",
         "dct": "http://purl.org/dc/terms/",
         "betk": "https://w3id.org/betk/def/"
     },
->>>>>>> e5a5584320286bfce67f0f1e3d9f0b98556dfd74
     "@graph": concepts,
     "skos:prefLabel": [
         {"@value": scheme["prefLabel"]["fi"], "@language": "fi"},
         {"@value": scheme["prefLabel"]["sv"], "@language": "sv"},
-<<<<<<< HEAD
-        {"@value": scheme["prefLabel"]["en"], "@language": "en"},
-    ],
-}
-
-docs_dir.mkdir(exist_ok=True)
-out_file = docs_dir / "sanasto.jsonld"
-out_file.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
-
-print("OK built", len(concepts), "concepts →", out_file)
-=======
         {"@value": scheme["prefLabel"]["en"], "@language": "en"}
+    ]
 }
 
 (docs_dir / "sanasto.jsonld").write_text(
@@ -156,4 +123,3 @@ print("OK built", len(concepts), "concepts →", out_file)
 )
 
 print("OK built", len(concepts), "concepts → docs/sanasto.jsonld")
->>>>>>> e5a5584320286bfce67f0f1e3d9f0b98556dfd74
