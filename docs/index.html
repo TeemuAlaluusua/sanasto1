@@ -320,14 +320,6 @@ function renderConcept(id){
     </div>
 
     <div class="section">
-      <b>Luotu</b><br>${fmtDate(created)||"—"}
-    </div>
-
-    <div class="section">
-      <b>Muokattu viimeksi</b><br>${fmtDate(modified)||"—"}
-    </div>
-
-    <div class="section">
       <h3>${tUI.terms}</h3>
       <table>
         <tr>
@@ -355,9 +347,18 @@ function renderConcept(id){
     </div>
 
     <div class="section">
+      <b>Luotu</b><br>${fmtDate(created)||"—"}
+    </div>
+
+    <div class="section">
+      <b>Muokattu viimeksi</b><br>${fmtDate(modified)||"—"}
+    </div>
+
+    <div class="section">
       <h3>${tUI.related}</h3>
       <ul>${rel||""}</ul>
     </div>
+
   `;
 }
 
