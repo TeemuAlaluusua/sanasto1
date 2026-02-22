@@ -15,11 +15,11 @@ header{background:#fff;border-bottom:1px solid #e5e7eb;padding:12px 18px;display
 .item a{font-weight:600;text-decoration:none;color:#2563eb}
 .concept{background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:18px}
 h1{margin:0 0 6px;font-size:28px}
-.meta{color:#6b7280;font-size:12px}
 .section{margin-top:18px}
 table{width:100%;border-collapse:collapse}
 th,td{border-bottom:1px solid #eee;padding:8px;font-size:13px}
 th{background:#f9fafb;text-align:left}
+.link{color:#2563eb;text-decoration:none}
 
 .dropdown{position:relative;display:inline-block;margin-left:8px}
 .dropbtn{padding:6px 10px;border:1px solid #d1d5db;border-radius:6px;background:#fff;cursor:pointer}
@@ -29,6 +29,7 @@ th{background:#f9fafb;text-align:left}
 .dropdown-content div:hover{background:#f3f4f6}
 
 .search{padding:6px 10px;border:1px solid #d1d5db;border-radius:6px;width:200px}
+.noteSource{color:#6b7280;font-size:12px;margin-left:18px}
 </style>
 </head>
 
@@ -86,53 +87,11 @@ th{background:#f9fafb;text-align:left}
 </div>
 
 <script>
-/* ===== UI TRANSLATIONS ===== */
+/* ========= UI TRANSLATIONS ========= */
 const UI = {
-  fi:{
-    selectConcept:"Valitse käsite",
-    terms:"Termit",
-    definition:"Määritelmä",
-    related:"Liittyvät käsitteet",
-    scheme:"Kuuluu sanastoon",
-    sources:"Lähteet",
-    uri:"URI",
-    status:"Status",
-    vocab:"Sanasto",
-    export:"Export",
-    lang:"Kieli",
-    term:"Termi",
-    type:"Tyyppi"
-  },
-  sv:{
-    selectConcept:"Välj begrepp",
-    terms:"Termer",
-    definition:"Definition",
-    related:"Relaterade begrepp",
-    scheme:"Ingår i ordlista",
-    sources:"Källor",
-    uri:"URI",
-    status:"Status",
-    vocab:"Ordlista",
-    export:"Export",
-    lang:"Språk",
-    term:"Term",
-    type:"Typ"
-  },
-  en:{
-    selectConcept:"Select concept",
-    terms:"Terms",
-    definition:"Definition",
-    related:"Related concepts",
-    scheme:"Member of vocabulary",
-    sources:"Sources",
-    uri:"URI",
-    status:"Status",
-    vocab:"Vocabulary",
-    export:"Export",
-    lang:"Language",
-    term:"Term",
-    type:"Type"
-  }
+  fi:{selectConcept:"Valitse käsite",terms:"Termit",definition:"Määritelmä",related:"Liittyvät käsitteet",sources:"Lähteet",uri:"URI",status:"Status",vocab:"Sanasto",export:"Export",lang:"Kieli",term:"Termi",type:"Tyyppi",note:"Huomautus"},
+  sv:{selectConcept:"Välj begrepp",terms:"Termer",definition:"Definition",related:"Relaterade begrepp",sources:"Källor",uri:"URI",status:"Status",vocab:"Ordlista",export:"Export",lang:"Språk",term:"Term",type:"Typ",note:"Anmärkning"},
+  en:{selectConcept:"Select concept",terms:"Terms",definition:"Definition",related:"Related concepts",sources:"Sources",uri:"URI",status:"Status",vocab:"Vocabulary",export:"Export",lang:"Language",term:"Term",type:"Type",note:"Note"}
 };
 
 let db, concepts=[], map={};
@@ -149,7 +108,7 @@ function updateUITexts(){
   document.getElementById("exportBtn").textContent=t.export;
 }
 
-/* ===== LOAD DATA ===== */
+/* ========= LOAD DATA ========= */
 fetch("sanasto.jsonld")
 .then(r=>r.json())
 .then(j=>{
@@ -160,6 +119,8 @@ fetch("sanasto.jsonld")
       id:c["@id"].split("/").pop(),
       terms:extractTerms(c),
       definitions:extractDefs(c),
+      notes:extractNotes(c),
+      sources:extractSources(c),
       relations:extractRelated(c)
     };
   });
@@ -170,7 +131,7 @@ fetch("sanasto.jsonld")
 
 document.getElementById("search").addEventListener("input",renderList);
 
-/* ===== LANGUAGE ===== */
+/* ========= LANGUAGE ========= */
 function setLang(l){
   currentLang=l;
   document.getElementById("langBtn").textContent=l.toUpperCase();
@@ -178,31 +139,21 @@ function setLang(l){
   renderList();
 }
 
-/* ===== FILTERS ===== */
-function setStatus(s){statusFilter=s;renderList();}
-function setScheme(id){schemeFilter=id;renderList();}
-
-/* ===== HELPERS ===== */
+/* ========= HELPERS ========= */
 function getTerm(c){
-  return c.terms?.find(t=>t.lang===currentLang && t.type==="Suositettava termi")
+  return c.terms?.find(t=>t.lang===currentLang && t.type==="Preferred")
       || c.terms?.find(t=>t.lang===currentLang)
       || c.terms?.[0];
 }
 
-function getDef(c){
-  return c.definitions?.find(d=>d.lang===currentLang)
-      || c.definitions?.[0];
-}
-
-/* ===== LIST ===== */
+/* ========= LIST ========= */
 function renderList(){
   const q=document.getElementById("search").value.toLowerCase();
   const el=document.getElementById("list");
 
   const filtered=concepts.filter(c=>{
     const t=getTerm(c)?.label?.toLowerCase()||"";
-    const d=getDef(c)?.text?.toLowerCase()||"";
-    return t.includes(q)||d.includes(q);
+    return t.includes(q);
   });
 
   el.innerHTML=filtered.map(c=>{
@@ -211,45 +162,13 @@ function renderList(){
   }).join("");
 }
 
-const src=(c.sources||[]).map(s=>`
-  <div>${s.lang?`<b>${s.lang.toUpperCase()}</b> `:""}${s.label}</div>
-`).join("") || "—";
-  
-const defs=(c.definitions||[]).map(d=>`
-  <div><b>${d.lang.toUpperCase()}</b> ${d.text}</div>
-`).join("") || "—";
-
-<div class="section">
-  <h3>${tUI.definition}</h3>
-  ${defs}
-</div>
-
-<div class="section">
-  <h3>Huomautus</h3>
-  ${notes}
-</div>
-
-<div class="section">
-  <h3>${tUI.sources}</h3>
-  ${src}
-</div>
-  
- const notes=(c.notes||[]).map(n=>`
-  <div>
-    <b>${n.lang.toUpperCase()}</b>
-    ${n.text}
-    ${n.source?`<div style="color:#6b7280;font-size:12px">${n.source}${n.quote?" (suora lainaus)":""}</div>`:""}
-  </div>
-`).join("") || "—"; 
-  
-/* ===== CONCEPT VIEW ===== */
+/* ========= CONCEPT VIEW ========= */
 function renderConcept(id){
   const c=concepts[map[id]];
   if(!c)return;
 
   const tUI=UI[currentLang];
   const term=getTerm(c);
-  const def=getDef(c);
 
   const termsRows=(c.terms||[]).map(t=>`
     <tr>
@@ -257,6 +176,21 @@ function renderConcept(id){
       <td>${t.label}</td>
       <td>${t.type||""}</td>
     </tr>`).join("");
+
+  const defs=(c.definitions||[]).map(d=>`
+    <div><b>${d.lang.toUpperCase()}</b> ${d.text}</div>
+  `).join("")||"—";
+
+  const notes=(c.notes||[]).map(n=>`
+    <div>
+      <b>${n.lang.toUpperCase()}</b> ${n.text}
+      ${n.source?`<div class="noteSource">${n.source}${n.quote?" (suora lainaus)":""}</div>`:""}
+    </div>
+  `).join("")||"—";
+
+  const src=(c.sources||[]).map(s=>`
+    <div>${s.lang?`<b>${s.lang.toUpperCase()}</b> `:""}${s.label}</div>
+  `).join("")||"—";
 
   const rel=(c.relations?.related||[]).map(r=>{
     const rc=concepts[map[r]];
@@ -285,7 +219,17 @@ function renderConcept(id){
 
     <div class="section">
       <h3>${tUI.definition}</h3>
-      <p>${def?.text||"—"}</p>
+      ${defs}
+    </div>
+
+    <div class="section">
+      <h3>${tUI.note}</h3>
+      ${notes}
+    </div>
+
+    <div class="section">
+      <h3>${tUI.sources}</h3>
+      ${src}
     </div>
 
     <div class="section">
@@ -295,7 +239,7 @@ function renderConcept(id){
   `;
 }
 
-/* ===== JSON-LD PARSING ===== */
+/* ========= JSON-LD PARSING ========= */
 function extractTerms(c){
   const out=[];
   (c["skos:prefLabel"]||[]).forEach(t=>{
@@ -314,12 +258,6 @@ function extractDefs(c){
   }));
 }
 
-function extractRelated(c){
-  return{
-    related:(c["skos:related"]||[]).map(u=>u.split("/").pop())
-  };
-}
-
 function extractNotes(c){
   return (c["skos:note"]||[]).map(n=>({
     lang:n["@language"],
@@ -335,13 +273,18 @@ function extractSources(c){
     lang:s["@language"]||""
   }));
 }
-  
-/* ===== EXPORT ===== */
+
+function extractRelated(c){
+  return{
+    related:(c["skos:related"]||[]).map(u=>u.split("/").pop())
+  };
+}
+
+/* ========= EXPORT ========= */
 function conceptURI(id){return BASE_URI+id;}
 
 function exportTTL(){
   let out=`@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n`;
-
   concepts.forEach(c=>{
     out+=`<${conceptURI(c.id)}> a skos:Concept ;\n`;
     c.terms?.forEach(t=>{
@@ -355,21 +298,6 @@ function exportTTL(){
     });
     out=out.replace(/;\n$/," .\n\n");
   });
-
-  concepts=(j["@graph"]||[]).map(c=>{
-  return{
-    id:c["@id"].split("/").pop(),
-    terms:extractTerms(c),
-    definitions:extractDefs(c),
-    notes:extractNotes(c),
-    sources:extractSources(c),
-    relations:extractRelated(c)
-  };
-});
-
-
-
-  
   download("sanasto.ttl",out);
 }
 
