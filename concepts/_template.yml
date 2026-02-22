@@ -19,11 +19,11 @@ definitions:
 
 notes: []
 
+sources:
+  - lang: fi
+    label: ISO 12345:2020 Example standard
+
 relations:
   broader: []
   narrower: []
   related: []
-  exactMatch: []
-  closeMatch: []
-
-sources: []
