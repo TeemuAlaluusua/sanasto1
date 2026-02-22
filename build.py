@@ -92,7 +92,7 @@ for f in concept_dir.glob("*.yml"):
         else:
             srcs.append(s)
     if srcs:
-        obj["dct:source"] = srcs
+        obj["dcterms:source"] = srcs
 
     # RELATIONS
     rel = c.get("relations", {})
@@ -101,12 +101,23 @@ for f in concept_dir.glob("*.yml"):
         if vals:
             obj["skos:" + key] = [base_uri + v for v in vals]
 
+    # METADATA (created / modified)
+    meta = c.get("metadata", {})
+    created = meta.get("created")
+    modified = meta.get("modified")
+
+    if created:
+        obj["dcterms:created"] = {"@value": created, "@type": "xsd:dateTime"}
+    if modified:
+        obj["dcterms:modified"] = {"@value": modified, "@type": "xsd:dateTime"}
+
     concepts.append(obj)
 
 out = {
     "@context": {
         "skos": "http://www.w3.org/2004/02/skos/core#",
-        "dct": "http://purl.org/dc/terms/",
+        "dcterms": "http://purl.org/dc/terms/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
         "betk": "https://w3id.org/betk/def/"
     },
     "@graph": concepts,
