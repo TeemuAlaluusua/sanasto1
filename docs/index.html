@@ -6,24 +6,78 @@
 <title>Sanasto</title>
 
 <style>
-body{font-family:system-ui,Arial;margin:0;background:#f3f4f6;color:#111}
-header{background:#fff;border-bottom:1px solid #e5e7eb;padding:12px 18px;display:flex;justify-content:space-between;align-items:center}
-.layout{display:grid;grid-template-columns:320px 1fr;gap:16px;padding:16px}
-.panel{background:#fff;border:1px solid #e5e7eb;border-radius:10px}
+body{
+  font-family:system-ui,Arial;
+  margin:0;
+  background:#f3f4f6;
+  color:#111;
+  font-size:16px;
+}
+
+header{
+  background:#fff;
+  border-bottom:1px solid #e5e7eb;
+  padding:12px 18px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.layout{
+  display:grid;
+  grid-template-columns:320px 1fr;
+  gap:16px;
+  padding:16px;
+}
+
+@media (max-width:800px){
+  .layout{
+    grid-template-columns:1fr;
+  }
+}
+
+.panel{
+  background:#fff;
+  border:1px solid #e5e7eb;
+  border-radius:10px;
+}
+
 .list{max-height:80vh;overflow:auto}
+
 .item{padding:10px 12px;border-bottom:1px solid #eee}
 .item a{font-weight:600;text-decoration:none;color:#2563eb}
-.concept{background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:18px}
-h1{margin:0 0 6px;font-size:28px}
+
+.concept{
+  background:#fff;
+  border:1px solid #e5e7eb;
+  border-radius:10px;
+  padding:18px;
+}
+
+h1{margin:0 0 6px;font-size:24px}
+
 .section{margin-top:18px}
+
 table{width:100%;border-collapse:collapse}
 th,td{border-bottom:1px solid #eee;padding:8px;font-size:13px}
 th{background:#f9fafb;text-align:left}
+
 .link{color:#2563eb;text-decoration:none}
 
 .dropdown{position:relative;display:inline-block;margin-left:8px}
 .dropbtn{padding:6px 10px;border:1px solid #d1d5db;border-radius:6px;background:#fff;cursor:pointer}
-.dropdown-content{display:none;position:absolute;background:#fff;border:1px solid #d1d5db;border-radius:6px;min-width:180px;z-index:10;padding:6px}
+
+.dropdown-content{
+  display:none;
+  position:absolute;
+  background:#fff;
+  border:1px solid #d1d5db;
+  border-radius:6px;
+  min-width:180px;
+  z-index:10;
+  padding:6px;
+}
+
 .dropdown:hover .dropdown-content{display:block}
 .dropdown-content div{padding:6px;cursor:pointer}
 .dropdown-content div:hover{background:#f3f4f6}
@@ -40,7 +94,6 @@ th{background:#f9fafb;text-align:left}
   <div>
     <input id="search" class="search" placeholder="Search">
 
-    <!-- Language -->
     <div class="dropdown">
       <button class="dropbtn" id="langBtn">FI</button>
       <div class="dropdown-content">
@@ -50,7 +103,6 @@ th{background:#f9fafb;text-align:left}
       </div>
     </div>
 
-    <!-- Status -->
     <div class="dropdown">
       <button class="dropbtn" id="statusBtn">Status</button>
       <div class="dropdown-content">
@@ -60,13 +112,11 @@ th{background:#f9fafb;text-align:left}
       </div>
     </div>
 
-    <!-- Scheme -->
     <div class="dropdown">
       <button class="dropbtn" id="schemeBtn">Sanasto</button>
       <div class="dropdown-content" id="schemeFilter"></div>
     </div>
 
-    <!-- Export -->
     <div class="dropdown">
       <button class="dropbtn" id="exportBtn">Export</button>
       <div class="dropdown-content">
@@ -96,8 +146,6 @@ const UI = {
 
 let db, concepts=[], map={};
 let currentLang="fi";
-let statusFilter="";
-let schemeFilter="";
 const BASE_URI="https://teemualaluusua.github.io/sanasto1/#/concept/";
 
 function updateUITexts(){
@@ -106,6 +154,19 @@ function updateUITexts(){
   document.getElementById("statusBtn").textContent=t.status;
   document.getElementById("schemeBtn").textContent=t.vocab;
   document.getElementById("exportBtn").textContent=t.export;
+}
+
+/* ========= DATE FORMAT ========= */
+function fmtDate(dt){
+  if(!dt) return "";
+  const d = new Date(dt);
+  return d.toLocaleString("fi-FI",{
+    day:"2-digit",
+    month:"2-digit",
+    year:"numeric",
+    hour:"2-digit",
+    minute:"2-digit"
+  });
 }
 
 /* ========= LOAD DATA ========= */
@@ -121,7 +182,9 @@ fetch("sanasto.jsonld")
       definitions:extractDefs(c),
       notes:extractNotes(c),
       sources:extractSources(c),
-      relations:extractRelated(c)
+      relations:extractRelated(c),
+      created:c["dcterms:created"]?.["@value"],
+      modified:c["dcterms:modified"]?.["@value"]
     };
   });
 
@@ -170,6 +233,9 @@ function renderConcept(id){
   const tUI=UI[currentLang];
   const term=getTerm(c);
 
+  const created=c.created;
+  const modified=c.modified;
+
   const termsRows=(c.terms||[]).map(t=>`
     <tr>
       <td>${t.lang}</td>
@@ -203,6 +269,14 @@ function renderConcept(id){
 
     <div class="section">
       <b>${tUI.uri}</b><br>${BASE_URI+id}
+    </div>
+
+    <div class="section">
+      <b>Luotu</b><br>${fmtDate(created)||"—"}
+    </div>
+
+    <div class="section">
+      <b>Muokattu viimeksi</b><br>${fmtDate(modified)||"—"}
     </div>
 
     <div class="section">
