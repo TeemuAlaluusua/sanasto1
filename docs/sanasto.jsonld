@@ -1,7 +1,8 @@
 {
   "@context": {
     "skos": "http://www.w3.org/2004/02/skos/core#",
-    "dct": "http://purl.org/dc/terms/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
     "betk": "https://w3id.org/betk/def/"
   },
   "@graph": [
@@ -44,12 +45,20 @@
           "quote": false
         }
       ],
-      "dct:source": [
+      "dcterms:source": [
         {
           "@value": "ISO 12345:2020 Example standard",
           "@language": "fi"
         }
-      ]
+      ],
+      "dcterms:created": {
+        "@value": "YYYY-MM-DDThh:mm",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "YYYY-MM-DDThh:mm",
+        "@type": "xsd:dateTime"
+      }
     },
     {
       "@id": "https://w3id.org/betk/sanasto/fyysinen_tietomalli",
@@ -84,12 +93,20 @@
           "quote": false
         }
       ],
-      "dct:source": [
+      "dcterms:source": [
         {
           "@value": "ISO 12345:2020 Example standard",
           "@language": "fi"
         }
-      ]
+      ],
+      "dcterms:created": {
+        "@value": "YYYY-MM-DDThh:mm",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "YYYY-MM-DDThh:mm",
+        "@type": "xsd:dateTime"
+      }
     }
   ],
   "skos:prefLabel": [
