@@ -27,11 +27,6 @@ sources:
 relations:
   broader: []
   narrower:
-  - rymallit:c12
-  - rymallit:c10
-  - rymallit:c8
-  - rymallit:c14
-  - rymallit:c13
   related: []
 metadata:
   created: 2025-12-23T14:08

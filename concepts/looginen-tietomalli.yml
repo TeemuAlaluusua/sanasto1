@@ -28,10 +28,8 @@ sources:
   label: https://iri.suomi.fi/terminology/yti/concept-73
 relations:
   broader:
-  - rymallit:c6
   narrower: []
   related:
-  - rymallit:c12
 metadata:
   created: 2025-12-23T14:08
   modified: 2025-12-23T14:08

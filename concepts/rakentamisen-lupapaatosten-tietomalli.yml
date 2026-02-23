@@ -12,7 +12,6 @@ sources:
   label: https://iri.suomi.fi/terminology/rymallit/c9
 relations:
   broader:
-  - rymallit:c8
   narrower: []
   related: []
 metadata:

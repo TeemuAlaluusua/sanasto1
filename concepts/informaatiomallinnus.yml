@@ -24,12 +24,8 @@ sources:
   label: https://iri.suomi.fi/terminology/rymallit/c4
 relations:
   broader:
-  - rymallit:c1
   narrower:
-  - rymallit:c5
   related:
-  - rymallit:c6
-  - rymallit:c15
 metadata:
   created: 2025-12-23T14:08
   modified: 2025-12-23T14:08

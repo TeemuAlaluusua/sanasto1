@@ -22,7 +22,6 @@ sources:
   label: https://iri.suomi.fi/terminology/rymallit/c12
 relations:
   broader:
-  - rymallit:c6
   narrower: []
   related: []
 metadata:

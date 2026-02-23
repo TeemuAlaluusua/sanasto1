@@ -26,7 +26,6 @@ sources:
   label: https://iri.suomi.fi/terminology/rakymp/c782
 relations:
   broader:
-  - rymallit:c6
   narrower: []
   related: []
 metadata:

@@ -24,7 +24,7 @@ ids = set()
 # -----------------------------
 # CONCEPTS
 # -----------------------------
-for f in concept_dir.glob("*.yml"):
+for f in list(concept_dir.glob("*.yml")) + list(concept_dir.glob("*.yaml")):
     if f.name.startswith("_"):
         continue
 

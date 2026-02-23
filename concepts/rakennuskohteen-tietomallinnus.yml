@@ -22,10 +22,8 @@ sources:
   label: https://iri.suomi.fi/terminology/rymallit/c3
 relations:
   broader:
-  - rymallit:c2
   narrower: []
   related:
-  - rymallit:c8
 metadata:
   created: 2025-12-23T14:08
   modified: 2025-12-23T14:08

@@ -34,7 +34,6 @@ sources:
   label: https://iri.suomi.fi/terminology/rakymp/c6
 relations:
   broader:
-  - rymallit:c28
   narrower: []
   related: []
 metadata:

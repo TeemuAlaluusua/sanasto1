@@ -24,16 +24,8 @@ sources:
   label: https://iri.suomi.fi/terminology/rymallit/c16
 relations:
   broader:
-  - rymallit:c15
   narrower:
-  - rymallit:c22
-  - rymallit:c19
-  - rymallit:c23
-  - rymallit:c18
-  - rymallit:c25
-  - rymallit:c21
   related:
-  - rymallit:c28
 metadata:
   created: 2025-12-23T14:08
   modified: 2025-12-23T14:08

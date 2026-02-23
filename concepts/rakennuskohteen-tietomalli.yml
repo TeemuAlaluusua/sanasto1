@@ -26,11 +26,8 @@ sources:
   label: https://iri.suomi.fi/terminology/rymallit/c8
 relations:
   broader:
-  - rymallit:c6
   narrower:
-  - rymallit:c9
   related:
-  - rymallit:c28
 metadata:
   created: 2025-12-23T14:08
   modified: 2025-12-23T14:08
