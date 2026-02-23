@@ -118,6 +118,63 @@
         "@value": "2026-02-25T12:00",
         "@type": "xsd:dateTime"
       }
+    },
+    {
+      "@id": "https://w3id.org/betk/sanasto/",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://w3id.org/betk/sanasto/rakentamisen-tieto-ja-informaatiomallit",
+      "skos:prefLabel": [
+        {
+          "@value": "informaatiomalli",
+          "@language": "fi"
+        },
+        {
+          "@value": "informationsmodell",
+          "@language": "sv"
+        },
+        {
+          "@value": "information model",
+          "@language": "en"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "tiettyä kohdetta kuvaava malli, jossa joukko tulkittavissa olevaa dataa on esitetty jäsennetysti",
+          "@language": "fi"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Informaatiomalli on ihmisen tulkittavissa ja tietomallien mukaiselta osaltaan koneluettavassa muodossa.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Informaatiomalli voi sisältää esimerkiksi geometrisia malleja, luetteloja, tietokantoja, kirjallisia dokumentteja, kuvia, videoleikkeitä ja äänitteitä. Geometrisia malleja voidaan esittää 2- tai 3-ulotteisina, ja niihin sisältyy usein sijaintitietoa.",
+          "@language": "fi"
+        },
+        {
+          "@value": "SFS-EN ISO 19650 -standardissa informaatiomalli-käsitteen määritelmässä viitataan informaatiokoosteeseen, koska määritelmä on laadittu mallin muodostamisen näkökulmasta. Informaatiokooste on nimetty pysyvä joukko informaatiota, joka on noudettavissa tiedoston, järjestelmän tai sovelluksen tallennushierarkiasta.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Käsitejärjestelmäkaavio: https://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg",
+          "@language": "fi"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "https://iri.suomi.fi/terminology/rymallit/c15",
+          "@language": null
+        }
+      ],
+      "dcterms:created": {
+        "@value": "2025-12-23T14:08",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-02-25T12:00",
+        "@type": "xsd:dateTime"
+      }
     }
   ]
 }
