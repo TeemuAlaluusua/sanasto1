@@ -22,8 +22,8 @@ notes:
     text: Fyysinen tietomalli on loogisesta tietomallista tarkemmalle tasolle viety kuvaus, jossa otetaan kantaa tietokannan käytännön tekniseen toteutukseen valitulla teknologialla.
 
 sources:
-  - lang: fi
-    label: ISO 12345:2020 Example standard
+  - lang: 
+    label: https://iri.suomi.fi/terminology/rymallit/c14
 
 relations:
   broader: []
