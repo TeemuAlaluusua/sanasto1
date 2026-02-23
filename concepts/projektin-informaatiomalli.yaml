@@ -1,0 +1,35 @@
+id: projektin-informaatiomalli
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: projektin informaatiomalli
+  type: Suositettava termi
+- lang: sv
+  label: projektinformationsmodell
+  type: Suositettava termi
+- lang: en
+  label: project information model
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: <a href="https://iri.suomi.fi/terminology/rymallit/c16">rakennuskohteen informaatiomalli</a>, joka sisältää rakennusprojektin suunnittelu- ja rakennusvaiheen toteutukseen tarvittavat tiedot
+notes:
+- lang: fi
+  text: Projektin informaatiomalli sisältää suunnitelmamallin ja toteumamallin tietojen lisäksi esimerkiksi aikataulutietoja sekä hankintoihin ja työmaalogistiikkaan liittyviä tietoja.
+- lang: fi
+  text: Projektin informaatiomalli tukee projektin toteutusta ja vaikuttaa omaisuuskohteen informaatiomalliin. Projektin informaatiomalli tarvitaan myös pitkäaikaista projektiarkistointia ja auditointia varten.
+- lang: fi
+  text: 'Käsitejärjestelmäkaavio: https://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg'
+sources:
+- lang: ''
+  label: https://iri.suomi.fi/terminology/rymallit/c21
+relations:
+  broader:
+  - rymallit:c16
+  narrower: []
+  related:
+  - rymallit:c25
+metadata:
+  created: 2025-12-23T14:08
+  modified: 2025-12-23T14:08

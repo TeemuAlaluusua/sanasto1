@@ -1,0 +1,36 @@
+id: rakennuskohde
+status: Hyväksytty
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: rakennuskohde
+  type: Suositettava termi
+- lang: sv
+  label: byggnadsobjekt
+  type: Suositettava termi
+- lang: en
+  label: construction
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: fyysinen kokonaisuus, jota parhaillaan rakennetaan tai joka on rakennettu
+notes:
+- lang: fi
+  text: Infrarakentamisessa rakennuskohteita voidaan kutsua infrakohteiksi. Niitä ovat esimerkiksi liikenneväylät, padot ja satamat.
+- lang: fi
+  text: Talonrakennuksessa rakennuskohteita ovat esimerkiksi rakennukset, rakennelmat ja niiden ulkoalueet.
+- lang: fi
+  text: 'Käsitejärjestelmäkaavio: https://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg'
+sources:
+- lang: ''
+  label: https://iri.suomi.fi/terminology/rymallit/c28
+- lang: ''
+  label: https://iri.suomi.fi/terminology/rakymp/c5
+relations:
+  broader: []
+  narrower:
+  - rymallit:c27
+  related: []
+metadata:
+  created: 2025-12-23T14:08
+  modified: 2025-12-23T14:08

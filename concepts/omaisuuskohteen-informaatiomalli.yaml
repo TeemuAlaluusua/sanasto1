@@ -1,0 +1,38 @@
+id: omaisuuskohteen-informaatiomalli
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: omaisuuskohteen informaatiomalli
+  type: Suositettava termi
+- lang: sv
+  label: tillgångsinformationsmodell
+  type: Suositettava termi
+- lang: en
+  label: asset information model
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: <a href="https://iri.suomi.fi/terminology/rymallit/c16">rakennuskohteen informaatiomalli</a>, joka sisältää <a href="https://iri.suomi.fi/terminology/rymallit/c28">rakennuskohteen</a> käyttö- ja ylläpitovaiheen aikana tarvittavat tiedot
+notes:
+- lang: fi
+  text: 'Käsitejärjestelmäkaavio: https://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg'
+- lang: fi
+  text: Omaisuuskohteen informaatiomallin sisältö perustuu usein projektin informaatiomalliin, johon kuuluvat esimerkiksi suunnitelma - ja toteumamallin tiedot.
+- lang: fi
+  text: Omaisuuskohteen informaatiomalli tukee omaisuudenhallintaa.
+sources:
+- lang: ''
+  label: https://iri.suomi.fi/terminology/rymallit/c25
+relations:
+  broader:
+  - rymallit:c16
+  narrower: []
+  related:
+  - rymallit:c22
+  - rymallit:c28
+  - rymallit:c21
+  - rymallit:c23
+metadata:
+  created: 2025-12-23T14:08
+  modified: 2025-12-23T14:08

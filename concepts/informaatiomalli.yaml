@@ -1,0 +1,37 @@
+id: informaatiomalli
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: informaatiomalli
+  type: Suositettava termi
+- lang: sv
+  label: informationsmodell
+  type: Suositettava termi
+- lang: en
+  label: information model
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: tiettyä kohdetta kuvaava malli, jossa joukko tulkittavissa olevaa dataa on esitetty jäsennetysti
+notes:
+- lang: fi
+  text: Informaatiomalli voi sisältää esimerkiksi geometrisia malleja, luetteloja, tietokantoja, kirjallisia dokumentteja, kuvia, videoleikkeitä ja äänitteitä. Geometrisia malleja voidaan esittää 2- tai 3-ulotteisina, ja niihin sisältyy usein sijaintitietoa.
+- lang: fi
+  text: 'Käsitejärjestelmäkaavio: https://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg'
+- lang: fi
+  text: SFS-EN ISO 19650 -standardissa informaatiomalli-käsitteen määritelmässä viitataan informaatiokoosteeseen, koska määritelmä on laadittu mallin muodostamisen näkökulmasta. Informaatiokooste on nimetty pysyvä joukko informaatiota, joka on noudettavissa tiedoston, järjestelmän tai sovelluksen tallennushierarkiasta.
+- lang: fi
+  text: Informaatiomalli on ihmisen tulkittavissa ja tietomallien mukaiselta osaltaan koneluettavassa muodossa.
+sources:
+- lang: ''
+  label: https://iri.suomi.fi/terminology/rymallit/c15
+relations:
+  broader: []
+  narrower:
+  - rymallit:c16
+  related:
+  - rymallit:c6
+metadata:
+  created: 2025-12-23T14:08
+  modified: 2025-12-23T14:08

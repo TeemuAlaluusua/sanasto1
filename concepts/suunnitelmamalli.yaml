@@ -1,0 +1,34 @@
+id: suunnitelmamalli
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: suunnitelmamalli
+  type: Suositettava termi
+- lang: sv
+  label: projekteringsmodell
+  type: Suositettava termi
+- lang: en
+  label: design model
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: <a href="https://iri.suomi.fi/terminology/rymallit/c16">rakennuskohteen informaatiomalli</a>, joka sisältää tiedot suunniteltavan <a href="https://iri.suomi.fi/terminology/rymallit/c28">rakennuskohteen</a> rakenteista sekä rakennusosista ja niiden ominaisuuksista
+notes:
+- lang: fi
+  text: 'Käsitejärjestelmäkaavio: https://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg'
+- lang: fi
+  text: Suunnitelmamallia käytetään ja kehitetään eteenpäin rakennuskohteen suunnitteluvaiheen aikana. Ainakin osaa suunnitelmamallin tiedoista käytetään lupamallissa.
+sources:
+- lang: ''
+  label: https://iri.suomi.fi/terminology/rymallit/c22
+relations:
+  broader:
+  - rymallit:c16
+  narrower: []
+  related:
+  - rymallit:c18
+  - rymallit:c28
+metadata:
+  created: 2025-12-23T14:08
+  modified: 2025-12-23T14:08

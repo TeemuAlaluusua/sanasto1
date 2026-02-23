@@ -1,0 +1,35 @@
+id: lupamalli
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: lupamalli
+  type: Suositettava termi
+- lang: sv
+  label: informationsmodell för byggnadslov
+  type: Suositettava termi
+- lang: en
+  label: information model for building permit
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: <a href="https://iri.suomi.fi/terminology/rymallit/c16">rakennuskohteen informaatiomalli</a>, joka sisältää ne <a href="https://iri.suomi.fi/terminology/rymallit/c22">suunnitelmamallin</a> tiedot, jotka tarvitaan rakentamislupaprosessin aikana
+notes:
+- lang: fi
+  text: Rakentamislupahakemuksessa ei välttämättä toimiteta erityissuunnitelmia, mutta niitä voidaan edellyttää toimitettavaksi rakentamislupaprosessin aikana ennen rakennustyön aloittamista.
+- lang: fi
+  text: Lupamallin tulee noudattaa rakentamisen lupapäätösten tietomallia. Lupamalli voidaan toimittaa esimerkiksi SFS-EN ISO 16739-1 -standardin mukaisessa koneluettavassa IFC-muodossa (Industry Foundation Classes).
+- lang: fi
+  text: 'Käsitejärjestelmäkaavio: https://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg'
+sources:
+- lang: ''
+  label: https://iri.suomi.fi/terminology/rymallit/c18
+relations:
+  broader:
+  - rymallit:c16
+  narrower: []
+  related:
+  - rymallit:c22
+metadata:
+  created: 2025-12-23T14:08
+  modified: 2025-12-23T14:08

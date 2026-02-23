@@ -1,0 +1,42 @@
+id: rakennus
+status: Hyväksytty
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: rakennus
+  type: Suositettava termi
+- lang: sv
+  label: byggnad
+  type: Suositettava termi
+- lang: en
+  label: building
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: paikallaan pysyväksi tarkoitettu, omalla sisäänkäynnillä varustettu, katettu ja ulkoseinien rajaama <a href="https://iri.suomi.fi/terminology/rymallit/c28">rakennuskohde</a>
+notes:
+- lang: fi
+  text: Toisistaan erillään olevat rakennukset ovat aina itsenäisiä rakennuksia. Kaikki itsenäiset rakennukset eivät kuitenkaan ole erillään muista rakennuksista esimerkiksi kadun varteen rakennettaessa. Esimerkiksi rivitalot, paritalot ja kerrostalot ovat itsenäisiä rakennuksia.
+- lang: fi
+  text: Rakennus on fyysinen kokonaisuus. Rakennusta koskevaa tietoa voidaan esittää rakennuskohdetietueessa.
+- lang: fi
+  text: Rakennuksen olosuhteiden ja mitoituksen tulisi pääasiallisesti mahdollistaa ihmisten toiminta ainakin osassa rakennuksen tiloista.
+- lang: fi
+  text: 'Käsitejärjestelmäkaavio: https://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg'
+- lang: fi
+  text: Rakennuksen ulkovaipan sisäpuolella on sisätiloja. Rakennuksen ulkovaipan rajapintaan rajautuu välittömästi rakennuksen yhteydessä olevia ja rakennukseen kuuluvia ulkotiloja, kuten parvekkeet, terassit, katokset, lavat jne.
+- lang: fi
+  text: Sisäänkäynnillä tarkoitetaan ovea tai aukkoa, josta on kulku rakennukseen sen ulkopuolelta.
+sources:
+- lang: ''
+  label: https://iri.suomi.fi/terminology/rymallit/c27
+- lang: ''
+  label: https://iri.suomi.fi/terminology/rakymp/c6
+relations:
+  broader:
+  - rymallit:c28
+  narrower: []
+  related: []
+metadata:
+  created: 2025-12-23T14:08
+  modified: 2025-12-23T14:08

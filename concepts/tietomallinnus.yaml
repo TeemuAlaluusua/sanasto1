@@ -1,0 +1,34 @@
+id: tietomallinnus
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: tietomallinnus
+  type: Suositettava termi
+- lang: sv
+  label: datamodellering
+  type: Suositettava termi
+- lang: en
+  label: data modeling
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: mallinnus, jonka tuloksena syntyy <a href="https://iri.suomi.fi/terminology/rymallit/c6">tietomalli</a>
+notes:
+- lang: fi
+  text: Tietomallinnus on vaiheittain etenevä prosessi.
+- lang: fi
+  text: 'Käsitejärjestelmäkaavio: https://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg'
+sources:
+- lang: ''
+  label: https://iri.suomi.fi/terminology/rymallit/c2
+relations:
+  broader:
+  - rymallit:c1
+  narrower:
+  - rymallit:c3
+  related:
+  - rymallit:c6
+metadata:
+  created: 2025-12-23T14:08
+  modified: 2025-12-23T14:08

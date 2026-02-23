@@ -1,0 +1,35 @@
+id: informaatiomallinnus
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: informaatiomallinnus
+  type: Suositettava termi
+- lang: sv
+  label: informationsmodellering
+  type: Suositettava termi
+- lang: en
+  label: information modeling
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: mallinnus, jonka tuloksena syntyy <a href="https://iri.suomi.fi/terminology/rymallit/c15">informaatiomalli</a>
+notes:
+- lang: fi
+  text: 'Käsitejärjestelmäkaavio: https://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg'
+- lang: fi
+  text: Osa informaatiomallinnuksessa syntyvästä tiedosta on koneluettavassa, tietomallien mukaisessa muodossa.
+sources:
+- lang: ''
+  label: https://iri.suomi.fi/terminology/rymallit/c4
+relations:
+  broader:
+  - rymallit:c1
+  narrower:
+  - rymallit:c5
+  related:
+  - rymallit:c6
+  - rymallit:c15
+metadata:
+  created: 2025-12-23T14:08
+  modified: 2025-12-23T14:08

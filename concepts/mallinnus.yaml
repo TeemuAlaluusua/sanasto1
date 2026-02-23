@@ -1,0 +1,21 @@
+id: mallinnus
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: mallinnus
+  type: Suositettava termi
+definitions: []
+notes: []
+sources:
+- lang: ''
+  label: https://iri.suomi.fi/terminology/rymallit/c1
+relations:
+  broader: []
+  narrower:
+  - rymallit:c4
+  - rymallit:c2
+  related: []
+metadata:
+  created: 2025-12-23T14:08
+  modified: 2025-12-23T14:08

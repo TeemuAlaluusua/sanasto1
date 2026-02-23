@@ -1,0 +1,37 @@
+id: looginen-tietomalli
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: looginen tietomalli
+  type: Suositettava termi
+- lang: sv
+  label: logisk datamodell
+  type: Suositettava termi
+- lang: en
+  label: logical data model
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: <a href="https://iri.suomi.fi/terminology/rymallit/c6">tietomalli</a>, joka kuvaa tiedot ja tietorakenteet loogisella, tiedon muodosta riippumattomalla tavalla
+notes:
+- lang: fi
+  text: 'Käsitejärjestelmäkaavio: https://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg'
+- lang: fi
+  text: Looginen tietomalli on käsitemallista tarkemmalle tasolle viety kuvaus.
+- lang: fi
+  text: Looginen tietomalli kuvaa tarkastelun kohteena olevat luokat, niiden väliset assosiaatiot (suhteet) ja luokkiin sisältyvät attribuutit.
+sources:
+- lang: ''
+  label: https://iri.suomi.fi/terminology/rymallit/c13
+- lang: ''
+  label: https://iri.suomi.fi/terminology/yti/concept-73
+relations:
+  broader:
+  - rymallit:c6
+  narrower: []
+  related:
+  - rymallit:c12
+metadata:
+  created: 2025-12-23T14:08
+  modified: 2025-12-23T14:08

@@ -1,0 +1,31 @@
+id: rakennuskohteen-informaatiomallinnus
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: rakennuskohteen informaatiomallinnus
+  type: Suositettava termi
+- lang: sv
+  label: informationsmodellering av byggnadsobjekt
+  type: Suositettava termi
+- lang: en
+  label: information modeling of construction entity
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: <a href="https://iri.suomi.fi/terminology/rymallit/c4">informaatiomallinnus</a>, jonka tuloksena syntyy <a href="https://iri.suomi.fi/terminology/rymallit/c16">rakennuskohteen informaatiomalli</a>
+notes:
+- lang: fi
+  text: 'Käsitejärjestelmäkaavio: https://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg'
+sources:
+- lang: ''
+  label: https://iri.suomi.fi/terminology/rymallit/c5
+relations:
+  broader:
+  - rymallit:c4
+  narrower: []
+  related:
+  - rymallit:c16
+metadata:
+  created: 2025-12-23T14:08
+  modified: 2025-12-23T14:08

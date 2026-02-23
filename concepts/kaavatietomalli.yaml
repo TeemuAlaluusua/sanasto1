@@ -1,0 +1,34 @@
+id: kaavatietomalli
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: kaavatietomalli
+  type: Suositettava termi
+- lang: sv
+  label: plandatamodell
+  type: Suositettava termi
+- lang: en
+  label: data model for land use plans
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: <a href="https://iri.suomi.fi/terminology/rymallit/c6">tietomalli</a>, joka on tarkoitettu kaavan tietojen kuvaamiseen
+notes:
+- lang: fi
+  text: 'Käsitejärjestelmäkaavio: https://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg'
+- lang: fi
+  text: Valtakunnallinen kaavatietomalli koostuu kaavaa, kaavakohteita ja kaavamääräyksiä kuvaavista osista.
+sources:
+- lang: ''
+  label: https://iri.suomi.fi/terminology/rymallit/c10
+- lang: ''
+  label: https://iri.suomi.fi/terminology/rakymp/c782
+relations:
+  broader:
+  - rymallit:c6
+  narrower: []
+  related: []
+metadata:
+  created: 2025-12-23T14:08
+  modified: 2025-12-23T14:08

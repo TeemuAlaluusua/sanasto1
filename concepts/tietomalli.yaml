@@ -1,0 +1,38 @@
+id: tietomalli
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: tietomalli
+  type: Suositettava termi
+- lang: sv
+  label: datamodell
+  type: Suositettava termi
+- lang: en
+  label: data model
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: malli, joka kuvaa tiedot ja tietojen väliset suhteet rakenteisessa muodossa
+notes:
+- lang: fi
+  text: 'Käsitejärjestelmäkaavio: https://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg'
+sources:
+- lang: ''
+  label: https://iri.suomi.fi/terminology/rymallit/c6
+- lang: ''
+  label: https://iri.suomi.fi/terminology/yti/concept-22
+- lang: ''
+  label: https://iri.suomi.fi/terminology/rakymp/c97
+relations:
+  broader: []
+  narrower:
+  - rymallit:c12
+  - rymallit:c10
+  - rymallit:c8
+  - rymallit:c14
+  - rymallit:c13
+  related: []
+metadata:
+  created: 2025-12-23T14:08
+  modified: 2025-12-23T14:08

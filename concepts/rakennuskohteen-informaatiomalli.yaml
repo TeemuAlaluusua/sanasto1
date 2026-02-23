@@ -1,0 +1,39 @@
+id: rakennuskohteen-informaatiomalli
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: rakennuskohteen informaatiomalli
+  type: Suositettava termi
+- lang: sv
+  label: informationsmodell av byggnadsobjekt
+  type: Suositettava termi
+- lang: en
+  label: information model of construction entity
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: <a href="https://iri.suomi.fi/terminology/rymallit/c15">informaatiomalli</a>, joka sisältää <a href="https://iri.suomi.fi/terminology/rymallit/c28">rakennuskohteen</a> tiedot
+notes:
+- lang: fi
+  text: 'Käsitejärjestelmäkaavio: https://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg'
+- lang: fi
+  text: Erilaisilla rakennuskohteen informaatiomalleilla voidaan kuvata kohteen eri vaiheita koko sen elinkaaren ajan.
+sources:
+- lang: ''
+  label: https://iri.suomi.fi/terminology/rymallit/c16
+relations:
+  broader:
+  - rymallit:c15
+  narrower:
+  - rymallit:c22
+  - rymallit:c19
+  - rymallit:c23
+  - rymallit:c18
+  - rymallit:c25
+  - rymallit:c21
+  related:
+  - rymallit:c28
+metadata:
+  created: 2025-12-23T14:08
+  modified: 2025-12-23T14:08

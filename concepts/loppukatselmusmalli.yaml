@@ -1,0 +1,32 @@
+id: loppukatselmusmalli
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: loppukatselmusmalli
+  type: Suositettava termi
+- lang: sv
+  label: as-built-modell för slutsyn
+  type: Suositettava termi
+- lang: en
+  label: as-built model for final inspection
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: ennen <a href="https://iri.suomi.fi/terminology/rymallit/c28">rakennuskohteen</a> käyttöönottoa vaadittava <a href="https://iri.suomi.fi/terminology/rymallit/c16">rakennuskohteen informaatiomalli</a>, joka sisältää <a href="https://iri.suomi.fi/terminology/rymallit/c18">lupamallia</a> vastaavat, toteutuksen mukaisesti päivitetyt tiedot
+notes:
+- lang: fi
+  text: 'Käsitejärjestelmäkaavio: https://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg'
+sources:
+- lang: ''
+  label: https://iri.suomi.fi/terminology/rymallit/c19
+relations:
+  broader:
+  - rymallit:c16
+  narrower: []
+  related:
+  - rymallit:c18
+  - rymallit:c28
+metadata:
+  created: 2025-12-23T14:08
+  modified: 2025-12-23T14:08

@@ -1,0 +1,30 @@
+id: kasitemalli
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: käsitemalli
+  type: Suositettava termi
+- lang: sv
+  label: begreppsmodel
+  type: Suositettava termi
+- lang: en
+  label: conceptual data model
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: <a href="https://iri.suomi.fi/terminology/rymallit/c6">tietomalli</a>, joka kuvaa tiettyyn tarkoitukseen tarvittavat käsitetiedot ja käsitetietojen väliset suhteet yleisellä tasolla
+notes:
+- lang: fi
+  text: 'Käsitejärjestelmäkaavio: https://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg'
+sources:
+- lang: ''
+  label: https://iri.suomi.fi/terminology/rymallit/c12
+relations:
+  broader:
+  - rymallit:c6
+  narrower: []
+  related: []
+metadata:
+  created: 2025-12-23T14:08
+  modified: 2025-12-23T14:08

@@ -1,0 +1,34 @@
+id: toteumamalli
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: toteumamalli
+  type: Suositettava termi
+- lang: sv
+  label: as-built-modell
+  type: Suositettava termi
+- lang: en
+  label: as-built model
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: <a href="https://iri.suomi.fi/terminology/rymallit/c16">rakennuskohteen informaatiomalli</a>, joka sisältää tiedot toteutuneesta <a href="https://iri.suomi.fi/terminology/rymallit/c28">rakennuskohteesta</a> mukaan lukien <a href="https://iri.suomi.fi/terminology/rymallit/c22">suunnitelmamallista</a> poikkeavat tiedot
+notes:
+- lang: fi
+  text: Toteumamalli kuvaa rakennuskohdetta käyttöönotto- tai loppukatselmuksen hetkellä.
+- lang: fi
+  text: 'Käsitejärjestelmäkaavio: https://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg'
+sources:
+- lang: ''
+  label: https://iri.suomi.fi/terminology/rymallit/c23
+relations:
+  broader:
+  - rymallit:c16
+  narrower: []
+  related:
+  - rymallit:c22
+  - rymallit:c28
+metadata:
+  created: 2025-12-23T14:08
+  modified: 2025-12-23T14:08

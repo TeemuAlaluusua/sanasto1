@@ -1,0 +1,36 @@
+id: rakennuskohteen-tietomalli
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: rakennuskohteen tietomalli
+  type: Suositettava termi
+- lang: sv
+  label: datamodell av byggnadsobjekt
+  type: Suositettava termi
+- lang: en
+  label: data model for construction entity
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: <a href="https://iri.suomi.fi/terminology/rymallit/c6">tietomalli</a>, joka on tarkoitettu <a href="https://iri.suomi.fi/terminology/rymallit/c28">rakennuskohteen</a> tietojen kuvaamiseen
+notes:
+- lang: fi
+  text: 'Käsitejärjestelmäkaavio: https://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg'
+- lang: fi
+  text: Sekä talonrakennuksen että infrarakentamisen kohteet ovat rakennuskohteita.
+- lang: fi
+  text: Rakennuskohteen tietomalli esitetään usein koneluettavassa muodossa.
+sources:
+- lang: ''
+  label: https://iri.suomi.fi/terminology/rymallit/c8
+relations:
+  broader:
+  - rymallit:c6
+  narrower:
+  - rymallit:c9
+  related:
+  - rymallit:c28
+metadata:
+  created: 2025-12-23T14:08
+  modified: 2025-12-23T14:08
