@@ -244,6 +244,12 @@ function renderList(){
         const t=getTerm(c)?.label?.toLowerCase()||"";
         return t.includes(q);
       });
+      
+items.sort((a,b)=>{
+  const ta=(getTerm(a)?.label||"").toLowerCase();
+  const tb=(getTerm(b)?.label||"").toLowerCase();
+  return ta.localeCompare(tb,currentLang);
+});
 
     if(items.length===0) return;
 
@@ -296,11 +302,11 @@ const defs=(c.definitions||[]).map(d=>`
 `).join("")||"—";
 
 const notes=(c.notes||[]).map(n=>`
-  <div class="infoRow">
+  <div class="infoBox">
     <span class="infoLang">${(n.lang||"").toUpperCase()}</span>
     ${n.text}
   </div>
-`).join("")||"—";
+`).join("") || `<div class="infoBox">—</div>`;
 
   const src=(c.sources||[]).map(s=>{
     const v=s.label;
