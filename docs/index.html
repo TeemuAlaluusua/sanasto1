@@ -259,7 +259,10 @@ function renderConcept(id){
   document.getElementById("view").innerHTML=`
     <h1>${term?.label||id}</h1>
 
-    <div class="section"><b>${tUI.uri}</b><br>${BASE_URI+id}</div>
+    <div class="section">
+      <b>${tUI.uri}</b><br>
+      <a class="link" href="${BASE_URI+id}">${BASE_URI+id}</a>
+    </div>
 
     <div class="section">
       <h3>${tUI.terms}</h3>
