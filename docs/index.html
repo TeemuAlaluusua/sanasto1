@@ -13,7 +13,6 @@ body{
   color:#111;
   font-size:16px;
 }
-
 header{
   background:#fff;
   border-bottom:1px solid #e5e7eb;
@@ -22,48 +21,37 @@ header{
   justify-content:space-between;
   align-items:center;
 }
-
 .layout{
   display:grid;
   grid-template-columns:320px 1fr;
   gap:16px;
   padding:16px;
 }
-
 @media (max-width:800px){
   .layout{grid-template-columns:1fr;}
 }
-
 .panel{
   background:#fff;
   border:1px solid #e5e7eb;
   border-radius:10px;
 }
-
 .list{max-height:80vh;overflow:auto}
-
 .item{padding:10px 12px;border-bottom:1px solid #eee}
 .item a{font-weight:600;text-decoration:none;color:#2563eb}
-
 .concept{
   background:#fff;
   border:1px solid #e5e7eb;
   border-radius:10px;
   padding:18px;
 }
-
 h1{margin:0 0 6px;font-size:24px}
 .section{margin-top:18px}
-
 table{width:100%;border-collapse:collapse}
 th,td{border-bottom:1px solid #eee;padding:8px;font-size:13px}
 th{background:#f9fafb;text-align:left}
-
 .link{color:#2563eb;text-decoration:none}
-
 .dropdown{position:relative;display:inline-block;margin-left:8px}
 .dropbtn{padding:6px 10px;border:1px solid #d1d5db;border-radius:6px;background:#fff;cursor:pointer}
-
 .dropdown-content{
   display:none;
   position:absolute;
@@ -74,11 +62,9 @@ th{background:#f9fafb;text-align:left}
   z-index:10;
   padding:6px;
 }
-
 .dropdown:hover .dropdown-content{display:block}
 .dropdown-content div{padding:6px;cursor:pointer}
 .dropdown-content div:hover{background:#f3f4f6}
-
 .search{padding:6px 10px;border:1px solid #d1d5db;border-radius:6px;width:200px}
 .noteSource{color:#6b7280;font-size:12px;margin-left:18px}
 </style>
@@ -120,7 +106,6 @@ th{background:#f9fafb;text-align:left}
   <div class="panel">
     <div class="list" id="list"></div>
   </div>
-
   <div class="concept" id="view">Valitse käsite</div>
 </div>
 
@@ -147,17 +132,17 @@ const UI = {
 let db, concepts=[], map={};
 let currentLang="fi";
 
-/* ✔ OIKEAT URI-LINKIT */
-const BASE_URI="https://teemualaluusua.github.io/sanasto1/concept/";
+/* HASH-URI */
+const BASE_URI="https://teemualaluusua.github.io/sanasto1/#/concept/";
 
-/* ========= DATE ========= */
+/* DATE */
 function fmtDate(dt){
   if(!dt) return "";
   const d=new Date(dt);
   return d.toLocaleString("fi-FI",{day:"2-digit",month:"2-digit",year:"numeric",hour:"2-digit",minute:"2-digit"});
 }
 
-/* ========= LOAD ========= */
+/* LOAD */
 fetch("sanasto.jsonld")
 .then(r=>r.json())
 .then(j=>{
@@ -179,35 +164,40 @@ fetch("sanasto.jsonld")
   concepts.forEach((c,i)=>map[c.id]=i);
 
   renderList();
-  openFromURL();   // ✔ avaa jos suora linkki
+  openFromHash();
 });
 
-document.getElementById("search").addEventListener("input",renderList);
+/* HASH LISTENER */
+window.addEventListener("hashchange", openFromHash);
 
-/* ========= OPEN FROM URL ========= */
-function openFromURL(){
-  const path=window.location.pathname;
-  const id=path.split("/").pop();
+/* OPEN FROM HASH */
+function openFromHash(){
+  const h = window.location.hash; // #/concept/id
+  const m = h.match(/^#\/concept\/(.+)$/);
+  if(!m) return;
+  const id = decodeURIComponent(m[1]);
   if(map[id]!==undefined){
     renderConcept(id);
   }
 }
 
-/* ========= LANGUAGE ========= */
+document.getElementById("search").addEventListener("input",renderList);
+
+/* LANGUAGE */
 function setLang(l){
   currentLang=l;
   document.getElementById("langBtn").textContent=l.toUpperCase();
   renderList();
 }
 
-/* ========= TERM ========= */
+/* TERM */
 function getTerm(c){
   return c.terms?.find(t=>t.lang===currentLang && t.type==="Preferred")
       || c.terms?.find(t=>t.lang===currentLang)
       || c.terms?.[0];
 }
 
-/* ========= LIST ========= */
+/* LIST */
 function renderList(){
   const q=document.getElementById("search").value.toLowerCase();
   const el=document.getElementById("list");
@@ -225,7 +215,7 @@ function renderList(){
     div.className="item";
 
     const a=document.createElement("a");
-    a.href=BASE_URI+c.id;   // ✔ oikea hyperlinkki
+    a.href="#/concept/"+c.id;   // HASH LINK
     a.textContent=t;
 
     div.appendChild(a);
@@ -233,7 +223,7 @@ function renderList(){
   });
 }
 
-/* ========= CONCEPT ========= */
+/* CONCEPT */
 function renderConcept(id){
   const c=concepts[map[id]];
   if(!c)return;
@@ -263,7 +253,7 @@ function renderConcept(id){
   const rel=(c.relations?.related||[]).map(r=>{
     const rc=concepts[map[r]];
     const lbl=getTerm(rc)?.label||r;
-    return `<li><a class="link" href="${BASE_URI+r}">${lbl}</a></li>`;
+    return `<li><a class="link" href="#/concept/${r}">${lbl}</a></li>`;
   }).join("");
 
   document.getElementById("view").innerHTML=`
@@ -290,18 +280,16 @@ function renderConcept(id){
   `;
 }
 
-/* ========= JSON-LD ========= */
+/* JSON-LD */
 function extractTerms(c){
   const out=[];
   (c["skos:prefLabel"]||[]).forEach(t=>out.push({lang:t["@language"],label:t["@value"],type:"Preferred"}));
   (c["skos:altLabel"]||[]).forEach(t=>out.push({lang:t["@language"],label:t["@value"],type:"Alt"}));
   return out;
 }
-
 function extractDefs(c){
   return (c["skos:definition"]||[]).map(d=>({lang:d["@language"],text:d["@value"]}));
 }
-
 function extractNotes(c){
   return (c["skos:note"]||[]).map(n=>({
     lang:n["@language"],
@@ -310,21 +298,19 @@ function extractNotes(c){
     quote:n.quote||false
   }));
 }
-
 function extractSources(c){
   return (c["dcterms:source"]||[]).map(s=>({
     label:s["@value"]||s,
     lang:s["@language"]||""
   }));
 }
-
 function extractRelated(c){
   return{
     related:(c["skos:related"]||[]).map(u=>u.split("/").pop())
   };
 }
 
-/* ========= EXPORT ========= */
+/* EXPORT */
 function conceptURI(id){return BASE_URI+id;}
 
 function exportTTL(){
@@ -343,15 +329,12 @@ function exportTTL(){
   });
   download("sanasto.ttl",out);
 }
-
 function exportJSONLD(){
   download("sanasto.jsonld",JSON.stringify(db,null,2));
 }
-
 function exportRDF(){
   download("sanasto.rdf","RDF export placeholder");
 }
-
 function download(name,text){
   const blob=new Blob([text],{type:"text/plain"});
   const a=document.createElement("a");
