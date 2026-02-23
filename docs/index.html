@@ -67,6 +67,18 @@ th{background:#f9fafb;text-align:left}
 .dropdown-content div:hover{background:#f3f4f6}
 .search{padding:6px 10px;border:1px solid #d1d5db;border-radius:6px;width:200px}
 .noteSource{color:#6b7280;font-size:12px;margin-left:18px}
+
+/* Palaute-osio (Suomi.fi-tyyli) */
+.feedbackBox{
+  margin-top:28px;
+  padding-top:12px;
+  border-top:1px solid #e5e7eb;
+}
+.feedbackHint{
+  color:#6b7280;
+  font-size:14px;
+  margin-bottom:6px;
+}
 </style>
 </head>
 
@@ -116,24 +128,33 @@ const UI = {
       related:"Liittyvät käsitteet",sources:"Lähteet",uri:"URI",
       vocab:"Sanasto",export:"Export",lang:"Kieli",
       term:"Termi",type:"Tyyppi",note:"Huomautus",
-      created:"Luotu",modified:"Muokattu viimeksi"},
+      created:"Luotu",modified:"Muokattu viimeksi",
+      feedbackHint:"Voit antaa palautetta käsitteestä sanaston vastuuorganisaatiolle.",
+      feedbackLink:"Anna palautetta käsitteestä"},
   sv:{selectConcept:"Välj begrepp",terms:"Termer",definition:"Definition",
       related:"Relaterade begrepp",sources:"Källor",uri:"URI",
       vocab:"Ordlista",export:"Export",lang:"Språk",
       term:"Term",type:"Typ",note:"Anmärkning",
-      created:"Skapad",modified:"Redigerad"},
+      created:"Skapad",modified:"Redigerad",
+      feedbackHint:"Du kan ge respons om begreppet till vokabulärets ansvariga organisation.",
+      feedbackLink:"Ge respons om begreppet"},
   en:{selectConcept:"Select concept",terms:"Terms",definition:"Definition",
       related:"Related concepts",sources:"Sources",uri:"URI",
       vocab:"Vocabulary",export:"Export",lang:"Language",
       term:"Term",type:"Type",note:"Note",
-      created:"Created",modified:"Modified"}
+      created:"Created",modified:"Modified",
+      feedbackHint:"You can give feedback about the concept to the responsible organization.",
+      feedbackLink:"Give feedback about the concept"}
 };
 
 let db, concepts=[], map={};
 let currentLang="fi";
 
-/* HASH-URI */
+/* HASH-URI (GitHub Pages -yhteensopiva) */
 const BASE_URI="https://teemualaluusua.github.io/sanasto1/#/concept/";
+
+/* Palautteet GitHub Issuesiin (vaihda tarvittaessa) */
+const ISSUES_REPO_URL = "https://github.com/teemualaluusua/sanasto1";
 
 /* DATE */
 function fmtDate(dt){
@@ -188,6 +209,8 @@ function setLang(l){
   currentLang=l;
   document.getElementById("langBtn").textContent=l.toUpperCase();
   renderList();
+  // Päivitä näkymä uudelleen jos käsite on auki
+  openFromHash();
 }
 
 /* TERM */
@@ -215,12 +238,26 @@ function renderList(){
     div.className="item";
 
     const a=document.createElement("a");
-    a.href="#/concept/"+c.id;   // HASH LINK
+    a.href="#/concept/"+encodeURIComponent(c.id);
     a.textContent=t;
 
     div.appendChild(a);
     el.appendChild(div);
   });
+}
+
+/* HELPERS */
+function isHttpUrl(s){ return /^https?:\/\//i.test(String(s||"")); }
+
+function makeIssueURL(conceptLabel, conceptURI){
+  const title = "Palaute käsitteestä: " + conceptLabel;
+  const body =
+    "Käsite: " + conceptLabel + "\n" +
+    "URI: " + conceptURI + "\n\n" +
+    "Palaute:\n";
+  return ISSUES_REPO_URL.replace(/\/$/,"") + "/issues/new"
+    + "?title=" + encodeURIComponent(title)
+    + "&body=" + encodeURIComponent(body);
 }
 
 /* CONCEPT */
@@ -230,6 +267,8 @@ function renderConcept(id){
 
   const tUI=UI[currentLang];
   const term=getTerm(c);
+  const label = term?.label || id;
+  const conceptURI = BASE_URI + encodeURIComponent(id);
 
   const termsRows=(c.terms||[]).map(t=>`
     <tr><td>${t.lang}</td><td>${t.label}</td><td>${t.type||""}</td></tr>
@@ -246,31 +285,29 @@ function renderConcept(id){
     </div>
   `).join("")||"—";
 
-const src=(c.sources||[]).map(s=>{
-  const url = s.label;
-  const isURL = /^https?:\/\//i.test(url);
-  return `
-    <div>
-      ${s.lang?`<b>${s.lang.toUpperCase()}</b> `:""}
-      ${isURL
-        ? `<a class="link" href="${url}" target="_blank" rel="noopener">${url}</a>`
-        : url}
-    </div>
-  `;
-}).join("") || "—";
+  /* SOURCES: tee URL:t linkeiksi */
+  const src=(c.sources||[]).map(s=>{
+    const v = s.label;
+    const link = isHttpUrl(v)
+      ? `<a class="link" href="${v}" target="_blank" rel="noopener">${v}</a>`
+      : String(v||"");
+    return `<div>${s.lang?`<b>${s.lang.toUpperCase()}</b> `:""}${link}</div>`;
+  }).join("") || "—";
 
   const rel=(c.relations?.related||[]).map(r=>{
     const rc=concepts[map[r]];
     const lbl=getTerm(rc)?.label||r;
-    return `<li><a class="link" href="#/concept/${r}">${lbl}</a></li>`;
+    return `<li><a class="link" href="#/concept/${encodeURIComponent(r)}">${lbl}</a></li>`;
   }).join("");
 
+  const feedbackURL = makeIssueURL(label, conceptURI);
+
   document.getElementById("view").innerHTML=`
-    <h1>${term?.label||id}</h1>
+    <h1>${label}</h1>
 
     <div class="section">
       <b>${tUI.uri}</b><br>
-      <a class="link" href="${BASE_URI+id}">${BASE_URI+id}</a>
+      <a class="link" href="${conceptURI}">${conceptURI}</a>
     </div>
 
     <div class="section">
@@ -289,6 +326,13 @@ const src=(c.sources||[]).map(s=>{
     <div class="section"><b>${tUI.modified}</b><br>${fmtDate(c.modified)||"—"}</div>
 
     <div class="section"><h3>${tUI.related}</h3><ul>${rel}</ul></div>
+
+    <div class="feedbackBox">
+      <div class="feedbackHint">${tUI.feedbackHint}</div>
+      <a class="link" href="${feedbackURL}" target="_blank" rel="noopener">
+        ${tUI.feedbackLink} ↗
+      </a>
+    </div>
   `;
 }
 
@@ -323,12 +367,12 @@ function extractRelated(c){
 }
 
 /* EXPORT */
-function conceptURI(id){return BASE_URI+id;}
+function conceptURIExport(id){return BASE_URI + encodeURIComponent(id);}
 
 function exportTTL(){
   let out=`@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n`;
   concepts.forEach(c=>{
-    out+=`<${conceptURI(c.id)}> a skos:Concept ;\n`;
+    out+=`<${conceptURIExport(c.id)}> a skos:Concept ;\n`;
     c.terms?.forEach(t=>{
       out+=t.type==="Preferred"
         ?`  skos:prefLabel "${t.label}"@${t.lang} ;\n`
