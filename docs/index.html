@@ -6,44 +6,16 @@
 <title>Sanasto</title>
 
 <style>
-body{
-  font-family:system-ui,Arial;
-  margin:0;
-  background:#f3f4f6;
-  color:#111;
-  font-size:16px;
-}
-header{
-  background:#fff;
-  border-bottom:1px solid #e5e7eb;
-  padding:12px 18px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-.layout{
-  display:grid;
-  grid-template-columns:320px 1fr;
-  gap:16px;
-  padding:16px;
-}
-@media (max-width:800px){
-  .layout{grid-template-columns:1fr;}
-}
-.panel{
-  background:#fff;
-  border:1px solid #e5e7eb;
-  border-radius:10px;
-}
+body{font-family:system-ui,Arial;margin:0;background:#f3f4f6;color:#111;font-size:16px;}
+header{background:#fff;border-bottom:1px solid #e5e7eb;padding:12px 18px;display:flex;justify-content:space-between;align-items:center;}
+.layout{display:grid;grid-template-columns:320px 1fr;gap:16px;padding:16px;}
+@media (max-width:800px){.layout{grid-template-columns:1fr;}}
+.panel{background:#fff;border:1px solid #e5e7eb;border-radius:10px;}
 .list{max-height:80vh;overflow:auto}
+.schemeHeader{padding:10px 12px;font-weight:600;background:#f9fafb;border-bottom:1px solid #eee}
 .item{padding:10px 12px;border-bottom:1px solid #eee}
 .item a{font-weight:600;text-decoration:none;color:#2563eb}
-.concept{
-  background:#fff;
-  border:1px solid #e5e7eb;
-  border-radius:10px;
-  padding:18px;
-}
+.concept{background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:18px;}
 h1{margin:0 0 6px;font-size:24px}
 .section{margin-top:18px}
 table{width:100%;border-collapse:collapse}
@@ -52,32 +24,13 @@ th{background:#f9fafb;text-align:left}
 .link{color:#2563eb;text-decoration:none}
 .dropdown{position:relative;display:inline-block;margin-left:8px}
 .dropbtn{padding:6px 10px;border:1px solid #d1d5db;border-radius:6px;background:#fff;cursor:pointer}
-.dropdown-content{
-  display:none;
-  position:absolute;
-  background:#fff;
-  border:1px solid #d1d5db;
-  border-radius:6px;
-  min-width:180px;
-  z-index:10;
-  padding:6px;
-}
+.dropdown-content{display:none;position:absolute;background:#fff;border:1px solid #d1d5db;border-radius:6px;min-width:180px;z-index:10;padding:6px;}
 .dropdown:hover .dropdown-content{display:block}
 .dropdown-content div{padding:6px;cursor:pointer}
 .dropdown-content div:hover{background:#f3f4f6}
 .search{padding:6px 10px;border:1px solid #d1d5db;border-radius:6px;width:200px}
-.noteSource{color:#6b7280;font-size:12px;margin-left:18px}
-
-.feedbackBox{
-  margin-top:28px;
-  padding-top:12px;
-  border-top:1px solid #e5e7eb;
-}
-.feedbackHint{
-  color:#6b7280;
-  font-size:14px;
-  margin-bottom:6px;
-}
+.feedbackBox{margin-top:28px;padding-top:12px;border-top:1px solid #e5e7eb;}
+.feedbackHint{color:#6b7280;font-size:14px;margin-bottom:6px;}
 </style>
 </head>
 
@@ -99,16 +52,6 @@ th{background:#f9fafb;text-align:left}
 
     <div class="dropdown">
       <button class="dropbtn" id="schemeBtn">Sanasto</button>
-      <div class="dropdown-content" id="schemeFilter"></div>
-    </div>
-
-    <div class="dropdown">
-      <button class="dropbtn" id="exportBtn">Export</button>
-      <div class="dropdown-content">
-        <div onclick="exportTTL()">SKOS Turtle (.ttl)</div>
-        <div onclick="exportRDF()">RDF/XML (.rdf)</div>
-        <div onclick="exportJSONLD()">JSON-LD (.jsonld)</div>
-      </div>
     </div>
   </div>
 </header>
@@ -122,236 +65,155 @@ th{background:#f9fafb;text-align:left}
 
 <script>
 /* ========= UI ========= */
-const UI = {
-  fi:{
-    selectConcept:"Valitse käsite",
-    terms:"Termit",
-    definition:"Määritelmä",
-    related:"Liittyvät käsitteet",
-    sources:"Lähteet",
-    uri:"URI",
-    vocab:"Sanasto",
-    export:"Export",
-    lang:"Kieli",
-    term:"Termi",
-    type:"Tyyppi",
-    note:"Huomautus",
-    created:"Luotu",
-    modified:"Muokattu viimeksi",
-    feedbackHint:"Voit antaa palautetta käsitteestä sanaston vastuuorganisaatiolle.",
-    feedbackLink:"Anna palautetta käsitteestä"
-  },
-  sv:{
-    selectConcept:"Välj begrepp",
-    terms:"Termer",
-    definition:"Definition",
-    related:"Relaterade begrepp",
-    sources:"Källor",
-    uri:"URI",
-    vocab:"Ordlistor",
-    export:"Export",
-    lang:"Språk",
-    term:"Term",
-    type:"Typ",
-    note:"Anmärkning",
-    created:"Skapad",
-    modified:"Redigerad",
-    feedbackHint:"Du kan ge respons om begreppet till vokabulärets ansvariga organisation.",
-    feedbackLink:"Ge respons om begreppet"
-  },
-  en:{
-    selectConcept:"Select concept",
-    terms:"Terms",
-    definition:"Definition",
-    related:"Related concepts",
-    sources:"Sources",
-    uri:"URI",
-    vocab:"Terminologies",
-    export:"Export",
-    lang:"Language",
-    term:"Term",
-    type:"Type",
-    note:"Note",
-    created:"Created",
-    modified:"Modified",
-    feedbackHint:"You can give feedback about the concept to the responsible organization.",
-    feedbackLink:"Give feedback about the concept"
-  }
+const UI={
+  fi:{vocab:"Sanasto",feedbackHint:"Voit antaa palautetta käsitteestä sanaston vastuuorganisaatiolle.",feedbackLink:"Anna palautetta käsitteestä"},
+  sv:{vocab:"Ordlistor",feedbackHint:"Du kan ge respons om begreppet.",feedbackLink:"Ge respons om begreppet"},
+  en:{vocab:"Terminologies",feedbackHint:"You can give feedback about the concept.",feedbackLink:"Give feedback"}
 };
 
-let db, concepts=[], map={};
+let db,concepts=[],schemes=[],map={};
 let currentLang="fi";
 
 const BASE_URI="https://teemualaluusua.github.io/sanasto1/#/concept/";
 const ISSUES_REPO_URL="https://github.com/teemualaluusua/sanasto1";
 
-/* ========= TOP BAR UPDATE ========= */
+/* ========= TOP BAR ========= */
 function updateTopBar(){
-  const t = UI[currentLang];
-  document.getElementById("schemeBtn").textContent = t.vocab;
-  document.getElementById("exportBtn").textContent = t.export;
+  document.getElementById("schemeBtn").textContent=UI[currentLang].vocab;
 }
 
-/* DATE */
-function fmtDate(dt){
-  if(!dt) return "";
-  const d=new Date(dt);
-  return d.toLocaleString("fi-FI",{day:"2-digit",month:"2-digit",year:"numeric",hour:"2-digit",minute:"2-digit"});
-}
-
-/* LOAD */
+/* ========= LOAD ========= */
 fetch("sanasto.jsonld")
 .then(r=>r.json())
 .then(j=>{
   db=j;
 
-  concepts=(j["@graph"]||[]).map(c=>{
-    return{
+  /* SCHEMES */
+  schemes=(j["@graph"]||[])
+    .filter(x=>x["@type"]==="skos:ConceptScheme")
+    .map(s=>({
+      id:s["@id"].split("/").pop(),
+      labels:s["skos:prefLabel"]||[]
+    }));
+
+  /* CONCEPTS */
+  concepts=(j["@graph"]||[])
+    .filter(x=>x["@type"]==="skos:Concept")
+    .map(c=>({
       id:c["@id"].split("/").pop(),
+      scheme:(c["skos:inScheme"]||[])[0]?.split("/").pop(),
       terms:extractTerms(c),
       definitions:extractDefs(c),
-      notes:extractNotes(c),
-      sources:extractSources(c),
-      relations:extractRelated(c),
-      created:c["dcterms:created"]?.["@value"],
-      modified:c["dcterms:modified"]?.["@value"]
-    };
-  });
+      sources:extractSources(c)
+    }));
 
   concepts.forEach((c,i)=>map[c.id]=i);
 
   renderList();
   openFromHash();
-  updateTopBar();   // ✔ alussa
+  updateTopBar();
 });
 
-window.addEventListener("hashchange", openFromHash);
-
-function openFromHash(){
-  const h = window.location.hash;
-  const m = h.match(/^#\/concept\/(.+)$/);
-  if(!m) return;
-  const id = decodeURIComponent(m[1]);
-  if(map[id]!==undefined) renderConcept(id);
-}
-
+window.addEventListener("hashchange",openFromHash);
 document.getElementById("search").addEventListener("input",renderList);
 
-/* LANGUAGE */
+/* ========= LANGUAGE ========= */
 function setLang(l){
   currentLang=l;
   document.getElementById("langBtn").textContent=l.toUpperCase();
-  updateTopBar();     // ✔ kielenvaihdossa
+  updateTopBar();
   renderList();
   openFromHash();
 }
 
-/* TERM */
+/* ========= TERM ========= */
 function getTerm(c){
   return c.terms?.find(t=>t.lang===currentLang && t.type==="Preferred")
-      || c.terms?.find(t=>t.lang===currentLang)
       || c.terms?.[0];
 }
 
-/* LIST */
+/* ========= SCHEME LABEL ========= */
+function getSchemeLabel(s){
+  const t=s.labels.find(l=>l["@language"]===currentLang);
+  return t?.["@value"] || s.labels[0]?.["@value"] || s.id;
+}
+
+/* ========= LIST ========= */
 function renderList(){
   const q=document.getElementById("search").value.toLowerCase();
   const el=document.getElementById("list");
   el.innerHTML="";
 
-  const filtered=concepts.filter(c=>{
-    const t=getTerm(c)?.label?.toLowerCase()||"";
-    return t.includes(q);
-  });
+  schemes.forEach(s=>{
+    const items=concepts.filter(c=>c.scheme===s.id)
+      .filter(c=>{
+        const t=getTerm(c)?.label?.toLowerCase()||"";
+        return t.includes(q);
+      });
 
-  filtered.forEach(c=>{
-    const t=getTerm(c)?.label||c.id;
-    const div=document.createElement("div");
-    div.className="item";
-    const a=document.createElement("a");
-    a.href="#/concept/"+encodeURIComponent(c.id);
-    a.textContent=t;
-    div.appendChild(a);
-    el.appendChild(div);
+    if(items.length===0) return;
+
+    const header=document.createElement("div");
+    header.className="schemeHeader";
+    header.textContent=getSchemeLabel(s);
+    el.appendChild(header);
+
+    items.forEach(c=>{
+      const t=getTerm(c)?.label||c.id;
+      const div=document.createElement("div");
+      div.className="item";
+      const a=document.createElement("a");
+      a.href="#/concept/"+encodeURIComponent(c.id);
+      a.textContent=t;
+      div.appendChild(a);
+      el.appendChild(div);
+    });
   });
 }
 
-/* HELPERS */
-function isHttpUrl(s){return /^https?:\/\//i.test(String(s||""));}
-
-function makeIssueURL(label,uri){
-  return ISSUES_REPO_URL+"/issues/new"
-    +"?title="+encodeURIComponent("Palaute käsitteestä: "+label)
-    +"&body="+encodeURIComponent("Käsite: "+label+"\nURI: "+uri+"\n\nPalaute:");
-}
-
-/* CONCEPT */
+/* ========= CONCEPT ========= */
 function renderConcept(id){
   const c=concepts[map[id]];
   if(!c)return;
 
-  const tUI=UI[currentLang];
   const term=getTerm(c);
   const label=term?.label||id;
   const conceptURI=BASE_URI+encodeURIComponent(id);
 
-  const termsRows=(c.terms||[]).map(t=>`
-    <tr><td>${t.lang}</td><td>${t.label}</td><td>${t.type||""}</td></tr>
-  `).join("");
-
-  const defs=(c.definitions||[]).map(d=>`
-    <div><b>${d.lang.toUpperCase()}</b> ${d.text}</div>
-  `).join("")||"—";
-
-  const notes=(c.notes||[]).map(n=>`
-    <div><b>${n.lang.toUpperCase()}</b> ${n.text}</div>
-  `).join("")||"—";
+  const defs=(c.definitions||[]).map(d=>`<div>${d.text}</div>`).join("")||"—";
 
   const src=(c.sources||[]).map(s=>{
     const v=s.label;
-    const link=isHttpUrl(v)?`<a class="link" href="${v}" target="_blank">${v}</a>`:v;
-    return `<div>${link}</div>`;
+    return `<div><a class="link" href="${v}" target="_blank">${v}</a></div>`;
   }).join("")||"—";
 
-  const rel=(c.relations?.related||[]).map(r=>{
-    const rc=concepts[map[r]];
-    const lbl=getTerm(rc)?.label||r;
-    return `<li><a class="link" href="#/concept/${encodeURIComponent(r)}">${lbl}</a></li>`;
-  }).join("");
-
-  const feedbackURL=makeIssueURL(label,conceptURI);
+  const feedbackURL=ISSUES_REPO_URL+"/issues/new?title="+encodeURIComponent(label);
 
   document.getElementById("view").innerHTML=`
     <h1>${label}</h1>
-
-    <div class="section">
-      <b>${tUI.uri}</b><br>
-      <a class="link" href="${conceptURI}">${conceptURI}</a>
-    </div>
-
-    <div class="section">
-      <h3>${tUI.terms}</h3>
-      <table>
-        <tr><th>${tUI.lang}</th><th>${tUI.term}</th><th>${tUI.type}</th></tr>
-        ${termsRows}
-      </table>
-    </div>
-
-    <div class="section"><h3>${tUI.definition}</h3>${defs}</div>
-    <div class="section"><h3>${tUI.sources}</h3>${src}</div>
-
-    <div class="section"><h3>${tUI.related}</h3><ul>${rel}</ul></div>
+    <div class="section"><b>URI</b><br><a class="link" href="${conceptURI}">${conceptURI}</a></div>
+    <div class="section"><b>Määritelmä</b>${defs}</div>
+    <div class="section"><b>Lähteet</b>${src}</div>
 
     <div class="feedbackBox">
-      <div class="feedbackHint">${tUI.feedbackHint}</div>
+      <div class="feedbackHint">${UI[currentLang].feedbackHint}</div>
       <a class="link" href="${feedbackURL}" target="_blank">
-        ${tUI.feedbackLink} ↗
+        ${UI[currentLang].feedbackLink} ↗
       </a>
     </div>
   `;
 }
 
-/* JSON-LD */
+/* ========= HASH ========= */
+function openFromHash(){
+  const h=window.location.hash;
+  const m=h.match(/^#\/concept\/(.+)$/);
+  if(!m) return;
+  const id=decodeURIComponent(m[1]);
+  if(map[id]!==undefined) renderConcept(id);
+}
+
+/* ========= JSON-LD ========= */
 function extractTerms(c){
   const out=[];
   (c["skos:prefLabel"]||[]).forEach(t=>out.push({lang:t["@language"],label:t["@value"],type:"Preferred"}));
@@ -361,18 +223,9 @@ function extractTerms(c){
 function extractDefs(c){
   return (c["skos:definition"]||[]).map(d=>({lang:d["@language"],text:d["@value"]}));
 }
-function extractNotes(c){return [];}
 function extractSources(c){
   return (c["dcterms:source"]||[]).map(s=>({label:s["@value"]||s}));
 }
-function extractRelated(c){
-  return{related:(c["skos:related"]||[]).map(u=>u.split("/").pop())};
-}
-
-/* EXPORT */
-function exportTTL(){}
-function exportJSONLD(){}
-function exportRDF(){}
 </script>
 </body>
 </html>
