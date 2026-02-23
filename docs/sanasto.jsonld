@@ -47,8 +47,8 @@
       ],
       "dcterms:source": [
         {
-          "@value": "ISO 12345:2020 Example standard",
-          "@language": "fi"
+          "@value": "https://iri.suomi.fi/terminology/rymallit/c26",
+          "@language": null
         }
       ],
       "dcterms:created": {
@@ -95,8 +95,8 @@
       ],
       "dcterms:source": [
         {
-          "@value": "ISO 12345:2020 Example standard",
-          "@language": "fi"
+          "@value": "https://iri.suomi.fi/terminology/rymallit/c14",
+          "@language": null
         }
       ],
       "dcterms:created": {
