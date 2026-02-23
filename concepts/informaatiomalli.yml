@@ -25,7 +25,7 @@ notes:
   - lang: fi
     text: SFS-EN ISO 19650 -standardissa informaatiomalli-käsitteen määritelmässä viitataan informaatiokoosteeseen, koska määritelmä on laadittu mallin muodostamisen näkökulmasta. Informaatiokooste on nimetty pysyvä joukko informaatiota, joka on noudettavissa tiedoston, järjestelmän tai sovelluksen tallennushierarkiasta.
   - lang: fi
-    text: Käsitejärjestelmäkaavio "https://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg"
+    text: "Käsitejärjestelmäkaavio: https://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg"
     
 sources:
   - lang: 
