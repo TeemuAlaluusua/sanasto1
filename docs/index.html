@@ -37,49 +37,48 @@ th{background:#f9fafb;text-align:left}
 
 <body>
 <header>
-<div id="title">Sanasto</div>
+  <div id="title">Sanasto</div>
 
-<div>
-<input id="search" class="search" placeholder="Search">
+  <div>
+    <input id="search" class="search" placeholder="Search">
 
-<div class="dropdown">
-<button class="dropbtn" id="langBtn">FI</button>
-<div class="dropdown-content">
-<div onclick="setLang('fi')">Suomi (FI)</div>
-<div onclick="setLang('sv')">Svenska (SV)</div>
-<div onclick="setLang('en')">English (EN)</div>
-</div>
-</div>
+    <div class="dropdown">
+      <button class="dropbtn" id="langBtn">FI</button>
+      <div class="dropdown-content">
+        <div onclick="setLang('fi')">Suomi (FI)</div>
+        <div onclick="setLang('sv')">Svenska (SV)</div>
+        <div onclick="setLang('en')">English (EN)</div>
+      </div>
+    </div>
 
-<div class="dropdown">
-<button class="dropbtn" id="schemeBtn">Sanasto</button>
-<div class="dropdown-content" id="schemeFilter"></div>
-</div>
+    <div class="dropdown">
+      <button class="dropbtn" id="schemeBtn">Sanasto</button>
+      <div class="dropdown-content" id="schemeFilter"></div>
+    </div>
 
-<div class="dropdown">
-<button class="dropbtn" id="exportBtn">Export</button>
-<div class="dropdown-content">
-<div onclick="exportTTL()">SKOS Turtle (.ttl)</div>
-<div onclick="exportRDF()">RDF/XML (.rdf)</div>
-<div onclick="exportJSONLD()">JSON-LD (.jsonld)</div>
-</div>
-</div>
-
-</div>
+    <div class="dropdown">
+      <button class="dropbtn" id="exportBtn">Export</button>
+      <div class="dropdown-content">
+        <div onclick="exportTTL()">SKOS Turtle (.ttl)</div>
+        <div onclick="exportRDF()">RDF/XML (.rdf)</div>
+        <div onclick="exportJSONLD()">JSON-LD (.jsonld)</div>
+      </div>
+    </div>
+  </div>
 </header>
 
 <div class="layout">
-<div class="panel">
-<div class="list" id="list"></div>
-</div>
-<div class="concept" id="view">Valitse käsite</div>
+  <div class="panel">
+    <div class="list" id="list"></div>
+  </div>
+  <div class="concept" id="view">Valitse käsite</div>
 </div>
 
 <script>
 const UI={
-fi:{selectConcept:"Valitse käsite",terms:"Termit",definition:"Määritelmä",related:"Liittyvät käsitteet",sources:"Lähteet",uri:"URI",vocab:"Sanasto",export:"Export",lang:"Kieli",term:"Termi",type:"Tyyppi",note:"Huomautus",created:"Luotu",modified:"Muokattu viimeksi",feedbackHint:"Voit antaa palautetta käsitteestä sanaston vastuuorganisaatiolle.",feedbackLink:"Anna palautetta käsitteestä"},
-sv:{selectConcept:"Välj begrepp",terms:"Termer",definition:"Definition",related:"Relaterade begrepp",sources:"Källor",uri:"URI",vocab:"Ordlistor",export:"Export",lang:"Språk",term:"Term",type:"Typ",note:"Anmärkning",created:"Skapad",modified:"Redigerad",feedbackHint:"Du kan ge respons om begreppet.",feedbackLink:"Ge respons"},
-en:{selectConcept:"Select concept",terms:"Terms",definition:"Definition",related:"Related concepts",sources:"Sources",uri:"URI",vocab:"Terminologies",export:"Export",lang:"Language",term:"Term",type:"Type",note:"Note",created:"Created",modified:"Modified",feedbackHint:"You can give feedback.",feedbackLink:"Give feedback"}
+  fi:{selectConcept:"Valitse käsite",terms:"Termit",definition:"Määritelmä",related:"Liittyvät käsitteet",sources:"Lähteet",uri:"URI",vocab:"Sanasto",export:"Export",lang:"Kieli",term:"Termi",type:"Tyyppi",note:"Huomautus",created:"Luotu",modified:"Muokattu viimeksi",feedbackHint:"Voit antaa palautetta käsitteestä sanaston vastuuorganisaatiolle.",feedbackLink:"Anna palautetta käsitteestä"},
+  sv:{selectConcept:"Välj begrepp",terms:"Termer",definition:"Definition",related:"Relaterade begrepp",sources:"Källor",uri:"URI",vocab:"Ordlistor",export:"Export",lang:"Språk",term:"Term",type:"Typ",note:"Anmärkning",created:"Skapad",modified:"Redigerad",feedbackHint:"Du kan ge respons om begreppet.",feedbackLink:"Ge respons"},
+  en:{selectConcept:"Select concept",terms:"Terms",definition:"Definition",related:"Related concepts",sources:"Sources",uri:"URI",vocab:"Terminologies",export:"Export",lang:"Language",term:"Term",type:"Type",note:"Note",created:"Created",modified:"Modified",feedbackHint:"You can give feedback.",feedbackLink:"Give feedback"}
 };
 
 let db,concepts=[],schemes=[],map={};
@@ -88,202 +87,276 @@ let currentLang="fi";
 const BASE_URI="https://teemualaluusua.github.io/sanasto1/#/concept/";
 const ISSUES_REPO_URL="https://github.com/teemualaluusua/sanasto1";
 
-function hasType(obj,type){
-return [].concat(obj["@type"]||[]).includes(type);
+/* ===== Robust helpers ===== */
+const SKOS = "http://www.w3.org/2004/02/skos/core#";
+const TYPE_ALIASES = {
+  concept: ["skos:Concept", SKOS+"Concept"],
+  scheme:  ["skos:ConceptScheme", SKOS+"ConceptScheme"]
+};
+
+function toArray(v){
+  if(v==null) return [];
+  return Array.isArray(v) ? v : [v];
+}
+
+function asId(x){
+  if(x==null) return "";
+  if(typeof x === "string") return x;
+  if(typeof x === "object") return x["@id"] || x["@value"] || "";
+  return "";
+}
+
+function normalizedTypes(obj){
+  return toArray(obj["@type"]).map(asId).filter(Boolean);
+}
+
+function hasType(obj, kind){
+  const t = normalizedTypes(obj);
+  return TYPE_ALIASES[kind].some(k => t.includes(k));
+}
+
+function pickLangLiteral(val, lang){
+  // val can be: array of { @language, @value } OR single object OR string
+  const arr = toArray(val).map(v=>{
+    if(typeof v === "string") return { "@language":"", "@value":v };
+    return v;
+  });
+  return arr.find(x=>x && x["@language"]===lang)?.["@value"]
+      || arr[0]?.["@value"]
+      || (typeof val === "string" ? val : "");
 }
 
 function updateTopBar(){
-const t=UI[currentLang];
-document.getElementById("schemeBtn").textContent=t.vocab;
-document.getElementById("exportBtn").textContent=t.export;
+  const t=UI[currentLang];
+  document.getElementById("schemeBtn").textContent=t.vocab;
+  document.getElementById("exportBtn").textContent=t.export;
 }
 
+/* ===== Load ===== */
 fetch("sanasto.jsonld")
 .then(r=>r.json())
 .then(j=>{
-db=j;
+  db=j;
 
-/* SANASTOT (ConceptScheme) */
-schemes=(j["@graph"]||[])
-.filter(x=>hasType(x,"skos:ConceptScheme"));
+  const graph = j["@graph"] || [];
 
-/* KÄSITTEET */
-concepts=(j["@graph"]||[])
-.filter(x=>hasType(x,"skos:Concept"))
-.map(c=>({
-id:c["@id"].split("/").pop(),
-scheme:(c["skos:inScheme"]||[])[0]?.split("/").pop(),
-terms:extractTerms(c),
-definitions:extractDefs(c),
-notes:extractNotes(c),
-sources:extractSources(c),
-relations:extractRelated(c),
-created:c["dcterms:created"]?.["@value"],
-modified:c["dcterms:modified"]?.["@value"]
-}));
+  schemes = graph
+    .filter(x=>hasType(x,"scheme"))
+    .map(s=>({
+      raw:s,
+      id: (asId(s["@id"]).split("/").pop()) || asId(s["@id"]),
+      label: pickLangLiteral(s["skos:prefLabel"], currentLang) || asId(s["@id"])
+    }));
 
-concepts.forEach((c,i)=>map[c.id]=i);
+  concepts = graph
+    .filter(x=>hasType(x,"concept"))
+    .map(c=>{
+      const inScheme = toArray(c["skos:inScheme"])[0];
+      const schemeId = asId(inScheme).split("/").pop(); // handles string and {"@id":...}
+      return {
+        id: asId(c["@id"]).split("/").pop(),
+        scheme: schemeId || "",
+        terms: extractTerms(c),
+        definitions: extractDefs(c),
+        notes: extractNotes(c),
+        sources: extractSources(c),
+        relations: extractRelated(c),
+        created: c["dcterms:created"]?.["@value"],
+        modified: c["dcterms:modified"]?.["@value"]
+      };
+    });
 
-renderList();
-openFromHash();
-updateTopBar();
+  concepts.forEach((c,i)=>map[c.id]=i);
+
+  // If no schemes found, create a pseudo-scheme so list isn't empty
+  if(schemes.length === 0){
+    schemes = [{ id:"__all__", label: UI[currentLang].vocab, raw:null }];
+    concepts = concepts.map(c=>({ ...c, scheme:"__all__" }));
+  }else{
+    // If some concepts have missing scheme, put them into "__other__"
+    const hasMissing = concepts.some(c=>!c.scheme);
+    if(hasMissing){
+      schemes.push({ id:"__other__", label:"(Muut)", raw:null });
+      concepts = concepts.map(c=>({ ...c, scheme: c.scheme || "__other__" }));
+    }
+  }
+
+  renderList();
+  openFromHash();
+  updateTopBar();
+})
+.catch(err=>{
+  console.error("Failed to load sanasto.jsonld", err);
+  document.getElementById("list").innerHTML =
+    `<div class="item">Virhe: sanasto.jsonld ei lataudu (katso Console)</div>`;
 });
 
 window.addEventListener("hashchange",openFromHash);
 document.getElementById("search").addEventListener("input",renderList);
 
+/* ===== Language ===== */
 function setLang(l){
-currentLang=l;
-document.getElementById("langBtn").textContent=l.toUpperCase();
-updateTopBar();
-renderList();
-openFromHash();
+  currentLang=l;
+  document.getElementById("langBtn").textContent=l.toUpperCase();
+  updateTopBar();
+
+  // update scheme labels for current language
+  schemes = schemes.map(s=>({
+    ...s,
+    label: s.raw ? (pickLangLiteral(s.raw["skos:prefLabel"], currentLang) || s.label) : s.label
+  }));
+
+  renderList();
+  openFromHash();
 }
 
+/* ===== Terms ===== */
 function getTerm(c){
-return c.terms?.find(t=>t.lang===currentLang && t.type==="Preferred")
-|| c.terms?.find(t=>t.lang===currentLang)
-|| c.terms?.[0];
+  return c.terms?.find(t=>t.lang===currentLang && t.type==="Preferred")
+      || c.terms?.find(t=>t.lang===currentLang)
+      || c.terms?.[0];
 }
 
-function getSchemeLabel(s){
-const labels=s["skos:prefLabel"]||[];
-return labels.find(x=>x["@language"]===currentLang)?.["@value"]
-|| labels[0]?.["@value"]
-|| s["@id"];
-}
-
+/* ===== List ===== */
 function renderList(){
-const q=document.getElementById("search").value.toLowerCase();
-const el=document.getElementById("list");
-el.innerHTML="";
+  const q=document.getElementById("search").value.toLowerCase();
+  const el=document.getElementById("list");
+  el.innerHTML="";
 
-schemes.forEach(s=>{
-const sid=s["@id"].split("/").pop();
+  schemes.forEach(s=>{
+    const items=concepts
+      .filter(c=>c.scheme===s.id)
+      .filter(c=>{
+        const t=getTerm(c)?.label?.toLowerCase()||"";
+        return t.includes(q);
+      });
 
-const items=concepts
-.filter(c=>c.scheme===sid)
-.filter(c=>{
-const t=getTerm(c)?.label?.toLowerCase()||"";
-return t.includes(q);
-});
+    if(items.length===0) return;
 
-if(items.length===0) return;
+    const header=document.createElement("div");
+    header.className="schemeHeader";
+    header.textContent=s.label || s.id;
+    el.appendChild(header);
 
-const header=document.createElement("div");
-header.className="schemeHeader";
-header.textContent=getSchemeLabel(s);
-el.appendChild(header);
-
-items.forEach(c=>{
-const t=getTerm(c)?.label||c.id;
-const div=document.createElement("div");
-div.className="item";
-const a=document.createElement("a");
-a.href="#/concept/"+encodeURIComponent(c.id);
-a.textContent=t;
-div.appendChild(a);
-el.appendChild(div);
-});
-});
+    items.forEach(c=>{
+      const t=getTerm(c)?.label||c.id;
+      const div=document.createElement("div");
+      div.className="item";
+      const a=document.createElement("a");
+      a.href="#/concept/"+encodeURIComponent(c.id);
+      a.textContent=t;
+      div.appendChild(a);
+      el.appendChild(div);
+    });
+  });
 }
 
+/* ===== Helpers ===== */
 function isHttpUrl(s){return /^https?:\/\//i.test(String(s||""));}
 
 function makeIssueURL(label,uri){
-return ISSUES_REPO_URL+"/issues/new?title="+encodeURIComponent("Palaute käsitteestä: "+label)+"&body="+encodeURIComponent("Käsite: "+label+"\nURI: "+uri);
+  return ISSUES_REPO_URL+"/issues/new?title="
+    +encodeURIComponent("Palaute käsitteestä: "+label)
+    +"&body="+encodeURIComponent("Käsite: "+label+"\nURI: "+uri);
 }
 
+/* ===== Concept view ===== */
 function renderConcept(id){
-const c=concepts[map[id]];
-if(!c)return;
+  const c=concepts[map[id]];
+  if(!c)return;
 
-const tUI=UI[currentLang];
-const term=getTerm(c);
-const label=term?.label||id;
-const conceptURI=BASE_URI+encodeURIComponent(id);
+  const tUI=UI[currentLang];
+  const term=getTerm(c);
+  const label=term?.label||id;
+  const conceptURI=BASE_URI+encodeURIComponent(id);
 
-const termsRows=(c.terms||[]).map(t=>`
-<tr><td>${t.lang}</td><td>${t.label}</td><td>${t.type||""}</td></tr>
-`).join("");
+  const termsRows=(c.terms||[]).map(t=>`
+    <tr><td>${t.lang}</td><td>${t.label}</td><td>${t.type||""}</td></tr>
+  `).join("");
 
-const defs=(c.definitions||[]).map(d=>`
-<div><b>${d.lang.toUpperCase()}</b> ${d.text}</div>
-`).join("")||"—";
+  const defs=(c.definitions||[]).map(d=>`
+    <div><b>${(d.lang||"").toUpperCase()}</b> ${d.text}</div>
+  `).join("")||"—";
 
-const notes=(c.notes||[]).map(n=>`
-<div><b>${n.lang.toUpperCase()}</b> ${n.text}</div>
-`).join("")||"—";
+  const notes=(c.notes||[]).map(n=>`
+    <div><b>${(n.lang||"").toUpperCase()}</b> ${n.text}</div>
+  `).join("")||"—";
 
-const src=(c.sources||[]).map(s=>{
-const v=s.label;
-const link=isHttpUrl(v)?`<a class="link" href="${v}" target="_blank">${v}</a>`:v;
-return `<div>${link}</div>`;
-}).join("")||"—";
+  const src=(c.sources||[]).map(s=>{
+    const v=s.label;
+    const link=isHttpUrl(v)?`<a class="link" href="${v}" target="_blank" rel="noopener">${v}</a>`:String(v||"");
+    return `<div>${link}</div>`;
+  }).join("")||"—";
 
-const rel=(c.relations?.related||[]).map(r=>{
-const rc=concepts[map[r]];
-const lbl=getTerm(rc)?.label||r;
-return `<li><a class="link" href="#/concept/${encodeURIComponent(r)}">${lbl}</a></li>`;
-}).join("");
+  const rel=(c.relations?.related||[]).map(r=>{
+    const rc=concepts[map[r]];
+    const lbl=getTerm(rc)?.label||r;
+    return `<li><a class="link" href="#/concept/${encodeURIComponent(r)}">${lbl}</a></li>`;
+  }).join("");
 
-const feedbackURL=makeIssueURL(label,conceptURI);
+  const feedbackURL=makeIssueURL(label,conceptURI);
 
-document.getElementById("view").innerHTML=`
-<h1>${label}</h1>
+  document.getElementById("view").innerHTML=`
+    <h1>${label}</h1>
 
-<div class="section">
-<b>${tUI.uri}</b><br>
-<a class="link" href="${conceptURI}">${conceptURI}</a>
-</div>
+    <div class="section">
+      <b>${tUI.uri}</b><br>
+      <a class="link" href="${conceptURI}">${conceptURI}</a>
+    </div>
 
-<div class="section">
-<h3>${tUI.terms}</h3>
-<table>
-<tr><th>${tUI.lang}</th><th>${tUI.term}</th><th>${tUI.type}</th></tr>
-${termsRows}
-</table>
-</div>
+    <div class="section">
+      <h3>${tUI.terms}</h3>
+      <table>
+        <tr><th>${tUI.lang}</th><th>${tUI.term}</th><th>${tUI.type}</th></tr>
+        ${termsRows}
+      </table>
+    </div>
 
-<div class="section"><h3>${tUI.definition}</h3>${defs}</div>
-<div class="section"><h3>${tUI.note}</h3>${notes}</div>
-<div class="section"><h3>${tUI.sources}</h3>${src}</div>
+    <div class="section"><h3>${tUI.definition}</h3>${defs}</div>
+    <div class="section"><h3>${tUI.note}</h3>${notes}</div>
+    <div class="section"><h3>${tUI.sources}</h3>${src}</div>
 
-<div class="section"><h3>${tUI.related}</h3><ul>${rel}</ul></div>
+    <div class="section"><h3>${tUI.related}</h3><ul>${rel}</ul></div>
 
-<div class="feedbackBox">
-<div class="feedbackHint">${tUI.feedbackHint}</div>
-<a class="link" href="${feedbackURL}" target="_blank">${tUI.feedbackLink} ↗</a>
-</div>
-`;
+    <div class="feedbackBox">
+      <div class="feedbackHint">${tUI.feedbackHint}</div>
+      <a class="link" href="${feedbackURL}" target="_blank" rel="noopener">${tUI.feedbackLink} ↗</a>
+    </div>
+  `;
 }
 
 function openFromHash(){
-const h=window.location.hash;
-const m=h.match(/^#\/concept\/(.+)$/);
-if(!m)return;
-const id=decodeURIComponent(m[1]);
-if(map[id]!==undefined) renderConcept(id);
+  const h=window.location.hash;
+  const m=h.match(/^#\/concept\/(.+)$/);
+  if(!m) return;
+  const id=decodeURIComponent(m[1]);
+  if(map[id]!==undefined) renderConcept(id);
 }
 
+/* ===== JSON-LD parsing ===== */
 function extractTerms(c){
-const out=[];
-(c["skos:prefLabel"]||[]).forEach(t=>out.push({lang:t["@language"],label:t["@value"],type:"Preferred"}));
-(c["skos:altLabel"]||[]).forEach(t=>out.push({lang:t["@language"],label:t["@value"],type:"Alt"}));
-return out;
+  const out=[];
+  toArray(c["skos:prefLabel"]).forEach(t=>out.push({lang:t["@language"],label:t["@value"],type:"Preferred"}));
+  toArray(c["skos:altLabel"]).forEach(t=>out.push({lang:t["@language"],label:t["@value"],type:"Alt"}));
+  return out;
 }
 function extractDefs(c){
-return (c["skos:definition"]||[]).map(d=>({lang:d["@language"],text:d["@value"]}));
+  return toArray(c["skos:definition"]).map(d=>({lang:d["@language"],text:d["@value"]}));
 }
 function extractNotes(c){
-return (c["skos:note"]||[]).map(n=>({lang:n["@language"],text:n["@value"]}));
+  return toArray(c["skos:note"]).map(n=>({lang:n["@language"],text:n["@value"]}));
 }
 function extractSources(c){
-return (c["dcterms:source"]||[]).map(s=>({label:s["@value"]||s}));
+  return toArray(c["dcterms:source"]).map(s=>({label:s["@value"]||s}));
 }
 function extractRelated(c){
-return{related:(c["skos:related"]||[]).map(u=>u.split("/").pop())};
+  return {related: toArray(c["skos:related"]).map(u=>asId(u).split("/").pop()).filter(Boolean)};
 }
+
+/* EXPORT (placeholders) */
+function exportTTL(){}
+function exportJSONLD(){}
+function exportRDF(){}
 </script>
 </body>
 </html>
