@@ -246,9 +246,18 @@ function renderConcept(id){
     </div>
   `).join("")||"—";
 
-  const src=(c.sources||[]).map(s=>`
-    <div>${s.lang?`<b>${s.lang.toUpperCase()}</b> `:""}${s.label}</div>
-  `).join("")||"—";
+const src=(c.sources||[]).map(s=>{
+  const url = s.label;
+  const isURL = /^https?:\/\//i.test(url);
+  return `
+    <div>
+      ${s.lang?`<b>${s.lang.toUpperCase()}</b> `:""}
+      ${isURL
+        ? `<a class="link" href="${url}" target="_blank" rel="noopener">${url}</a>`
+        : url}
+    </div>
+  `;
+}).join("") || "—";
 
   const rel=(c.relations?.related||[]).map(r=>{
     const rc=concepts[map[r]];
