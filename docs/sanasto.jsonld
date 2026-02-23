@@ -2,14 +2,30 @@
   "@context": {
     "skos": "http://www.w3.org/2004/02/skos/core#",
     "dcterms": "http://purl.org/dc/terms/",
-    "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "betk": "https://w3id.org/betk/def/"
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
     {
+      "@id": "https://w3id.org/betk/sanasto/rakentamisen-tieto-ja-informaatiomallit",
+      "@type": "skos:ConceptScheme",
+      "skos:prefLabel": [
+        {
+          "@value": "Rakentamisen tieto- ja informaatiomallien sanasto",
+          "@language": "fi"
+        },
+        {
+          "@value": "Ordlista för data- och informationsmodeller inom byggande (utkast)",
+          "@language": "sv"
+        },
+        {
+          "@value": "Glossary of Data and Information Models in Construction (draft)",
+          "@language": "en"
+        }
+      ]
+    },
+    {
       "@id": "https://w3id.org/betk/sanasto/digitaalinen-kaksonen",
       "@type": "skos:Concept",
-      "betk:status": "Luonnos",
       "skos:inScheme": "https://w3id.org/betk/sanasto/rakentamisen-tieto-ja-informaatiomallit",
       "skos:prefLabel": [
         {
@@ -40,9 +56,7 @@
       "skos:note": [
         {
           "@value": "Digitaalisen kaksosen avulla voi hallita, muuttaa ja jakaa sen fyysiseen vastineeseen liittyvää tietoa erilaisia käyttötarkoituksia varten. Rakennuskohteen digitaalinen kaksonen voi sisältää kohteen elinkaaren eri vaiheissa käytettävien rakennuskohteen informaatiomallien tietoja. Rakennuksen käyttövaiheen digitaalinen kaksonen voi sisältää esimerkiksi rakennuksen ajantasaiset kulutustiedot ja -historian sekä tietoa rakennukseen tehdyistä korjauksista ja muutostöistä koko rakennuksen elinkaaren ajalta.",
-          "@language": "fi",
-          "source": "",
-          "quote": false
+          "@language": "fi"
         }
       ],
       "dcterms:source": [
@@ -63,7 +77,6 @@
     {
       "@id": "https://w3id.org/betk/sanasto/fyysinen_tietomalli",
       "@type": "skos:Concept",
-      "betk:status": "Luonnos",
       "skos:inScheme": "https://w3id.org/betk/sanasto/rakentamisen-tieto-ja-informaatiomallit",
       "skos:prefLabel": [
         {
@@ -88,9 +101,7 @@
       "skos:note": [
         {
           "@value": "Fyysinen tietomalli on loogisesta tietomallista tarkemmalle tasolle viety kuvaus, jossa otetaan kantaa tietokannan käytännön tekniseen toteutukseen valitulla teknologialla.",
-          "@language": "fi",
-          "source": "",
-          "quote": false
+          "@language": "fi"
         }
       ],
       "dcterms:source": [
@@ -107,20 +118,6 @@
         "@value": "2026-02-25T12:00",
         "@type": "xsd:dateTime"
       }
-    }
-  ],
-  "skos:prefLabel": [
-    {
-      "@value": "Rakentamisen tieto- ja informaatiomallien sanasto",
-      "@language": "fi"
-    },
-    {
-      "@value": "Ordlista för data- och informationsmodeller inom byggande (utkast)",
-      "@language": "sv"
-    },
-    {
-      "@value": "Glossary of Data and Information Models in Construction (draft)",
-      "@language": "en"
     }
   ]
 }
