@@ -151,4 +151,4 @@ out_path.write_text(
     encoding="utf-8"
 )
 
-print(f"OK built {len(concepts)} concepts → {out_path}")
+print(f"OK built {len(concepts)} concepts -> {out_path}")
