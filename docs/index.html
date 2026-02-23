@@ -32,6 +32,20 @@ th{background:#f9fafb;text-align:left}
 .noteSource{color:#6b7280;font-size:12px;margin-left:18px}
 .feedbackBox{margin-top:28px;padding-top:12px;border-top:1px solid #e5e7eb;}
 .feedbackHint{color:#6b7280;font-size:14px;margin-bottom:6px;}
+.infoBox{
+  border:1px solid #e5e7eb;
+  border-radius:6px;
+  background:#f9fafb;
+  padding:10px 12px;
+  margin-top:6px;
+}
+.infoRow{
+  margin-bottom:6px;
+}
+.infoLang{
+  font-weight:600;
+  margin-right:6px;
+}
 </style>
 </head>
 
@@ -274,13 +288,19 @@ function renderConcept(id){
     <tr><td>${t.lang}</td><td>${t.label}</td><td>${t.type||""}</td></tr>
   `).join("");
 
-  const defs=(c.definitions||[]).map(d=>`
-    <div><b>${(d.lang||"").toUpperCase()}</b> ${d.text}</div>
-  `).join("")||"—";
+const defs=(c.definitions||[]).map(d=>`
+  <div class="infoRow">
+    <span class="infoLang">${(d.lang||"").toUpperCase()}</span>
+    ${d.text}
+  </div>
+`).join("")||"—";
 
-  const notes=(c.notes||[]).map(n=>`
-    <div><b>${(n.lang||"").toUpperCase()}</b> ${n.text}</div>
-  `).join("")||"—";
+const notes=(c.notes||[]).map(n=>`
+  <div class="infoRow">
+    <span class="infoLang">${(n.lang||"").toUpperCase()}</span>
+    ${n.text}
+  </div>
+`).join("")||"—";
 
   const src=(c.sources||[]).map(s=>{
     const v=s.label;
@@ -312,11 +332,25 @@ function renderConcept(id){
       </table>
     </div>
 
-    <div class="section"><h3>${tUI.definition}</h3>${defs}</div>
-    <div class="section"><h3>${tUI.note}</h3>${notes}</div>
-    <div class="section"><h3>${tUI.sources}</h3>${src}</div>
+<div class="section">
+  <h3>${tUI.definition}</h3>
+  <div class="infoBox">${defs}</div>
+</div>
 
-    <div class="section"><h3>${tUI.related}</h3><ul>${rel}</ul></div>
+<div class="section">
+  <h3>${tUI.note}</h3>
+  <div class="infoBox">${notes}</div>
+</div>
+
+<div class="section">
+  <h3>${tUI.sources}</h3>
+  <div class="infoBox">${src}</div>
+</div>
+
+<div class="section">
+  <h3>${tUI.related}</h3>
+  <div class="infoBox"><ul>${rel}</ul></div>
+</div>
 
     <div class="feedbackBox">
       <div class="feedbackHint">${tUI.feedbackHint}</div>
