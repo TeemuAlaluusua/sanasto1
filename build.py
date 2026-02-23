@@ -1,4 +1,7 @@
-import pathlib, json, yaml, sys
+import pathlib
+import json
+import yaml
+import sys
 
 root = pathlib.Path(__file__).parent
 concept_dir = root / "concepts"
@@ -7,15 +10,20 @@ scheme_file = root / "schemes.yml"
 
 docs_dir.mkdir(exist_ok=True)
 
-def load_yaml(p):
-    return yaml.safe_load(p.read_text(encoding="utf-8"))
 
-scheme = load_yaml(scheme_file)["schemes"][0]
-base_uri = scheme["baseUri"]
+def load_yaml(path: pathlib.Path):
+    return yaml.safe_load(path.read_text(encoding="utf-8"))
+
+
+scheme_data = load_yaml(scheme_file)["schemes"][0]
+base_uri = scheme_data["baseUri"]
 
 concepts = []
 ids = set()
 
+# -----------------------------
+# CONCEPTS
+# -----------------------------
 for f in concept_dir.glob("*.yml"):
     if f.name.startswith("_"):
         continue
@@ -35,11 +43,7 @@ for f in concept_dir.glob("*.yml"):
         "@type": "skos:Concept"
     }
 
-    # STATUS
-    if "status" in c:
-        obj["betk:status"] = c["status"]
-
-    # SCHEME
+    # SCHEME LINK
     if "schemeId" in c:
         obj["skos:inScheme"] = base_uri + c["schemeId"]
 
@@ -74,9 +78,7 @@ for f in concept_dir.glob("*.yml"):
     for n in c.get("notes", []):
         notes.append({
             "@value": n["text"],
-            "@language": n.get("lang", "fi"),
-            "source": n.get("source", ""),
-            "quote": n.get("quote", False)
+            "@language": n.get("lang", "fi")
         })
     if notes:
         obj["skos:note"] = notes
@@ -101,36 +103,52 @@ for f in concept_dir.glob("*.yml"):
         if vals:
             obj["skos:" + key] = [base_uri + v for v in vals]
 
-    # METADATA (created / modified)
+    # METADATA
     meta = c.get("metadata", {})
-    created = meta.get("created")
-    modified = meta.get("modified")
-
-    if created:
-        obj["dcterms:created"] = {"@value": created, "@type": "xsd:dateTime"}
-    if modified:
-        obj["dcterms:modified"] = {"@value": modified, "@type": "xsd:dateTime"}
+    if meta.get("created"):
+        obj["dcterms:created"] = {
+            "@value": meta["created"],
+            "@type": "xsd:dateTime"
+        }
+    if meta.get("modified"):
+        obj["dcterms:modified"] = {
+            "@value": meta["modified"],
+            "@type": "xsd:dateTime"
+        }
 
     concepts.append(obj)
 
+# -----------------------------
+# CONCEPT SCHEME
+# -----------------------------
+scheme_uri = base_uri + scheme_data["id"]
+
+scheme_obj = {
+    "@id": scheme_uri,
+    "@type": "skos:ConceptScheme",
+    "skos:prefLabel": [
+        {"@value": scheme_data["prefLabel"]["fi"], "@language": "fi"},
+        {"@value": scheme_data["prefLabel"]["sv"], "@language": "sv"},
+        {"@value": scheme_data["prefLabel"]["en"], "@language": "en"}
+    ]
+}
+
+# -----------------------------
+# OUTPUT
+# -----------------------------
 out = {
     "@context": {
         "skos": "http://www.w3.org/2004/02/skos/core#",
         "dcterms": "http://purl.org/dc/terms/",
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "betk": "https://w3id.org/betk/def/"
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
-    "@graph": concepts,
-    "skos:prefLabel": [
-        {"@value": scheme["prefLabel"]["fi"], "@language": "fi"},
-        {"@value": scheme["prefLabel"]["sv"], "@language": "sv"},
-        {"@value": scheme["prefLabel"]["en"], "@language": "en"}
-    ]
+    "@graph": [scheme_obj] + concepts
 }
 
-(docs_dir / "sanasto.jsonld").write_text(
+out_path = docs_dir / "sanasto.jsonld"
+out_path.write_text(
     json.dumps(out, ensure_ascii=False, indent=2),
     encoding="utf-8"
 )
 
-print("OK built", len(concepts), "concepts → docs/sanasto.jsonld")
+print(f"OK built {len(concepts)} concepts → {out_path}")
