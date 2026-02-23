@@ -120,7 +120,7 @@
       }
     },
     {
-      "@id": "https://w3id.org/betk/sanasto/",
+      "@id": "https://w3id.org/betk/sanasto/informaatiomalli",
       "@type": "skos:Concept",
       "skos:inScheme": "https://w3id.org/betk/sanasto/rakentamisen-tieto-ja-informaatiomallit",
       "skos:prefLabel": [
