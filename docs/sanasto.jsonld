@@ -175,7 +175,982 @@
         "@value": "2026-02-25T12:00",
         "@type": "xsd:dateTime"
       }
+    },
+    {
+      "@id": "https://w3id.org/betk/sanasto/informaatiomallinnus",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://w3id.org/betk/sanasto/rakentamisen-tieto-ja-informaatiomallit",
+      "skos:prefLabel": [
+        {
+          "@value": "informaatiomallinnus",
+          "@language": "fi"
+        },
+        {
+          "@value": "informationsmodellering",
+          "@language": "sv"
+        },
+        {
+          "@value": "information modeling",
+          "@language": "en"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "mallinnus, jonka tuloksena syntyy <a href=\"https://iri.suomi.fi/terminology/rymallit/c15\">informaatiomalli</a>",
+          "@language": "fi"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Käsitejärjestelmäkaavio: https://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg",
+          "@language": "fi"
+        },
+        {
+          "@value": "Osa informaatiomallinnuksessa syntyvästä tiedosta on koneluettavassa, tietomallien mukaisessa muodossa.",
+          "@language": "fi"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "https://iri.suomi.fi/terminology/rymallit/c4",
+          "@language": ""
+        }
+      ],
+      "dcterms:created": {
+        "@value": "2025-12-23T14:08",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2025-12-23T14:08",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://w3id.org/betk/sanasto/kaavatietomalli",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://w3id.org/betk/sanasto/rakentamisen-tieto-ja-informaatiomallit",
+      "skos:prefLabel": [
+        {
+          "@value": "kaavatietomalli",
+          "@language": "fi"
+        },
+        {
+          "@value": "plandatamodell",
+          "@language": "sv"
+        },
+        {
+          "@value": "data model for land use plans",
+          "@language": "en"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "<a href=\"https://iri.suomi.fi/terminology/rymallit/c6\">tietomalli</a>, joka on tarkoitettu kaavan tietojen kuvaamiseen",
+          "@language": "fi"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Käsitejärjestelmäkaavio: https://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg",
+          "@language": "fi"
+        },
+        {
+          "@value": "Valtakunnallinen kaavatietomalli koostuu kaavaa, kaavakohteita ja kaavamääräyksiä kuvaavista osista.",
+          "@language": "fi"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "https://iri.suomi.fi/terminology/rymallit/c10",
+          "@language": ""
+        },
+        {
+          "@value": "https://iri.suomi.fi/terminology/rakymp/c782",
+          "@language": ""
+        }
+      ],
+      "dcterms:created": {
+        "@value": "2025-12-23T14:08",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2025-12-23T14:08",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://w3id.org/betk/sanasto/kasitemalli",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://w3id.org/betk/sanasto/rakentamisen-tieto-ja-informaatiomallit",
+      "skos:prefLabel": [
+        {
+          "@value": "käsitemalli",
+          "@language": "fi"
+        },
+        {
+          "@value": "begreppsmodel",
+          "@language": "sv"
+        },
+        {
+          "@value": "conceptual data model",
+          "@language": "en"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "<a href=\"https://iri.suomi.fi/terminology/rymallit/c6\">tietomalli</a>, joka kuvaa tiettyyn tarkoitukseen tarvittavat käsitetiedot ja käsitetietojen väliset suhteet yleisellä tasolla",
+          "@language": "fi"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Käsitejärjestelmäkaavio: https://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg",
+          "@language": "fi"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "https://iri.suomi.fi/terminology/rymallit/c12",
+          "@language": ""
+        }
+      ],
+      "dcterms:created": {
+        "@value": "2025-12-23T14:08",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2025-12-23T14:08",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://w3id.org/betk/sanasto/looginen-tietomalli",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://w3id.org/betk/sanasto/rakentamisen-tieto-ja-informaatiomallit",
+      "skos:prefLabel": [
+        {
+          "@value": "looginen tietomalli",
+          "@language": "fi"
+        },
+        {
+          "@value": "logisk datamodell",
+          "@language": "sv"
+        },
+        {
+          "@value": "logical data model",
+          "@language": "en"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "<a href=\"https://iri.suomi.fi/terminology/rymallit/c6\">tietomalli</a>, joka kuvaa tiedot ja tietorakenteet loogisella, tiedon muodosta riippumattomalla tavalla",
+          "@language": "fi"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Käsitejärjestelmäkaavio: https://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg",
+          "@language": "fi"
+        },
+        {
+          "@value": "Looginen tietomalli on käsitemallista tarkemmalle tasolle viety kuvaus.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Looginen tietomalli kuvaa tarkastelun kohteena olevat luokat, niiden väliset assosiaatiot (suhteet) ja luokkiin sisältyvät attribuutit.",
+          "@language": "fi"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "https://iri.suomi.fi/terminology/rymallit/c13",
+          "@language": ""
+        },
+        {
+          "@value": "https://iri.suomi.fi/terminology/yti/concept-73",
+          "@language": ""
+        }
+      ],
+      "dcterms:created": {
+        "@value": "2025-12-23T14:08",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2025-12-23T14:08",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://w3id.org/betk/sanasto/loppukatselmusmalli",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://w3id.org/betk/sanasto/rakentamisen-tieto-ja-informaatiomallit",
+      "skos:prefLabel": [
+        {
+          "@value": "loppukatselmusmalli",
+          "@language": "fi"
+        },
+        {
+          "@value": "as-built-modell för slutsyn",
+          "@language": "sv"
+        },
+        {
+          "@value": "as-built model for final inspection",
+          "@language": "en"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "ennen <a href=\"https://iri.suomi.fi/terminology/rymallit/c28\">rakennuskohteen</a> käyttöönottoa vaadittava <a href=\"https://iri.suomi.fi/terminology/rymallit/c16\">rakennuskohteen informaatiomalli</a>, joka sisältää <a href=\"https://iri.suomi.fi/terminology/rymallit/c18\">lupamallia</a> vastaavat, toteutuksen mukaisesti päivitetyt tiedot",
+          "@language": "fi"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Käsitejärjestelmäkaavio: https://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg",
+          "@language": "fi"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "https://iri.suomi.fi/terminology/rymallit/c19",
+          "@language": ""
+        }
+      ],
+      "dcterms:created": {
+        "@value": "2025-12-23T14:08",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2025-12-23T14:08",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://w3id.org/betk/sanasto/lupamalli",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://w3id.org/betk/sanasto/rakentamisen-tieto-ja-informaatiomallit",
+      "skos:prefLabel": [
+        {
+          "@value": "lupamalli",
+          "@language": "fi"
+        },
+        {
+          "@value": "informationsmodell för byggnadslov",
+          "@language": "sv"
+        },
+        {
+          "@value": "information model for building permit",
+          "@language": "en"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "<a href=\"https://iri.suomi.fi/terminology/rymallit/c16\">rakennuskohteen informaatiomalli</a>, joka sisältää ne <a href=\"https://iri.suomi.fi/terminology/rymallit/c22\">suunnitelmamallin</a> tiedot, jotka tarvitaan rakentamislupaprosessin aikana",
+          "@language": "fi"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Rakentamislupahakemuksessa ei välttämättä toimiteta erityissuunnitelmia, mutta niitä voidaan edellyttää toimitettavaksi rakentamislupaprosessin aikana ennen rakennustyön aloittamista.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Lupamallin tulee noudattaa rakentamisen lupapäätösten tietomallia. Lupamalli voidaan toimittaa esimerkiksi SFS-EN ISO 16739-1 -standardin mukaisessa koneluettavassa IFC-muodossa (Industry Foundation Classes).",
+          "@language": "fi"
+        },
+        {
+          "@value": "Käsitejärjestelmäkaavio: https://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg",
+          "@language": "fi"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "https://iri.suomi.fi/terminology/rymallit/c18",
+          "@language": ""
+        }
+      ],
+      "dcterms:created": {
+        "@value": "2025-12-23T14:08",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2025-12-23T14:08",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://w3id.org/betk/sanasto/mallinnus",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://w3id.org/betk/sanasto/rakentamisen-tieto-ja-informaatiomallit",
+      "skos:prefLabel": [
+        {
+          "@value": "mallinnus",
+          "@language": "fi"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "https://iri.suomi.fi/terminology/rymallit/c1",
+          "@language": ""
+        }
+      ],
+      "dcterms:created": {
+        "@value": "2025-12-23T14:08",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2025-12-23T14:08",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://w3id.org/betk/sanasto/omaisuuskohteen-informaatiomalli",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://w3id.org/betk/sanasto/rakentamisen-tieto-ja-informaatiomallit",
+      "skos:prefLabel": [
+        {
+          "@value": "omaisuuskohteen informaatiomalli",
+          "@language": "fi"
+        },
+        {
+          "@value": "tillgångsinformationsmodell",
+          "@language": "sv"
+        },
+        {
+          "@value": "asset information model",
+          "@language": "en"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "<a href=\"https://iri.suomi.fi/terminology/rymallit/c16\">rakennuskohteen informaatiomalli</a>, joka sisältää <a href=\"https://iri.suomi.fi/terminology/rymallit/c28\">rakennuskohteen</a> käyttö- ja ylläpitovaiheen aikana tarvittavat tiedot",
+          "@language": "fi"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Käsitejärjestelmäkaavio: https://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg",
+          "@language": "fi"
+        },
+        {
+          "@value": "Omaisuuskohteen informaatiomallin sisältö perustuu usein projektin informaatiomalliin, johon kuuluvat esimerkiksi suunnitelma - ja toteumamallin tiedot.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Omaisuuskohteen informaatiomalli tukee omaisuudenhallintaa.",
+          "@language": "fi"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "https://iri.suomi.fi/terminology/rymallit/c25",
+          "@language": ""
+        }
+      ],
+      "dcterms:created": {
+        "@value": "2025-12-23T14:08",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2025-12-23T14:08",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://w3id.org/betk/sanasto/projektin-informaatiomalli",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://w3id.org/betk/sanasto/rakentamisen-tieto-ja-informaatiomallit",
+      "skos:prefLabel": [
+        {
+          "@value": "projektin informaatiomalli",
+          "@language": "fi"
+        },
+        {
+          "@value": "projektinformationsmodell",
+          "@language": "sv"
+        },
+        {
+          "@value": "project information model",
+          "@language": "en"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "<a href=\"https://iri.suomi.fi/terminology/rymallit/c16\">rakennuskohteen informaatiomalli</a>, joka sisältää rakennusprojektin suunnittelu- ja rakennusvaiheen toteutukseen tarvittavat tiedot",
+          "@language": "fi"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Projektin informaatiomalli sisältää suunnitelmamallin ja toteumamallin tietojen lisäksi esimerkiksi aikataulutietoja sekä hankintoihin ja työmaalogistiikkaan liittyviä tietoja.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Projektin informaatiomalli tukee projektin toteutusta ja vaikuttaa omaisuuskohteen informaatiomalliin. Projektin informaatiomalli tarvitaan myös pitkäaikaista projektiarkistointia ja auditointia varten.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Käsitejärjestelmäkaavio: https://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg",
+          "@language": "fi"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "https://iri.suomi.fi/terminology/rymallit/c21",
+          "@language": ""
+        }
+      ],
+      "dcterms:created": {
+        "@value": "2025-12-23T14:08",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2025-12-23T14:08",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://w3id.org/betk/sanasto/rakennus",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://w3id.org/betk/sanasto/rakentamisen-tieto-ja-informaatiomallit",
+      "skos:prefLabel": [
+        {
+          "@value": "rakennus",
+          "@language": "fi"
+        },
+        {
+          "@value": "byggnad",
+          "@language": "sv"
+        },
+        {
+          "@value": "building",
+          "@language": "en"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "paikallaan pysyväksi tarkoitettu, omalla sisäänkäynnillä varustettu, katettu ja ulkoseinien rajaama <a href=\"https://iri.suomi.fi/terminology/rymallit/c28\">rakennuskohde</a>",
+          "@language": "fi"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Toisistaan erillään olevat rakennukset ovat aina itsenäisiä rakennuksia. Kaikki itsenäiset rakennukset eivät kuitenkaan ole erillään muista rakennuksista esimerkiksi kadun varteen rakennettaessa. Esimerkiksi rivitalot, paritalot ja kerrostalot ovat itsenäisiä rakennuksia.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Rakennus on fyysinen kokonaisuus. Rakennusta koskevaa tietoa voidaan esittää rakennuskohdetietueessa.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Rakennuksen olosuhteiden ja mitoituksen tulisi pääasiallisesti mahdollistaa ihmisten toiminta ainakin osassa rakennuksen tiloista.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Käsitejärjestelmäkaavio: https://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg",
+          "@language": "fi"
+        },
+        {
+          "@value": "Rakennuksen ulkovaipan sisäpuolella on sisätiloja. Rakennuksen ulkovaipan rajapintaan rajautuu välittömästi rakennuksen yhteydessä olevia ja rakennukseen kuuluvia ulkotiloja, kuten parvekkeet, terassit, katokset, lavat jne.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Sisäänkäynnillä tarkoitetaan ovea tai aukkoa, josta on kulku rakennukseen sen ulkopuolelta.",
+          "@language": "fi"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "https://iri.suomi.fi/terminology/rymallit/c27",
+          "@language": ""
+        },
+        {
+          "@value": "https://iri.suomi.fi/terminology/rakymp/c6",
+          "@language": ""
+        }
+      ],
+      "dcterms:created": {
+        "@value": "2025-12-23T14:08",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2025-12-23T14:08",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://w3id.org/betk/sanasto/rakennuskohde",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://w3id.org/betk/sanasto/rakentamisen-tieto-ja-informaatiomallit",
+      "skos:prefLabel": [
+        {
+          "@value": "rakennuskohde",
+          "@language": "fi"
+        },
+        {
+          "@value": "byggnadsobjekt",
+          "@language": "sv"
+        },
+        {
+          "@value": "construction",
+          "@language": "en"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "fyysinen kokonaisuus, jota parhaillaan rakennetaan tai joka on rakennettu",
+          "@language": "fi"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Infrarakentamisessa rakennuskohteita voidaan kutsua infrakohteiksi. Niitä ovat esimerkiksi liikenneväylät, padot ja satamat.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Talonrakennuksessa rakennuskohteita ovat esimerkiksi rakennukset, rakennelmat ja niiden ulkoalueet.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Käsitejärjestelmäkaavio: https://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg",
+          "@language": "fi"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "https://iri.suomi.fi/terminology/rymallit/c28",
+          "@language": ""
+        },
+        {
+          "@value": "https://iri.suomi.fi/terminology/rakymp/c5",
+          "@language": ""
+        }
+      ],
+      "dcterms:created": {
+        "@value": "2025-12-23T14:08",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2025-12-23T14:08",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://w3id.org/betk/sanasto/rakennuskohteen-informaatiomalli",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://w3id.org/betk/sanasto/rakentamisen-tieto-ja-informaatiomallit",
+      "skos:prefLabel": [
+        {
+          "@value": "rakennuskohteen informaatiomalli",
+          "@language": "fi"
+        },
+        {
+          "@value": "informationsmodell av byggnadsobjekt",
+          "@language": "sv"
+        },
+        {
+          "@value": "information model of construction entity",
+          "@language": "en"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "<a href=\"https://iri.suomi.fi/terminology/rymallit/c15\">informaatiomalli</a>, joka sisältää <a href=\"https://iri.suomi.fi/terminology/rymallit/c28\">rakennuskohteen</a> tiedot",
+          "@language": "fi"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Käsitejärjestelmäkaavio: https://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg",
+          "@language": "fi"
+        },
+        {
+          "@value": "Erilaisilla rakennuskohteen informaatiomalleilla voidaan kuvata kohteen eri vaiheita koko sen elinkaaren ajan.",
+          "@language": "fi"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "https://iri.suomi.fi/terminology/rymallit/c16",
+          "@language": ""
+        }
+      ],
+      "dcterms:created": {
+        "@value": "2025-12-23T14:08",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2025-12-23T14:08",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://w3id.org/betk/sanasto/rakennuskohteen-informaatiomallinnus",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://w3id.org/betk/sanasto/rakentamisen-tieto-ja-informaatiomallit",
+      "skos:prefLabel": [
+        {
+          "@value": "rakennuskohteen informaatiomallinnus",
+          "@language": "fi"
+        },
+        {
+          "@value": "informationsmodellering av byggnadsobjekt",
+          "@language": "sv"
+        },
+        {
+          "@value": "information modeling of construction entity",
+          "@language": "en"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "<a href=\"https://iri.suomi.fi/terminology/rymallit/c4\">informaatiomallinnus</a>, jonka tuloksena syntyy <a href=\"https://iri.suomi.fi/terminology/rymallit/c16\">rakennuskohteen informaatiomalli</a>",
+          "@language": "fi"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Käsitejärjestelmäkaavio: https://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg",
+          "@language": "fi"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "https://iri.suomi.fi/terminology/rymallit/c5",
+          "@language": ""
+        }
+      ],
+      "dcterms:created": {
+        "@value": "2025-12-23T14:08",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2025-12-23T14:08",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://w3id.org/betk/sanasto/rakennuskohteen-tietomalli",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://w3id.org/betk/sanasto/rakentamisen-tieto-ja-informaatiomallit",
+      "skos:prefLabel": [
+        {
+          "@value": "rakennuskohteen tietomalli",
+          "@language": "fi"
+        },
+        {
+          "@value": "datamodell av byggnadsobjekt",
+          "@language": "sv"
+        },
+        {
+          "@value": "data model for construction entity",
+          "@language": "en"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "<a href=\"https://iri.suomi.fi/terminology/rymallit/c6\">tietomalli</a>, joka on tarkoitettu <a href=\"https://iri.suomi.fi/terminology/rymallit/c28\">rakennuskohteen</a> tietojen kuvaamiseen",
+          "@language": "fi"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Käsitejärjestelmäkaavio: https://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg",
+          "@language": "fi"
+        },
+        {
+          "@value": "Sekä talonrakennuksen että infrarakentamisen kohteet ovat rakennuskohteita.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Rakennuskohteen tietomalli esitetään usein koneluettavassa muodossa.",
+          "@language": "fi"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "https://iri.suomi.fi/terminology/rymallit/c8",
+          "@language": ""
+        }
+      ],
+      "dcterms:created": {
+        "@value": "2025-12-23T14:08",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2025-12-23T14:08",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://w3id.org/betk/sanasto/rakennuskohteen-tietomallinnus",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://w3id.org/betk/sanasto/rakentamisen-tieto-ja-informaatiomallit",
+      "skos:prefLabel": [
+        {
+          "@value": "rakennuskohteen tietomallinnus",
+          "@language": "fi"
+        },
+        {
+          "@value": "datamodellering av byggnadsobjekt",
+          "@language": "sv"
+        },
+        {
+          "@value": "data modeling of construction entity",
+          "@language": "en"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "<a href=\"https://iri.suomi.fi/terminology/rymallit/c2\">tietomallinnus</a>, jonka tuloksena syntyy <a href=\"https://iri.suomi.fi/terminology/rymallit/c8\">rakennuskohteen tietomalli</a>",
+          "@language": "fi"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Käsitejärjestelmäkaavio: https://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg",
+          "@language": "fi"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "https://iri.suomi.fi/terminology/rymallit/c3",
+          "@language": ""
+        }
+      ],
+      "dcterms:created": {
+        "@value": "2025-12-23T14:08",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2025-12-23T14:08",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://w3id.org/betk/sanasto/rakentamisen-lupapaatosten-tietomalli",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://w3id.org/betk/sanasto/rakentamisen-tieto-ja-informaatiomallit",
+      "skos:prefLabel": [
+        {
+          "@value": "rakentamisen lupapäätösten tietomalli",
+          "@language": "fi"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "https://iri.suomi.fi/terminology/rymallit/c9",
+          "@language": ""
+        }
+      ],
+      "dcterms:created": {
+        "@value": "2025-12-23T14:08",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2025-12-23T14:08",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://w3id.org/betk/sanasto/suunnitelmamalli",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://w3id.org/betk/sanasto/rakentamisen-tieto-ja-informaatiomallit",
+      "skos:prefLabel": [
+        {
+          "@value": "suunnitelmamalli",
+          "@language": "fi"
+        },
+        {
+          "@value": "projekteringsmodell",
+          "@language": "sv"
+        },
+        {
+          "@value": "design model",
+          "@language": "en"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "<a href=\"https://iri.suomi.fi/terminology/rymallit/c16\">rakennuskohteen informaatiomalli</a>, joka sisältää tiedot suunniteltavan <a href=\"https://iri.suomi.fi/terminology/rymallit/c28\">rakennuskohteen</a> rakenteista sekä rakennusosista ja niiden ominaisuuksista",
+          "@language": "fi"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Käsitejärjestelmäkaavio: https://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg",
+          "@language": "fi"
+        },
+        {
+          "@value": "Suunnitelmamallia käytetään ja kehitetään eteenpäin rakennuskohteen suunnitteluvaiheen aikana. Ainakin osaa suunnitelmamallin tiedoista käytetään lupamallissa.",
+          "@language": "fi"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "https://iri.suomi.fi/terminology/rymallit/c22",
+          "@language": ""
+        }
+      ],
+      "dcterms:created": {
+        "@value": "2025-12-23T14:08",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2025-12-23T14:08",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://w3id.org/betk/sanasto/tietomalli",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://w3id.org/betk/sanasto/rakentamisen-tieto-ja-informaatiomallit",
+      "skos:prefLabel": [
+        {
+          "@value": "tietomalli",
+          "@language": "fi"
+        },
+        {
+          "@value": "datamodell",
+          "@language": "sv"
+        },
+        {
+          "@value": "data model",
+          "@language": "en"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "malli, joka kuvaa tiedot ja tietojen väliset suhteet rakenteisessa muodossa",
+          "@language": "fi"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Käsitejärjestelmäkaavio: https://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg",
+          "@language": "fi"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "https://iri.suomi.fi/terminology/rymallit/c6",
+          "@language": ""
+        },
+        {
+          "@value": "https://iri.suomi.fi/terminology/yti/concept-22",
+          "@language": ""
+        },
+        {
+          "@value": "https://iri.suomi.fi/terminology/rakymp/c97",
+          "@language": ""
+        }
+      ],
+      "dcterms:created": {
+        "@value": "2025-12-23T14:08",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2025-12-23T14:08",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://w3id.org/betk/sanasto/tietomallinnus",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://w3id.org/betk/sanasto/rakentamisen-tieto-ja-informaatiomallit",
+      "skos:prefLabel": [
+        {
+          "@value": "tietomallinnus",
+          "@language": "fi"
+        },
+        {
+          "@value": "datamodellering",
+          "@language": "sv"
+        },
+        {
+          "@value": "data modeling",
+          "@language": "en"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "mallinnus, jonka tuloksena syntyy <a href=\"https://iri.suomi.fi/terminology/rymallit/c6\">tietomalli</a>",
+          "@language": "fi"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Tietomallinnus on vaiheittain etenevä prosessi.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Käsitejärjestelmäkaavio: https://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg",
+          "@language": "fi"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "https://iri.suomi.fi/terminology/rymallit/c2",
+          "@language": ""
+        }
+      ],
+      "dcterms:created": {
+        "@value": "2025-12-23T14:08",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2025-12-23T14:08",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://w3id.org/betk/sanasto/toteumamalli",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://w3id.org/betk/sanasto/rakentamisen-tieto-ja-informaatiomallit",
+      "skos:prefLabel": [
+        {
+          "@value": "toteumamalli",
+          "@language": "fi"
+        },
+        {
+          "@value": "as-built-modell",
+          "@language": "sv"
+        },
+        {
+          "@value": "as-built model",
+          "@language": "en"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "<a href=\"https://iri.suomi.fi/terminology/rymallit/c16\">rakennuskohteen informaatiomalli</a>, joka sisältää tiedot toteutuneesta <a href=\"https://iri.suomi.fi/terminology/rymallit/c28\">rakennuskohteesta</a> mukaan lukien <a href=\"https://iri.suomi.fi/terminology/rymallit/c22\">suunnitelmamallista</a> poikkeavat tiedot",
+          "@language": "fi"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Toteumamalli kuvaa rakennuskohdetta käyttöönotto- tai loppukatselmuksen hetkellä.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Käsitejärjestelmäkaavio: https://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg",
+          "@language": "fi"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "https://iri.suomi.fi/terminology/rymallit/c23",
+          "@language": ""
+        }
+      ],
+      "dcterms:created": {
+        "@value": "2025-12-23T14:08",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2025-12-23T14:08",
+        "@type": "xsd:dateTime"
+      }
     }
   ]
-}//build Mon Feb 23 21:07:50     2026
-//build Mon Feb 23 21:22:13     2026
+}
