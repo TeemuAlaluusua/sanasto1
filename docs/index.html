@@ -88,6 +88,10 @@ let currentLang="fi";
 const BASE_URI="https://teemualaluusua.github.io/sanasto1/#/concept/";
 const ISSUES_REPO_URL="https://github.com/teemualaluusua/sanasto1";
 
+function hasType(obj,type){
+return [].concat(obj["@type"]||[]).includes(type);
+}
+
 function updateTopBar(){
 const t=UI[currentLang];
 document.getElementById("schemeBtn").textContent=t.vocab;
@@ -99,11 +103,13 @@ fetch("sanasto.jsonld")
 .then(j=>{
 db=j;
 
+/* SANASTOT (ConceptScheme) */
 schemes=(j["@graph"]||[])
-.filter(x=>x["@type"]==="skos:ConceptScheme");
+.filter(x=>hasType(x,"skos:ConceptScheme"));
 
+/* KÄSITTEET */
 concepts=(j["@graph"]||[])
-.filter(x=>x["@type"]==="skos:Concept")
+.filter(x=>hasType(x,"skos:Concept"))
 .map(c=>({
 id:c["@id"].split("/").pop(),
 scheme:(c["skos:inScheme"]||[])[0]?.split("/").pop(),
@@ -141,8 +147,10 @@ return c.terms?.find(t=>t.lang===currentLang && t.type==="Preferred")
 }
 
 function getSchemeLabel(s){
-const l=s["skos:prefLabel"]||[];
-return l.find(x=>x["@language"]===currentLang)?.["@value"] || l[0]?.["@value"];
+const labels=s["skos:prefLabel"]||[];
+return labels.find(x=>x["@language"]===currentLang)?.["@value"]
+|| labels[0]?.["@value"]
+|| s["@id"];
 }
 
 function renderList(){
@@ -152,7 +160,9 @@ el.innerHTML="";
 
 schemes.forEach(s=>{
 const sid=s["@id"].split("/").pop();
-const items=concepts.filter(c=>c.scheme===sid)
+
+const items=concepts
+.filter(c=>c.scheme===sid)
 .filter(c=>{
 const t=getTerm(c)?.label?.toLowerCase()||"";
 return t.includes(q);
