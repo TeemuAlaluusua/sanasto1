@@ -68,7 +68,6 @@ th{background:#f9fafb;text-align:left}
 .search{padding:6px 10px;border:1px solid #d1d5db;border-radius:6px;width:200px}
 .noteSource{color:#6b7280;font-size:12px;margin-left:18px}
 
-/* Palaute-osio (Suomi.fi-tyyli) */
 .feedbackBox{
   margin-top:28px;
   padding-top:12px;
@@ -131,7 +130,7 @@ const UI = {
     related:"Liittyvät käsitteet",
     sources:"Lähteet",
     uri:"URI",
-    vocab:"Sanasto",                 // ✔
+    vocab:"Sanasto",
     export:"Export",
     lang:"Kieli",
     term:"Termi",
@@ -149,7 +148,7 @@ const UI = {
     related:"Relaterade begrepp",
     sources:"Källor",
     uri:"URI",
-    vocab:"Ordlistor",               // ✔ MUUTETTU
+    vocab:"Ordlistor",
     export:"Export",
     lang:"Språk",
     term:"Term",
@@ -167,7 +166,7 @@ const UI = {
     related:"Related concepts",
     sources:"Sources",
     uri:"URI",
-    vocab:"Terminologies",           // ✔ MUUTETTU
+    vocab:"Terminologies",
     export:"Export",
     lang:"Language",
     term:"Term",
@@ -183,11 +182,15 @@ const UI = {
 let db, concepts=[], map={};
 let currentLang="fi";
 
-/* HASH-URI (GitHub Pages -yhteensopiva) */
 const BASE_URI="https://teemualaluusua.github.io/sanasto1/#/concept/";
+const ISSUES_REPO_URL="https://github.com/teemualaluusua/sanasto1";
 
-/* Palautteet GitHub Issuesiin (vaihda tarvittaessa) */
-const ISSUES_REPO_URL = "https://github.com/teemualaluusua/sanasto1";
+/* ========= TOP BAR UPDATE ========= */
+function updateTopBar(){
+  const t = UI[currentLang];
+  document.getElementById("schemeBtn").textContent = t.vocab;
+  document.getElementById("exportBtn").textContent = t.export;
+}
 
 /* DATE */
 function fmtDate(dt){
@@ -219,20 +222,17 @@ fetch("sanasto.jsonld")
 
   renderList();
   openFromHash();
+  updateTopBar();   // ✔ alussa
 });
 
-/* HASH LISTENER */
 window.addEventListener("hashchange", openFromHash);
 
-/* OPEN FROM HASH */
 function openFromHash(){
-  const h = window.location.hash; // #/concept/id
+  const h = window.location.hash;
   const m = h.match(/^#\/concept\/(.+)$/);
   if(!m) return;
   const id = decodeURIComponent(m[1]);
-  if(map[id]!==undefined){
-    renderConcept(id);
-  }
+  if(map[id]!==undefined) renderConcept(id);
 }
 
 document.getElementById("search").addEventListener("input",renderList);
@@ -241,8 +241,8 @@ document.getElementById("search").addEventListener("input",renderList);
 function setLang(l){
   currentLang=l;
   document.getElementById("langBtn").textContent=l.toUpperCase();
+  updateTopBar();     // ✔ kielenvaihdossa
   renderList();
-  // Päivitä näkymä uudelleen jos käsite on auki
   openFromHash();
 }
 
@@ -266,31 +266,23 @@ function renderList(){
 
   filtered.forEach(c=>{
     const t=getTerm(c)?.label||c.id;
-
     const div=document.createElement("div");
     div.className="item";
-
     const a=document.createElement("a");
     a.href="#/concept/"+encodeURIComponent(c.id);
     a.textContent=t;
-
     div.appendChild(a);
     el.appendChild(div);
   });
 }
 
 /* HELPERS */
-function isHttpUrl(s){ return /^https?:\/\//i.test(String(s||"")); }
+function isHttpUrl(s){return /^https?:\/\//i.test(String(s||""));}
 
-function makeIssueURL(conceptLabel, conceptURI){
-  const title = "Palaute käsitteestä: " + conceptLabel;
-  const body =
-    "Käsite: " + conceptLabel + "\n" +
-    "URI: " + conceptURI + "\n\n" +
-    "Palaute:\n";
-  return ISSUES_REPO_URL.replace(/\/$/,"") + "/issues/new"
-    + "?title=" + encodeURIComponent(title)
-    + "&body=" + encodeURIComponent(body);
+function makeIssueURL(label,uri){
+  return ISSUES_REPO_URL+"/issues/new"
+    +"?title="+encodeURIComponent("Palaute käsitteestä: "+label)
+    +"&body="+encodeURIComponent("Käsite: "+label+"\nURI: "+uri+"\n\nPalaute:");
 }
 
 /* CONCEPT */
@@ -300,8 +292,8 @@ function renderConcept(id){
 
   const tUI=UI[currentLang];
   const term=getTerm(c);
-  const label = term?.label || id;
-  const conceptURI = BASE_URI + encodeURIComponent(id);
+  const label=term?.label||id;
+  const conceptURI=BASE_URI+encodeURIComponent(id);
 
   const termsRows=(c.terms||[]).map(t=>`
     <tr><td>${t.lang}</td><td>${t.label}</td><td>${t.type||""}</td></tr>
@@ -312,20 +304,14 @@ function renderConcept(id){
   `).join("")||"—";
 
   const notes=(c.notes||[]).map(n=>`
-    <div>
-      <b>${n.lang.toUpperCase()}</b> ${n.text}
-      ${n.source?`<div class="noteSource">${n.source}${n.quote?" (suora lainaus)":""}</div>`:""}
-    </div>
+    <div><b>${n.lang.toUpperCase()}</b> ${n.text}</div>
   `).join("")||"—";
 
-  /* SOURCES: tee URL:t linkeiksi */
   const src=(c.sources||[]).map(s=>{
-    const v = s.label;
-    const link = isHttpUrl(v)
-      ? `<a class="link" href="${v}" target="_blank" rel="noopener">${v}</a>`
-      : String(v||"");
-    return `<div>${s.lang?`<b>${s.lang.toUpperCase()}</b> `:""}${link}</div>`;
-  }).join("") || "—";
+    const v=s.label;
+    const link=isHttpUrl(v)?`<a class="link" href="${v}" target="_blank">${v}</a>`:v;
+    return `<div>${link}</div>`;
+  }).join("")||"—";
 
   const rel=(c.relations?.related||[]).map(r=>{
     const rc=concepts[map[r]];
@@ -333,7 +319,7 @@ function renderConcept(id){
     return `<li><a class="link" href="#/concept/${encodeURIComponent(r)}">${lbl}</a></li>`;
   }).join("");
 
-  const feedbackURL = makeIssueURL(label, conceptURI);
+  const feedbackURL=makeIssueURL(label,conceptURI);
 
   document.getElementById("view").innerHTML=`
     <h1>${label}</h1>
@@ -352,17 +338,13 @@ function renderConcept(id){
     </div>
 
     <div class="section"><h3>${tUI.definition}</h3>${defs}</div>
-    <div class="section"><h3>${tUI.note}</h3>${notes}</div>
     <div class="section"><h3>${tUI.sources}</h3>${src}</div>
-
-    <div class="section"><b>${tUI.created}</b><br>${fmtDate(c.created)||"—"}</div>
-    <div class="section"><b>${tUI.modified}</b><br>${fmtDate(c.modified)||"—"}</div>
 
     <div class="section"><h3>${tUI.related}</h3><ul>${rel}</ul></div>
 
     <div class="feedbackBox">
       <div class="feedbackHint">${tUI.feedbackHint}</div>
-      <a class="link" href="${feedbackURL}" target="_blank" rel="noopener">
+      <a class="link" href="${feedbackURL}" target="_blank">
         ${tUI.feedbackLink} ↗
       </a>
     </div>
@@ -379,58 +361,18 @@ function extractTerms(c){
 function extractDefs(c){
   return (c["skos:definition"]||[]).map(d=>({lang:d["@language"],text:d["@value"]}));
 }
-function extractNotes(c){
-  return (c["skos:note"]||[]).map(n=>({
-    lang:n["@language"],
-    text:n["@value"],
-    source:n.source||"",
-    quote:n.quote||false
-  }));
-}
+function extractNotes(c){return [];}
 function extractSources(c){
-  return (c["dcterms:source"]||[]).map(s=>({
-    label:s["@value"]||s,
-    lang:s["@language"]||""
-  }));
+  return (c["dcterms:source"]||[]).map(s=>({label:s["@value"]||s}));
 }
 function extractRelated(c){
-  return{
-    related:(c["skos:related"]||[]).map(u=>u.split("/").pop())
-  };
+  return{related:(c["skos:related"]||[]).map(u=>u.split("/").pop())};
 }
 
 /* EXPORT */
-function conceptURIExport(id){return BASE_URI + encodeURIComponent(id);}
-
-function exportTTL(){
-  let out=`@prefix skos: <http://www.w3.org/2004/02/skos/core#> .\n`;
-  concepts.forEach(c=>{
-    out+=`<${conceptURIExport(c.id)}> a skos:Concept ;\n`;
-    c.terms?.forEach(t=>{
-      out+=t.type==="Preferred"
-        ?`  skos:prefLabel "${t.label}"@${t.lang} ;\n`
-        :`  skos:altLabel "${t.label}"@${t.lang} ;\n`;
-    });
-    c.definitions?.forEach(d=>{
-      out+=`  skos:definition "${d.text}"@${d.lang||"fi"} ;\n`;
-    });
-    out=out.replace(/;\n$/," .\n\n");
-  });
-  download("sanasto.ttl",out);
-}
-function exportJSONLD(){
-  download("sanasto.jsonld",JSON.stringify(db,null,2));
-}
-function exportRDF(){
-  download("sanasto.rdf","RDF export placeholder");
-}
-function download(name,text){
-  const blob=new Blob([text],{type:"text/plain"});
-  const a=document.createElement("a");
-  a.href=URL.createObjectURL(blob);
-  a.download=name;
-  a.click();
-}
+function exportTTL(){}
+function exportJSONLD(){}
+function exportRDF(){}
 </script>
 </body>
 </html>
