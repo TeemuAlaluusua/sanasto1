@@ -55,7 +55,8 @@ notes:
 
 sources:
 - lang: fi
-  label: '[RYHTI, Sanasto](https://ryhti.syke.fi/ohjeet-ja-tuki/ryhti-sanasto/)'
+  label: 'RYHTI, Sanasto'
+  url: 'https://ryhti.syke.fi/ohjeet-ja-tuki/ryhti-sanasto/'
 
 relations:
   broader: []
