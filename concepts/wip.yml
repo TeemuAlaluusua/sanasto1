@@ -1,0 +1,29 @@
+id: wip
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: WIP
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: work in progress
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: WIP-termi (engl. work in progress) kuvaa työn vaihetta tai tilaa, joka tarkoittaa,
+    että toimenpiteet ovat alkaneet, mutta niitä ei ole vielä saatettu päätökseen.
+    Käytetään yleisesti häiriöiden, ongelmien, muutosten jne. tilana.
+notes: []
+sources:
+- lang: fi
+  label: '[ISO 22468:2020](https://www.iso.org/standard/73292.html)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

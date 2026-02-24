@@ -1,0 +1,30 @@
+id: gs1-standardit
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: GS1-STANDARDIT
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: global standard one
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: GS1 standardijärjestelmä (engl. global standard one) perustuu tiedon (mm.
+    asioiden, tavaroiden, paikkojen ja henkilöiden) -yksilöintiin, näiden fyysiseen
+    tunnistamiseen, sekä -jakamiseen digitaalisessa muodossa toimitusketjun eri toimijoiden
+    välillä.
+notes: []
+sources:
+- lang: fi
+  label: '[GS1 Finland Oy](https://gs1.fi/fi/standardit/gs1n-tiedonjakamisen-standardit)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

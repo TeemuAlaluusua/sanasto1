@@ -1,0 +1,28 @@
+id: lokitieto
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Lokitieto
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: ''
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: Lokitietoa (engl.log data) on tietojärjestelmän muistiin automaattisesti kirjautuva
+    tapahtumatieto.
+notes: []
+sources:
+- lang: fi
+  label: '[ISO 26430-4:2009](https://www.iso.org/)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

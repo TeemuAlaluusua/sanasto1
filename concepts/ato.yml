@@ -1,0 +1,40 @@
+id: ato
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: ATO
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: Assembly-to-order
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: "Asiakasohjautuva kokoonpano (engl. Assembly-to-order) on valmistusstrategia,\
+    \ jota käytetään usein teollisuudessa, jossa on paljon erilaisia vaihtoehtoja\
+    \ tai konfiguraatioita tuotteelle. Tässä valmistusstrategiassa tuotevalmistaja\
+    \ tuottaa varastoiduista vakiokomponenteista erilaisia tuotevariaatioita asiakastarpeiden\
+    \ mukaisesti. Nämä osat on tyypillisesti suunniteltu sopimaan yhteen erilaisissa\
+    \ kokoonpanoissa, jolloin yritys voi tarjota asiakkaille valikoiman tuotevaihtoehtoja\
+    \ ja samalla minimoida yksilöllisen valmistuksen tarpeen. Tyypillisiä ATO-tuotteita\
+    \ ovat esim. ikkunat sekä keittiökalusteet. Tässä tuotannonohjausmuodossa varastoon\
+    \ sitoutuu pääomaa, koska standardikomponentteja tarvitaan paljon. ATO:n ideana\
+    \ on tasapainottaa massatuotannon edut ja räätälöidyn tuotannon joustavuus. ATO-\
+    \ tuotteiden valmistusjärjestelmässä ei ole puskuria valmiille varastolle, ja\
+    \ toimitusaika riippuu varaston osakokoonpanovaraston saatavuudesta. \n\n**Lähteet:**\n\
+    [Alaluusua, 2023](https://aaltodoc.aalto.fi/server/api/core/bitstreams/d55ffacc-a2d7-414b-8f8c-313dff01e984/content)\n\
+    [Peltokorpi, 2020](https://www.aalto.fi/sites/default/files/2020-11/Loppuraportti_Tuotetiedon%20hallinta%20ja%20hyo%CC%88dynta%CC%88minen_2.11.2020_0.pdf)"
+notes: []
+sources:
+- lang: fi
+  label: ''
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

@@ -1,0 +1,29 @@
+id: kotiinkutsu
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Kotiinkutsu
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: ''
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: Tilaajan (usein työmaan) toimittajalle tekemä ilmoitus, jossa ennalta sovitusta
+    toimituksesta varmistetaan toimitussisältö ja toimitusajankohta. Kotiinkutsu voi
+    koskea koko toimitusta tai sen koostuessa useasta erästä, ainoastaan yhtä toimituserää.
+notes: []
+sources:
+- lang: fi
+  label: '[Logistiikan maailma -termisanasto:2025](https://www.logistiikanmaailma.fi/aineistot/sanastot/logistiikan-maailma-termisanasto/)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

@@ -1,0 +1,28 @@
+id: tahtivaunu-työpaketti
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Tahtivaunu (työpaketti)
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: ''
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: ”Arvoa tuottava prosessi”. Kuvaa sitä tehtäväkokonaisuutta, jonka työryhmä
+    suorittaa yhdellä tahtialueella yhden tahtiajan aikana.
+notes: []
+sources:
+- lang: fi
+  label: ''
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

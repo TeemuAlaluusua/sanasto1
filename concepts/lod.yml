@@ -1,0 +1,33 @@
+id: lod
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: LOD
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: Level of Development
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: 'Suunnittelun kehitystasomäärittely LOD (engl. Level of Development) on tietomallintamisen
+    teoreettinen vertailumenetelmä, jonka tarkoituksena on parantaa rakennustietomallien
+    (BIM) käyttäjien välistä viestintää mallien elementtien ominaisuuksista niiden
+    kehitysvaiheen mukaan. LOD-kehitystasot perustuvat suunnittelun eri loppukäyttötarkoitusten
+    tietovaatimuksiin: lupaprosessi (LOD 100-300), hankinta (LOD 300-350), esivalmistus
+    (LOD 350-400), asennus ja elinkaaren aikainen hallinta (LOD 400). LOD kehitystasomäärittely
+    siis ilmaisee projektitietojen tarkkuutta tietomallissa.'
+notes: []
+sources:
+- lang: fi
+  label: '[43][BIMForum: 2023](https://bimforum.org/resource/lod-level-of-development-lod-specification/)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

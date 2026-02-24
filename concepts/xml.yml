@@ -1,0 +1,42 @@
+id: xml
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: XML
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: eXtensible Markup Language
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: "XML (engl. eXtensible Markup Language) on merkintäkieli, jota käytetään tietojen\
+    \ tallentamiseen ja välittämiseen hierarkkisessa\nmuodossa. Se on suunniteltu\
+    \ helpottamaan tietojen vaihtoa eri järjestelmien välillä, koska se on ihmisen\
+    \ ja koneen luettavissa oleva\ntekstimuotoinen tiedosto. XML tukee tietojen vaihtoa\
+    \ tietokonejärjestelmien, kuten verkkosivustojen, tietokantojen ja kolmansien\n\
+    osapuolten sovellusten välillä. XML formaattia käytetään esimerkiksi verkkosivujen\
+    \ rakenteen määrittelyssä (HTML), tietokantojen\nvarmuuskopioinnissa, tiedonsiirrossa\
+    \ ja konfiguraatiotiedostoina. XML:ssä tietoja kuvataan tagien avulla, jotka määrittelevät\
+    \ tietojen\nrakenteen ja hierarkian.\nEsimerkiksi:\n```ruby\n<tuote>\n <nimi>Naula</nimi>\n\
+    \ <materiaali>Teräs</materiaali>\n <koko>\n  <pituus>5 cm</pituus>\n  <halkaisija>3\
+    \ mm</halkaisija>\n </koko>\n <hinta>0.10 euroa/kpl</hinta>\n</tuote>\n```\n\n\
+    Tässä esimerkissä ```<tuote>``` on pääelementti, joka sisältää alielementtejä\
+    \ kuten ```<nimi>```, ```<materiaali>```, ```<koko>``` ja ```<hinta>```.```<koko>```-\n\
+    elementti puolestaan sisältää alielementtejä ```<pituus>``` ja ```<halkaisija>```,\
+    \ jotka määrittelevät naulan mitat. \n\n**Lähteet:**\n[ISO 5127:2017](https://www.iso.org)\n\
+    [ISO/IEC 15909-2:2011](https://www.iso.org/standard/43538.html#:~:text=ISO%2FIEC%2015909%2D2%3A2011%20defines%20an%20XML%2D,tools%20and%20among%20different%20parties.)"
+notes: []
+sources:
+- lang: fi
+  label: ''
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

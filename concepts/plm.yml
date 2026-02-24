@@ -1,0 +1,29 @@
+id: plm
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: PLM
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: Product lifecycle management, PLM
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: Tuotteen elinkaaren hallinta (engl. Product lifecycle management, PLM) on
+    prosessi infrastruktuurin osien oikea-aikaisen uusimisen hallitsemiseksi ja tuotteiden
+    elinkaarikustannusten tarkastelemiseksi.
+notes: []
+sources:
+- lang: fi
+  label: '[ISO/IEC TS 22237-7:2017](https://www.iso.org)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

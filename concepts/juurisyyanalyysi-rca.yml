@@ -1,0 +1,28 @@
+id: juurisyyanalyysi-rca
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Juurisyyanalyysi (RCA)
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: root cause analysis
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: Toiminto, joka tunnistaa häiriön tai ongelman perussyyn (engl. root cause
+    analysis).
+notes: []
+sources:
+- lang: fi
+  label: '[ISO/IEC/IEEE 24765:2017](https://www.iso.org/)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

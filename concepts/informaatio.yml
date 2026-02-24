@@ -1,0 +1,42 @@
+id: informaatio
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Informaatio
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: Information
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: 'Termillä "informaatio" (engl. Information) on perinteisesti viitattu jonkin
+    rakenteen, viestin, merkin tai koodin semanttiseen sisältöön, informaatiosisältöön,
+    joka voidaan tulkita, purkaa tai tehdä jotenkin muuten ilmeneväksi, jos tähän
+    käsittelyyn on saatavilla oikeanlainen
+
+    menetelmä. Toisin sanoen informaatiolla tarkoitetaan uudelleen tulkittavissa olevaa
+    sovitun muotoista esitystapaa, joka sopii tiedonsiirtoon, viestintään, tulkintaan
+    tai käsittelyyn. Informaatiota voi käsitellä ihminen tai sitä voidaan käsitellä
+    automaattisin menetelmin.
+
+
+    **Lähteet:**
+
+    [ISO 19650-1:2019](https://www.iso.org/)
+
+    [EN/ISO 19650:2018](https://www.iso.org/standard/68078.html)'
+notes: []
+sources:
+- lang: fi
+  label: ''
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

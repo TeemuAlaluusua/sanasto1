@@ -1,0 +1,47 @@
+id: eto
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: ETO
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: Engineer-to-order
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: 'Asiakasohjautuva tuotesuunnittelu (engl. Engineer-to-order) -tuotantomenetelmän
+    lähtökohtana ovat asiakaskohtaiset kustomoidut tuotteet, jotka suunnitellaan ja
+    valmistetaan asiakasmääritelmien mukaan vastaamaan heidän erityistarpeitaan. ETO-toimitusketjussa
+    asiakastilauksen kytkentäpiste sijaitsee tuotteen suunnitteluvaiheessa. Siksi
+    kaikki prosessit liittyvät yksittäisten asiakkaiden vaatimuksiin. ETO-tuotantomenetelmän
+    tuotteilla on tyypillisesti pitkät toimitusajat ja korkeat tuotantokustannukset.
+    Lisäksi tuotteiden ja prosessien suuri vaihtelu, monimutkaisuus sekä pienet tuotantomäärät
+    ovat ominaista ETO-tuotantoympäristölle, sillä jokaisessa uudessa tilauksessa
+    on kyse asiakasmääritelmiin perustuvasta tuotesuunnittelusta. Tämän vuoksi ETO-tuotteet
+    vaativat korkeatasoista insinööri-, suunnittelu- ja tuotanto-osaamista, sekä aktiivista
+    tiedonvaihtoa eri osapuolten välillä.
+
+
+    **Lähteet:**
+
+    [Alaluusua, 2023](https://aaltodoc.aalto.fi/server/api/core/bitstreams/d55ffacc-a2d7-414b-8f8c-313dff01e984/content)
+
+    [Peltokorpi, 2020](https://www.aalto.fi/sites/default/files/2020-11/Loppuraportti_Tuotetiedon%20hallinta%20ja%20hyo%CC%88dynta%CC%88minen_2.11.2020_0.pdf)
+
+
+    # F'
+notes: []
+sources:
+- lang: fi
+  label: ''
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

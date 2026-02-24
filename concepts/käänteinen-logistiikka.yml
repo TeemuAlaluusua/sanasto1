@@ -1,0 +1,34 @@
+id: käänteinen-logistiikka
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Käänteinen logistiikka
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: reverse logistics
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: Käänteisellä logistiikalla (engl. reverse logistics) tarkoitetaan tuotteiden
+    liikkumista kulutuspisteistä kohti lähtöpisteitä. Käänteisen logistiikan viitataan
+    usein kierrätykseen ja vastuulliseen jätehuoltoon. Sen voidaan kuitenkin katsoa
+    liittyvän tuotantoprosessissa syntyneiden tuotteiden palauttamiseen (mm. asennusten
+    ylijäämämateriaali sekä vialliset tai väärät tuotteet), uusiokäyttöön tai kierrättämiseen
+    alkuperäisestä kulutuspisteestä takaisin tuotantoketjuun, sisältäen myös tuotteiden
+    elinkaaren aikaiset huolto, korjaus ja kunnostustoimenpiteet sekä asianmukaisen
+    hävittämisen.
+notes: []
+sources:
+- lang: fi
+  label: '[Alaluusua, 2023](https://aaltodoc.aalto.fi/server/api/core/bitstreams/d55ffacc-a2d7-414b-8f8c-313dff01e984/content)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

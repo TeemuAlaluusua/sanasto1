@@ -1,0 +1,34 @@
+id: loki-
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Loki-
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: ''
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: '*Lokimerkintä, lokitiedosto, lokitus, engl. log, log file, digitaalinen merkintä
+    tapahtumista ja tekijöistä.*
+
+
+    Lokitus tarkoittaa digitaalisen jalanjäljen kirjaamista tiedostoon. Lokiin kirjataan
+    ainakin ajankohta, käyttäjän tunniste ja mitä tietoa käyttö on koskenut. Loki
+    voi tallentaa myös tiedon siitä, miten tietoa on käytetty (esim. lukeminen ja
+    muutokset). Lokin kerääminen on osa järjestelmän tietoturvaa.'
+notes: []
+sources:
+- lang: fi
+  label: '[RYHTI, Sanasto](https://ryhti.syke.fi/ohjeet-ja-tuki/ryhti-sanasto/)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

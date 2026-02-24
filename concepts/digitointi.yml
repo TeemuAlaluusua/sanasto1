@@ -1,0 +1,28 @@
+id: digitointi
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Digitointi
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: digitization
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: Digitoinnilla (engl. digitization) tarkoitetaan prosessia, jossa muunnetaan
+    analogisia materiaaleja digitaaliseen (tietoteknisesti käsiteltävään) muotoon.
+notes: []
+sources:
+- lang: fi
+  label: '[ISO 5127:2017](https://www.iso.org/)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

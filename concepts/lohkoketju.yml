@@ -1,0 +1,31 @@
+id: lohkoketju
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Lohkoketju
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: blockchain
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: Lohkoketjulla (engl. blockchain) tarkoitetaan teknologiaa, jonka avulla toisilleen
+    vieraat toimijat voivat yhdessä tuottaa ja ylläpitää tietokantoja hajautetusti.
+    Lohkoketju toteutetaan listana tai lokina transaktioista, joka jaetaan osallistujien
+    kesken, jolloin sen voi todentaa monesta lähteestä ja koostaa sen perusteella
+    tietokannan.
+notes: []
+sources:
+- lang: fi
+  label: '[Sanastot](https://sanastot.suomi.fi/)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

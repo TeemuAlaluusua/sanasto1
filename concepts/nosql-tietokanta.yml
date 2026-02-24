@@ -1,0 +1,34 @@
+id: nosql-tietokanta
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: NoSQL-tietokanta
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: NoSQL database
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: 'NoSQL-tietokanta (engl. NoSQL database) on tietokantajärjestelmä, joka eroaa
+    perinteisistä relaatiotietokannoista siinä, että se ei noudata relaatiomallia
+    tai SQL-kieltä (engl. Structured Query Language). Sen sijaan NoSQL-tietokannat
+    tarjoavat joustavamman datamallin, joka soveltuu erityisesti hajautettuihin ja
+    skaalautuviin ympäristöihin.
+
+
+    # O'
+notes: []
+sources:
+- lang: fi
+  label: ''
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

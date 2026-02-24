@@ -1,0 +1,29 @@
+id: tiedonvaihtovaatimus
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Tiedonvaihtovaatimus
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: Exchange Information Requirements, EIR
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: Tiedonvaihtovaatimuksella (engl. Exchange Information Requirements, EIR) tarkoitetaan
+    tietoja, jotka on vaihdettava tietyn liiketoimintavaatimuksen tukemiseksi tietyssä
+    prosessivaiheessa tai tietyissä prosessivaiheissa konekielisenä tiedostona.
+notes: []
+sources:
+- lang: fi
+  label: '[Ympäristöministeriö, Yleiset tietomallivaatimukset: 2022](https://rastiprojekti.com/wp-content/uploads/2019/02/RASTI-strategia-v1.pdf)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

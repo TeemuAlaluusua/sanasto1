@@ -1,0 +1,29 @@
+id: data-analytiikka
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Data analytiikka
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: Data analytics
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: Data analytiikka (engl. Data analytics) on prosessi, jossa analysoidaan, kerätään,
+    järjestetään ja tallennetaan raakadataa liiketoiminnan kannalta merkityksellisten
+    havaintojen saamiseksi.
+notes: []
+sources:
+- lang: fi
+  label: '[ISO/IEC 24668:2022](https://www.iso.org/)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

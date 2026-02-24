@@ -1,0 +1,30 @@
+id: lähtötiedot
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Lähtötiedot
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: Initial data
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: 'Lähtötiedot (engl. Initial data) ovat eri tietolähteistä saatua tai mitattua
+    tuotteiden, toiminnan ja palveluiden suunnittelua varten
+
+    hankittua informaatiota.'
+notes: []
+sources:
+- lang: fi
+  label: '[Ympäristöministeriö, RASTI-projekti: 2019](https://rastiprojekti.com/wp-content/uploads/2019/02/RASTI-strategia-v1.pdf)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

@@ -1,0 +1,33 @@
+id: toimitusketjun-hallinta
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Toimitusketjun hallinta
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: construction supply chain management
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: Rakennusalan näkökulmasta tehdyn määritelmän mukaan toimitusketjun hallinnalla
+    (engl. construction supply chain management) tarkoitetaan rakennusalan tuotantoketjun
+    alku- ja loppupäässä toimivien yritysten integrointia, joiden tavoitteena on luoda
+    arvoa asiakkaalle sekä muille toimitusketjun sidosryhmille tuotteiden, palveluiden,
+    tiedon ja valuutan muodossa. Toisin sanoen rakentamisen toimitusketjun hallinnan
+    tavoitteena on integroida toimitusketjun materiaali- ja tietovirrat toimitusketjun
+    suorituskyvyn edistämiseksi toiminnallisista tai organisaatiorajoista riippumatta.
+notes: []
+sources:
+- lang: fi
+  label: '[Alaluusua, 2023](https://aaltodoc.aalto.fi/server/api/core/bitstreams/d55ffacc-a2d7-414b-8f8c-313dff01e984/content)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

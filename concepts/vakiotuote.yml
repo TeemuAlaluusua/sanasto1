@@ -1,0 +1,38 @@
+id: vakiotuote
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Vakiotuote
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: ''
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: 'Vakiotuotteella tarkoitetaan valmistajan yleisesti saatavilla olevan tuotevalikoiman
+    tuotteita, jotka on suunniteltu yleisiin tarpeisiin ja valmistettu ennalta määritettyjen
+    ominaisuuksien, mittojen ja standardien mukaisesti. Vakiotuotteina on pidetty
+    MTS-tuotantostrategian mukaisia standardoituja vakiokauppatuotteita, sekä MTO-tuotantostrategian
+    mukaisia tilaustuotteita.
+
+
+    **Lähteet:**
+
+    [Alaluusua 2023](https://aaltodoc.aalto.fi/server/api/core/bitstreams/d55ffacc-a2d7-414b-8f8c-313dff01e984/content)
+
+    [ISO 15489-1:2017](https://www.iso.org/standard/73292.html)'
+notes: []
+sources:
+- lang: fi
+  label: ''
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

@@ -1,0 +1,30 @@
+id: attribuutti
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Attribuutti
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: Attribute
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: Attribuutit (engl. Attribute) kuvaavat objektien ominaisuuksia. Tämä voi olla
+    esimerkiksi tietomallissa rakenneosaan liittyvä yksittäinen tieto tai tätä kuvaava
+    ominaisuus; esimerkiksi nimi, sijainti, materiaali, valmistaja, versionumero ja
+    kustannus.
+notes: []
+sources:
+- lang: fi
+  label: '[RYHTI, Sanasto](https://ryhti.syke.fi/ohjeet-ja-tuki/ryhti-sanasto/)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

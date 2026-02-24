@@ -1,0 +1,29 @@
+id: lot-laite
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: loT-laite
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: IoT device
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: Termillä IoT-laite (engl. IoT device) tarkoitetaan loT-järjestelmän entiteettiä
+    eli kohdeyksikköä, joka on vuorovaikutuksessa ja viestii fyysisen maailman kanssa
+    havainnoimalla tai aktivoimalla. loT-laite voi olla sensori tai toimilaite.
+notes: []
+sources:
+- lang: fi
+  label: '[ISO/IEC 22989:2023](https://www.iso.org)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

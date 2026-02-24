@@ -1,0 +1,27 @@
+id: last-planner-system-lps
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Last Planner System (LPS)
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: ''
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: Rakentamisen tuotannonohjauksen menetelmä.
+notes: []
+sources:
+- lang: fi
+  label: '[Lean Construction Institute: 2007](https://leanconstruction.org/lean-topics/last-planner-system/)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

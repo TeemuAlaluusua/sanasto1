@@ -1,0 +1,30 @@
+id: peppol-verkosto
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: PEPPOL-verkosto
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: Pan Pan European Public eProcurement On-Line
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: PEPPOL (engl. Pan Pan European Public eProcurement On-Line) sähköisten sanomien
+    välitysverkosto, joka perustuu yhteisesti sovituille tiedonsiirtotavoille, tietomalleille
+    ja liiketoimintasäännöille. PEPPOL-verkoston käyttäjät vaihtavat verkostossa keskenään
+    mm. hankintasanomia, verkkolaskuja ja viranomaisraportteja.
+notes: []
+sources:
+- lang: fi
+  label: '[Sanastot](https://sanastot.suomi.fi/)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

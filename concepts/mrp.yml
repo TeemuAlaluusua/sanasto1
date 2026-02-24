@@ -1,0 +1,28 @@
+id: mrp
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: MRP
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: Manufacturing Resource Planning
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: Materiaalitarvelaskenta MRP (engl. Manufacturing Resource Planning) on ohjelmistosovellus,
+    joka ohjaa ja aikatauluttaa materiaalivirtoja tuotannon vaatimusten mukaisesti.
+notes: []
+sources:
+- lang: fi
+  label: '[ISO 10303-240:2005](https://www.iso.org/)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

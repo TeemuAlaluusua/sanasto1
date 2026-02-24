@@ -1,0 +1,28 @@
+id: yksilöinti
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Yksilöinti
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: ''
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: Toimijan tai objektin yksilöllisyyteen perustuva erottaminen muista samaan
+    tai samankaltaiseen joukkoon kuuluvista.
+notes: []
+sources:
+- lang: fi
+  label: '[Sanastot](https://sanastot.suomi.fi/)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

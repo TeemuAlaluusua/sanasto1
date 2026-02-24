@@ -1,0 +1,35 @@
+id: relaatiotietomalli
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Relaatiotietomalli
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: primary key
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: '*Tietomallimuoto, joka muodostuu tauluista, rivistä ja sarakkeista.*
+
+
+    IBM:n kehittämä tietomallimuoto on nykyisin hyvin yleinen. Sen perusosia ovat
+    tietokantataulut, jotka koostuvat riveistä ja sarakkeista. Jokaisessa taulussa
+    on taulun sisäinen, uniikki pääavain (engl. primary key), joka erottaa taulun
+    rivit toisistaan. Lisäksi taulussa on toiseen tauluun viittaava viiteavain (engl.
+    foreign key). Taulujen sisältö voidaan linkittää toisiinsa viiteavaimilla. Nämä
+    taulujen väliset suhteet ovat relaatiotietomallin keskeinen osa.'
+notes: []
+sources:
+- lang: fi
+  label: '[RYHTI, Sanasto](https://ryhti.syke.fi/ohjeet-ja-tuki/ryhti-sanasto/)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

@@ -1,0 +1,29 @@
+id: standardi
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Standardi
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: standard
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: Standardi (engl. standard) on tekninen dokumentti, jota on tarkoitus käyttää
+    sääntönä, ohjeena tai määritelmänä. Standardi laaditaan kaikille ymmärrettävässä
+    muodossa ja se on mahdollista ottaa käyttöön dokumentin pohjalta.
+notes: []
+sources:
+- lang: fi
+  label: '[Sanastot](https://sanastot.suomi.fi/)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

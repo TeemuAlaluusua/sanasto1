@@ -1,0 +1,29 @@
+id: gdpr
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: GDPR
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: General Data Protection Regulation
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: EU:n tietosuoja-asetus eli GDPR (engl. General Data Protection Regulation)
+    säätää kansalaisten oikeuksista tietosuojaan ja omien henkilötietojen luottamukselliseen
+    käsittelyyn. Suomen tietosuojalaki täsmentää ja täydentää tietosuoja-asetusta.
+notes: []
+sources:
+- lang: fi
+  label: '[ISO/IEC TR 7052:2023](https://www.iso.org)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

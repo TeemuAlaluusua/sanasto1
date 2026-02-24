@@ -1,0 +1,31 @@
+id: iot
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: IoT
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: Internet of Things
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: Esineiden internet (engl. Internet of Things) on koneiden ja laitteiden yhdistämistä
+    Internetiin sekä koneista syntyneen datan yhdistämistä muuhun dataan. Se käsittää
+    toisiinsa yhdistettyjen entiteettien eli kohdeyksiköiden, ihmisten, järjestelmien
+    ja informaatioresurssien infrastruktuurin sekä palvelut, jotka käsittelevät fyysisestä
+    ja virtuaalimaailmasta tulevaa informaatiota sekä reagoivat siihen.
+notes: []
+sources:
+- lang: fi
+  label: '[ISO/IEC 22989:2023](https://www.iso.org)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

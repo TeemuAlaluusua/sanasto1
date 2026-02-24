@@ -1,0 +1,30 @@
+id: versio
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Versio
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: ''
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: Tietosisällöt, joilla on sama käyttötarkoitus, mutta eri voimassaoloaika ja
+    joiden sisältö voi poiketa toisistaan. Versio on yksittäisen sanaston, koodiston
+    tai tietomallin uusi tai vanha versio. Niiden voimassaolon alkamis- ja päättymispäivämäärät
+    poikkeavat toisistaan. Tyypillisesti uusi versio korvaa vanhan version.
+notes: []
+sources:
+- lang: fi
+  label: '[Sanastot](https://sanastot.suomi.fi/)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

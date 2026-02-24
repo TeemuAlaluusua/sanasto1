@@ -1,0 +1,31 @@
+id: suljettu-toimintaympäristö
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Suljettu toimintaympäristö
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: ''
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: "Sovellus, joka on tarkoitettu suljetun käyttäjäryhmän käyttöön, yleensä yhden\
+    \ organisaation sisällä tai tietyn sopimuksen mukaisesti. (kts. avoin toimintaympäristö).\
+    \ \n\n**Lähteet:**\n[EN 1556:1998](https://sales.sfs.fi/fi/index/tuotteet/SFS/CEN/ID2/1/246564.html.stx)\
+    \ \n[Alaluusua, 2023](https://aaltodoc.aalto.fi/server/api/core/bitstreams/d55ffacc-a2d7-414b-8f8c-313dff01e984/content)\n\
+    \n# T"
+notes: []
+sources:
+- lang: fi
+  label: ''
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

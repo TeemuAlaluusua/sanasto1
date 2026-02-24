@@ -1,0 +1,29 @@
+id: avoin-data
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Avoin data
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: open data
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: Avoin data (engl. open data) tarkoittaa dataa, joka on tarjolla ja näkyvissä
+    muille ja jota kuka tahansa saa vapaasti käyttää, kierrättää, julkaista uudelleen
+    ja levittää edelleen.
+notes: []
+sources:
+- lang: fi
+  label: '[ISO 5127:2022](https://sales.sfs.fi/fi/index/tuotteet/SFS/ISO/ID2/5/1142215.html.stx)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

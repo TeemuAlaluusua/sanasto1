@@ -1,0 +1,30 @@
+id: tekoäly
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Tekoäly
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: AI
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: Tekoäly (engl. Artificial intelligence, AI) on tietojenkäsittelytieteen osa-alue,
+    jonka tarkoituksena on kehittää tietojenkäsittelyjärjestelmiä, jotka suorittavat
+    normaalisti ihmisen älykkyyteen liittyviä toimintoja, kuten päättelyä, oppimista
+    ja itsensä parantamista.
+notes: []
+sources:
+- lang: fi
+  label: '[ISO/IEC 2382:2015](https://www.iso.org/standard/63598.html)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

@@ -1,0 +1,27 @@
+id: asiakastilauksen-kytkeytymiskohta
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Asiakastilauksen kytkeytymiskohta
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: ''
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: Se toimitusketjun kohta, jossa tuote liitetään asiakkaan tekemään tilaukseen.
+notes: []
+sources:
+- lang: fi
+  label: '[Logistiikan maailma -termisanasto:2025](https://www.logistiikanmaailma.fi/aineistot/sanastot/logistiikan-maailma-termisanasto/)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

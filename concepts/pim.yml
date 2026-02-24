@@ -1,0 +1,33 @@
+id: pim
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: PIM
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: project information model
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: Projektin toteutusvaiheeseen liittyvä informaatiomalli PIM (engl. project
+    information model) on jäsennelty tietoarkisto, jota käytetään päätöksenteossa
+    rakennetun ympäristön kohteissa koko niiden elinkaaren aikana. Projektin informaatiomalli
+    (PIM) voi sisältää projektin toteuttamisen aikana esimerkiksi projektin geometrian
+    yksityiskohtia, laitteistojen sijainteja, projektin suunnittelun aikaisia ominaisuusvaatimuksia,
+    rakentamistavan ja aikatauluja, kustannuksia sekä yksityiskohtia asennetuista
+    järjestelmistä, komponenteista ja laitteistoista, mukaan lukien näiden kunnossapitovaatimuksia.
+notes: []
+sources:
+- lang: fi
+  label: '[EN/ISO 19650:2018](https://www.iso.org/standard/68078.html)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

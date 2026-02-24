@@ -1,0 +1,29 @@
+id: tahtiaikataulu
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Tahtiaikataulu
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: takt schedule
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: Tahtiaikataulu (engl. takt schedule) on tahtisuunnittelun tuotoksena syntyvä
+    ja tahtiohjauksen kautta ohjattava aikataulu, joka kertoo missä, miten ja millä
+    resusseilla hankkeen ja tuotannon eri tehtäviä toteutetaan.
+notes: []
+sources:
+- lang: fi
+  label: '[RIL, Tahtituotanto:2024](https://view.taiqa.com/ril/tahtituotanto-opas-2-2024#/page=1)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

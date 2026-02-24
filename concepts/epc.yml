@@ -1,0 +1,31 @@
+id: epc
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: EPC
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: Electronic Product Code
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: EPC (engl. Electronic Product Code) on GS1:n standardi RFID:lle. Sillä yksilöidään
+    esimerkiksi logistiset yksiköt, sijainnit ja muut toimitusketjun tiedot RFID-teknologiaan
+    soveltuviksi. EPC:tä voidaan käyttää eri yhteyksissä, esimerkiksi binäärimuodossa
+    RFIDtunnisteisiin koodattuna tai tekstimuodossa tietojen jakamiseksi yritysten
+    järjestelmien välillä.
+notes: []
+sources:
+- lang: fi
+  label: '[GS1 Finland:2025](https://gs1.fi/fi/standardit/tunnistamisen-standardit/epcrfid)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

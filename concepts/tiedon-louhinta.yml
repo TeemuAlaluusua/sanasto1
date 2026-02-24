@@ -1,0 +1,38 @@
+id: tiedon-louhinta
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Tiedon louhinta
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: Data mining
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: 'Tiedonlouhinta (engl. Data mining) on laskennallinen tiedonhakuprosessi,
+    jossa tunnistetaan piirteitä analysoimalla kvantitatiivista tietoa eri näkökulmista
+    ja ulottuvuuksista, luokittelemalla se ja tekemällä yhteenveto mahdollisista suhteista
+    ja vaikutuksista. Yksinkertaistettuna tiedon louhinnalla tarkoitetaan siis kaikesta
+    tarjolla olevasta datasta kerättävää olennaista informaatiota.
+
+
+    **Lähteet:**
+
+    [ISO/IEC 22989:2023](https://www.iso.org)
+
+    [ISO 5127:2017](https://www.iso.org)'
+notes: []
+sources:
+- lang: fi
+  label: ''
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

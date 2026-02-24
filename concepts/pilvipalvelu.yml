@@ -1,0 +1,35 @@
+id: pilvipalvelu
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Pilvipalvelu
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: cloud Service
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: pilvipalvelu (engl. cloud Service) on yksi tai useampi toiminnallisuus, jota
+    tarjotaan pilvilaskennan mukaisesti ja käytetään määritellyn rajapinnan kautta.
+    Yksinkertaisesti sanottuna pilvipalvelut mahdollistavat tietojen tallentamisen
+    ja käsittelemisen internetissä sijaitsevilla palvelimilla sen sijaan, että ne
+    olisivat paikallisesti omassa tietokoneessa tai organisaatioiden omilla palvelimilla.
+    Näitä palveluita voivat olla esimerkiksi tiedostojen tallennus, sähköposti, verkkosovellukset
+    ja tietokantapalvelut. Pilvipalveluiden avulla käyttäjät voivat käyttää tietoja
+    ja sovelluksia mistä tahansa, missä on internet-yhteys, mikä tekee niistä käteviä
+    ja joustavia käyttää.
+notes: []
+sources:
+- lang: fi
+  label: '[ISO/IEC 22123-1:2023](https://www.iso.org/standard/82758.html)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

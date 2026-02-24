@@ -1,0 +1,32 @@
+id: edi
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: EDI
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: electronic data interchange
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: "EDI (engl. electronic data interchange) tarkoittaa standardoitua tekniikkaa,\
+    \ jota käytetään organisaatioiden välisten tietojärjestelmien kommunikointiin.\
+    \ EDI yhdistetään yleensä EDIFACT-sanomaformaattiin. Suurin osa esimerkiksi kaupan,\
+    \ tukkukaupan, teollisuuden ja kuljetusalan sanomista onkin EDIFACT-standardin\
+    \ mukaisia sanomia. \n\n**Lähteet:**\n[Sanastot](https://sanastot.suomi.fi/)\n\
+    [ISO/IEC 19762-1:2025](https://www.iso.org/)"
+notes: []
+sources:
+- lang: fi
+  label: ''
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

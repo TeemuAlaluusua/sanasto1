@@ -1,0 +1,29 @@
+id: tunnistus--ja-tiedonkeruutekniikat
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Tunnistus- ja tiedonkeruutekniikat
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: ''
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: Tarkoittaa menetelmiä, joilla kohteet tunnistetaan automaattisesti, kerätään
+    niitä koskevia tietoja ja syötetään nämä tiedot suoraan tietokonejärjestelmiin
+    (eli ilman ihmisen osallistumista) - esimerkiksi viivakoodien, RFID:n jne. käyttö.
+notes: []
+sources:
+- lang: fi
+  label: ''
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

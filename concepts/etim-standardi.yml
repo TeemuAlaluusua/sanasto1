@@ -1,0 +1,34 @@
+id: etim-standardi
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: ETIM-standardi
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: European Technical Information Model
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: ETIM (engl. European Technical Information Model) on kansainvälinen de facto
+    teollisuusstandardi, joka määrittelee sen, miten sähkö-, LVI- ja rakennusalan
+    tuotteiden tekniset ominaisuudet tulee ilmoittaa ja välittää koko toimitusketjussa
+    yhdenmukaisella tavalla. ETIM International hallinnoi ja kehittää jäsenistönsä
+    kautta rakennus-, lvi- ja sähköalan teknisten tuotteiden yhtenäistä ja kielestä
+    riippumatonta tuoteluokittelua. ETIM ei ole tuotetietokanta tai ohjelmisto vaan
+    looginen malli tuotteiden jaottelemiseksi erilaisiin tuoteluokkiin sekä listaus
+    eri tuoteluokkien tärkeimmistä teknisistä ominaisuuksista.
+notes: []
+sources:
+- lang: fi
+  label: '[ETIM](https://etim.stkliitto.fi/)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

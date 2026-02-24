@@ -1,0 +1,37 @@
+id: konenäkö
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Konenäkö
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: computer vision
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: Konenäkö (engl. computer vision) tarkoittaa toiminnallisen yksikön kykyä hankkia,
+    käsitellä ja tulkita dataa kuva- tai videomuodossa olevasta lähteestä Konenäkö
+    sisältää sensoreiden käyttöä visuaalista tilannetta esittävän digitaalisen kuvan
+    luomiseen. Konenäkö liittyy läheisesti kuvantunnistukseen, kuten digitaalisten
+    kuvien käsittelyyn. Kuvamuodossa oleva data on yleensä peräisin digitaalisesta
+    kamerasta, digitaalisesti skannatusta fyysisestä kuvasta tai jostain muusta kuvansyöttölaitteesta.
+    Digitaaliset kuvat ovat olemassa numeromatriisina, joka edustaa kuvassa olevia
+    harmaa-asteikon sävyjä tai värejä tai joissain tapauksissa vektorien kokoelmaa.
+    Digitaaliset kuvat voivat sisältää metatietoa, joka kuvailee kuvaan liittyviä
+    ominaispiirteitä ja attribuutteja. Digitaaliset kuvat voidaan pakata tallennustilan
+    säästämiseksi ja niiden lähetysnopeuden parantamiseksi digitaalisissa verkoissa.
+notes: []
+sources:
+- lang: fi
+  label: '[ISO/IEC 22989:2023](https://www.iso.org)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

@@ -1,0 +1,38 @@
+id: koneluettava
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Koneluettava
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: ''
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: 'Tietosisällön esittäminen rakenteellisessa muodossa, esimerkiksi taulukoissa.
+    Koneluettavuudella pyritään yksinkertaistamaan tulkinnanvaraisia asioita sekä
+    yhtenäistämään tiedon muotoa. Tietojärjestelmissä konemuotoista tietoa voidaan
+    yhdistellä olemassa olevaan tietosisältöön, jossa monisanaiset tai tulkinnanvaraiset
+    tietokohteet on korvattu yksiselitteisillä merkinnöillä, koodeilla tai niihin
+    verrattavilla ilmaisuilla. Koneluettavuus on tiedon rakenteellistamista taulukoihin
+    tai muuten jaoteltuihin tiedostoihin, joista ohjelma on helpompi poimia samaan
+    kohteeseen tai asiaan liittyvää tietoa. Oleellista konemuodossa on eri lähteistä
+    tulevien tietojen yhdisteleminen ja yhtenäinen muoto.
+
+
+    vrt. ihmisluettava'
+notes: []
+sources:
+- lang: fi
+  label: '[RYHTI, Sanasto](https://ryhti.syke.fi/ohjeet-ja-tuki/ryhti-sanasto/)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

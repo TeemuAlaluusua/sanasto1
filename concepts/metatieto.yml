@@ -1,0 +1,35 @@
+id: metatieto
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Metatieto
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: Metadata
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: "Metatieto (engl. Metadata) on digitaalisiin tiedostoihin tai kohteisiin liittyvä\
+    \ ominaisuustieto (tietoa tiedosta). Metadata kuvaa aineiston kontekstia, sisältöä\
+    \ tai rakennetta sekä ohjaa ja dokumentoi sen käsittelyä ja hallintaa. \n\nMetatieto\
+    \ tunnetaan paremmin suomenkielisellä termillä ominaisuustieto. Metatietoa on\
+    \ kaikki digitaaliseen tiedostoon tai yksikköön (esim. karttakohde, rakennus)\
+    \ liitetty lisätieto. Myös sijaintitieto voi olla metatietoa, etenkin kun kohde\
+    \ on tallennettu järjestelmään, jossa sitä ei käsitellä paikkatietona. Yleisimmin\
+    \ metatietona on kohteen nimi, tunnus, päivämäärä.\n\n**Lähteet:**\n[ISO 19650-5:2020](https://www.iso.org/)\n\
+    [ISO 5127:2017](https://www.iso.org/)\n[RYHTI, Sanasto](https://ryhti.syke.fi/ohjeet-ja-tuki/ryhti-sanasto/)"
+notes: []
+sources:
+- lang: fi
+  label: ''
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

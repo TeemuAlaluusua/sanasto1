@@ -1,0 +1,31 @@
+id: sanasto
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Sanasto
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: ''
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: '*Tietyn aihealueen käsitteistä muodostettu kokonaisuus*
+
+    Sanastot ovat luetteloita jossain kielessä tai ympäristössä sallituista sanoista
+    tai termeistä luokitteluineen, määritelmineen, kuvauksineen ja esimerkkeineen.
+    Sanastot laaditaan aihealueen ammattilaisten ja sanastotyön asiantuntijoiden yhteistyönä.'
+notes: []
+sources:
+- lang: fi
+  label: '[RYHTI, Sanasto](https://ryhti.syke.fi/ohjeet-ja-tuki/ryhti-sanasto/)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

@@ -1,0 +1,30 @@
+id: komponentti
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Komponentti
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: component
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: Komponentti (engl. component) on yleinen termi, jota käytetään tarkoittamaan
+    yhtä kokonaisuuden osaa. Rakennuskohteen komponentit ovat joko rakennusosia tai
+    tuoteosia. Rakennusosat valmistetaan (kootaan) pääosin työmaalla. Tuoteosat ovat
+    pääosin valmiita ostettavia tuotteita, jotka asennetaan.
+notes: []
+sources:
+- lang: fi
+  label: ''
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

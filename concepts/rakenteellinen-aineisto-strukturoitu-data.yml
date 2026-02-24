@@ -1,0 +1,35 @@
+id: rakenteellinen-aineisto-strukturoitu-data
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Rakenteellinen aineisto /Strukturoitu data
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: Structured data
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: Strukturoitu data (engl. Structured data) tarkoittaa tietoa, joka on järjestetty
+    määrättyyn muotoon tai skeemaan, tyypillisesti riveihin ja sarakkeisiin, kuten
+    relaatiotietokannoissa tai taulukkolaskentaohjelmissa. Nämä tiedot noudattavat
+    ennalta määriteltyä mallia, jossa on selkeät säännöt siitä, miten yksittäiset
+    tiedot tallennetaan ja miten ne liittyvät toisiinsa. Strukturoitu tieto on hyvin
+    järjestettyä ja sitä on helppo hakea, käyttää ja käsitellä tietokannan hallintajärjestelmien
+    ja muiden työkalujen avulla. Esimerkkejä strukturoidusta datasta ovat tietokannat,
+    taulukkolaskentaohjelmat ja tietyllä tavalla muotoillut tiedostot kuten XML ja
+    JSON.
+notes: []
+sources:
+- lang: fi
+  label: ''
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

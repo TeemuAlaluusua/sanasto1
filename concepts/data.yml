@@ -1,0 +1,28 @@
+id: data
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Data
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: ''
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: Datalla tarkoitetaan informaation uudelleen tulkittavissa olevaa esitystapaa
+    virallistetulla tavalla, joka soveltuu viestintään, tulkintaan tai käsittelyyn.
+notes: []
+sources:
+- lang: fi
+  label: '[ISO 5127:2017](https://www.iso.org/)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

@@ -1,0 +1,40 @@
+id: tietoturva
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Tietoturva
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: information security
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: 'Tietoturvalla (engl. information security) tarkoitetaan fyysistä ja digitaalista
+    tiedon suojaamista. Fyysinen suojaaminen voi pitää sisällään toimenpiteitä, jotka
+    suojaavat tietokoneita varastavalta murtovarkaalta. Digitaalinen suojaaminen eli
+    kyberturvallisuus (engl. cyber security) tarkoittaa suojautumista verkon kautta
+    tulevilta hyökkäyksiltä ja tietomurroilta. Tietoturvalla on kolme päätavoitetta:
+    Tiedon luottamuksellisuuden, eheyden ja saatavuuden varmistaminen.
+
+    1 Luottamuksellisuus (engl. confidentially) tarkoittaa, ettei tieto saa vuotaa
+    ulkopuolisille.
+
+    2 Eheys (engl. integrity) tarkoittaa, että järjestelmät ovat luotettavia ja että
+    tieto säilyy muuttumattomana ja on ajantasaisesti varmuuskopioitu.
+
+    3 Saatavuus (engl. availability) tarkoittaa pääsyä tietoon silloin, kun sitä tarvitaan.'
+notes: []
+sources:
+- lang: fi
+  label: '[ISO/IEC 27000:2020](https://www.iso.org)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

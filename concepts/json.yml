@@ -1,0 +1,43 @@
+id: json
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: JSON
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: JavaScript Object Notation
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: "JSON (engl. JavaScript Object Notation) on yksinkertainen ja kevyt tietojen\
+    \ vaihtoon tarkoitettu avoimen standardin tiedostomuoto tiedonvälitykseen, joka\
+    \ perustuu JavaScriptiin. Se on ihmisen luettavissa oleva ja koneiden helppokäyttöinen\
+    \ formaatti, jota käytetään usein tietojen tallentamiseen ja välittämiseen web-sovellusten\
+    \ välillä. JSON-muotoa käytetään yleisesti RESTful-rajapintojen yhteydessä, jolloin\
+    \ tietoja lähetetään ja vastaanotetaan HTTP-pyyntöjen ja -vastausten kautta. JSON-rakenteet\
+    \ koostuvat avain-arvo -pareista, jotka voidaan sisällyttää objekteihin ja taulukoihin.\
+    \ JSON-notaatio määrittelee olion alkavalla aaltosululla {, jota seuraa oliomuuttujien\
+    \ nimet ja niiden arvot. Lopulta olio päätetään sulkevaan aaltosulkuun }. Oliomuuttujien\
+    \ nimet ovat hipsuissa \" sillä ne käsitellään merkkijonoina. Muuttujien arvot\
+    \ ovat arvon tyypistä riippuen hipsuissa. Esimerkiksi:\n```ruby\n{\n \"tuote\"\
+    : {\n \"nimi\": \"Ruuvi\",\n \"materiaali\": \"Teräs\",\n \"koko\": {\n \"pituus\"\
+    : \"3 cm\",\n \"halkaisija\": \"2 mm\"\n },\n \"hinta\": \"0.05 euroa/kpl\"\n\
+    \ }\n}\n```\nTässä JSON-esimerkissä on objekti, joka kuvaa ruuvia. Objekti sisältää\
+    \ avain-arvo -pareja, kuten \"nimi\", \"materiaali\", \"koko\" ja \"hinta\". Ruuvin\
+    \ koko on esitetty toisessa objektissa, joka sisältää avain-arvo -pareja pituudelle\
+    \ ja halkaisijalle."
+notes: []
+sources:
+- lang: fi
+  label: '[Ympäristöministeriö, RASTI-projekti: 2019](https://rastiprojekti.com/wp-content/uploads/2019/02/RASTI-strategia-v1.pdf)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

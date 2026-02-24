@@ -1,0 +1,30 @@
+id: tapahtumatieto
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Tapahtumatieto
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: event data
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: 'Tapahtumatiedot (engl. event data) ovat eräänlaisia tietoja, joita kerätään
+    ja tallennetaan erilaisilla seurantatyökaluilla tai -menetelmillä,
+
+    jotta saadaan tietoa toimitusketjun tapahtumista.'
+notes: []
+sources:
+- lang: fi
+  label: '[ISO/IEC 14478-2:1998](https://www.iso.org)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

@@ -1,0 +1,30 @@
+id: ohjelmointirajapinta
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Ohjelmointirajapinta
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: Application programming interface, API
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: Ohjelmointirajapinta (engl. Application programming interface, API) on määritelmä,
+    jonka mukaan eri ohjelmat voivat tehdä pyyntöjä ja vaihtaa tietoja eli keskustella
+    keskenään. Rajapinta voi olla pelkkä datarajapinta, jonka kautta saa luettua palvelun
+    sisältämän datan toisiin järjestelmiin.
+notes: []
+sources:
+- lang: fi
+  label: '[Sanastot](https://sanastot.suomi.fi/)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

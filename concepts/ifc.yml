@@ -1,0 +1,32 @@
+id: ifc
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: IFC
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: Industry Foundation Classes
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: IFC (engl. Industry Foundation Classes) on rakennusalan kansainvälinen standardi
+    (EN ISO 16739) oliopohjaisen talo- tai infrarakenteen tiedon semanttiseen määrittelyyn,
+    jäsentämiseen ja siirtoon tietokonejärjestelmästä toiseen. Toisin sanoen IFC on
+    standardi, joka määrittelee, miten fyysisiä rakennusosia vastaavat tietokomponentit
+    tulee kuvata. Tätä avoimen standardin mukaista tietomuotoa hyödynnetään laajasti
+    ohjelmistojen välisessä tiedonvaihdossa suunnittelusta rakentamiseen ja ylläpitoon.
+notes: []
+sources:
+- lang: fi
+  label: '[Ympäristöministeriö, RASTI-projekti: 2019](https://rastiprojekti.com/wp-content/uploads/2019/02/RASTI-strategia-v1.pdf)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

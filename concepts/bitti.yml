@@ -1,0 +1,36 @@
+id: bitti
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Bitti
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: binary digit, bit
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: 'Bitti (engl. binary digit, bit) on informaatioteoriassa informaation määrän
+    mitta ja tietotekniikassa tiedon tai tietovuon pienin käsiteltävä osa. Sähköisen
+    tiedon pienin yksikkö on bitti (b), yksi merkki, joka voi saada arvon 1 tai 0.
+
+
+    **Lähteet:**
+
+    [EN 1556:1998](https://sales.sfs.fi/fi/index/tuotteet/SFS/CEN/ID2/1/246564.html.stx)
+
+    [ISO/IEC 19762-1:2025](https://www.iso.org/)'
+notes: []
+sources:
+- lang: fi
+  label: ''
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

@@ -1,0 +1,35 @@
+id: yhteentoimivuusalusta
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Yhteentoimivuusalusta
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: ''
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: '*Myös Y-alusta, kokoelma työkaluja yhteentoimivuuden ja tiedonhallinnan parantamiseen.*
+
+
+    Digi- ja väestötietoviraston (DVV) ylläpitämä yhteentoimivuusalusta on kokoelma
+    työkaluja, joiden käyttö on vapaata ja avointa. Työkaluilla voidaan laatia sanastoja,
+    koodistoja ja loogisia tietomalleja, joita voidaan jakaa eri toimijoiden kesken.
+    Palvelu on tarkoitettu niin julkisille kuin yksityisille toimijoille. Palvelun
+    tarkoitus on vähentää päällekäistä työtä, kun jo kertaalleen määriteltyjä kokonaisuuksia
+    voi hyödyntää uusien projektikokonaisuuksien pohjalla.'
+notes: []
+sources:
+- lang: fi
+  label: '[RYHTI, Sanasto](https://ryhti.syke.fi/ohjeet-ja-tuki/ryhti-sanasto/)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

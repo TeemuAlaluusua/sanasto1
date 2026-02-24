@@ -1,0 +1,27 @@
+id: ifcowl
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: ifcOWL
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: ''
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: IFC:n OWL-ontologia.
+notes: []
+sources:
+- lang: fi
+  label: '[buildingSmart Terminology](https://user.buildingsmart.org/knowledge-base/terminology/)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

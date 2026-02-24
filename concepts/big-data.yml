@@ -1,0 +1,31 @@
+id: big-data
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Big Data
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: ''
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: Big Data -käsitteellä (suom. suuraineisto tai massadata) tarkoitetaan laajoja
+    tietokokonaisuuksia - ensisijaisesti datan määrän, monimuotoisuuden, nopeuden
+    ja vaihtelevuuden osalta - jotka edellyttävät skaalautuvaa teknologiaa tehokasta
+    varastointia, käsittelyä, hallintaa ja analysointia varten. Big Data on useimmiten
+    rakenteetonta (strukturoimaton data, kuten teksti-, kuva-, video-, ja äänidata).
+notes: []
+sources:
+- lang: fi
+  label: '[ISO/IEC 30105-9:2023](https://www.iso.org/standard/82368.html)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

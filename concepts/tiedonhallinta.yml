@@ -1,0 +1,31 @@
+id: tiedonhallinta
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Tiedonhallinta
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: data management
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: Tiedonhallinta (engl. data management) on kattotermi, joka sisältää datan
+    hyödyntämisen liittyvän kehityksen, hallinnan, operaatiot sekä käytännöt koko
+    tiedon elinkaaren ajan. Alueelle kuuluvat mm. datastrategia, data governance,
+    käsitteiden mallintaminen, tietovarastointi, turvallisuusasiat, tietoarkkitehtuuri,
+    talletusratkaisut ja tietojen laatu.
+notes: []
+sources:
+- lang: fi
+  label: '[Ympäristöministeriö, RASTI-projekti: 2019](https://rastiprojekti.com/wp-content/uploads/2019/02/RASTI-strategia-v1.pdf)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

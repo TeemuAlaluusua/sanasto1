@@ -1,0 +1,29 @@
+id: it
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: IT
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: information technology
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: Informaatioteknologia/tietotekniikka (engl. information technology) tarkoittaa
+    tietokoneiden ja digitaalisen tietoliikenteen käyttämistä tiedon säilyttämiseen,
+    hakemiseen, siirtämiseen ja muokkaamiseen.
+notes: []
+sources:
+- lang: fi
+  label: '[ISO/IEC 30071-1:2019](https://www.iso.org/)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

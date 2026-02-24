@@ -1,0 +1,30 @@
+id: erp
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: ERP
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: enterprise resource planning
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: "ERP-järjestelmä (engl. enterprise resource planning) eli toiminnanohjausjärjestelmä\
+    \ on yrityksen tietojärjestelmä, joka integroi eri toimintoja, esimerkiksi tuotantoa,\
+    \ jakelua, varastonhallintaa, laskutusta ja kirjanpitoa. \n\n**Lähteet:**\n[ISO\
+    \ 16100-1:2009](https://www.iso.org)\n[Logistiikan maailma -termisanasto:2025](https://www.logistiikanmaailma.fi/aineistot/sanastot/logistiikan-maailma-termisanasto/)"
+notes: []
+sources:
+- lang: fi
+  label: ''
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

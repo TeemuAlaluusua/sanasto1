@@ -1,0 +1,35 @@
+id: guid-tunniste
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: GUID-tunniste
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: Globally Unique IDentifier
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: GUID on (engl. Globally Unique IDentifier) mallinnusohjelman antama kullekin
+    osalle yksilöllinen tunniste. GUID-tunnisteen avulla sama osa voidaan tunnistaa
+    eri malleista ja näin osaan sidottu tieto säilyy mallin päivityksen yhteydessä
+    tai tieto saadaan siirtymään mallista toiseen. Kun elementille on annettu säilytettävää
+    tietoa, esim. asennus päivämäärä, on GUID-tunnisteet pyrittävä säilyttämään muokkaamalla
+    jo luotuja rakennusosia niiden tuhoamisen ja uuden osan luomisen sijaan. GUID-tunnukset
+    muodostuvat 128 bitin satunnaisnumerosarjasta, jotka esitetään yleensä 32na heksadesimaalilukuina
+    yhdysmerkein ryhmiteltynä. GUID-tunnuksissa käytetään numeroita 0-9 ja kirjaimia
+    A-F.
+notes: []
+sources:
+- lang: fi
+  label: '[ISO/IEC 9834-8:2014](https://www.iso.org/)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

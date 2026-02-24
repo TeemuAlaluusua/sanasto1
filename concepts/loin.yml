@@ -1,0 +1,34 @@
+id: loin
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: LOIN
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: Level of Information Need
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: "Informaatiotarve (engl. Level of Information Need) tarkoittaa viitekehystä,\
+    \ joka määrittelee informaation laajuuden ja rakeisuuden. HUOM. Informaatiotarpeen\
+    \ määrittelyn yksi tarkoitus on estää liiallisen informaation toimittaminen. Rakennustietomallien\
+    \ osalta puhutaan usein kehitystasomäärittelystä (LOD) joka on suunniteltu erityisesti\
+    \ mallipohjaista työskentely varten, kun taas LOIN-termillä pyritään kuvaamaan\
+    \ koko projektin tietosisältöä mahdollisimman laajasti siirtämällä painopistettä\
+    \ entistä enemmän metatietoon, geometristen ominaisuuksien sijasta. \n\n**Lähteet:**\n\
+    [EN/ISO 19650:2018](https://www.iso.org/standard/68078.html)\n[Tomczak, A:2022](https://www.buildingsmart.org/methods-to-specify-information-requirements-in-digital-construction-projects/)"
+notes: []
+sources:
+- lang: fi
+  label: ''
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

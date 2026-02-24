@@ -1,0 +1,27 @@
+id: formaatti
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Formaatti
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: data format
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: Datan esitysmuoto (engl. data format) jonkin määritellyn enkoodaustavan mukaisesti.
+notes: []
+sources:
+- lang: fi
+  label: '[Helsingin yliopisto:2024](https://wiki.helsinki.fi/xwiki/bin/view/stemmatology/Data%20formats/)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

@@ -1,0 +1,28 @@
+id: eir
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: EIR
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: exchange Information requirements, EIR
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: Informaation vaihdon vaatimukset (engl. exchange Information requirements,
+    EIR) tarkoittaa informaatiovaatimuksia suhteessa toimeksiantoon.
+notes: []
+sources:
+- lang: fi
+  label: ''
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

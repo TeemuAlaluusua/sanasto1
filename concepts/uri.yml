@@ -1,0 +1,48 @@
+id: uri
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: URI
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: Uniform Resource Identifier
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: 'URI (engl. Uniform Resource Identifier) on merkkijonosta muodostuva tunnus,
+    joka yksikäsitteisesti yksilöi tietyn verkkoresurssin noudattaen sovittua syntaksia.
+    URI-tunnistetta käytetään tyypillisesti World Wide Webin verkkoresurssien yksilöimisessä.
+
+
+    **Lähteet:**
+
+    [ISO/IEC 19770-5:2015](https://www.iso.org)
+
+    [ISO 5127:2017](https://www.iso.org)
+
+
+    *Uniform Resource Identifier, yhtenäinen resurssitunniste*
+
+
+    URI on verkossa olevan sisällön yksilöllinen tunniste. URI:lle on määritetty muoto,
+    joka toimii samalla tavalla kuin URL (Unified Resource Location). URI-muodossa
+    määritellään sisällön muoto (esim. ”http:” verkkosivulle tai ”mailto:” sähköpostille)
+    ja sisällön sijainti (esim. ”ym.fi” verkkosivulle tai ”ryhtimuutostuki@digifinland.fi”
+    sähköpostille). URI-muodon tarkoituksena on ilmaista mistä ja missä muodossa haettu
+    tieto löytyy. Tietomallin sisällöissä URI-muoto viittaa usein liitetiedostojen
+    sijaintiin palvelimella.'
+notes: []
+sources:
+- lang: fi
+  label: '[RYHTI, Sanasto](https://ryhti.syke.fi/ohjeet-ja-tuki/ryhti-sanasto/)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

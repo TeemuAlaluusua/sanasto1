@@ -1,0 +1,27 @@
+id: tietorakenne
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Tietorakenne
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: ''
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: Ennalta määritelty struktuuri, johon informaatio voidaan tallentaa.
+notes: []
+sources:
+- lang: fi
+  label: '[Ympäristöministeriö, Yleiset tietomallivaatimukset: 2022](https://rastiprojekti.com/wp-content/uploads/2019/02/RASTI-strategia-v1.pdf)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

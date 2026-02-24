@@ -1,0 +1,33 @@
+id: koneluettavuus
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Koneluettavuus
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: Machine readability
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: Koneluettavuus (engl. Machine readability) tarkoittaa, että tieto on rakenteistettu
+    systemaattiseen muotoon siten, että kone pystyy tulkitsemaan, käsittelemään, ja
+    siirtämään tietoa tietojenkäsittelyjärjestelmään ilman käyttäjän toimenpiteitä.
+    Lineaariset (1D) viivakoodisymbolit sekä kaksiulotteiset symbolit, magneettijuovaiset
+    älykortit, RFID, biometria ja optinen kirjaintunnistus ovat koneluettavia tekniikoita.
+    Tiedot sisältyvät yleensä tietovirrassa oleviin ennalta määriteltyihin paikkoihin
+    (kenttiin). Tietokoneohjelma voi tulkita nämä tiedot.
+notes: []
+sources:
+- lang: fi
+  label: '[ISO/IEC 19762-1:2025](https://www.iso.org/)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

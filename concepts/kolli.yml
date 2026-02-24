@@ -1,0 +1,31 @@
+id: kolli
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Kolli
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: ''
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: Kollilla tarkoitetaan matka- tai rahtitavaran lähetyksen pienintä (tarkemmin
+    määrittelemätöntä) kuljetusyksikköä. Jokainen kolli on varustettava niin sanotulla
+    kolliosoitelapulla. Kolliosoitelapussa mainitaan muun muassa lähetyksen toimitusosoite,
+    SSCC-koodi, kollin järjestysnumero ja paino sekä lähetyksen kokonaiskollimäärä
+    ja kollien yhteispaino.
+notes: []
+sources:
+- lang: fi
+  label: ''
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

@@ -1,0 +1,29 @@
+id: arvoketju
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Arvoketju
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: value chain
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: Arvoketju (engl. value chain) tarkoittaa tuotteen tai palvelun vaiheittaista
+    jalostumista valmiiksi tuotteeksi niin, että jokainen vaihe nostaa lopputuotteen
+    arvoa.
+notes: []
+sources:
+- lang: fi
+  label: '[ISO - PAS 24644-1:2023](https://standards.globalspec.com/std/14629302/pas-24644-1)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

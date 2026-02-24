@@ -1,0 +1,31 @@
+id: epics
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: EPICS
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: Electronic Product Code Information Services
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: EPICS (engl. Electronic Product Code Information Services) on GS1-standardi,
+    joka on suunniteltu helpottamaan tapahtumatietojen luomista, tallentamista ja
+    jakamista organisaatioiden välillä koko toimitusketjussa. EPCIS tarjoaa yhtenäisen
+    tietorakenteen ja formaatin tapahtumien kuvaamiseen, mikä mahdollistaa tuotteiden
+    ja omaisuuden tilan, sijainnin, liikkeiden ja alkuperän seuraamisen.
+notes: []
+sources:
+- lang: fi
+  label: '[GS1 Finland:2025](https://gs1.fi/fi/standardit/gs1n-tiedon-jakamisen-standardit)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

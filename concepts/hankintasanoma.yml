@@ -1,0 +1,33 @@
+id: hankintasanoma
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Hankintasanoma
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: ''
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: Hankintasanoma on kaupankäyntiin liittyvä sanoma, joka on rakenteellisessa
+    ja koneellisesti käsiteltävässä muodossa. Yleisesti rakennusalalla käytetty vakioitu
+    toimitusketjun sähköisen tiedonsiirron menetelmä on ns. verkkolasku, jossa toimittajan
+    järjestelmästä välitetään määrämuotoinen sähköinen sanoma (lasku) suoraan asiakkaan
+    järjestelmään. Rakennustoimialan kannalta tärkeitä sanomamäärittelyjä verkkolaskun
+    lisäksi on olemassa myös toimitusten ohjaukseen esim. tilauksille, tilausvahvistuksille
+    sekä toimituksille (sähköinen rahtikirja).
+notes: []
+sources:
+- lang: fi
+  label: '[Sanastot](https://sanastot.suomi.fi/)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

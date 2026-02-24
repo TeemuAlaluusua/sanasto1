@@ -1,0 +1,31 @@
+id: yhteentoimivuus
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Yhteentoimivuus
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: interoperability
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: Yhteentoimivuudella (engl. interoperability) tarkoitetaan kahden tai useamman
+    järjestelmän tai sovelluksen kykyä vaihtaa tietoa ja käyttää vaihdettua tietoa
+    yhdessä. Tietojärjestelmät ovat teknisesti ja tietosisällöllisesti yhteentoimivia
+    muiden tietojärjestelmien kanssa silloin, kun ne pystyvät käyttämään samoja tietoja
+    tai toimivat yhteen esim. rajapinnan kautta.
+notes: []
+sources:
+- lang: fi
+  label: '[ISO/IEC 22123-1:2023](https://www.iso.org/standard/82758.html)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

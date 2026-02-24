@@ -1,0 +1,41 @@
+id: laajat-kielimallit-llm
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Laajat kielimallit (LLM)
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: Large Language Models, LLM
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: Laajat kielimallit (engl. Large Language Models, LLM) on tekoälyyn perustuva
+    järjestelmä, jota käytetään esimerkiksi ennustamaan todennäköisyyttä lauseen seuraavasta
+    sanasta, kääntämisessä ja vastausten tuottamisessa annetun syötteen perusteella.
+    Laajat kielimallit perustuvat koneoppimiseen, ja erityisesti syväoppimiseen. Tämä
+    tarkoittaa sitä, että kielimalli hyödyntää ja kehittää itsenäisesti eräänlaista
+    ihmisen aivojen toimintaa jäljittelevää järjestelmää, joka oppii käsillä olevia
+    konteksteja, merkityksiä ja asiayhteyksiä. Tällaiset kielimallit vaativat myös
+    oppiakseen ja kehittyäkseen suuria tietokantoja, joita kutsutaan myös koulutusdataksi.
+    Kielimallin hyödyntämä koulutusdata voi olla esimerkiksi internetistä kerättyä
+    tietoa. Mitä suuremman ja tarkemman tietokannan kielimalli saa käyttöönsä ja mitä
+    kauemmin sen annetaan oppia ja tehdä virheitä, on yleensä sen kyky ennustaa ja
+    tuottaa tekstiä parempi. Kielimallin tehtävä on siis generoida ihmismäistä sujuvaa
+    tekstiä sille annetun syötteen (prompt) perusteella. Yleisin syötteen antotapa
+    tekoälysovellukselle on tekstikenttään kirjoitettu teksti. Maailmalla tunnettuja
+    kielimalleja ovat mm. OpenAI:n ChatGPT ja Googlen Gemini.
+notes: []
+sources:
+- lang: fi
+  label: ''
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

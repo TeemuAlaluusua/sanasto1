@@ -1,0 +1,31 @@
+id: tietokanta
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Tietokanta
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: database
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: Tietokanta (engl. database) on koneellisesti luettavan tiedon kokoelma, joka
+    sisältää sähköisesti tallennettuja kuvailevia tietueita tai sisältöyksiköitä,
+    kuten tosiasioita, tekstejä, kuvia ja ääniä, ja joka on järjestetty siten, että
+    sitä voidaan helposti käyttää, hallita ja päivittää yhteisen käyttöliittymän ja
+    ohjelmiston avulla tietojen hakemista ja käsittelyä varten.
+notes: []
+sources:
+- lang: fi
+  label: '[ISO 9707:2008](https://www.iso.org/)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

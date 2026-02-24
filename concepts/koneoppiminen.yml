@@ -1,0 +1,30 @@
+id: koneoppiminen
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Koneoppiminen
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: Machine learning
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: Koneoppiminen (engl. Machine learning) tarkoittaa tietojenkäsittelytieteen
+    osa-aluetta, jossa ohjelmisto tai järjestelmä ”oppii” datan avulla ilman ohjelmointia.
+    Koneoppiminen hyödyntää data-analytiikasta tuttuja laskennallisia menetelmiä ja
+    tilastotiedettä parantamaan asteittain annetun tehtävän suorituskykyä.
+notes: []
+sources:
+- lang: fi
+  label: '[ISO/IEC 22989:2023](https://www.iso.org)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

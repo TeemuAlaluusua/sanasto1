@@ -1,0 +1,34 @@
+id: tilatieto--statustieto
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Tilatieto / statustieto
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: status information
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: 'Statustieto (engl. status information) käsitteenä kuvaa rakennusosan valmiusastetta
+    tai jonkin toimitusketjussa esiintyvän toiminnon senhetkistä tilaa. Statustietoja
+    voidaan kirjata jokaisesta rakennusosasta useita. Esimerkiksi betonielementillä
+    voi olla statustoimintoja: suunnittelu, valu, varastointi, toimitus ja asennus.
+    Näitä statustoimintoja on mahdollista kirjata useita erilaisia aina kohteesta
+    ja tarpeista riippuen. Jokaiselle statustoiminnolle puolestaan voidaan antaa statusarvoja,
+    jotka kuvaavat tarkemmin rakennusosan senhetkistä tilaa. Statusarvot voivat olla
+    esimerkiksi aloitettu, keskeytetty ja valmis.'
+notes: []
+sources:
+- lang: fi
+  label: '[ISO 9241-13:1998](https://www.iso.org/)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

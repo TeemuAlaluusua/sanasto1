@@ -1,0 +1,29 @@
+id: tietoarkkitehtuuri
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Tietoarkkitehtuuri
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: information architecture
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: Tietoarkkitehtuurilla (engl. information architecture) tarkoitetaan keinoa
+    järjestää ja merkitä datan hallintajärjestelmiin ja varastoihin tallennettua tietosisältöä
+    ja dokumentteja haun, tietoturvan ja käytettävyyden helpottamiseksi.
+notes: []
+sources:
+- lang: fi
+  label: '[ISO 5127:2022](https://www.iso.org/)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

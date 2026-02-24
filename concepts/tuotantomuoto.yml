@@ -1,0 +1,37 @@
+id: tuotantomuoto
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Tuotantomuoto
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: ''
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: "Valmistavassa teollisuudessa, sekä erityisesti rakennusteollisuudessa tuotteiden\
+    \ ja materiaalien tuotantomuodot eroavat toisistaan imuja työntöohjaukseen perustuvan\
+    \ varasto- ja tilausohjautuvan tuotannon mukaan, mikä konkretisoituu tuotteiden\
+    \ saatavuuden kautta. Siinä missä varasto-ohjautuvia tuotteita voidaan noutaa\
+    \ suoraan rakennustarvikemyymälöiden hyllystä, tilausohjautuvat tuotteet valmistetaan\
+    \ asiakastilauksen kautta. Tuotantomuodot voidaan jakaa varasto- ja tilausohjautuvien\
+    \ tuotantoprosessien kautta tilauspisteen (OPP, Order Penetration Point) mukaisesti\
+    \ viiteen kategoriaan:\n1 Varasto-ohjautuva tuotanto (MTS)\n2 Asiakasohjautuva\
+    \ kokoonpano (ATO)\n3 Tilausohjautuva tuotanto (MTO)\n4 Asiakasohjautuva tuotesuunnittelu\
+    \ (ETO)\n5 Asiakasohjautuva tuotekehitys (DTO). \n\n**Lähteet:**\n[Alaluusua 2023](https://aaltodoc.aalto.fi/server/api/core/bitstreams/d55ffacc-a2d7-414b-8f8c-313dff01e984/content)\n\
+    [ISO 15489-1:2017](https://www.iso.org/)"
+notes: []
+sources:
+- lang: fi
+  label: ''
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

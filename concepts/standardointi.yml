@@ -1,0 +1,31 @@
+id: standardointi
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Standardointi
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: standardization
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: Standardointi (engl. standardization) on yhteisten ohjeiden ja toimintatapojen
+    laatimista. Standardointi viittaa sääntöihin, ohjeisiin tai teknisiin määrityksiin,
+    jotka on laadittu yleisesti hyväksyttyjen käytäntöjen perusteella. Standardit
+    voivat kattaa esimerkiksi tuotteiden laatuvaatimukset, turvallisuusstandardit,
+    toimialakohtaiset käytännöt ja muut tekniset tiedot.
+notes: []
+sources:
+- lang: fi
+  label: '[Ympäristöministeriö, RASTI-projekti: 2019](https://rastiprojekti.com/wp-content/uploads/2019/02/RASTI-strategia-v1.pdf)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

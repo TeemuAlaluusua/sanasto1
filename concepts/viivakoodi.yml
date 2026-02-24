@@ -1,0 +1,38 @@
+id: viivakoodi
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Viivakoodi
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: Barcode tai DataBar
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: "Viivakoodi (engl. Barcode tai DataBar) koostuu eri levyisistä mustista ja\
+    \ valkeista palkeista. Koodi voi olla rakenteeltaan numeerinen tai alfanumeerinen,\
+    \ riippuen käytetystä koodijärjestelmästä. Viivakoodit eivät yleensä sisällä tietoja\
+    \ itse tuotteesta, vaan vain yksilöintitunnuksen, jonka avulla tuote voidaan tunnistaa\
+    \ nopeasti ja virheettömästi. Se voi olla lineaarinen (1D) tai kaksiulotteinen\
+    \ (GS1 DataMatrix ja QR-koodit ovat 2D viivakoodeja). Informaatio luetaan yhdistelmästä\
+    \ optisesti, jolloin lukulaite (viivakoodinlukija tai älypuhelimen kamera) mittaa\
+    \ viivakoodin juovien leveyden ja/tai kombinaation. Lukulaitteen havaintotiedot\
+    \ muutetaan sähköisiksi digitaalimerkeiksi, joita voidaan käsitellä tietojärjestelmissä.\
+    \ \n\n**Lähteet:**\n[Alaluusua, 2023](https://aaltodoc.aalto.fi/server/api/core/bitstreams/d55ffacc-a2d7-414b-8f8c-313dff01e984/content)\
+    \ \n[EN 1556:1998](https://sales.sfs.fi/fi/index/tuotteet/SFS/CEN/ID2/1/246564.html.stx)\n\
+    \n# W"
+notes: []
+sources:
+- lang: fi
+  label: ''
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

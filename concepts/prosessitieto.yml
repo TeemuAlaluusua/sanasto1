@@ -1,0 +1,30 @@
+id: prosessitieto
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Prosessitieto
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: ''
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: Prosessitiedolla tarkoitetaan tuoteyksilön ja toimituserän käsittelyyn, jakeluun,
+    sijaintiin, käyttöön yms. liittyvä prosessitietoa, kuten aikaleimoja, sijaintikoodeja
+    ja työntekijätietoja. On siis oleellista huomata, että prosessitieto syntyy vasta
+    projektissa ja sen eri toiminnoissa.
+notes: []
+sources:
+- lang: fi
+  label: ''
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

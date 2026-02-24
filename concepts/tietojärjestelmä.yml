@@ -1,0 +1,35 @@
+id: tietojärjestelmä
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Tietojärjestelmä
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: ''
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: '*Yleiskäsite, joka sisältää digitaalisen aineiston käsittelyn toimenpiteet,
+    laitteet ja ohjelmistot.*
+
+
+    Tietojärjestelmä on laaja yleiskäsite, jolla tarkoitetaan digitaalisen aineiston
+    käsittelyssä käytettäviä laitteita, menetelmiä ja ohjelmistoja. Tietojärjestelmä
+    voi siis olla yksittäinen ohjelmiston ja laitteiston kokonaisuus. Sanaa käsitettä
+    käytetään myös kuvaamaan kansallisia, monialaisia ja monien eri tahojen yhdessä
+    käyttämiä kokonaisuuksia.'
+notes: []
+sources:
+- lang: fi
+  label: '[RYHTI, Sanasto](https://ryhti.syke.fi/ohjeet-ja-tuki/ryhti-sanasto/)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

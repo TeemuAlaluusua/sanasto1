@@ -1,0 +1,28 @@
+id: automatisoitu
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Automatisoitu
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: Automaattinen
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: Prosessi tai järjestelmä, joka tietyissä olosuhteissa toimii ilman ihmisen
+    puuttumista.
+notes: []
+sources:
+- lang: fi
+  label: '[ISO/IEC 22989:2023](https://sales.sfs.fi/fi/index/tuotteet/SFS/CENISO/ID2/2/1282472.html.stx)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

@@ -1,0 +1,29 @@
+id: validointi
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Validointi
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: validation
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: Validointi (engl. validation) tarkoittaa objektiiviseen näyttöön perustuvaa
+    varmistumista siitä, että tiettyä aiottua käyttö- tai sovellustarkoitusta koskevat
+    vaatimukset on täytetty.
+notes: []
+sources:
+- lang: fi
+  label: '[ISO/IEC 22989:2023](https://www.iso.org)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

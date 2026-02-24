@@ -1,0 +1,35 @@
+id: skeema
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Skeema
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: schema
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: "Skeema (engl. schema) tarkoittaa rakennekuvausta, jonka mukaisella sanastolla\
+    \ voidaan kuvailla sillä tarkkuudella, että myös tietokoneet ymmärtävät sen. Tietojenkäsittelytieteessä\
+    \ ja tietokantojen hallinnassa skeema määrittelee tietokannan rakenteen, mukaan\
+    \ lukien tietoelementtien organisaation, niiden väliset suhteet ja niiden vuorovaikutusta\
+    \ ohjaavat rajoitukset. Toisin sanoen skeema on looginen suunnitelma, jossa esitetään\
+    \ metatietoelementtien väliset yhteydet yleensä määrittämällä säännöt metatietojen\
+    \ käytölle ja hallinnalle erityisesti semantiikan, syntaksin ja arvojen valinnaisuuden\
+    \ (pakollisuusasteen] osalta. \n\n**Lähteet:**\n[ISO 15489-1:2017](https://www.iso.org)\n\
+    [Sanastot](https://sanastot.suomi.fi/)"
+notes: []
+sources:
+- lang: fi
+  label: ''
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

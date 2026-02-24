@@ -1,0 +1,36 @@
+id: logistiikka
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Logistiikka
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: logistics
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: "Logistiikka (engl. logistics) -käsite tarkoittaa yhteyksien luomista ja parhaan\
+    \ tavan löytämistä päämäärän saavuttamiseksi, jotta aineelliset esineet tai elävät\
+    \ olennot voidaan tuoda riittävässä määrin oikeaan paikkaan oikeaan aikaan. \n\
+    \nToimitusketjujen hallinta sekoitetaan usein logistiikka -käsitteeseen, jotka\
+    \ ovat osin samaa asiakokonaisuutta tarkoittavia termejä Toimitusketjun hallinta\
+    \ on toimitusketjun toimijoiden välisiä keskinäisiä riippuvuussuhteita strategisella\
+    \ tasolla kuvaava määritelmä, kun taas logistiikan hallinta keskittyy projektikohteeseen\
+    \ toimitettavien materiaalivirtojen hallintaan operatiivisella tasolla, jossa\
+    \ tarkastellaan yritysten hankintatoimitusprosessia (tulo-, sisä- ja lähtölogistiikkaa).\
+    \ \n\n**Lähteet:**\n[ISO 5127:2017](https://www.iso.org/)\n[Alaluusua, 2023](https://aaltodoc.aalto.fi/server/api/core/bitstreams/d55ffacc-a2d7-414b-8f8c-313dff01e984/content)"
+notes: []
+sources:
+- lang: fi
+  label: ''
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

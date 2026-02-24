@@ -1,0 +1,30 @@
+id: digitalisaatio
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Digitalisaatio
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: digital transformation
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: Digitalisaatiolla (engl. digital transformation) tarkoitetaan toimintakulttuurin
+    systeemistä muutosta, jossa digitaaliteknologiat (mm. big data, lohkoketju, pilvilaskenta,
+    esineiden internet, tekoäly, analytiikka, kognitiiviset ratkaisut jne.) lisääntyvät
+    arjen kaikissa eri toiminnoissa tehostaen toimintaa, joka perustuu data analytiikkaan.
+notes: []
+sources:
+- lang: fi
+  label: '[ISO/IEC TS 30105-9:2023](https://www.iso.org/)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

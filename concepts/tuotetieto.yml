@@ -1,0 +1,37 @@
+id: tuotetieto
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Tuotetieto
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: Product data
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: "Tuotetiedolla (engl. Product data) tarkoitetaan tuotetta koskevan tiedon\
+    \ esittämistä muodollisella tavalla, joka soveltuu ihmisten tai tietokoneiden\
+    \ välitettäväksi, tulkittavaksi tai käsiteltäväksi. Tuotetiedolla tarkoitetaan\
+    \ rakennusalan kontekstissa lähes kaikkea tuotteisiin liittyvää tietoa. Rakennusalalla\
+    \ tuotteisiin liittyvää tuotetietoa on tyypillisesti mm. tuotteiden esitteet,\
+    \ tuotteiden tekniset ja toiminnalliset ominaisuudet, suunnitelmat, asennus-,\
+    \ käyttö- ja huolto-ohjeet, tuoterakenteet, osaluettelot, testaustulokset, ympäristövaikutukset\
+    \ sekä mahdolliset turvallisuusnäkökohdat. Tuotteisiin liittyvä tieto puolestaan\
+    \ voidaan jakaa a) vakiotietoihin, b) instanssitietoihin ja c) prosessitietoihin.\
+    \ \n\n**Lähteet:**\n[Peltokorpi, 2020](https://www.aalto.fi/sites/default/files/2020-11/Loppuraportti_Tuotetiedon%20hallinta%20ja%20hyo%CC%88dynta%CC%88minen_2.11.2020_0.pdf)\n\
+    [ISO 10303-1:1994](https://www.iso.org)\n\n# U"
+notes: []
+sources:
+- lang: fi
+  label: ''
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

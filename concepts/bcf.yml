@@ -1,0 +1,29 @@
+id: bcf
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: BCF
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: BIM Collaboration Format
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: BCF (engl. BIM Collaboration Format) on standardi, jolla vaihdetaan tietoja
+    IFC-tietokokonaisuuden sisällöstä. Tietoja voidaan vaihtaa ZIP-tiedostossa (xml)
+    tai API:n kautta (JSON).
+notes: []
+sources:
+- lang: fi
+  label: '[buildingSmart Terminology](https://user.buildingsmart.org/knowledge-base/terminology/)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

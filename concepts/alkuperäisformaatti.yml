@@ -1,0 +1,35 @@
+id: alkuperäisformaatti
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Alkuperäisformaatti
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: ''
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: 'Mallinnusohjelman oma tallennusformaatti. Rakennusalan julkaisuissa käytetään
+    tälle synonyyminä käsitteitä natiivimalli tai natiiviformaatti.
+
+
+    **Lähteet:**
+
+    [BEC:2023](https://www.elementtisuunnittelu.fi/Download/23982/BEC2012%20Elementtisuunnittelun%20mallinnusohje_v110.pdf)
+
+    [YTV:2012](https://wiki.buildingsmart.fi/fi/04_Julkaisut_ja_Standardit/YTV)'
+notes: []
+sources:
+- lang: fi
+  label: ''
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

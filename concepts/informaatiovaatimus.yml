@@ -1,0 +1,27 @@
+id: informaatiovaatimus
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Informaatiovaatimus
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: ''
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: Yleiskäsite sille, mitä, milloin, miksi, miten ja kenelle tietoa tuotetaan.
+notes: []
+sources:
+- lang: fi
+  label: '[EN/ISO 19650:2018](https://www.iso.org/standard/68078.html)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

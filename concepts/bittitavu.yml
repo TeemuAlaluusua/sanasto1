@@ -1,0 +1,37 @@
+id: bittitavu
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Bittitavu
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: byte
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: 'Tavu (engl. byte) on tietotekniikassa käytettävä mittayksikkö sellaiselle
+    tallennuskapasiteetille, joka on riippumaton tallennetun datan tyypistä. Bitin
+    jälkeen seuraavaksi pienin yksikkö on tavu (t), joka on kahdeksan bittiä, eli
+    esimerkiksi merkkijono 00010101.
+
+
+    **Lähteet:**
+
+    [EN 1556:1998](https://sales.sfs.fi/fi/index/tuotteet/SFS/CEN/ID2/1/246564.html.stx)
+
+    [ISO/IEC 19762-1:2025](https://www.iso.org/)'
+notes: []
+sources:
+- lang: fi
+  label: ''
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

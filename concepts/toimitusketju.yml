@@ -1,0 +1,28 @@
+id: toimitusketju
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Toimitusketju
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: construction supply chain
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: Rakentamisessa toimitusketju (engl. construction supply chain) käsittää kaikki
+    ne toimet ja toimijat, jotka liittyvät lopputuotteen tuottamiseen raaka-aineista.
+notes: []
+sources:
+- lang: fi
+  label: '[Alaluusua, 2023](https://aaltodoc.aalto.fi/server/api/core/bitstreams/d55ffacc-a2d7-414b-8f8c-313dff01e984/content)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

@@ -1,0 +1,28 @@
+id: tunnistus-tunnistaminen
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: Tunnistus; tunnistaminen
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: recognition; identification
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: Tunnistamisella (engl. recognition; identification) tarkoitetaan menettelyä,
+    jolla varmistetaan mm. henkilön identiteetti tai esineen tai asian tunniste.
+notes: []
+sources:
+- lang: fi
+  label: '[Sanastot](https://sanastot.suomi.fi/)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35

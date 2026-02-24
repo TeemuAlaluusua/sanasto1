@@ -1,0 +1,30 @@
+id: bi
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+terms:
+- lang: fi
+  label: BI
+  type: Suositettava termi
+- lang: sv
+  label: ''
+  type: Suositettava termi
+- lang: en
+  label: Business Intelligence, BI
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: liiketoimintatiedon hallinta (engl. Business Intelligence, BI) tarkoittaa
+    prosessuaalista ja teknistä infrastruktuuria, joka kerää, tallentaa ja analysoi
+    yrityksen toiminnan tuottamaa tietoa. Microsoft Power BI on yksi suosituista BI-ohjelmistoista,
+    jota yritykset käyttävät tietojen analysointiin ja raportointiin.
+notes: []
+sources:
+- lang: fi
+  label: '[Itewiki:2025](https://www.itewiki.fi/opas/bi-business-intelligence-ja-raportointi/)'
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35
