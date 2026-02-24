@@ -24,45 +24,6 @@
       ]
     },
     {
-      "@id": "https://w3id.org/betk/sanasto/010n01",
-      "@type": "skos:Concept",
-      "skos:inScheme": "https://w3id.org/betk/sanasto/rakentamisen-tieto-ja-informaatiomallit",
-      "skos:prefLabel": [
-        {
-          "@value": "(0..)/(1..)/(0..n)/(0..1)",
-          "@language": "fi"
-        },
-        {
-          "@value": "",
-          "@language": "sv"
-        },
-        {
-          "@value": "",
-          "@language": "en"
-        }
-      ],
-      "skos:definition": [
-        {
-          "@value": "*Kardinaliteetti eli kuinka monta kertaa tietoelementti voidaan tai pitää liittää toiseen tietoelementtiin.*\n\nTietokannan perusteissa tietokokonaisuudet liittyvät toisiinsa eri tavoilla eli kardinaliteeteilla. Tässä numeroilla ilmaistaan miten moneen toiseen tietoelementtiin tarkasteltava tietoelementti voi liittyä. Numeroilla ilmaistuna yksi (1) tarkoittaa tasan yhtä vastaavaa kohdetta, ```(1..)``` tarkoittaa vähintään yhtä vastaavuutta. Numero nolla ```(0)``` tarkoittaa, että elementtiin ei ole pakko liittää toista, vastaavaa elementtiä. Jolloin ```(0..1)``` tarkoittaa yhtä tai ei yhtään ja ```(0..)``` tarkoittaa ei yhtään, yksi tai useampia. Tässä yhteydessä ``` ”n”``` ja ```””``` merkinnät vastaavat toisiaan. Esimerkiksi kunta on yksi ```(1)```, toista kuntaa ei ole samoilla tiedoilla. Kunnalla voi olla monta kaava-aluetta tai rakennuslupaa ( tai n). Kaavakohteita ```()``` voi olla kaavassa ```(1)``` yksi tai useampi, jolloin merkintä on ```(1..)```. Kaavakohteeseen ```(1)``` voi kohdistua yksi tai useampi kaavamääräys ```()```. Kaavasuosituksia voi olla yksi tai useampi ```()``` ja ne voivat kohdistua tai olla kohdistumatta kaavakohteeseen ```(0)```.",
-          "@language": "fi"
-        }
-      ],
-      "dcterms:source": [
-        {
-          "@value": "[RYHTI, Sanasto](https://ryhti.syke.fi/ohjeet-ja-tuki/ryhti-sanasto/)",
-          "@language": "fi"
-        }
-      ],
-      "dcterms:created": {
-        "@value": "2026-02-24T17:35",
-        "@type": "xsd:dateTime"
-      },
-      "dcterms:modified": {
-        "@value": "2026-02-24T17:35",
-        "@type": "xsd:dateTime"
-      }
-    },
-    {
       "@id": "https://w3id.org/betk/sanasto/aim",
       "@type": "skos:Concept",
       "skos:inScheme": "https://w3id.org/betk/sanasto/rakentamisen-tieto-ja-informaatiomallit",
@@ -2580,6 +2541,67 @@
       }
     },
     {
+      "@id": "https://w3id.org/betk/sanasto/kardinaliteetti",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://w3id.org/betk/sanasto/rakentamisen-tieto-ja-informaatiomallit",
+      "skos:prefLabel": [
+        {
+          "@value": "kardinaliteetti",
+          "@language": "fi"
+        },
+        {
+          "@value": "kardinalitet",
+          "@language": "sv"
+        },
+        {
+          "@value": "cardinality",
+          "@language": "en"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "Tietomallissa kahden tietoelementin välisen suhteen sallittu tai vaadittu lukumäärä.",
+          "@language": "fi"
+        },
+        {
+          "@value": "I en informationsmodell det tillåtna eller obligatoriska antalet förekomster i relationen mellan två informationsobjekt.",
+          "@language": "sv"
+        },
+        {
+          "@value": "In a data model, the permitted or required number of occurrences in the relationship between two data elements.",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Kardinaliteetti (minimi..maksimi) ilmaistaan usein merkinnöillä, kuten (1), (0..1), (1..n) tai (0..n).\n\n- (1) = täsmälleen yksi\n- (0..1) = nolla tai yksi (enintään yksi)\n- (1..n) = yksi tai useampi (vähintään yksi)\n- (0..n) = nolla tai useampia\n\nMerkintätavoissa käytetään myös symboleja kuten * tai jätetään maksimi auki (esim. 0..* / 0..n).\n",
+          "@language": "fi"
+        },
+        {
+          "@value": "Kardinalitet (min..max) uttrycks ofta med notationer som (1), (0..1), (1..n) eller (0..n).\n\n- (1) = exakt en\n- (0..1) = noll eller en (högst en)\n- (1..n) = en eller flera (minst en)\n- (0..n) = noll eller flera\n\nI vissa notationer används även symboler som * (t.ex. 0..* i stället för 0..n).\n",
+          "@language": "sv"
+        },
+        {
+          "@value": "Cardinality (min..max) is often expressed using notations such as (1), (0..1), (1..n), or (0..n).\n\n- (1) = exactly one\n- (0..1) = zero or one (at most one)\n- (1..n) = one or more (at least one)\n- (0..n) = zero or more\n\nSome notations use symbols like * (e.g., 0..* instead of 0..n).\n",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "RYHTI, Sanasto",
+          "@language": "fi"
+        }
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
       "@id": "https://w3id.org/betk/sanasto/kasitemalli",
       "@type": "skos:Concept",
       "skos:inScheme": "https://w3id.org/betk/sanasto/rakentamisen-tieto-ja-informaatiomallit",
@@ -3945,7 +3967,7 @@
           "@language": "fi"
         },
         {
-          "@value": "",
+          "@value": "tillgångsinformationskrav",
           "@language": "sv"
         },
         {
@@ -3961,7 +3983,7 @@
       ],
       "skos:definition": [
         {
-          "@value": "omaisuuskohteen informaatiovaatimukset kuvaa informaatiovaatimukset suhteessa omaisuuskohteen käyttöön. Omaisuuskohteen informaatiovaatimuksissa (AIR) esitetään omaisuuskohteen informaation tuottamiseen tarvittavat liikkeenjohdolliset, kaupalliset ja tekniset näkökohdat.",
+          "@value": "Omaisuuskohteen informaatiovaatimukset kuvaavat informaatiovaatimukset suhteessa omaisuuskohteen käyttöön. Omaisuuskohteen informaatiovaatimuksissa (AIR) esitetään omaisuuskohteen informaation tuottamiseen tarvittavat liikkeenjohdolliset, kaupalliset ja tekniset näkökohdat.",
           "@language": "fi"
         }
       ],
