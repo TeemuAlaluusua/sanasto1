@@ -273,6 +273,14 @@ items.sort((a,b)=>{
 
 /* ===== Helpers ===== */
 function isHttpUrl(s){return /^https?:\/\//i.test(String(s||""));}
+function escapeHtml(str){
+  return String(str||"").replace(/[&<>"']/g, s=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[s]));
+}
+function parseMarkdownLink(text){
+  const m=String(text||"").match(/^\s*\[([^\]]+)\]\((https?:\/\/[^)]+)\)\s*$/);
+  if(!m) return null;
+  return {label:m[1], url:m[2]};
+}
 
 function makeIssueURL(label,uri){
   return ISSUES_REPO_URL+"/issues/new?title="
@@ -297,22 +305,43 @@ function renderConcept(id){
 const defs=(c.definitions||[]).map(d=>`
   <div class="infoRow">
     <span class="infoLang">${(d.lang||"").toUpperCase()}</span>
-    ${d.text}
+    ${escapeHtml(d.text)}
   </div>
 `).join("")||"—";
 
-const notes=(c.notes||[]).map(n=>`
-  <div class="infoBox">
+const notes = (c.notes||[]).map(n=>`
+  <div class="infoRow">
     <span class="infoLang">${(n.lang||"").toUpperCase()}</span>
-    ${n.text}
+    ${escapeHtml(n.text)}
   </div>
-`).join("") || `<div class="infoBox">—</div>`;
+`).join("") || "—";
 
-  const src=(c.sources||[]).map(s=>{
-    const v=s.label;
-    const link=isHttpUrl(v)?`<a class="link" href="${v}" target="_blank" rel="noopener">${v}</a>`:String(v||"");
-    return `<div>${link}</div>`;
-  }).join("")||"—";
+  const srcByLang = (c.sources||[]).reduce((acc,s)=>{
+    const lang=(s.lang||"").toLowerCase()||"";
+    (acc[lang]=acc[lang]||[]).push(s);
+    return acc;
+  },{});
+
+  const langOrder=["fi","sv","en",""];
+  const src = langOrder
+    .filter(l=>srcByLang[l]?.length)
+    .map(l=>{
+      const rows = srcByLang[l].map(s=>{
+        const label = escapeHtml(s.label||"");
+        const url = s.url || "";
+        if(url){
+          return `<div><a class="link" href="${escapeHtml(url)}" target="_blank" rel="noopener">${label}</a></div>`;
+        }
+        // if label itself is a bare url, link it
+        if(isHttpUrl(s.label)){
+          return `<div><a class="link" href="${escapeHtml(s.label)}" target="_blank" rel="noopener">${label}</a></div>`;
+        }
+        return `<div>${label}</div>`;
+      }).join("");
+      const prefix = l ? `<span class="infoLang">${l.toUpperCase()}</span> ` : "";
+      return `<div class="infoRow">${prefix}${rows}</div>`;
+    })
+    .join("") || "—";
 
   const rel=(c.relations?.related||[]).map(r=>{
     const rc=concepts[map[r]];
@@ -387,7 +416,14 @@ function extractNotes(c){
   return toArray(c["skos:note"]).map(n=>({lang:n["@language"],text:n["@value"]}));
 }
 function extractSources(c){
-  return toArray(c["dcterms:source"]).map(s=>({label:s["@value"]||s}));
+  return toArray(c["dcterms:source"]).map(s=>{
+    const lang = (s && typeof s === "object") ? (s["@language"] || "") : "";
+    const raw  = (s && typeof s === "object") ? (s["@value"] || asId(s) || "") : String(s||"");
+    const md = parseMarkdownLink(raw);
+    return md
+      ? { lang, label: md.label, url: md.url, raw }
+      : { lang, label: raw, url: "", raw };
+  });
 }
 function extractRelated(c){
   return {related: toArray(c["skos:related"]).map(u=>asId(u).split("/").pop()).filter(Boolean)};
