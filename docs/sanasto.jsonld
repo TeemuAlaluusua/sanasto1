@@ -102,45 +102,6 @@
       }
     },
     {
-      "@id": "https://w3id.org/betk/sanasto/air",
-      "@type": "skos:Concept",
-      "skos:inScheme": "https://w3id.org/betk/sanasto/rakentamisen-tieto-ja-informaatiomallit",
-      "skos:prefLabel": [
-        {
-          "@value": "AIR",
-          "@language": "fi"
-        },
-        {
-          "@value": "",
-          "@language": "sv"
-        },
-        {
-          "@value": "asset information requirements",
-          "@language": "en"
-        }
-      ],
-      "skos:definition": [
-        {
-          "@value": "omaisuuskohteen informaatiovaatimukset AIR (engl. asset information requirements) kuvaa informaatiovaatimukset suhteessa omaisuuskohteen käyttöön. Omaisuuskohteen informaatiovaatimuksissa (AIR) esitetään omaisuuskohteen informaation tuottamiseen tarvittavat liikkeenjohdolliset, kaupalliset ja tekniset näkökohdat.",
-          "@language": "fi"
-        }
-      ],
-      "dcterms:source": [
-        {
-          "@value": "[EN/ISO 19650:2018](https://www.iso.org/standard/68078.html)",
-          "@language": "fi"
-        }
-      ],
-      "dcterms:created": {
-        "@value": "2026-02-24T17:35",
-        "@type": "xsd:dateTime"
-      },
-      "dcterms:modified": {
-        "@value": "2026-02-24T17:35",
-        "@type": "xsd:dateTime"
-      }
-    },
-    {
       "@id": "https://w3id.org/betk/sanasto/alavirta",
       "@type": "skos:Concept",
       "skos:inScheme": "https://w3id.org/betk/sanasto/rakentamisen-tieto-ja-informaatiomallit",
@@ -3962,6 +3923,55 @@
       "dcterms:source": [
         {
           "@value": "[Sanastot](https://sanastot.suomi.fi/)",
+          "@language": "fi"
+        }
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://w3id.org/betk/sanasto/omaisuuskohteen informaatiovaatimukset",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://w3id.org/betk/sanasto/rakentamisen-tieto-ja-informaatiomallit",
+      "skos:prefLabel": [
+        {
+          "@value": "omaisuuskohteen informaatiovaatimukset",
+          "@language": "fi"
+        },
+        {
+          "@value": "",
+          "@language": "sv"
+        },
+        {
+          "@value": "asset information requirements",
+          "@language": "en"
+        }
+      ],
+      "skos:altLabel": [
+        {
+          "@value": "AIR",
+          "@language": "en"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "omaisuuskohteen informaatiovaatimukset kuvaa informaatiovaatimukset suhteessa omaisuuskohteen käyttöön. Omaisuuskohteen informaatiovaatimuksissa (AIR) esitetään omaisuuskohteen informaation tuottamiseen tarvittavat liikkeenjohdolliset, kaupalliset ja tekniset näkökohdat.",
+          "@language": "fi"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "EN/ISO 19650:2018 https://www.iso.org/standard/68078.html",
+          "@language": "fi"
+        },
+        {
+          "@value": "https://iri.suomi.fi/terminology/en19650/concept-20",
           "@language": "fi"
         }
       ],
