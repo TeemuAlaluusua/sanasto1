@@ -1,9 +1,9 @@
-id: air
+id: omaisuuskohteen informaatiovaatimukset
 status: Luonnos
 schemeId: rakentamisen-tieto-ja-informaatiomallit
 terms:
 - lang: fi
-  label: AIR
+  label: omaisuuskohteen informaatiovaatimukset
   type: Suositettava termi
 - lang: sv
   label: ''
@@ -11,16 +11,20 @@ terms:
 - lang: en
   label: asset information requirements
   type: Suositettava termi
+- lang: en
+  label: AIR
+  type: Synonyymi
 definitions:
 - lang: fi
-  text: omaisuuskohteen informaatiovaatimukset AIR (engl. asset information requirements)
-    kuvaa informaatiovaatimukset suhteessa omaisuuskohteen käyttöön. Omaisuuskohteen
+  text: omaisuuskohteen informaatiovaatimukset kuvaa informaatiovaatimukset suhteessa omaisuuskohteen käyttöön. Omaisuuskohteen
     informaatiovaatimuksissa (AIR) esitetään omaisuuskohteen informaation tuottamiseen
     tarvittavat liikkeenjohdolliset, kaupalliset ja tekniset näkökohdat.
 notes: []
 sources:
 - lang: fi
-  label: '[EN/ISO 19650:2018](https://www.iso.org/standard/68078.html)'
+  label: EN/ISO 19650:2018 https://www.iso.org/standard/68078.html
+- lang: fi
+  label: https://iri.suomi.fi/terminology/en19650/concept-20
 relations:
   broader: []
   narrower: []
