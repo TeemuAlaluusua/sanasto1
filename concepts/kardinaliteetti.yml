@@ -1,0 +1,67 @@
+id: kardinaliteetti
+status: Luonnos
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+
+terms:
+- lang: fi
+  label: kardinaliteetti
+  type: Suositettava termi
+- lang: sv
+  label: kardinalitet
+  type: Suositettava termi
+- lang: en
+  label: cardinality
+  type: Suositettava termi
+
+definitions:
+- lang: fi
+  text: Tietomallissa kahden tietoelementin välisen suhteen sallittu tai vaadittu lukumäärä.
+- lang: sv
+  text: I en informationsmodell det tillåtna eller obligatoriska antalet förekomster i relationen mellan två informationsobjekt.
+- lang: en
+  text: In a data model, the permitted or required number of occurrences in the relationship between two data elements.
+
+notes:
+- lang: fi
+  text: |
+    Kardinaliteetti (minimi..maksimi) ilmaistaan usein merkinnöillä, kuten (1), (0..1), (1..n) tai (0..n).
+
+    - (1) = täsmälleen yksi
+    - (0..1) = nolla tai yksi (enintään yksi)
+    - (1..n) = yksi tai useampi (vähintään yksi)
+    - (0..n) = nolla tai useampia
+
+    Merkintätavoissa käytetään myös symboleja kuten * tai jätetään maksimi auki (esim. 0..* / 0..n).
+- lang: sv
+  text: |
+    Kardinalitet (min..max) uttrycks ofta med notationer som (1), (0..1), (1..n) eller (0..n).
+
+    - (1) = exakt en
+    - (0..1) = noll eller en (högst en)
+    - (1..n) = en eller flera (minst en)
+    - (0..n) = noll eller flera
+
+    I vissa notationer används även symboler som * (t.ex. 0..* i stället för 0..n).
+- lang: en
+  text: |
+    Cardinality (min..max) is often expressed using notations such as (1), (0..1), (1..n), or (0..n).
+
+    - (1) = exactly one
+    - (0..1) = zero or one (at most one)
+    - (1..n) = one or more (at least one)
+    - (0..n) = zero or more
+
+    Some notations use symbols like * (e.g., 0..* instead of 0..n).
+
+sources:
+- lang: fi
+  label: '[RYHTI, Sanasto](https://ryhti.syke.fi/ohjeet-ja-tuki/ryhti-sanasto/)'
+
+relations:
+  broader: []
+  narrower: []
+  related: []
+
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35
