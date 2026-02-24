@@ -19,7 +19,7 @@ definitions:
   Omaisuuskohteen informaatiovaatimukset kuvaavat informaatiovaatimukset suhteessa omaisuuskohteen käyttöön. Omaisuuskohteen
     informaatiovaatimuksissa (AIR) esitetään omaisuuskohteen informaation tuottamiseen
     tarvittavat liikkeenjohdolliset, kaupalliset ja tekniset näkökohdat.
-notes: []
+notes:
 sources:
 - lang: fi
   label: EN/ISO 19650:2018 https://www.iso.org/standard/68078.html
