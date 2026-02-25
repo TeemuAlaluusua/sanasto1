@@ -11,6 +11,9 @@ terms:
 - lang: en
   label: project information model
   type: Suositettava termi
+- lang: en
+  label: PIR
+  type: Synonyymi
 definitions:
 - lang: fi
   text: <a href="https://iri.suomi.fi/terminology/rymallit/c16">rakennuskohteen informaatiomalli</a>, joka sisältää rakennusprojektin suunnittelu- ja rakennusvaiheen toteutukseen tarvittavat tiedot
