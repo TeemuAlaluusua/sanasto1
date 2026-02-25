@@ -29,6 +29,9 @@ for f in list(concept_dir.glob("*.yml")) + list(concept_dir.glob("*.yaml")):
         continue
 
     c = load_yaml(f)
+    if not c:
+        continue
+
     cid = c["id"]
 
     if cid in ids:
@@ -44,7 +47,7 @@ for f in list(concept_dir.glob("*.yml")) + list(concept_dir.glob("*.yaml")):
     }
 
     # SCHEME LINK
-    if "schemeId" in c:
+    if c.get("schemeId"):
         obj["skos:inScheme"] = base_uri + c["schemeId"]
 
     # TERMS
@@ -75,7 +78,7 @@ for f in list(concept_dir.glob("*.yml")) + list(concept_dir.glob("*.yaml")):
 
     # NOTES
     notes = []
-    for n in c.get("notes", []):
+    for n in (c.get("notes") or []):
         notes.append({
             "@value": n["text"],
             "@language": n.get("lang", "fi")
@@ -84,29 +87,25 @@ for f in list(concept_dir.glob("*.yml")) + list(concept_dir.glob("*.yaml")):
         obj["skos:note"] = notes
 
     # SOURCES
-# SOURCES
-srcs = []
-for s in c.get("sources", []):
-    if isinstance(s, dict):
-        node = {
-            "@language": s.get("lang", "")
-        }
+    srcs = []
+    for s in (c.get("sources") or []):
+        if isinstance(s, dict):
+            node = {
+                "@language": s.get("lang", "")
+            }
 
-        # label
-        if s.get("label"):
-            node["rdfs:label"] = s["label"]
+            if s.get("label"):
+                node["rdfs:label"] = s["label"]
 
-        # URL → URI node
-        if s.get("url"):
-            node["@id"] = s["url"]
+            if s.get("url"):
+                node["@id"] = s["url"]
 
-        srcs.append(node)
+            srcs.append(node)
+        else:
+            srcs.append(s)
 
-    else:
-        srcs.append(s)
-
-if srcs:
-    obj["dcterms:source"] = srcs
+    if srcs:
+        obj["dcterms:source"] = srcs
 
     # RELATIONS
     rel = c.get("relations", {})
@@ -149,12 +148,12 @@ scheme_obj = {
 # OUTPUT
 # -----------------------------
 out = {
-"@context": {
-    "skos": "http://www.w3.org/2004/02/skos/core#",
-    "dcterms": "http://purl.org/dc/terms/",
-    "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
-},
+    "@context": {
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "dcterms": "http://purl.org/dc/terms/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+    },
     "@graph": [scheme_obj] + concepts
 }
 
