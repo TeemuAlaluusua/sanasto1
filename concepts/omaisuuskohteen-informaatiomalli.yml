@@ -11,6 +11,9 @@ terms:
 - lang: en
   label: asset information model
   type: Suositettava termi
+- lang: en
+  label: AIM
+  type: Synonyymi
 definitions:
 - lang: fi
   text: <a href="https://iri.suomi.fi/terminology/rymallit/c16">rakennuskohteen informaatiomalli</a>, joka sisältää <a href="https://iri.suomi.fi/terminology/rymallit/c28">rakennuskohteen</a> käyttö- ja ylläpitovaiheen aikana tarvittavat tiedot
