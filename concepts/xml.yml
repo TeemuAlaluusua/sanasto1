@@ -6,10 +6,13 @@ terms:
   label: XML
   type: Suositettava termi
 - lang: sv
-  label: ''
+  label: XML
   type: Suositettava termi
 - lang: en
   label: eXtensible Markup Language
+  type: Suositettava termi
+- lang: en
+  label: XML
   type: Suositettava termi
 definitions:
 - lang: fi
