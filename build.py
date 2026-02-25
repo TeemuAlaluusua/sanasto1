@@ -84,17 +84,29 @@ for f in list(concept_dir.glob("*.yml")) + list(concept_dir.glob("*.yaml")):
         obj["skos:note"] = notes
 
     # SOURCES
-    srcs = []
-    for s in c.get("sources", []):
-        if isinstance(s, dict):
-            srcs.append({
-                "@value": s["label"],
-                "@language": s.get("lang", "")
-            })
-        else:
-            srcs.append(s)
-    if srcs:
-        obj["dcterms:source"] = srcs
+# SOURCES
+srcs = []
+for s in c.get("sources", []):
+    if isinstance(s, dict):
+        node = {
+            "@language": s.get("lang", "")
+        }
+
+        # label
+        if s.get("label"):
+            node["rdfs:label"] = s["label"]
+
+        # URL → URI node
+        if s.get("url"):
+            node["@id"] = s["url"]
+
+        srcs.append(node)
+
+    else:
+        srcs.append(s)
+
+if srcs:
+    obj["dcterms:source"] = srcs
 
     # RELATIONS
     rel = c.get("relations", {})
@@ -137,11 +149,12 @@ scheme_obj = {
 # OUTPUT
 # -----------------------------
 out = {
-    "@context": {
-        "skos": "http://www.w3.org/2004/02/skos/core#",
-        "dcterms": "http://purl.org/dc/terms/",
-        "xsd": "http://www.w3.org/2001/XMLSchema#"
-    },
+"@context": {
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+}
     "@graph": [scheme_obj] + concepts
 }
 
