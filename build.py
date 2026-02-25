@@ -154,7 +154,7 @@ out = {
     "dcterms": "http://purl.org/dc/terms/",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
-}
+},
     "@graph": [scheme_obj] + concepts
 }
 
