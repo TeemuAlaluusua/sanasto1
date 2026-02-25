@@ -87,25 +87,26 @@ for f in list(concept_dir.glob("*.yml")) + list(concept_dir.glob("*.yaml")):
         obj["skos:note"] = notes
 
     # SOURCES
-    srcs = []
-    for s in (c.get("sources") or []):
-        if isinstance(s, dict):
-            node = {
-                "@language": s.get("lang", "")
-            }
+srcs = []
+for s in (c.get("sources") or []):
+    if isinstance(s, dict):
+        node = {}
 
-            if s.get("label"):
-                node["rdfs:label"] = s["label"]
+        if s.get("label"):
+            node["@value"] = s["label"]
 
-            if s.get("url"):
-                node["@id"] = s["url"]
+        if s.get("lang"):
+            node["@language"] = s["lang"]
 
-            srcs.append(node)
-        else:
-            srcs.append(s)
+        if s.get("url"):
+            node["@id"] = s["url"]
 
-    if srcs:
-        obj["dcterms:source"] = srcs
+        srcs.append(node)
+    else:
+        srcs.append(s)
+
+if srcs:
+    obj["dcterms:source"] = srcs
 
     # RELATIONS
     rel = c.get("relations", {})
