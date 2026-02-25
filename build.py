@@ -29,7 +29,9 @@ for f in list(concept_dir.glob("*.yml")) + list(concept_dir.glob("*.yaml")):
         continue
 
     c = load_yaml(f)
-    if not c:
+    if not isinstance(c, dict):
+        continue
+    if "id" not in c:
         continue
 
     cid = c["id"]
@@ -50,72 +52,120 @@ for f in list(concept_dir.glob("*.yml")) + list(concept_dir.glob("*.yaml")):
     if c.get("schemeId"):
         obj["skos:inScheme"] = base_uri + c["schemeId"]
 
-    # TERMS
+    # -------------------------
+    # TERMS (new or old)
+    # -------------------------
     pref = []
     alt = []
 
-    for t in c.get("terms", []):
-        lit = {"@value": t["label"], "@language": t["lang"]}
-        if t.get("type") == "Suositettava termi":
-            pref.append(lit)
-        else:
-            alt.append(lit)
+    # new schema
+    if c.get("terms"):
+        for t in c["terms"]:
+            lit = {"@value": t["label"], "@language": t["lang"]}
+            if t.get("type") == "Suositettava termi":
+                pref.append(lit)
+            else:
+                alt.append(lit)
+
+    # old schema
+    if c.get("prefLabel"):
+        for lang, text in c["prefLabel"].items():
+            pref.append({"@value": text, "@language": lang})
+
+    if c.get("altLabel"):
+        for lang, text in c["altLabel"].items():
+            alt.append({"@value": text, "@language": lang})
 
     if pref:
         obj["skos:prefLabel"] = pref
     if alt:
         obj["skos:altLabel"] = alt
 
+    # -------------------------
     # DEFINITIONS
+    # -------------------------
     defs = []
-    for d in c.get("definitions", []):
-        defs.append({
-            "@value": d["text"],
-            "@language": d.get("lang", "fi")
-        })
+
+    if c.get("definitions"):
+        for d in c["definitions"]:
+            defs.append({
+                "@value": d["text"],
+                "@language": d.get("lang", "fi")
+            })
+
+    if c.get("definition"):
+        for lang, text in c["definition"].items():
+            defs.append({
+                "@value": text,
+                "@language": lang
+            })
+
     if defs:
         obj["skos:definition"] = defs
 
+    # -------------------------
     # NOTES
+    # -------------------------
     notes = []
-    for n in (c.get("notes") or []):
-        notes.append({
-            "@value": n["text"],
-            "@language": n.get("lang", "fi")
-        })
+
+    if c.get("notes"):
+        for n in c["notes"]:
+            notes.append({
+                "@value": n["text"],
+                "@language": n.get("lang", "fi")
+            })
+
+    if c.get("note"):
+        for lang, text in c["note"].items():
+            notes.append({
+                "@value": text,
+                "@language": lang
+            })
+
     if notes:
         obj["skos:note"] = notes
 
+    # -------------------------
     # SOURCES
-srcs = []
-for s in (c.get("sources") or []):
-    if isinstance(s, dict):
-        node = {}
+    # -------------------------
+    srcs = []
 
-        if s.get("label"):
-            node["@value"] = s["label"]
+    if c.get("sources"):
+        for s in c["sources"]:
+            node = {}
+            if s.get("url"):
+                node["@id"] = s["url"]
+            if s.get("label"):
+                node["rdfs:label"] = {
+                    "@value": s["label"],
+                    "@language": s.get("lang", "")
+                }
+            srcs.append(node)
 
-        if s.get("lang"):
-            node["@language"] = s["lang"]
+    if c.get("source"):
+        for lang, text in c["source"].items():
+            srcs.append({
+                "rdfs:label": {
+                    "@value": text,
+                    "@language": lang
+                }
+            })
 
-        if s.get("url"):
-            node["@id"] = s["url"]
+    if srcs:
+        obj["dcterms:source"] = srcs
 
-        srcs.append(node)
-    else:
-        srcs.append(s)
-
-if srcs:
-    obj["dcterms:source"] = srcs
-
+    # -------------------------
     # RELATIONS
+    # -------------------------
     rel = c.get("relations", {})
     for key in ["broader", "narrower", "related"]:
         vals = rel.get(key, [])
         if vals:
             obj["skos:" + key] = [base_uri + v for v in vals]
 
+    # -------------------------
     # METADATA
+    # -------------------------
     meta = c.get("metadata", {})
     if meta.get("created"):
         obj["dcterms:created"] = {
