@@ -1,0 +1,34 @@
+id: alfanumeerinen
+status: Luonnos
+schemeId: IT
+terms:
+- lang: fi
+  label: Alfanumeerinen
+  type: Suositettava termi
+- lang: fi
+  label: Aakkosnumeerinen
+  type: Synonyymi
+- lang: sv
+  label:
+  type: Suositettava termi
+- lang: en
+  label: alphanumeric
+  type: Suositettava termi
+definitions:
+- lang: fi
+  text: 'Alfanumeerinen tarkoittaa aakkosista (a-z) ja numeroista (0-9) koostuva koodi, jossa hyödynnetään välimerkkejä.
+notes: []
+sources:
+- lang: en
+  label: "ISO 1556:1998"
+  url: 
+- lang: en
+  label: "ISO 19762:2025"
+  url: 
+relations:
+  broader: []
+  narrower: []
+  related: []
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35
