@@ -30,13 +30,10 @@ for f in list(concept_dir.glob("*.yml")) + list(concept_dir.glob("*.yaml")):
         continue
 
     c = load_yaml(f)
-    if not isinstance(c, dict):
-        continue
-    if "id" not in c:
+    if not isinstance(c, dict) or "id" not in c:
         continue
 
     cid = c["id"]
-
     if cid in ids:
         print("Duplicate id:", cid)
         sys.exit(1)
@@ -83,56 +80,45 @@ for f in list(concept_dir.glob("*.yml")) + list(concept_dir.glob("*.yaml")):
         obj["skos:altLabel"] = alt
 
     # -------------------------
-    # DEFINITIONS
+    # DEFINITIONS (new or old)
     # -------------------------
     defs = []
 
     if c.get("definitions"):
         for d in c["definitions"]:
-            defs.append({
-                "@value": d["text"],
-                "@language": d.get("lang", "fi")
-            })
+            defs.append({"@value": d["text"], "@language": d.get("lang", "fi")})
 
     if c.get("definition"):
         for lang, text in c["definition"].items():
-            defs.append({
-                "@value": text,
-                "@language": lang
-            })
+            defs.append({"@value": text, "@language": lang})
 
     if defs:
         obj["skos:definition"] = defs
 
     # -------------------------
-    # NOTES
+    # NOTES (new or old)
     # -------------------------
     notes = []
 
-    if c.get("notes"):
-        for n in c["notes"]:
-            notes.append({
-                "@value": n["text"],
-                "@language": n.get("lang", "fi")
-            })
+    for n in (c.get("notes") or []):
+        notes.append({"@value": n["text"], "@language": n.get("lang", "fi")})
 
     if c.get("note"):
         for lang, text in c["note"].items():
-            notes.append({
-                "@value": text,
-                "@language": lang
-            })
+            notes.append({"@value": text, "@language": lang})
 
     if notes:
         obj["skos:note"] = notes
 
     # -------------------------
-    # SOURCES
+    # SOURCES (new or old)
     # -------------------------
     srcs = []
 
     if c.get("sources"):
-        for s in c["sources"]:
+        for s in (c.get("sources") or []):
+            if not isinstance(s, dict):
+                continue
             node = {}
             if s.get("url"):
                 node["@id"] = s["url"]
@@ -141,7 +127,8 @@ for f in list(concept_dir.glob("*.yml")) + list(concept_dir.glob("*.yaml")):
                     "@value": s["label"],
                     "@language": s.get("lang", "")
                 }
-            srcs.append(node)
+            if node:
+                srcs.append(node)
 
     if c.get("source"):
         for lang, text in c["source"].items():
@@ -164,30 +151,25 @@ for f in list(concept_dir.glob("*.yml")) + list(concept_dir.glob("*.yaml")):
         if vals:
             obj["skos:" + key] = [base_uri + v for v in vals]
 
-# -------------------------
-# METADATA
-# -------------------------
-meta = c.get("metadata", {})
+    # -------------------------
+    # METADATA  (TÄRKEÄÄ: sisällä loopissa)
+    # -------------------------
+    meta = c.get("metadata", {})
 
-if meta.get("created"):
-    created = meta["created"]
-    if isinstance(created, datetime):
-        created = created.isoformat()
-    obj["dcterms:created"] = {
-        "@value": created,
-        "@type": "xsd:dateTime"
-    }
+    if meta.get("created"):
+        created = meta["created"]
+        if isinstance(created, datetime):
+            created = created.isoformat()
+        obj["dcterms:created"] = {"@value": created, "@type": "xsd:dateTime"}
 
-if meta.get("modified"):
-    modified = meta["modified"]
-    if isinstance(modified, datetime):
-        modified = modified.isoformat()
-    obj["dcterms:modified"] = {
-        "@value": modified,
-        "@type": "xsd:dateTime"
-    }
+    if meta.get("modified"):
+        modified = meta["modified"]
+        if isinstance(modified, datetime):
+            modified = modified.isoformat()
+        obj["dcterms:modified"] = {"@value": modified, "@type": "xsd:dateTime"}
 
-concepts.append(obj)
+    # TÄRKEÄÄ: append aina loopin lopussa
+    concepts.append(obj)
 
 # -----------------------------
 # CONCEPT SCHEME
@@ -218,9 +200,6 @@ out = {
 }
 
 out_path = docs_dir / "sanasto.jsonld"
-out_path.write_text(
-    json.dumps(out, ensure_ascii=False, indent=2),
-    encoding="utf-8"
-)
+out_path.write_text(json.dumps(out, ensure_ascii=False, indent=2), encoding="utf-8")
 
 print(f"OK built {len(concepts)} concepts -> {out_path}")
