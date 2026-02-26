@@ -1,6 +1,7 @@
 id: alfanumeerinen
 status: Luonnos
 schemeId: IT
+
 terms:
 - lang: fi
   label: Alfanumeerinen
@@ -9,26 +10,35 @@ terms:
   label: Aakkosnumeerinen
   type: Synonyymi
 - lang: sv
-  label:
+  label: Alfanumerisk
   type: Suositettava termi
 - lang: en
-  label: alphanumeric
+  label: Alphanumeric
   type: Suositettava termi
+
 definitions:
 - lang: fi
-  text: 'Alfanumeerinen tarkoittaa aakkosista (a-z) ja numeroista (0-9) koostuva koodi, jossa hyödynnetään välimerkkejä.
-notes: []
+  text: Aakkosista (A–Z) ja numeroista (0–9) koostuva tai niitä sisältävä merkistö, koodi tai tieto. Vastakohtana pelkästään aakkosellinen tai pelkästään numeerinen.
+
+notes:
+- lang: fi
+  text: Alfanumeerinen ei sisällä välimerkkejä tai erikoismerkkejä; jos myös niitä sallitaan, puhutaan esimerkiksi alfanumeerisesta ja erikoismerkkejä sisältävästä merkkijonosta tai laajennetusta merkistöstä.
+
 sources:
 - lang: en
-  label: "ISO 1556:1998"
-  url: 
+  label: ISO/IEC 2382:2015 Information technology — Vocabulary
+  url: https://www.iso.org/standard/63598.html
 - lang: en
-  label: "ISO 19762:2025"
-  url: 
+  label: ISO/IEC 19762:2025 Information technology — Automatic identification and data capture techniques — Harmonized vocabulary
+  url: https://www.iso.org/standard/86159.html
+
 relations:
   broader: []
   narrower: []
-  related: []
+  related:
+  - merkkijono
+  - merkistö
+
 metadata:
   created: 2026-02-24T17:35
-  modified: 2026-02-24T17:35
+  modified: 2026-02-26T10:33:00
