@@ -2,6 +2,7 @@ import pathlib
 import json
 import yaml
 import sys
+from datetime import datetime
 
 root = pathlib.Path(__file__).parent
 concept_dir = root / "concepts"
@@ -167,16 +168,24 @@ for f in list(concept_dir.glob("*.yml")) + list(concept_dir.glob("*.yaml")):
     # METADATA
     # -------------------------
     meta = c.get("metadata", {})
-    if meta.get("created"):
-        obj["dcterms:created"] = {
-            "@value": meta["created"],
-            "@type": "xsd:dateTime"
-        }
-    if meta.get("modified"):
-        obj["dcterms:modified"] = {
-            "@value": meta["modified"],
-            "@type": "xsd:dateTime"
-        }
+
+if meta.get("created"):
+    created = meta["created"]
+    if isinstance(created, datetime):
+        created = created.isoformat()
+    obj["dcterms:created"] = {
+        "@value": created,
+        "@type": "xsd:dateTime"
+    }
+
+if meta.get("modified"):
+    modified = meta["modified"]
+    if isinstance(modified, datetime):
+        modified = modified.isoformat()
+    obj["dcterms:modified"] = {
+        "@value": modified,
+        "@type": "xsd:dateTime"
+    }
 
     concepts.append(obj)
 
