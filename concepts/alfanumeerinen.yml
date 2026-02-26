@@ -26,11 +26,8 @@ notes:
 
 sources:
 - lang: en
-  label: ISO/IEC 2382:2015 Information technology — Vocabulary
-  url: https://www.iso.org/standard/63598.html
-- lang: en
   label: ISO/IEC 19762:2025 Information technology — Automatic identification and data capture techniques — Harmonized vocabulary
-  url: https://www.iso.org/standard/86159.html
+  url:
 
 relations:
   broader: []
