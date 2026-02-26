@@ -39,7 +39,7 @@ for f in list(concept_dir.glob("*.yml")) + list(concept_dir.glob("*.yaml")):
         sys.exit(1)
     ids.add(cid)
 
-    uri = base_uri + cid
+    uri = base_uri + "#/concept/" + cid
 
     obj = {
         "@id": uri,
