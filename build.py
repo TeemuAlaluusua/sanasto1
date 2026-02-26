@@ -164,10 +164,10 @@ for f in list(concept_dir.glob("*.yml")) + list(concept_dir.glob("*.yaml")):
         if vals:
             obj["skos:" + key] = [base_uri + v for v in vals]
 
-    # -------------------------
-    # METADATA
-    # -------------------------
-    meta = c.get("metadata", {})
+# -------------------------
+# METADATA
+# -------------------------
+meta = c.get("metadata", {})
 
 if meta.get("created"):
     created = meta["created"]
@@ -187,7 +187,7 @@ if meta.get("modified"):
         "@type": "xsd:dateTime"
     }
 
-    concepts.append(obj)
+concepts.append(obj)
 
 # -----------------------------
 # CONCEPT SCHEME
