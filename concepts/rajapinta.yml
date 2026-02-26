@@ -1,24 +1,27 @@
-id: api
+id: rajapinta
 status: Luonnos
 schemeId: rakentamisen-tieto-ja-informaatiomallit
 terms:
 - lang: fi
-  label: API
+  label: rajapinta
   type: Suositettava termi
 - lang: sv
-  label: ''
+  label: gränssnitt
   type: Suositettava termi
 - lang: en
-  label: Application Programming Interface
+  label: application programming interface
   type: Suositettava termi
+- lang: en
+  label: API
+  type: Synonyymi
 definitions:
 - lang: fi
-  text: Rajapinta (engl. Application Programming Interface) tarkoittaa kahden järjestelmän
-    välille rakennettua kommunikointiyhteyttä.
-notes: []
+  text: Rajapinta tarkoittaa kahden järjestelmän välille rakennettua kommunikointiyhteyttä.
+notes: 
 sources:
 - lang: fi
-  label: '[RYHTI, Sanasto](https://ryhti.syke.fi/ohjeet-ja-tuki/ryhti-sanasto/)'
+  label: 'RYHTI, Sanasto'
+  url: "https://ryhti.syke.fi/ohjeet-ja-tuki/ryhti-sanasto/"
 relations:
   broader: []
   narrower: []
