@@ -113,34 +113,39 @@ for f in list(concept_dir.glob("*.yml")) + list(concept_dir.glob("*.yaml")):
     # -------------------------
     # SOURCES (new or old)
     # -------------------------
-    srcs = []
+# -------------------------
+# SOURCES (new or old)
+# -------------------------
+srcs = []
 
-    if c.get("sources"):
-        for s in (c.get("sources") or []):
-            if not isinstance(s, dict):
-                continue
-            node = {}
-            if s.get("url"):
-                node["@id"] = s["url"]
-            if s.get("label"):
-                node["rdfs:label"] = {
-                    "@value": s["label"],
-                    "@language": s.get("lang", "")
-                }
-            if node:
-                srcs.append(node)
+if c.get("sources"):
+    for s in c.get("sources") or []:
+        if not isinstance(s, dict):
+            continue
 
-    if c.get("source"):
-        for lang, text in c["source"].items():
-            srcs.append({
-                "rdfs:label": {
-                    "@value": text,
-                    "@language": lang
-                }
-            })
+        node = {}
 
-    if srcs:
-        obj["dcterms:source"] = srcs
+        if s.get("label"):
+            node["@value"] = s["label"]
+
+        if s.get("lang"):
+            node["@language"] = s["lang"]
+
+        if s.get("url"):
+            node["@id"] = s["url"]
+
+        if node:
+            srcs.append(node)
+
+if c.get("source"):
+    for lang, text in c["source"].items():
+        srcs.append({
+            "@value": text,
+            "@language": lang
+        })
+
+if srcs:
+    obj["dcterms:source"] = srcs
 
     # -------------------------
     # RELATIONS
