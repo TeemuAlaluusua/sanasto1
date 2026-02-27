@@ -147,7 +147,7 @@ function updateTopBar(){
 }
 
 /* ===== Load ===== */
-fetch("sanasto.jsonld")
+fetch("./sanasto.jsonld")
 .then(r=>r.json())
 .then(j=>{
   db=j;
