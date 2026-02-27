@@ -47,8 +47,8 @@ for f in list(concept_dir.glob("*.yml")) + list(concept_dir.glob("*.yaml")):
     }
 
     # SCHEME LINK
-    if c.get("schemeId"):
-        obj["skos:inScheme"] = base_uri + c["schemeId"]
+    scheme_id = c.get("schemeId") or scheme_data["id"]
+obj["skos:inScheme"] = base_uri + scheme_id
 
     # -------------------------
     # TERMS (new or old)
