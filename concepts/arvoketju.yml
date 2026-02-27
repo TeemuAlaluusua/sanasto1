@@ -5,25 +5,48 @@ terms:
 - lang: fi
   label: Arvoketju
   type: Suositettava termi
+- lang: fi
+  label: arvoverkko
+  type: Synonyymi
 - lang: sv
-  label: ''
+  label: värdekedja
   type: Suositettava termi
+- lang: sv
+  label: värdenätverk
+  type: Synonyymi
 - lang: en
   label: value chain
   type: Suositettava termi
+- lang: en
+  label: value network
+  type: Synonyymi
 definitions:
 - lang: fi
-  text: Arvoketju (engl. value chain) tarkoittaa tuotteen tai palvelun vaiheittaista
-    jalostumista valmiiksi tuotteeksi niin, että jokainen vaihe nostaa lopputuotteen
-    arvoa.
+  text: |
+    Arvoketju (engl. value chain) tarkoittaa tuotteen tai palvelun vaiheittaista
+    jalostumista valmiiksi tuotteeksi tai palveluksi siten, että jokainen vaihe
+    lisää lopputuotteen tai -palvelun arvoa.
+- lang: sv
+  text: |
+    En värdekedja avser den stegvisa förädlingen av en produkt eller tjänst till en
+    färdig produkt eller tjänst, där varje steg ökar slutproduktens eller
+    slutresultatets värde.
+- lang: en
+  text: |
+    A value chain refers to the stepwise transformation of a product or service
+    into a finished offering, where each stage adds value to the final product or
+    service.
 notes: []
 sources:
-- lang: fi
-  label: '[ISO - PAS 24644-1:2023](https://standards.globalspec.com/std/14629302/pas-24644-1)'
+- lang: en
+  label: ISO/PAS 24644-1:2023
+  uri: https://standards.globalspec.com/std/14629302/pas-24644-1
 relations:
   broader: []
   narrower: []
-  related: []
+  related:
+  - toimitusketju
+  - liiketoimintaprosessi
 metadata:
   created: 2026-02-24T17:35
-  modified: 2026-02-24T17:35
+  modified: 2026-02-27T00:00
