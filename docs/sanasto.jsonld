@@ -7,20 +7,42 @@
   },
   "@graph": [
     {
+      "@id": "https://w3id.org/betk/sanasto/IT",
+      "@type": "skos:ConceptScheme",
+      "skos:prefLabel": [
+        {
+          "@value": "IT",
+          "@language": "fi"
+        }
+      ]
+    },
+    {
       "@id": "https://w3id.org/betk/sanasto/rakentamisen-tieto-ja-informaatiomallit",
       "@type": "skos:ConceptScheme",
       "skos:prefLabel": [
         {
-          "@value": "Rakentamisen tieto- ja informaatiomallien sanasto",
+          "@value": "rakentamisen-tieto-ja-informaatiomallit",
           "@language": "fi"
-        },
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/betk/sanasto/rakentamisen-toimitusketju",
+      "@type": "skos:ConceptScheme",
+      "skos:prefLabel": [
         {
-          "@value": "Ordlista för data- och informationsmodeller inom byggande (utkast)",
-          "@language": "sv"
-        },
+          "@value": "rakentamisen-toimitusketju",
+          "@language": "fi"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/betk/sanasto/toimitusketju",
+      "@type": "skos:ConceptScheme",
+      "skos:prefLabel": [
         {
-          "@value": "Glossary of Data and Information Models in Construction (draft)",
-          "@language": "en"
+          "@value": "toimitusketju",
+          "@language": "fi"
         }
       ]
     },

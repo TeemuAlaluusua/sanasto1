@@ -21,6 +21,7 @@ base_uri = scheme_data["baseUri"]
 
 concepts = []
 ids = set()
+schemes_found = set()  # ← kerätään kaikki schemeId:t
 
 # -----------------------------
 # CONCEPTS
@@ -50,10 +51,11 @@ for f in list(concept_dir.glob("*.yml")) + list(concept_dir.glob("*.yaml")):
     # SCHEME LINK
     # -------------------------
     scheme_id = c.get("schemeId") or scheme_data["id"]
+    schemes_found.add(scheme_id)
     obj["skos:inScheme"] = base_uri + scheme_id
 
     # -------------------------
-    # TERMS (new or old)
+    # TERMS
     # -------------------------
     pref = []
     alt = []
@@ -170,19 +172,18 @@ for f in list(concept_dir.glob("*.yml")) + list(concept_dir.glob("*.yaml")):
     concepts.append(obj)
 
 # -----------------------------
-# CONCEPT SCHEME
+# SCHEMES (moniskeematuki)
 # -----------------------------
-scheme_uri = base_uri + scheme_data["id"]
+scheme_objs = []
 
-scheme_obj = {
-    "@id": scheme_uri,
-    "@type": "skos:ConceptScheme",
-    "skos:prefLabel": [
-        {"@value": scheme_data["prefLabel"]["fi"], "@language": "fi"},
-        {"@value": scheme_data["prefLabel"]["sv"], "@language": "sv"},
-        {"@value": scheme_data["prefLabel"]["en"], "@language": "en"}
-    ]
-}
+for sid in sorted(schemes_found):
+    scheme_objs.append({
+        "@id": base_uri + sid,
+        "@type": "skos:ConceptScheme",
+        "skos:prefLabel": [
+            {"@value": sid, "@language": "fi"}
+        ]
+    })
 
 # -----------------------------
 # OUTPUT
@@ -194,10 +195,10 @@ out = {
         "xsd": "http://www.w3.org/2001/XMLSchema#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
     },
-    "@graph": [scheme_obj] + concepts
+    "@graph": scheme_objs + concepts
 }
 
 out_path = docs_dir / "sanasto.jsonld"
 out_path.write_text(json.dumps(out, ensure_ascii=False, indent=2), encoding="utf-8")
 
-print(f"OK built {len(concepts)} concepts -> {out_path}")
+print(f"OK built {len(concepts)} concepts in {len(scheme_objs)} schemes -> {out_path}")
