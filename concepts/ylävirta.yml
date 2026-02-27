@@ -4,13 +4,13 @@ schemeId: toimitusketju
 
 terms:
 - lang: fi
-  label: Ylävirta
+  label: ylävirta
   type: Suositettava termi
 - lang: sv
-  label: Uppströms
+  label: uppströms
   type: Suositettava termi
 - lang: en
-  label: Upstream
+  label: upstream
   type: Suositettava termi
 
 definitions:
