@@ -138,26 +138,78 @@
           "@language": "fi"
         },
         {
-          "@value": "",
+          "@value": "Nativt format",
           "@language": "sv"
         },
         {
-          "@value": "",
+          "@value": "Native format",
+          "@language": "en"
+        }
+      ],
+      "skos:altLabel": [
+        {
+          "@value": "natiiviformaatti",
+          "@language": "fi"
+        },
+        {
+          "@value": "natiivimalli",
+          "@language": "fi"
+        },
+        {
+          "@value": "ursprungsformat",
+          "@language": "sv"
+        },
+        {
+          "@value": "nativt filformat",
+          "@language": "sv"
+        },
+        {
+          "@value": "native file format",
+          "@language": "en"
+        },
+        {
+          "@value": "proprietary format",
           "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "Mallinnusohjelman oma tallennusformaatti. Rakennusalan julkaisuissa käytetään tälle synonyyminä käsitteitä natiivimalli tai natiiviformaatti.\n\n**Lähteet:**\n[BEC:2023](https://www.elementtisuunnittelu.fi/Download/23982/BEC2012%20Elementtisuunnittelun%20mallinnusohje_v110.pdf)\n[YTV:2012](https://wiki.buildingsmart.fi/fi/04_Julkaisut_ja_Standardit/YTV)",
+          "@value": "Mallinnusohjelman oma tallennusformaatti. Rakennusalan julkaisuissa käytetään\ntälle synonyyminä käsitteitä natiivimalli tai natiiviformaatti.\n",
           "@language": "fi"
+        },
+        {
+          "@value": "Det filformat som är specifikt för ett visst modelleringsprogram och dess\ninterna lagring av modellen. Inom byggbranschen används även benämningarna\nnativ modell eller nativt format som synonymer.\n",
+          "@language": "sv"
+        },
+        {
+          "@value": "The file format specific to a particular modelling software used for the\nmodel’s native storage. In the construction industry, the terms native model\nor native format are also used as synonyms.\n",
+          "@language": "en"
         }
+      ],
+      "dcterms:source": [
+        {
+          "rdfs:label": {
+            "@value": "BEC:2023 Elementtisuunnittelun mallinnusohje",
+            "@language": "fi"
+          }
+        },
+        {
+          "rdfs:label": {
+            "@value": "YTV:2012 Yleiset tietomallivaatimukset",
+            "@language": "fi"
+          }
+        }
+      ],
+      "skos:related": [
+        "https://w3id.org/betk/sanasto/natiiviformaatti",
+        "https://w3id.org/betk/sanasto/natiivimalli"
       ],
       "dcterms:created": {
         "@value": "2026-02-24T17:35",
         "@type": "xsd:dateTime"
       },
       "dcterms:modified": {
-        "@value": "2026-02-24T17:35",
+        "@value": "2026-02-27T00:00",
         "@type": "xsd:dateTime"
       }
     },
@@ -171,40 +223,66 @@
           "@language": "fi"
         },
         {
-          "@value": "",
+          "@value": "Sensor",
           "@language": "sv"
         },
         {
-          "@value": "",
+          "@value": "Sensor",
+          "@language": "en"
+        }
+      ],
+      "skos:altLabel": [
+        {
+          "@value": "sensori",
+          "@language": "fi"
+        },
+        {
+          "@value": "givare",
+          "@language": "sv"
+        },
+        {
+          "@value": "transducer",
           "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "Anturi on laite, joka reagoi fyysiseen ärsykkeeseen kuten lämpö, valo, ääni, paine, vetovoimaan tai liikkeeseen ja välittää sen arvon eteen päin. Antureita hyödynnetään esimerkiksi erilaisissa IoT- ratkaisuissa.",
+          "@value": "Anturi on laite, joka reagoi fyysiseen ärsykkeeseen kuten lämpöön, valoon,\nääneen, paineeseen, vetovoimaan tai liikkeeseen ja välittää sen arvon eteenpäin.\nAntureita hyödynnetään esimerkiksi erilaisissa IoT-ratkaisuissa.\n",
           "@language": "fi"
+        },
+        {
+          "@value": "En sensor är en anordning som reagerar på en fysisk påverkan såsom värme, ljus,\nljud, tryck, gravitation eller rörelse och vidarebefordrar dess värde.\nSensorer används till exempel i olika IoT-lösningar.\n",
+          "@language": "sv"
+        },
+        {
+          "@value": "A sensor is a device that responds to a physical stimulus such as heat, light,\nsound, pressure, gravity or motion and transmits its value onward. Sensors are\nused, for example, in various IoT solutions.\n",
+          "@language": "en"
         }
+      ],
+      "skos:related": [
+        "https://w3id.org/betk/sanasto/mittalaite",
+        "https://w3id.org/betk/sanasto/IoT-laite"
       ],
       "dcterms:created": {
         "@value": "2026-02-24T17:35",
         "@type": "xsd:dateTime"
       },
       "dcterms:modified": {
-        "@value": "2026-02-24T17:35",
+        "@value": "2026-02-27T00:00",
         "@type": "xsd:dateTime"
       }
     },
     {
       "@id": "https://w3id.org/betk/sanasto/#/concept/arvoketju",
       "@type": "skos:Concept",
-      "skos:inScheme": "https://w3id.org/betk/sanasto/rakentamisen-tieto-ja-informaatiomallit",
+      "skos:inScheme": "https://w3id.org/betk/sanasto/rakentamisen-toimitusketju",
       "skos:prefLabel": [
         {
           "@value": "Arvoketju",
           "@language": "fi"
         },
         {
-          "@value": "",
+          "@value": "värdekedja",
           "@language": "sv"
         },
         {
@@ -212,26 +290,52 @@
           "@language": "en"
         }
       ],
+      "skos:altLabel": [
+        {
+          "@value": "arvoverkko",
+          "@language": "fi"
+        },
+        {
+          "@value": "värdenätverk",
+          "@language": "sv"
+        },
+        {
+          "@value": "value network",
+          "@language": "en"
+        }
+      ],
       "skos:definition": [
         {
-          "@value": "Arvoketju (engl. value chain) tarkoittaa tuotteen tai palvelun vaiheittaista jalostumista valmiiksi tuotteeksi niin, että jokainen vaihe nostaa lopputuotteen arvoa.",
+          "@value": "Arvoketju (engl. value chain) tarkoittaa tuotteen tai palvelun vaiheittaista\njalostumista valmiiksi tuotteeksi tai palveluksi siten, että jokainen vaihe\nlisää lopputuotteen tai -palvelun arvoa.\n",
           "@language": "fi"
+        },
+        {
+          "@value": "En värdekedja avser den stegvisa förädlingen av en produkt eller tjänst till en\nfärdig produkt eller tjänst, där varje steg ökar slutproduktens eller\nslutresultatets värde.\n",
+          "@language": "sv"
+        },
+        {
+          "@value": "A value chain refers to the stepwise transformation of a product or service\ninto a finished offering, where each stage adds value to the final product or\nservice.\n",
+          "@language": "en"
         }
       ],
       "dcterms:source": [
         {
           "rdfs:label": {
-            "@value": "[ISO - PAS 24644-1:2023](https://standards.globalspec.com/std/14629302/pas-24644-1)",
-            "@language": "fi"
+            "@value": "ISO/PAS 24644-1:2023",
+            "@language": "en"
           }
         }
+      ],
+      "skos:related": [
+        "https://w3id.org/betk/sanasto/toimitusketju",
+        "https://w3id.org/betk/sanasto/liiketoimintaprosessi"
       ],
       "dcterms:created": {
         "@value": "2026-02-24T17:35",
         "@type": "xsd:dateTime"
       },
       "dcterms:modified": {
-        "@value": "2026-02-24T17:35",
+        "@value": "2026-02-27T00:00",
         "@type": "xsd:dateTime"
       }
     },
