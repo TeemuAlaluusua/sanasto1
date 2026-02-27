@@ -46,9 +46,11 @@ for f in list(concept_dir.glob("*.yml")) + list(concept_dir.glob("*.yaml")):
         "@type": "skos:Concept"
     }
 
+    # -------------------------
     # SCHEME LINK
+    # -------------------------
     scheme_id = c.get("schemeId") or scheme_data["id"]
-obj["skos:inScheme"] = base_uri + scheme_id
+    obj["skos:inScheme"] = base_uri + scheme_id
 
     # -------------------------
     # TERMS (new or old)
@@ -56,7 +58,6 @@ obj["skos:inScheme"] = base_uri + scheme_id
     pref = []
     alt = []
 
-    # new schema
     if c.get("terms"):
         for t in c["terms"]:
             lit = {"@value": t["label"], "@language": t["lang"]}
@@ -65,7 +66,6 @@ obj["skos:inScheme"] = base_uri + scheme_id
             else:
                 alt.append(lit)
 
-    # old schema
     if c.get("prefLabel"):
         for lang, text in c["prefLabel"].items():
             pref.append({"@value": text, "@language": lang})
@@ -80,7 +80,7 @@ obj["skos:inScheme"] = base_uri + scheme_id
         obj["skos:altLabel"] = alt
 
     # -------------------------
-    # DEFINITIONS (new or old)
+    # DEFINITIONS
     # -------------------------
     defs = []
 
@@ -96,7 +96,7 @@ obj["skos:inScheme"] = base_uri + scheme_id
         obj["skos:definition"] = defs
 
     # -------------------------
-    # NOTES (new or old)
+    # NOTES
     # -------------------------
     notes = []
 
@@ -111,41 +111,35 @@ obj["skos:inScheme"] = base_uri + scheme_id
         obj["skos:note"] = notes
 
     # -------------------------
-    # SOURCES (new or old)
+    # SOURCES
     # -------------------------
-# -------------------------
-# SOURCES (new or old)
-# -------------------------
-srcs = []
+    srcs = []
 
-if c.get("sources"):
-    for s in c.get("sources") or []:
-        if not isinstance(s, dict):
-            continue
+    if c.get("sources"):
+        for s in c.get("sources") or []:
+            if not isinstance(s, dict):
+                continue
 
-        node = {}
+            node = {}
+            if s.get("label"):
+                node["@value"] = s["label"]
+            if s.get("lang"):
+                node["@language"] = s["lang"]
+            if s.get("url"):
+                node["@id"] = s["url"]
 
-        if s.get("label"):
-            node["@value"] = s["label"]
+            if node:
+                srcs.append(node)
 
-        if s.get("lang"):
-            node["@language"] = s["lang"]
+    if c.get("source"):
+        for lang, text in c["source"].items():
+            srcs.append({
+                "@value": text,
+                "@language": lang
+            })
 
-        if s.get("url"):
-            node["@id"] = s["url"]
-
-        if node:
-            srcs.append(node)
-
-if c.get("source"):
-    for lang, text in c["source"].items():
-        srcs.append({
-            "@value": text,
-            "@language": lang
-        })
-
-if srcs:
-    obj["dcterms:source"] = srcs
+    if srcs:
+        obj["dcterms:source"] = srcs
 
     # -------------------------
     # RELATIONS
@@ -157,7 +151,7 @@ if srcs:
             obj["skos:" + key] = [base_uri + v for v in vals]
 
     # -------------------------
-    # METADATA  (TÄRKEÄÄ: sisällä loopissa)
+    # METADATA
     # -------------------------
     meta = c.get("metadata", {})
 
@@ -173,7 +167,6 @@ if srcs:
             modified = modified.isoformat()
         obj["dcterms:modified"] = {"@value": modified, "@type": "xsd:dateTime"}
 
-    # TÄRKEÄÄ: append aina loopin lopussa
     concepts.append(obj)
 
 # -----------------------------
