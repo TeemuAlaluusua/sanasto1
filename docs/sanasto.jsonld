@@ -52,15 +52,15 @@
       "skos:inScheme": "https://w3id.org/betk/sanasto/toimitusketju",
       "skos:prefLabel": [
         {
-          "@value": "Alavirta",
+          "@value": "alavirta",
           "@language": "fi"
         },
         {
-          "@value": "Nedströms",
+          "@value": "nedströms",
           "@language": "sv"
         },
         {
-          "@value": "Downstream",
+          "@value": "downstream",
           "@language": "en"
         }
       ],
@@ -7103,32 +7103,48 @@
           "@language": "fi"
         },
         {
-          "@value": "",
+          "@value": "Identifiering",
           "@language": "sv"
         },
         {
-          "@value": "",
+          "@value": "Identification",
           "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "Toimijan tai objektin yksilöllisyyteen perustuva erottaminen muista samaan tai samankaltaiseen joukkoon kuuluvista.",
+          "@value": "Toimijan, kohteen tai tietomallin objektin yksiselitteinen tunnistaminen ja erottaminen muista samaan joukkoon kuuluvista.",
+          "@language": "fi"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Yksilöinti toteutetaan liittämällä kohteeseen yksilöintitieto, kuten tunnus, koodi tai globaalitunniste (esim. GUID). Rakentamisen tietomalleissa yksilöinti mahdollistaa objektien elinkaaren aikaisen viittauksen, jäljitettävyyden ja tiedonhallinnan.",
           "@language": "fi"
         }
       ],
       "dcterms:source": [
         {
-          "@value": "[Sanastot](https://sanastot.suomi.fi/)",
-          "@language": "fi"
+          "@value": "Suomi.fi-sanastot: Yritysdigi – yksilöinti",
+          "@language": "fi",
+          "@id": "https://sanastot.suomi.fi/terminology/yritysdigi/concept/concept-2065"
         }
+      ],
+      "skos:broader": [
+        "https://w3id.org/betk/sanasto/tunnistaminen"
+      ],
+      "skos:related": [
+        "https://w3id.org/betk/sanasto/yksilöintitieto",
+        "https://w3id.org/betk/sanasto/tunniste",
+        "https://w3id.org/betk/sanasto/GUID",
+        "https://w3id.org/betk/sanasto/tietomalliobjekti"
       ],
       "dcterms:created": {
         "@value": "2026-02-24T17:35",
         "@type": "xsd:dateTime"
       },
       "dcterms:modified": {
-        "@value": "2026-02-24T17:35",
+        "@value": "2026-02-27T10:55:00",
         "@type": "xsd:dateTime"
       }
     },
@@ -7142,70 +7158,49 @@
           "@language": "fi"
         },
         {
-          "@value": "",
+          "@value": "Identifieringsuppgift",
           "@language": "sv"
         },
         {
-          "@value": "",
+          "@value": "Identifying information",
           "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "Tieto tai tietojoukko, jonka perusteella toimija tai objekti on yksilöitävissä.",
+          "@value": "Tieto tai tietojoukko, jonka avulla toimija, kohde tai tietomallin objekti voidaan yksiselitteisesti tunnistaa ja erottaa muista.",
+          "@language": "fi"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Yksilöintitieto voi olla yksittäinen tunniste (esim. tunnus, koodi, GUID) tai tunnisteiden yhdistelmä. Rakentamisen tietomalleissa yksilöintitieto liitetään esimerkiksi rakennusosiin, järjestelmiin, tiloihin ja laitteisiin elinkaaren aikaisen jäljitettävyyden ja hallinnan varmistamiseksi.",
           "@language": "fi"
         }
       ],
       "dcterms:source": [
         {
-          "@value": "[Sanastot](https://sanastot.suomi.fi/)",
-          "@language": "fi"
+          "@value": "Suomi.fi-sanastot: Yritysdigi – yksilöintitieto",
+          "@language": "fi",
+          "@id": "https://sanastot.suomi.fi/terminology/yritysdigi/concept/concept-2062"
         }
+      ],
+      "skos:broader": [
+        "https://w3id.org/betk/sanasto/tieto"
+      ],
+      "skos:related": [
+        "https://w3id.org/betk/sanasto/tunniste",
+        "https://w3id.org/betk/sanasto/tunnistetieto",
+        "https://w3id.org/betk/sanasto/globaalitunniste",
+        "https://w3id.org/betk/sanasto/GUID",
+        "https://w3id.org/betk/sanasto/tietomalliobjekti"
       ],
       "dcterms:created": {
         "@value": "2026-02-24T17:35",
         "@type": "xsd:dateTime"
       },
       "dcterms:modified": {
-        "@value": "2026-02-24T17:35",
-        "@type": "xsd:dateTime"
-      }
-    },
-    {
-      "@id": "https://w3id.org/betk/sanasto/#/concept/ylläpitomalli",
-      "@type": "skos:Concept",
-      "skos:inScheme": "https://w3id.org/betk/sanasto/rakentamisen-tieto-ja-informaatiomallit",
-      "skos:prefLabel": [
-        {
-          "@value": "Ylläpitomalli",
-          "@language": "fi"
-        },
-        {
-          "@value": "",
-          "@language": "sv"
-        },
-        {
-          "@value": "Maintenance model",
-          "@language": "en"
-        }
-      ],
-      "skos:definition": [
-        {
-          "@value": "Ylläpitomalli (engl. Maintenance model) on rakenteen tai -järjestelmän tietomallin tietosisällön osajoukko (vaiheistus), joka kattaa ylläpidon näkökulman eli käytön ja ylläpidon aikaiset tehtävät, muutokset jne.",
-          "@language": "fi"
-        }
-      ],
-      "dcterms:source": [
-        {
-          "@language": "fi"
-        }
-      ],
-      "dcterms:created": {
-        "@value": "2026-02-24T17:35",
-        "@type": "xsd:dateTime"
-      },
-      "dcterms:modified": {
-        "@value": "2026-02-24T17:35",
+        "@value": "2026-02-27T10:48:00",
         "@type": "xsd:dateTime"
       }
     },
@@ -7215,15 +7210,15 @@
       "skos:inScheme": "https://w3id.org/betk/sanasto/toimitusketju",
       "skos:prefLabel": [
         {
-          "@value": "Ylävirta",
+          "@value": "ylävirta",
           "@language": "fi"
         },
         {
-          "@value": "Uppströms",
+          "@value": "uppströms",
           "@language": "sv"
         },
         {
-          "@value": "Upstream",
+          "@value": "upstream",
           "@language": "en"
         }
       ],
