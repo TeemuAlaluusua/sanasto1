@@ -27,21 +27,21 @@
       ]
     },
     {
-      "@id": "https://w3id.org/betk/sanasto/rakentamisen-toimitusketju",
-      "@type": "skos:ConceptScheme",
-      "skos:prefLabel": [
-        {
-          "@value": "rakentamisen-toimitusketju",
-          "@language": "fi"
-        }
-      ]
-    },
-    {
       "@id": "https://w3id.org/betk/sanasto/toimitusketju",
       "@type": "skos:ConceptScheme",
       "skos:prefLabel": [
         {
           "@value": "toimitusketju",
+          "@language": "fi"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/betk/sanasto/tuotanto- ja toimitusstrategiat",
+      "@type": "skos:ConceptScheme",
+      "skos:prefLabel": [
+        {
+          "@value": "tuotanto- ja toimitusstrategiat",
           "@language": "fi"
         }
       ]
@@ -101,21 +101,21 @@
       "skos:inScheme": "https://w3id.org/betk/sanasto/IT",
       "skos:prefLabel": [
         {
-          "@value": "Alfanumeerinen",
+          "@value": "alfanumeerinen",
           "@language": "fi"
         },
         {
-          "@value": "Alfanumerisk",
+          "@value": "alfanumerisk",
           "@language": "sv"
         },
         {
-          "@value": "Alphanumeric",
+          "@value": "alphanumeric",
           "@language": "en"
         }
       ],
       "skos:altLabel": [
         {
-          "@value": "Aakkosnumeerinen",
+          "@value": "aakkosnumeerinen",
           "@language": "fi"
         }
       ],
@@ -152,11 +152,11 @@
       "skos:inScheme": "https://w3id.org/betk/sanasto/rakentamisen-tieto-ja-informaatiomallit",
       "skos:prefLabel": [
         {
-          "@value": "Alkuperäisformaatti",
+          "@value": "alkuperäisformaatti",
           "@language": "fi"
         },
         {
-          "@value": "Nativt format",
+          "@value": "nativt format",
           "@language": "sv"
         },
         {
@@ -230,18 +230,18 @@
     {
       "@id": "https://w3id.org/betk/sanasto/#/concept/anturi",
       "@type": "skos:Concept",
-      "skos:inScheme": "https://w3id.org/betk/sanasto/rakentamisen-tieto-ja-informaatiomallit",
+      "skos:inScheme": "https://w3id.org/betk/sanasto/IT",
       "skos:prefLabel": [
         {
-          "@value": "Anturi",
+          "@value": "anturi",
           "@language": "fi"
         },
         {
-          "@value": "Sensor",
+          "@value": "sensor",
           "@language": "sv"
         },
         {
-          "@value": "Sensor",
+          "@value": "sensor",
           "@language": "en"
         }
       ],
@@ -294,10 +294,10 @@
     {
       "@id": "https://w3id.org/betk/sanasto/#/concept/arvoketju",
       "@type": "skos:Concept",
-      "skos:inScheme": "https://w3id.org/betk/sanasto/rakentamisen-toimitusketju",
+      "skos:inScheme": "https://w3id.org/betk/sanasto/toimitusketju",
       "skos:prefLabel": [
         {
-          "@value": "Arvoketju",
+          "@value": "arvoketju",
           "@language": "fi"
         },
         {
@@ -362,50 +362,84 @@
       "skos:inScheme": "https://w3id.org/betk/sanasto/rakentamisen-tieto-ja-informaatiomallit",
       "skos:prefLabel": [
         {
-          "@value": "Asiakastilauksen kytkeytymiskohta",
+          "@value": "asiakastilauksen kytkeytymiskohta",
           "@language": "fi"
         },
         {
-          "@value": "",
+          "@value": "kundorderpunkt",
           "@language": "sv"
         },
         {
-          "@value": "",
+          "@value": "customer order decoupling point",
+          "@language": "en"
+        }
+      ],
+      "skos:altLabel": [
+        {
+          "@value": "tilauskytkentäpiste",
+          "@language": "fi"
+        },
+        {
+          "@value": "tilauksen kytkeytymispiste",
+          "@language": "fi"
+        },
+        {
+          "@value": "kundorderkopplingspunkt",
+          "@language": "sv"
+        },
+        {
+          "@value": "order penetration point",
           "@language": "en"
         }
       ],
       "skos:definition": [
         {
-          "@value": "Se toimitusketjun kohta, jossa tuote liitetään asiakkaan tekemään tilaukseen.",
+          "@value": "Se toimitusketjun kohta, jossa tuote tai palvelu liitetään asiakkaan tekemään\ntilaukseen ja jossa toiminta muuttuu ennusteohjautuvasta tilausohjautuvaksi.\n",
           "@language": "fi"
+        },
+        {
+          "@value": "Den punkt i leveranskedjan där en produkt eller tjänst kopplas till en kundorder\noch där styrningen övergår från prognosbaserad till orderstyrd.\n",
+          "@language": "sv"
+        },
+        {
+          "@value": "The point in the supply chain where a product or service is linked to a specific\ncustomer order and operations shift from forecast-driven to order-driven.\n",
+          "@language": "en"
         }
       ],
       "dcterms:source": [
         {
-          "@value": "[Logistiikan maailma -termisanasto:2025](https://www.logistiikanmaailma.fi/aineistot/sanastot/logistiikan-maailma-termisanasto/)",
+          "@value": "Logistiikan maailma -termisanasto:2025",
           "@language": "fi"
         }
+      ],
+      "skos:broader": [
+        "https://w3id.org/betk/sanasto/toimitusketju"
+      ],
+      "skos:related": [
+        "https://w3id.org/betk/sanasto/arvoketju",
+        "https://w3id.org/betk/sanasto/tilausohjautuva tuotanto",
+        "https://w3id.org/betk/sanasto/ennusteohjautuva tuotanto"
       ],
       "dcterms:created": {
         "@value": "2026-02-24T17:35",
         "@type": "xsd:dateTime"
       },
       "dcterms:modified": {
-        "@value": "2026-02-24T17:35",
+        "@value": "2026-02-27T00:00",
         "@type": "xsd:dateTime"
       }
     },
     {
       "@id": "https://w3id.org/betk/sanasto/#/concept/ato",
       "@type": "skos:Concept",
-      "skos:inScheme": "https://w3id.org/betk/sanasto/rakentamisen-tieto-ja-informaatiomallit",
+      "skos:inScheme": "https://w3id.org/betk/sanasto/tuotanto- ja toimitusstrategiat",
       "skos:prefLabel": [
         {
           "@value": "ATO",
           "@language": "fi"
         },
         {
-          "@value": "",
+          "@value": "ATO",
           "@language": "sv"
         },
         {
@@ -413,23 +447,59 @@
           "@language": "en"
         }
       ],
+      "skos:altLabel": [
+        {
+          "@value": "asiakasohjautuva kokoonpano",
+          "@language": "fi"
+        },
+        {
+          "@value": "kundorderstyrd montering",
+          "@language": "sv"
+        },
+        {
+          "@value": "ATO",
+          "@language": "en"
+        }
+      ],
       "skos:definition": [
         {
-          "@value": "Asiakasohjautuva kokoonpano (engl. Assembly-to-order) on valmistusstrategia, jota käytetään usein teollisuudessa, jossa on paljon erilaisia vaihtoehtoja tai konfiguraatioita tuotteelle. Tässä valmistusstrategiassa tuotevalmistaja tuottaa varastoiduista vakiokomponenteista erilaisia tuotevariaatioita asiakastarpeiden mukaisesti. Nämä osat on tyypillisesti suunniteltu sopimaan yhteen erilaisissa kokoonpanoissa, jolloin yritys voi tarjota asiakkaille valikoiman tuotevaihtoehtoja ja samalla minimoida yksilöllisen valmistuksen tarpeen. Tyypillisiä ATO-tuotteita ovat esim. ikkunat sekä keittiökalusteet. Tässä tuotannonohjausmuodossa varastoon sitoutuu pääomaa, koska standardikomponentteja tarvitaan paljon. ATO:n ideana on tasapainottaa massatuotannon edut ja räätälöidyn tuotannon joustavuus. ATO- tuotteiden valmistusjärjestelmässä ei ole puskuria valmiille varastolle, ja toimitusaika riippuu varaston osakokoonpanovaraston saatavuudesta. \n\n**Lähteet:**\n[Alaluusua, 2023](https://aaltodoc.aalto.fi/server/api/core/bitstreams/d55ffacc-a2d7-414b-8f8c-313dff01e984/content)\n[Peltokorpi, 2020](https://www.aalto.fi/sites/default/files/2020-11/Loppuraportti_Tuotetiedon%20hallinta%20ja%20hyo%CC%88dynta%CC%88minen_2.11.2020_0.pdf)",
+          "@value": "Asiakasohjautuva kokoonpanolla tarkoitetaan tuotanto- ja toimitusstrategiaa, jossa tuote kootaan asiakkaan\ntilauksen jälkeen varastoiduista vakiokomponenteista tai\nosakokoonpanoista. Strategia yhdistää massatuotannon\ntehokkuuden ja asiakaskohtaisen konfiguroinnin joustavuuden.\nToimitusaika määräytyy komponentti- ja osakokoonpanovaraston\nsaatavuuden sekä kokoonpanoajan perusteella.\n",
           "@language": "fi"
+        },
+        {
+          "@value": "Kundorderstyrd montering är en produktions- och leveransstrategi där produkten monteras efter\nkundorder från lagerhållna standardkomponenter eller delmontage.\nStrategin kombinerar effektiviteten i massproduktion med\nflexibiliteten i kundanpassad konfiguration. Leveranstiden beror\npå tillgången på komponent- och delmontagelager samt monteringstid.\n",
+          "@language": "sv"
+        },
+        {
+          "@value": "Assembly-to-order (ATO) is a production and fulfilment strategy in\nwhich a product is assembled after receipt of a customer order\nfrom stocked standard components or subassemblies. The approach\ncombines the efficiency of mass production with the flexibility of\ncustomer-specific configuration. Lead time depends on the\navailability of components and subassemblies and the assembly time.\n",
+          "@language": "en"
         }
       ],
       "dcterms:source": [
         {
+          "@value": "Alaluusua 2023",
+          "@language": "fi"
+        },
+        {
+          "@value": "Peltokorpi 2020 Tuotetiedon hallinta ja hyödyntäminen",
           "@language": "fi"
         }
+      ],
+      "skos:broader": [
+        "https://w3id.org/betk/sanasto/tuotanto-ja-toimitusstrategia"
+      ],
+      "skos:related": [
+        "https://w3id.org/betk/sanasto/asiakastilauksen-kytkeytymiskohta",
+        "https://w3id.org/betk/sanasto/mto",
+        "https://w3id.org/betk/sanasto/mts",
+        "https://w3id.org/betk/sanasto/eto"
       ],
       "dcterms:created": {
         "@value": "2026-02-24T17:35",
         "@type": "xsd:dateTime"
       },
       "dcterms:modified": {
-        "@value": "2026-02-24T17:35",
+        "@value": "2026-02-27T00:00",
         "@type": "xsd:dateTime"
       }
     },
@@ -439,36 +509,68 @@
       "skos:inScheme": "https://w3id.org/betk/sanasto/rakentamisen-tieto-ja-informaatiomallit",
       "skos:prefLabel": [
         {
-          "@value": "Attribuutti",
+          "@value": "attribuutti",
           "@language": "fi"
         },
         {
-          "@value": "",
+          "@value": "attribut",
           "@language": "sv"
         },
         {
-          "@value": "Attribute",
+          "@value": "attribute",
           "@language": "en"
+        }
+      ],
+      "skos:altLabel": [
+        {
+          "@value": "attribuuttitieto",
+          "@language": "fi"
+        },
+        {
+          "@value": "attributdata",
+          "@language": "sv"
         }
       ],
       "skos:definition": [
         {
-          "@value": "Attribuutit (engl. Attribute) kuvaavat objektien ominaisuuksia. Tämä voi olla esimerkiksi tietomallissa rakenneosaan liittyvä yksittäinen tieto tai tätä kuvaava ominaisuus; esimerkiksi nimi, sijainti, materiaali, valmistaja, versionumero ja kustannus.",
+          "@value": "Attribuutti (engl. attribute) on tietomallissa objektin määrittelyyn\nkuuluva rakenteellinen tietokenttä, joka kuvaa objektin ominaisuutta.\nAttribuutti on osa objektin luokan rakennetta ja sillä on ennalta\nmääritelty merkitys ja tietotyyppi. Esimerkkejä ovat nimi, tunnus,\nsijainti, tyyppi tai materiaali.\n",
+          "@language": "fi"
+        },
+        {
+          "@value": "Ett attribut är i en informationsmodell ett strukturellt datafält som\ningår i definitionen av ett objekt och beskriver en egenskap hos\nobjektet. Ett attribut är en del av objektklassens struktur och har en\nfördefinierad betydelse och datatyp, till exempel namn, identitet,\nläge, typ eller material.\n",
+          "@language": "sv"
+        },
+        {
+          "@value": "An attribute is a structural data field in an information model that\nforms part of an object’s definition and describes a characteristic of\nthe object. An attribute belongs to the object class structure and has\na predefined meaning and data type, such as name, identifier,\nlocation, type, or material.\n",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Tietomallinnuksessa attribuutti erotetaan usein ominaisuudesta\n(engl. property). Attribuutti on objektin luokan sisäinen,\nrakenteellinen kenttä, kun taas ominaisuus on yleensä erillinen,\nlaajennettava ominaisuustieto (esim. BIM-propertysetissä).\n",
           "@language": "fi"
         }
       ],
       "dcterms:source": [
         {
-          "@value": "[RYHTI, Sanasto](https://ryhti.syke.fi/ohjeet-ja-tuki/ryhti-sanasto/)",
+          "@value": "RYHTI-sanasto",
           "@language": "fi"
         }
+      ],
+      "skos:broader": [
+        "https://w3id.org/betk/sanasto/objekti"
+      ],
+      "skos:related": [
+        "https://w3id.org/betk/sanasto/ominaisuus",
+        "https://w3id.org/betk/sanasto/attribuutin-arvo",
+        "https://w3id.org/betk/sanasto/tietokenttä"
       ],
       "dcterms:created": {
         "@value": "2026-02-24T17:35",
         "@type": "xsd:dateTime"
       },
       "dcterms:modified": {
-        "@value": "2026-02-24T17:35",
+        "@value": "2026-02-27T00:00",
         "@type": "xsd:dateTime"
       }
     },
