@@ -198,7 +198,7 @@ out = {
     "@graph": scheme_objs + concepts
 }
 
-out_path = docs_dir / "sanasto.jsonld"
+out_path = root / "sanasto.jsonld"
 out_path.write_text(json.dumps(out, ensure_ascii=False, indent=2), encoding="utf-8")
 
 print(f"OK built {len(concepts)} concepts in {len(scheme_objs)} schemes -> {out_path}")
