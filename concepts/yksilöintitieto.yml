@@ -28,7 +28,7 @@ notes:
 
 sources:
 - lang: fi
-  label: Suomi.fi-sanastot: Yritysdigi – yksilöintitieto
+  label: "Suomi.fi-sanastot: Yritysdigi – yksilöintitieto"
   url: https://sanastot.suomi.fi/terminology/yritysdigi/concept/concept-2062
 
 relations:
