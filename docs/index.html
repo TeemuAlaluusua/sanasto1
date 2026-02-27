@@ -168,7 +168,7 @@ fetch("./sanasto.jsonld")
       const inScheme = toArray(c["skos:inScheme"])[0];
       const schemeId = asId(inScheme).split("/").pop(); // handles string and {"@id":...}
       return {
-        id: asId(c["@id"]).split("/").pop(),
+        id: asId(c["@id"]).split("#/concept/").pop(),
         scheme: schemeId || "",
         terms: extractTerms(c),
         definitions: extractDefs(c),
