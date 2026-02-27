@@ -1,28 +1,44 @@
 id: yksilöinti
 status: Luonnos
 schemeId: rakentamisen-tieto-ja-informaatiomallit
+
 terms:
 - lang: fi
   label: Yksilöinti
   type: Suositettava termi
 - lang: sv
-  label: ''
+  label: Identifiering
   type: Suositettava termi
 - lang: en
-  label: ''
+  label: Identification
   type: Suositettava termi
+
 definitions:
 - lang: fi
-  text: Toimijan tai objektin yksilöllisyyteen perustuva erottaminen muista samaan
-    tai samankaltaiseen joukkoon kuuluvista.
-notes: []
+  text: Toimijan, kohteen tai tietomallin objektin yksiselitteinen
+    tunnistaminen ja erottaminen muista samaan joukkoon kuuluvista.
+
+notes:
+- lang: fi
+  text: Yksilöinti toteutetaan liittämällä kohteeseen yksilöintitieto,
+    kuten tunnus, koodi tai globaalitunniste (esim. GUID). Rakentamisen
+    tietomalleissa yksilöinti mahdollistaa objektien elinkaaren aikaisen
+    viittauksen, jäljitettävyyden ja tiedonhallinnan.
+
 sources:
 - lang: fi
-  label: '[Sanastot](https://sanastot.suomi.fi/)'
+  label: Suomi.fi-sanastot: Yritysdigi – yksilöinti
+  url: https://sanastot.suomi.fi/terminology/yritysdigi/concept/concept-2065
+
 relations:
-  broader: []
-  narrower: []
-  related: []
+  broader:
+  - tunnistaminen
+  related:
+  - yksilöintitieto
+  - tunniste
+  - GUID
+  - tietomalliobjekti
+
 metadata:
   created: 2026-02-24T17:35
-  modified: 2026-02-24T17:35
+  modified: 2026-02-27T10:55:00
