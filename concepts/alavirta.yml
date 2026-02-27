@@ -4,13 +4,13 @@ schemeId: toimitusketju
 
 terms:
 - lang: fi
-  label: Alavirta
+  label: alavirta
   type: Suositettava termi
 - lang: sv
-  label: Nedströms
+  label: nedströms
   type: Suositettava termi
 - lang: en
-  label: Downstream
+  label: downstream
   type: Suositettava termi
 
 definitions:
