@@ -1,21 +1,21 @@
 id: anturi
 status: Luonnos
-schemeId: rakentamisen-tieto-ja-informaatiomallit
+schemeId: IT
 terms:
 - lang: fi
-  label: Anturi
+  label: anturi
   type: Suositettava termi
 - lang: fi
   label: sensori
   type: Synonyymi
 - lang: sv
-  label: Sensor
+  label: sensor
   type: Suositettava termi
 - lang: sv
   label: givare
   type: Synonyymi
 - lang: en
-  label: Sensor
+  label: sensor
   type: Suositettava termi
 - lang: en
   label: transducer
@@ -40,6 +40,7 @@ notes: []
 sources:
 - lang: fi
   label: ''
+  uri:
 relations:
   broader: []
   narrower: []
