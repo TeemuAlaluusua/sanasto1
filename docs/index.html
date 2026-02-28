@@ -1,70 +1,3 @@
-<!DOCTYPE html>
-<html lang="fi">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Sanasto</title>
-
-<style>
-body{font-family:system-ui,Arial;margin:0;background:#f3f4f6;color:#111;font-size:16px;}
-header{background:#fff;border-bottom:1px solid #e5e7eb;padding:12px 18px;display:flex;justify-content:space-between;align-items:center;}
-.layout{display:grid;grid-template-columns:320px 1fr;gap:16px;padding:16px;}
-@media (max-width:800px){.layout{grid-template-columns:1fr;}}
-.panel{background:#fff;border:1px solid #e5e7eb;border-radius:10px;}
-.list{max-height:80vh;overflow:auto}
-.item{padding:10px 12px;border-bottom:1px solid #eee}
-.item a{font-weight:600;text-decoration:none;color:#2563eb}
-.concept{background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:18px;}
-h1{margin:0 0 6px;font-size:24px}
-.section{margin-top:18px}
-.link{color:#2563eb;text-decoration:none}
-.dropdown{position:relative;display:inline-block;margin-left:8px}
-.dropbtn{padding:6px 10px;border:1px solid #d1d5db;border-radius:6px;background:#fff;cursor:pointer}
-.dropdown-content{display:none;position:absolute;background:#fff;border:1px solid #d1d5db;border-radius:6px;min-width:180px;z-index:10;padding:6px;}
-.dropdown:hover .dropdown-content{display:block}
-.dropdown-content div{padding:6px;cursor:pointer}
-.dropdown-content div:hover{background:#f3f4f6}
-.search{padding:6px 10px;border:1px solid #d1d5db;border-radius:6px;width:200px}
-.infoBox{border:1px solid #e5e7eb;border-radius:6px;background:#f9fafb;padding:10px 12px;margin-top:6px;}
-.infoRow{margin-bottom:6px;}
-.infoLang{font-weight:600;margin-right:6px;}
-</style>
-</head>
-
-<body>
-<header>
-  <div id="title">Sanasto</div>
-
-  <div>
-    <input id="search" class="search" placeholder="Search">
-
-    <div class="dropdown">
-      <button class="dropbtn" id="langBtn">FI</button>
-      <div class="dropdown-content">
-        <div onclick="setLang('fi')">Suomi (FI)</div>
-        <div onclick="setLang('sv')">Svenska (SV)</div>
-        <div onclick="setLang('en')">English (EN)</div>
-      </div>
-    </div>
-
-    <div class="dropdown">
-      <button class="dropbtn" id="exportBtn">Export</button>
-      <div class="dropdown-content">
-        <div onclick="exportTTL()">SKOS Turtle (.ttl)</div>
-        <div onclick="exportRDF()">RDF/XML (.rdf)</div>
-        <div onclick="exportJSONLD()">JSON-LD (.jsonld)</div>
-      </div>
-    </div>
-  </div>
-</header>
-
-<div class="layout">
-  <div class="panel">
-    <div class="list" id="list"></div>
-  </div>
-  <div class="concept" id="view">Valitse käsite</div>
-</div>
-
 <script>
 let db,concepts=[],map={},currentLang="fi";
 
@@ -76,7 +9,6 @@ function escapeHtml(str){
   return String(str||"").replace(/[&<>"']/g,s=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[s]));
 }
 
-/* ===== TYPE SAFE CHECK ===== */
 function isConcept(obj){
   const t=toArray(obj["@type"]).map(asId);
   return t.includes("skos:Concept") || t.includes(SKOS+"Concept");
@@ -97,7 +29,8 @@ fetch("./sanasto.jsonld")
         terms:extractTerms(c),
         definitions:extractDefs(c),
         notes:extractNotes(c),
-        sources:extractSources(c)
+        sources:extractSources(c),
+        related:extractRelated(c)
       };
     });
 
@@ -105,10 +38,6 @@ fetch("./sanasto.jsonld")
 
   renderList();
   openFromHash();
-})
-.catch(err=>{
-  console.error("JSON load error",err);
-  document.getElementById("list").innerHTML="<div class='item'>Virhe: sanasto.jsonld ei lataudu</div>";
 });
 
 window.addEventListener("hashchange",openFromHash);
@@ -122,7 +51,9 @@ function setLang(l){
 }
 
 function getTerm(c){
-  return c.terms?.find(t=>t.lang===currentLang) || c.terms?.[0];
+  return c.terms?.find(t=>t.lang===currentLang && t.type==="Preferred")
+      || c.terms?.find(t=>t.lang===currentLang)
+      || c.terms?.[0];
 }
 
 function renderList(){
@@ -144,26 +75,45 @@ function renderList(){
     });
 }
 
+/* ===== FULL CONCEPT VIEW ===== */
 function renderConcept(id){
   const c=concepts[map[id]];
   if(!c)return;
 
   const label=getTerm(c)?.label||id;
 
+  /* TERMS TABLE */
+  const termsRows=(c.terms||[]).map(t=>`
+    <tr><td>${t.lang}</td><td>${escapeHtml(t.label)}</td><td>${t.type||""}</td></tr>
+  `).join("");
+
+  /* DEFINITIONS */
   const defs=(c.definitions||[]).map(d=>`
     <div class="infoRow"><span class="infoLang">${(d.lang||"").toUpperCase()}</span>${escapeHtml(d.text)}</div>
   `).join("")||"—";
 
+  /* NOTES */
   const notes=(c.notes||[]).map(n=>`
     <div class="infoRow"><span class="infoLang">${(n.lang||"").toUpperCase()}</span>${escapeHtml(n.text)}</div>
   `).join("")||"—";
 
+  /* SOURCES WITH URI */
   const src=(c.sources||[]).map(s=>{
     if(s.url){
-      return `<div><a class="link" href="${s.url}" target="_blank">${escapeHtml(s.label)}</a></div>`;
+      return `<div><a class="link" href="${s.url}" target="_blank">${escapeHtml(s.label||s.url)}</a></div>`;
+    }
+    if(/^https?:\/\//i.test(s.label)){
+      return `<div><a class="link" href="${s.label}" target="_blank">${escapeHtml(s.label)}</a></div>`;
     }
     return `<div>${escapeHtml(s.label)}</div>`;
   }).join("")||"—";
+
+  /* RELATED */
+  const rel=(c.related||[]).map(r=>{
+    const rc=concepts[map[r]];
+    const lbl=getTerm(rc)?.label||r;
+    return `<li><a class="link" href="#/concept/${encodeURIComponent(r)}">${lbl}</a></li>`;
+  }).join("");
 
   document.getElementById("view").innerHTML=`
     <h1>${label}</h1>
@@ -171,6 +121,14 @@ function renderConcept(id){
     <div class="section">
       <b>URI</b><br>
       <a class="link" href="#/concept/${encodeURIComponent(id)}">#/concept/${id}</a>
+    </div>
+
+    <div class="section">
+      <h3>Termit</h3>
+      <table>
+        <tr><th>Kieli</th><th>Termi</th><th>Tyyppi</th></tr>
+        ${termsRows}
+      </table>
     </div>
 
     <div class="section">
@@ -187,6 +145,11 @@ function renderConcept(id){
       <h3>Lähteet</h3>
       <div class="infoBox">${src}</div>
     </div>
+
+    <div class="section">
+      <h3>Liittyvät käsitteet</h3>
+      <ul>${rel}</ul>
+    </div>
   `;
 }
 
@@ -201,16 +164,14 @@ function openFromHash(){
 
   const slug=id.replace(/\s+/g,"-");
   if(map[slug]!==undefined){renderConcept(slug);return;}
-
-  try{
-    const enc=encodeURIComponent(id);
-    if(map[enc]!==undefined){renderConcept(enc);return;}
-  }catch(e){}
 }
 
-/* JSON-LD */
+/* JSON-LD parsing */
 function extractTerms(c){
-  return toArray(c["skos:prefLabel"]).map(t=>({lang:t["@language"],label:t["@value"]}));
+  const out=[];
+  toArray(c["skos:prefLabel"]).forEach(t=>out.push({lang:t["@language"],label:t["@value"],type:"Preferred"}));
+  toArray(c["skos:altLabel"]).forEach(t=>out.push({lang:t["@language"],label:t["@value"],type:"Alt"}));
+  return out;
 }
 function extractDefs(c){
   return toArray(c["skos:definition"]).map(d=>({lang:d["@language"],text:d["@value"]}));
@@ -225,11 +186,12 @@ function extractSources(c){
     url:s["@id"]||""
   }));
 }
+function extractRelated(c){
+  return toArray(c["skos:related"]).map(u=>asId(u).split("/").pop());
+}
 
 /* export placeholders */
 function exportTTL(){}
 function exportRDF(){}
 function exportJSONLD(){}
 </script>
-</body>
-</html>
