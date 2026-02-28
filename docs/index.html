@@ -37,6 +37,7 @@ th{background:#f9fafb}
 <body>
 <header>
   <div>Sanasto</div>
+
   <div>
     <input id="search" class="search" placeholder="Search">
 
@@ -66,8 +67,11 @@ th{background:#f9fafb}
 </div>
 
 <script>
-let concepts=[],map={},currentLang="fi";
 const SKOS="http://www.w3.org/2004/02/skos/core#";
+const BASE="https://teemualaluusua.github.io/sanasto1/#/concept/";
+const ISSUE_BASE="https://github.com/TeemuAlaluusua/sanasto1/issues/new";
+
+let concepts=[],map={},currentLang="fi";
 
 function toArray(v){return v==null?[]:(Array.isArray(v)?v:[v]);}
 function asId(x){return typeof x==="object"?x["@id"]||"":x||"";}
@@ -78,6 +82,13 @@ function isConcept(o){
   return t.includes("skos:Concept") || t.includes(SKOS+"Concept");
 }
 
+function issueURL(label,uri){
+  return ISSUE_BASE
+    +"?title="+encodeURIComponent("Palaute käsitteestä: "+label)
+    +"&body="+encodeURIComponent("Käsite: "+label+"\nURI: "+uri);
+}
+
+/* LOAD */
 fetch("./sanasto.jsonld")
 .then(r=>r.json())
 .then(j=>{
@@ -100,7 +111,7 @@ fetch("./sanasto.jsonld")
   renderList();
   openFromHash();
 })
-.catch(e=>{
+.catch(()=>{
   document.getElementById("list").innerHTML="Virhe: sanasto.jsonld ei lataudu";
 });
 
@@ -134,11 +145,13 @@ function renderList(){
     });
 }
 
+/* CONCEPT VIEW */
 function renderConcept(id){
   const c=concepts[map[id]];
   if(!c)return;
 
   const label=term(c).label;
+  const uri=BASE+encodeURIComponent(id);
 
   const termsRows=c.terms.map(t=>`
     <tr><td>${t.lang}</td><td>${esc(t.label)}</td><td>${t.type}</td></tr>
@@ -153,7 +166,9 @@ function renderConcept(id){
   `).join("")||"—";
 
   const src=c.src.map(s=>{
-    if(s.url) return `<div><a class="link" href="${s.url}" target="_blank">${esc(s.label||s.url)}</a></div>`;
+    if(s.url){
+      return `<div><a class="link" href="${s.url}" target="_blank">${esc(s.label||s.url)}</a></div>`;
+    }
     return `<div>${esc(s.label)}</div>`;
   }).join("")||"—";
 
@@ -168,7 +183,7 @@ function renderConcept(id){
 
     <div class="section">
       <b>URI</b><br>
-      <a class="link" href="#/concept/${encodeURIComponent(id)}">#/concept/${id}</a>
+      <a class="link" href="${uri}">${uri}</a>
     </div>
 
     <div class="section">
@@ -197,6 +212,15 @@ function renderConcept(id){
     <div class="section">
       <h3>Liittyvät käsitteet</h3>
       <ul>${rel}</ul>
+    </div>
+
+    <div class="section">
+      <div class="infoBox">
+        Voit antaa palautetta käsitteestä sanaston vastuuorganisaatiolle.<br>
+        <a class="link" href="${issueURL(label,uri)}" target="_blank">
+          Anna palautetta käsitteestä ↗
+        </a>
+      </div>
     </div>
   `;
 }
