@@ -166,12 +166,26 @@ function renderConcept(id){
   const t=UI[currentLang];
   const label=term(c)?.label||id;
 
+  const termsRows=c.terms.map(tr=>`
+    <tr>
+      <td>${esc(tr.lang)}</td>
+      <td>${esc(tr.label)}</td>
+      <td>${esc(tr.type||"Preferred")}</td>
+    </tr>
+  `).join("");
+
   const defs=c.defs.map(d=>`
-    <div class="infoRow"><span class="infoLang">${d.lang.toUpperCase()}</span>${esc(d.text)}</div>
+    <div class="infoRow">
+      <span class="infoLang">${d.lang.toUpperCase()}</span>
+      ${esc(d.text)}
+    </div>
   `).join("")||"—";
 
   const notes=c.notes.map(d=>`
-    <div class="infoRow"><span class="infoLang">${d.lang.toUpperCase()}</span>${esc(d.text)}</div>
+    <div class="infoRow">
+      <span class="infoLang">${d.lang.toUpperCase()}</span>
+      ${esc(d.text)}
+    </div>
   `).join("")||"—";
 
   const src=c.sources.map(s=>{
@@ -195,6 +209,14 @@ function renderConcept(id){
     <div class="section">
       <b>URI</b><br>
       <a class="link" href="#/concept/${encodeURIComponent(id)}">#/concept/${esc(id)}</a>
+    </div>
+
+    <div class="section">
+      <h3>${t.terms}</h3>
+      <table>
+        <tr><th>${t.lang}</th><th>${t.term}</th><th>${t.type}</th></tr>
+        ${termsRows}
+      </table>
     </div>
 
     <div class="section">
