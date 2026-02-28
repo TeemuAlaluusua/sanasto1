@@ -22,7 +22,14 @@ table{width:100%;border-collapse:collapse}
 th,td{border-bottom:1px solid #eee;padding:8px;font-size:13px}
 th{background:#f9fafb;text-align:left}
 .link{color:#2563eb;text-decoration:none}
+.dropdown{position:relative;display:inline-block;margin-left:8px}
+.dropbtn{padding:6px 10px;border:1px solid #d1d5db;border-radius:6px;background:#fff;cursor:pointer}
+.dropdown-content{display:none;position:absolute;background:#fff;border:1px solid #d1d5db;border-radius:6px;min-width:180px;z-index:10;padding:6px;}
+.dropdown:hover .dropdown-content{display:block}
+.dropdown-content div{padding:6px;cursor:pointer}
+.dropdown-content div:hover{background:#f3f4f6}
 .search{padding:6px 10px;border:1px solid #d1d5db;border-radius:6px;width:200px}
+.noteSource{color:#6b7280;font-size:12px;margin-left:18px}
 .feedbackBox{margin-top:28px;padding-top:12px;border-top:1px solid #e5e7eb;}
 .feedbackHint{color:#6b7280;font-size:14px;margin-bottom:6px;}
 .infoBox{border:1px solid #e5e7eb;border-radius:6px;background:#f9fafb;padding:10px 12px;margin-top:6px;}
@@ -33,8 +40,29 @@ th{background:#f9fafb;text-align:left}
 
 <body>
 <header>
-  <div>Sanasto</div>
-  <input id="search" class="search" placeholder="Search">
+  <div id="title">Sanasto</div>
+
+  <div>
+    <input id="search" class="search" placeholder="Search">
+
+    <div class="dropdown">
+      <button class="dropbtn" id="langBtn">FI</button>
+      <div class="dropdown-content">
+        <div onclick="setLang('fi')">Suomi (FI)</div>
+        <div onclick="setLang('sv')">Svenska (SV)</div>
+        <div onclick="setLang('en')">English (EN)</div>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn" id="exportBtn">Export</button>
+      <div class="dropdown-content">
+        <div onclick="exportTTL()">SKOS Turtle (.ttl)</div>
+        <div onclick="exportRDF()">RDF/XML (.rdf)</div>
+        <div onclick="exportJSONLD()">JSON-LD (.jsonld)</div>
+      </div>
+    </div>
+  </div>
 </header>
 
 <div class="layout">
@@ -45,33 +73,31 @@ th{background:#f9fafb;text-align:left}
 </div>
 
 <script>
-let concepts=[], map={};
-let currentLang="fi";
+let db,concepts=[],map={},currentLang="fi";
 
-/* ===== helpers ===== */
 function toArray(v){return v==null?[]:(Array.isArray(v)?v:[v]);}
 function asId(x){return typeof x==="object"?x["@id"]||"":x||"";}
 function escapeHtml(str){
   return String(str||"").replace(/[&<>"']/g,s=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[s]));
 }
 
-/* ===== load ===== */
 fetch("./sanasto.jsonld")
 .then(r=>r.json())
 .then(j=>{
+  db=j;
   const graph=j["@graph"]||[];
 
   concepts = graph
     .filter(x=>toArray(x["@type"]).includes("skos:Concept"))
     .map(c=>{
-      const rawId = asId(c["@id"]).split("#/concept/").pop();
-      return {
-        id: rawId,
-        terms: extractTerms(c),
-        definitions: extractDefs(c),
-        notes: extractNotes(c),
-        sources: extractSources(c),
-        relations: extractRelated(c)
+      const rawId=asId(c["@id"]).split("#/concept/").pop();
+      return{
+        id:rawId,
+        terms:extractTerms(c),
+        definitions:extractDefs(c),
+        notes:extractNotes(c),
+        sources:extractSources(c),
+        relations:extractRelated(c)
       };
     });
 
@@ -84,7 +110,13 @@ fetch("./sanasto.jsonld")
 window.addEventListener("hashchange",openFromHash);
 document.getElementById("search").addEventListener("input",renderList);
 
-/* ===== list ===== */
+function setLang(l){
+  currentLang=l;
+  document.getElementById("langBtn").textContent=l.toUpperCase();
+  renderList();
+  openFromHash();
+}
+
 function getTerm(c){
   return c.terms?.find(t=>t.lang===currentLang) || c.terms?.[0];
 }
@@ -108,45 +140,33 @@ function renderList(){
     });
 }
 
-/* ===== concept view ===== */
 function renderConcept(id){
   const c=concepts[map[id]];
   if(!c)return;
 
-  const term=getTerm(c);
-  const label=term?.label||id;
-
-  const termsRows=(c.terms||[]).map(t=>`
-    <tr><td>${t.lang}</td><td>${escapeHtml(t.label)}</td></tr>
-  `).join("");
+  const label=getTerm(c)?.label||id;
 
   const defs=(c.definitions||[]).map(d=>`
-    <div class="infoRow">
-      <span class="infoLang">${(d.lang||"").toUpperCase()}</span>
-      ${escapeHtml(d.text)}
-    </div>
+    <div class="infoRow"><span class="infoLang">${(d.lang||"").toUpperCase()}</span>${escapeHtml(d.text)}</div>
   `).join("")||"—";
 
   const notes=(c.notes||[]).map(n=>`
-    <div class="infoRow">
-      <span class="infoLang">${(n.lang||"").toUpperCase()}</span>
-      ${escapeHtml(n.text)}
-    </div>
+    <div class="infoRow"><span class="infoLang">${(n.lang||"").toUpperCase()}</span>${escapeHtml(n.text)}</div>
   `).join("")||"—";
 
-  const src=(c.sources||[]).map(s=>`
-    <div>${escapeHtml(s.label||"")}</div>
-  `).join("")||"—";
+  const src=(c.sources||[]).map(s=>{
+    if(s.url){
+      return `<div><a class="link" href="${s.url}" target="_blank">${escapeHtml(s.label)}</a></div>`;
+    }
+    return `<div>${escapeHtml(s.label)}</div>`;
+  }).join("")||"—";
 
   document.getElementById("view").innerHTML=`
     <h1>${label}</h1>
 
     <div class="section">
-      <h3>Termit</h3>
-      <table>
-        <tr><th>Kieli</th><th>Termi</th></tr>
-        ${termsRows}
-      </table>
+      <b>URI</b><br>
+      <a class="link" href="#/concept/${encodeURIComponent(id)}">#/concept/${id}</a>
     </div>
 
     <div class="section">
@@ -166,41 +186,27 @@ function renderConcept(id){
   `;
 }
 
-/* ===== hash routing FIX ===== */
+/* HASH FIX */
 function openFromHash(){
   const h=window.location.hash;
   const m=h.match(/^#\/concept\/(.+)$/);
   if(!m) return;
 
-  let id = decodeURIComponent(m[1]).trim();
+  let id=decodeURIComponent(m[1]).trim();
 
-  if(map[id]!==undefined){
-    renderConcept(id);
-    return;
-  }
+  if(map[id]!==undefined){renderConcept(id);return;}
 
   const slug=id.replace(/\s+/g,"-");
-  if(map[slug]!==undefined){
-    renderConcept(slug);
-    return;
-  }
+  if(map[slug]!==undefined){renderConcept(slug);return;}
 
   try{
     const enc=encodeURIComponent(id);
-    if(map[enc]!==undefined){
-      renderConcept(enc);
-      return;
-    }
+    if(map[enc]!==undefined){renderConcept(enc);return;}
   }catch(e){}
-
-  console.warn("Concept not found:",id);
 }
 
-/* ===== JSON parse ===== */
 function extractTerms(c){
-  const out=[];
-  toArray(c["skos:prefLabel"]).forEach(t=>out.push({lang:t["@language"],label:t["@value"]}));
-  return out;
+  return toArray(c["skos:prefLabel"]).map(t=>({lang:t["@language"],label:t["@value"]}));
 }
 function extractDefs(c){
   return toArray(c["skos:definition"]).map(d=>({lang:d["@language"],text:d["@value"]}));
@@ -211,12 +217,15 @@ function extractNotes(c){
 function extractSources(c){
   return toArray(c["dcterms:source"]).map(s=>({
     lang:s["@language"]||"",
-    label:s["@value"]||""
+    label:s["@value"]||"",
+    url:s["@id"]||""
   }));
 }
-function extractRelated(c){
-  return {related:toArray(c["skos:related"]).map(u=>asId(u).split("/").pop())};
-}
+
+/* exports placeholders */
+function exportTTL(){}
+function exportRDF(){}
+function exportJSONLD(){}
 </script>
 </body>
 </html>
