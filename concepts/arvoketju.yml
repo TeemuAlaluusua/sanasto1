@@ -1,9 +1,9 @@
 id: arvoketju
 status: Luonnos
-schemeId: rakentamisen-toimitusketju
+schemeId: toimitusketju
 terms:
 - lang: fi
-  label: Arvoketju
+  label: arvoketju
   type: Suositettava termi
 - lang: fi
   label: arvoverkko

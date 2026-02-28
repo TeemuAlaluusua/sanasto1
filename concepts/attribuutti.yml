@@ -3,28 +3,61 @@ status: Luonnos
 schemeId: rakentamisen-tieto-ja-informaatiomallit
 terms:
 - lang: fi
-  label: Attribuutti
+  label: attribuutti
+  type: Suositettava termi
+- lang: fi
+  label: attribuuttitieto
+  type: Synonyymi
+- lang: sv
+  label: attribut
   type: Suositettava termi
 - lang: sv
-  label: ''
-  type: Suositettava termi
+  label: attributdata
+  type: Synonyymi
 - lang: en
-  label: Attribute
+  label: attribute
   type: Suositettava termi
 definitions:
 - lang: fi
-  text: Attribuutit (engl. Attribute) kuvaavat objektien ominaisuuksia. Tämä voi olla
-    esimerkiksi tietomallissa rakenneosaan liittyvä yksittäinen tieto tai tätä kuvaava
-    ominaisuus; esimerkiksi nimi, sijainti, materiaali, valmistaja, versionumero ja
-    kustannus.
-notes: []
+  text: |
+    Attribuutti (engl. attribute) on tietomallissa objektin määrittelyyn
+    kuuluva rakenteellinen tietokenttä, joka kuvaa objektin ominaisuutta.
+    Attribuutti on osa objektin luokan rakennetta ja sillä on ennalta
+    määritelty merkitys ja tietotyyppi. Esimerkkejä ovat nimi, tunnus,
+    sijainti, tyyppi tai materiaali.
+- lang: sv
+  text: |
+    Ett attribut är i en informationsmodell ett strukturellt datafält som
+    ingår i definitionen av ett objekt och beskriver en egenskap hos
+    objektet. Ett attribut är en del av objektklassens struktur och har en
+    fördefinierad betydelse och datatyp, till exempel namn, identitet,
+    läge, typ eller material.
+- lang: en
+  text: |
+    An attribute is a structural data field in an information model that
+    forms part of an object’s definition and describes a characteristic of
+    the object. An attribute belongs to the object class structure and has
+    a predefined meaning and data type, such as name, identifier,
+    location, type, or material.
+notes:
+- lang: fi
+  text: |
+    Tietomallinnuksessa attribuutti erotetaan usein ominaisuudesta
+    (engl. property). Attribuutti on objektin luokan sisäinen,
+    rakenteellinen kenttä, kun taas ominaisuus on yleensä erillinen,
+    laajennettava ominaisuustieto (esim. BIM-propertysetissä).
 sources:
 - lang: fi
-  label: '[RYHTI, Sanasto](https://ryhti.syke.fi/ohjeet-ja-tuki/ryhti-sanasto/)'
+  label: RYHTI-sanasto
+  uri: https://ryhti.syke.fi/ohjeet-ja-tuki/ryhti-sanasto/
 relations:
-  broader: []
+  broader:
+  - objekti
   narrower: []
-  related: []
+  related:
+  - ominaisuus
+  - attribuutin-arvo
+  - tietokenttä
 metadata:
   created: 2026-02-24T17:35
-  modified: 2026-02-24T17:35
+  modified: 2026-02-27T00:00

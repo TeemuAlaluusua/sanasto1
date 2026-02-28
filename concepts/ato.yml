@@ -1,40 +1,66 @@
 id: ato
 status: Luonnos
-schemeId: rakentamisen-tieto-ja-informaatiomallit
+schemeId: tuotanto- ja toimitusstrategiat
 terms:
 - lang: fi
   label: ATO
   type: Suositettava termi
+- lang: fi
+  label: asiakasohjautuva kokoonpano
+  type: Synonyymi
 - lang: sv
-  label: ''
+  label: ATO
   type: Suositettava termi
+- lang: sv
+  label: kundorderstyrd montering
+  type: Synonyymi
 - lang: en
   label: Assembly-to-order
   type: Suositettava termi
+- lang: en
+  label: ATO
+  type: Synonyymi
 definitions:
 - lang: fi
-  text: "Asiakasohjautuva kokoonpano (engl. Assembly-to-order) on valmistusstrategia,\
-    \ jota käytetään usein teollisuudessa, jossa on paljon erilaisia vaihtoehtoja\
-    \ tai konfiguraatioita tuotteelle. Tässä valmistusstrategiassa tuotevalmistaja\
-    \ tuottaa varastoiduista vakiokomponenteista erilaisia tuotevariaatioita asiakastarpeiden\
-    \ mukaisesti. Nämä osat on tyypillisesti suunniteltu sopimaan yhteen erilaisissa\
-    \ kokoonpanoissa, jolloin yritys voi tarjota asiakkaille valikoiman tuotevaihtoehtoja\
-    \ ja samalla minimoida yksilöllisen valmistuksen tarpeen. Tyypillisiä ATO-tuotteita\
-    \ ovat esim. ikkunat sekä keittiökalusteet. Tässä tuotannonohjausmuodossa varastoon\
-    \ sitoutuu pääomaa, koska standardikomponentteja tarvitaan paljon. ATO:n ideana\
-    \ on tasapainottaa massatuotannon edut ja räätälöidyn tuotannon joustavuus. ATO-\
-    \ tuotteiden valmistusjärjestelmässä ei ole puskuria valmiille varastolle, ja\
-    \ toimitusaika riippuu varaston osakokoonpanovaraston saatavuudesta. \n\n**Lähteet:**\n\
-    [Alaluusua, 2023](https://aaltodoc.aalto.fi/server/api/core/bitstreams/d55ffacc-a2d7-414b-8f8c-313dff01e984/content)\n\
-    [Peltokorpi, 2020](https://www.aalto.fi/sites/default/files/2020-11/Loppuraportti_Tuotetiedon%20hallinta%20ja%20hyo%CC%88dynta%CC%88minen_2.11.2020_0.pdf)"
+  text: |
+    Asiakasohjautuva kokoonpanolla tarkoitetaan tuotanto- ja toimitusstrategiaa, jossa tuote kootaan asiakkaan
+    tilauksen jälkeen varastoiduista vakiokomponenteista tai
+    osakokoonpanoista. Strategia yhdistää massatuotannon
+    tehokkuuden ja asiakaskohtaisen konfiguroinnin joustavuuden.
+    Toimitusaika määräytyy komponentti- ja osakokoonpanovaraston
+    saatavuuden sekä kokoonpanoajan perusteella.
+- lang: sv
+  text: |
+    Kundorderstyrd montering är en produktions- och leveransstrategi där produkten monteras efter
+    kundorder från lagerhållna standardkomponenter eller delmontage.
+    Strategin kombinerar effektiviteten i massproduktion med
+    flexibiliteten i kundanpassad konfiguration. Leveranstiden beror
+    på tillgången på komponent- och delmontagelager samt monteringstid.
+- lang: en
+  text: |
+    Assembly-to-order (ATO) is a production and fulfilment strategy in
+    which a product is assembled after receipt of a customer order
+    from stocked standard components or subassemblies. The approach
+    combines the efficiency of mass production with the flexibility of
+    customer-specific configuration. Lead time depends on the
+    availability of components and subassemblies and the assembly time.
 notes: []
 sources:
 - lang: fi
-  label: ''
+  label: Alaluusua 2023
+  uri: https://aaltodoc.aalto.fi/server/api/core/bitstreams/d55ffacc-a2d7-414b-8f8c-313dff01e984/content
+- lang: fi
+  label: Peltokorpi 2020 Tuotetiedon hallinta ja hyödyntäminen
+  uri: https://www.aalto.fi/sites/default/files/2020-11/Loppuraportti_Tuotetiedon%20hallinta%20ja%20hyo%CC%88dynta%CC%88minen_2.11.2020_0.pdf
 relations:
-  broader: []
+  broader:
+  - tuotanto-ja-toimitusstrategia
   narrower: []
-  related: []
+  related:
+  - asiakastilauksen-kytkeytymiskohta
+  - mto
+  - mts
+  - eto
 metadata:
   created: 2026-02-24T17:35
-  modified: 2026-02-24T17:35
+  modified: 2026-02-27T00:00

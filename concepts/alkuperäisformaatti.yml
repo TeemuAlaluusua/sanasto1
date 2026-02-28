@@ -3,7 +3,7 @@ status: Luonnos
 schemeId: rakentamisen-tieto-ja-informaatiomallit
 terms:
 - lang: fi
-  label: Alkuperäisformaatti
+  label: alkuperäisformaatti
   type: Suositettava termi
 - lang: fi
   label: natiiviformaatti
@@ -12,7 +12,7 @@ terms:
   label: natiivimalli
   type: Synonyymi
 - lang: sv
-  label: Nativt format
+  label: nativt format
   type: Suositettava termi
 - lang: sv
   label: ursprungsformat
