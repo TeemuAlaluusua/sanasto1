@@ -113,7 +113,7 @@ for f in list(concept_dir.glob("*.yml")) + list(concept_dir.glob("*.yaml")):
         obj["skos:note"] = notes
 
     # -------------------------
-    # SOURCES
+    # SOURCES  ✅ FIXED
     # -------------------------
     srcs = []
 
@@ -127,7 +127,11 @@ for f in list(concept_dir.glob("*.yml")) + list(concept_dir.glob("*.yaml")):
                 node["@value"] = s["label"]
             if s.get("lang"):
                 node["@language"] = s["lang"]
-            if s.get("url"):
+
+            # ✅ hyväksy sekä uri että url
+            if s.get("uri"):
+                node["@id"] = s["uri"]
+            elif s.get("url"):
                 node["@id"] = s["url"]
 
             if node:
