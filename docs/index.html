@@ -87,8 +87,13 @@ fetch("./sanasto.jsonld")
   db=j;
   const graph=j["@graph"]||[];
 
+  // FIX: hyväksy sekä prefiksi että täysi URI
   concepts = graph
-    .filter(x=>toArray(x["@type"]).includes("skos:Concept"))
+    .filter(x=>{
+      const t=toArray(x["@type"]);
+      return t.includes("skos:Concept") ||
+             t.includes("http://www.w3.org/2004/02/skos/core#Concept");
+    })
     .map(c=>{
       const rawId=asId(c["@id"]).split("#/concept/").pop();
       return{
@@ -186,7 +191,6 @@ function renderConcept(id){
   `;
 }
 
-/* HASH FIX */
 function openFromHash(){
   const h=window.location.hash;
   const m=h.match(/^#\/concept\/(.+)$/);
@@ -222,7 +226,6 @@ function extractSources(c){
   }));
 }
 
-/* exports placeholders */
 function exportTTL(){}
 function exportRDF(){}
 function exportJSONLD(){}
