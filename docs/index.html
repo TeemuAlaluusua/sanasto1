@@ -12,15 +12,11 @@ header{background:#fff;border-bottom:1px solid #e5e7eb;padding:12px 18px;display
 @media (max-width:800px){.layout{grid-template-columns:1fr;}}
 .panel{background:#fff;border:1px solid #e5e7eb;border-radius:10px;}
 .list{max-height:80vh;overflow:auto}
-.schemeHeader{padding:10px 12px;font-weight:600;background:#f9fafb;border-bottom:1px solid #eee}
 .item{padding:10px 12px;border-bottom:1px solid #eee}
 .item a{font-weight:600;text-decoration:none;color:#2563eb}
 .concept{background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:18px;}
 h1{margin:0 0 6px;font-size:24px}
 .section{margin-top:18px}
-table{width:100%;border-collapse:collapse}
-th,td{border-bottom:1px solid #eee;padding:8px;font-size:13px}
-th{background:#f9fafb;text-align:left}
 .link{color:#2563eb;text-decoration:none}
 .dropdown{position:relative;display:inline-block;margin-left:8px}
 .dropbtn{padding:6px 10px;border:1px solid #d1d5db;border-radius:6px;background:#fff;cursor:pointer}
@@ -29,9 +25,6 @@ th{background:#f9fafb;text-align:left}
 .dropdown-content div{padding:6px;cursor:pointer}
 .dropdown-content div:hover{background:#f3f4f6}
 .search{padding:6px 10px;border:1px solid #d1d5db;border-radius:6px;width:200px}
-.noteSource{color:#6b7280;font-size:12px;margin-left:18px}
-.feedbackBox{margin-top:28px;padding-top:12px;border-top:1px solid #e5e7eb;}
-.feedbackHint{color:#6b7280;font-size:14px;margin-bottom:6px;}
 .infoBox{border:1px solid #e5e7eb;border-radius:6px;background:#f9fafb;padding:10px 12px;margin-top:6px;}
 .infoRow{margin-bottom:6px;}
 .infoLang{font-weight:600;margin-right:6px;}
@@ -75,10 +68,18 @@ th{background:#f9fafb;text-align:left}
 <script>
 let db,concepts=[],map={},currentLang="fi";
 
+const SKOS="http://www.w3.org/2004/02/skos/core#";
+
 function toArray(v){return v==null?[]:(Array.isArray(v)?v:[v]);}
 function asId(x){return typeof x==="object"?x["@id"]||"":x||"";}
 function escapeHtml(str){
   return String(str||"").replace(/[&<>"']/g,s=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[s]));
+}
+
+/* ===== TYPE SAFE CHECK ===== */
+function isConcept(obj){
+  const t=toArray(obj["@type"]).map(asId);
+  return t.includes("skos:Concept") || t.includes(SKOS+"Concept");
 }
 
 fetch("./sanasto.jsonld")
@@ -87,13 +88,8 @@ fetch("./sanasto.jsonld")
   db=j;
   const graph=j["@graph"]||[];
 
-  // FIX: hyväksy sekä prefiksi että täysi URI
   concepts = graph
-    .filter(x=>{
-      const t=toArray(x["@type"]);
-      return t.includes("skos:Concept") ||
-             t.includes("http://www.w3.org/2004/02/skos/core#Concept");
-    })
+    .filter(isConcept)
     .map(c=>{
       const rawId=asId(c["@id"]).split("#/concept/").pop();
       return{
@@ -101,8 +97,7 @@ fetch("./sanasto.jsonld")
         terms:extractTerms(c),
         definitions:extractDefs(c),
         notes:extractNotes(c),
-        sources:extractSources(c),
-        relations:extractRelated(c)
+        sources:extractSources(c)
       };
     });
 
@@ -110,6 +105,10 @@ fetch("./sanasto.jsonld")
 
   renderList();
   openFromHash();
+})
+.catch(err=>{
+  console.error("JSON load error",err);
+  document.getElementById("list").innerHTML="<div class='item'>Virhe: sanasto.jsonld ei lataudu</div>";
 });
 
 window.addEventListener("hashchange",openFromHash);
@@ -209,6 +208,7 @@ function openFromHash(){
   }catch(e){}
 }
 
+/* JSON-LD */
 function extractTerms(c){
   return toArray(c["skos:prefLabel"]).map(t=>({lang:t["@language"],label:t["@value"]}));
 }
@@ -226,6 +226,7 @@ function extractSources(c){
   }));
 }
 
+/* export placeholders */
 function exportTTL(){}
 function exportRDF(){}
 function exportJSONLD(){}
