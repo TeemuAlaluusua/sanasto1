@@ -27,6 +27,8 @@ h1{margin:0 0 6px;font-size:24px}
 .dropdown-content div{padding:6px;cursor:pointer}
 .dropdown-content div:hover{background:#f3f4f6}
 .link{color:#2563eb;text-decoration:none}
+.feedbackBox{margin-top:24px;padding-top:12px;border-top:1px solid #e5e7eb}
+.feedbackHint{color:#6b7280;font-size:14px;margin-bottom:6px}
 </style>
 </head>
 
@@ -36,6 +38,7 @@ h1{margin:0 0 6px;font-size:24px}
   <div>Sanasto</div>
   <div>
     <input id="search" class="search" placeholder="Search">
+
     <div class="dropdown">
       <button id="langBtn" class="dropbtn">FI</button>
       <div class="dropdown-content">
@@ -44,6 +47,16 @@ h1{margin:0 0 6px;font-size:24px}
         <div onclick="setLang('en')">English</div>
       </div>
     </div>
+
+    <div class="dropdown">
+      <button class="dropbtn">Export</button>
+      <div class="dropdown-content">
+        <div onclick="exportJSONLD()">JSON-LD</div>
+        <div onclick="exportTTL()">SKOS Turtle</div>
+        <div onclick="exportRDF()">RDF/XML</div>
+      </div>
+    </div>
+
   </div>
 </header>
 
@@ -53,23 +66,23 @@ h1{margin:0 0 6px;font-size:24px}
 </div>
 
 <script>
-/* ---------- UI TEXT ---------- */
 const UI={
-  fi:{select:"Valitse käsite",def:"Määritelmä",note:"Huomautus",src:"Lähteet",rel:"Liittyvät käsitteet"},
-  sv:{select:"Välj begrepp",def:"Definition",note:"Anmärkning",src:"Källor",rel:"Relaterade begrepp"},
-  en:{select:"Select concept",def:"Definition",note:"Note",src:"Sources",rel:"Related concepts"}
+  fi:{select:"Valitse käsite",def:"Määritelmä",note:"Huomautus",src:"Lähteet",rel:"Liittyvät käsitteet",fb:"Voit antaa palautetta käsitteestä",fbLink:"Anna palautetta käsitteestä"},
+  sv:{select:"Välj begrepp",def:"Definition",note:"Anmärkning",src:"Källor",rel:"Relaterade begrepp",fb:"Du kan ge respons",fbLink:"Ge respons"},
+  en:{select:"Select concept",def:"Definition",note:"Note",src:"Sources",rel:"Related concepts",fb:"You can give feedback",fbLink:"Give feedback"}
 };
+
+const ISSUE_REPO="https://github.com/TeemuAlaluusua/sanasto1/issues/new";
 
 let currentLang="fi";
 let concepts=[];
 let map={};
 
-/* ---------- HELPERS ---------- */
 const toArray=v=>v==null?[]:(Array.isArray(v)?v:[v]);
 const asId=x=>typeof x==="object"?x["@id"]||"":x||"";
 const esc=s=>String(s||"").replace(/[&<>"']/g,a=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[a]));
 
-/* ---------- LOAD JSON ---------- */
+/* LOAD */
 fetch("./sanasto.jsonld")
 .then(r=>r.json())
 .then(j=>{
@@ -78,13 +91,11 @@ fetch("./sanasto.jsonld")
   concepts=graph
     .filter(n=>{
       const t=toArray(n["@type"]);
-      return t.includes("skos:Concept") ||
-             t.includes("http://www.w3.org/2004/02/skos/core#Concept");
+      return t.includes("skos:Concept") || t.includes("http://www.w3.org/2004/02/skos/core#Concept");
     })
     .map(n=>{
       const uri=asId(n["@id"]);
       if(!uri.includes("#/concept/")) return null;
-
       const id=uri.split("#/concept/").pop();
 
       return{
@@ -111,7 +122,7 @@ fetch("./sanasto.jsonld")
   openFromHash();
 });
 
-/* ---------- LANG ---------- */
+/* LANG */
 function setLang(l){
   currentLang=l;
   document.getElementById("langBtn").textContent=l.toUpperCase();
@@ -123,7 +134,7 @@ function term(c){
   return c.terms.find(t=>t.lang===currentLang) || c.terms[0];
 }
 
-/* ---------- LIST ---------- */
+/* LIST */
 function renderList(){
   const q=document.getElementById("search").value.toLowerCase();
   const el=document.getElementById("list");
@@ -147,7 +158,7 @@ function renderList(){
     });
 }
 
-/* ---------- VIEW ---------- */
+/* VIEW */
 function renderConcept(id){
   const c=concepts[map[id]];
   if(!c) return;
@@ -176,6 +187,8 @@ function renderConcept(id){
     return `<li><a class="link" href="#/concept/${encodeURIComponent(r)}">${esc(term(rc).label)}</a></li>`;
   }).join("");
 
+  const issueURL=ISSUE_REPO+"?title="+encodeURIComponent(label);
+
   document.getElementById("view").innerHTML=`
     <h1>${esc(label)}</h1>
 
@@ -203,17 +216,21 @@ function renderConcept(id){
       <h3>${t.rel}</h3>
       <div class="infoBox"><ul>${rel}</ul></div>
     </div>
+
+    <div class="feedbackBox">
+      <div class="feedbackHint">${t.fb}</div>
+      <a class="link" href="${issueURL}" target="_blank">${t.fbLink} ↗</a>
+    </div>
   `;
 }
 
-/* ---------- HASH ---------- */
+/* HASH */
 function openFromHash(){
   const h=location.hash;
   const m=h.match(/^#\/concept\/(.+)$/);
   if(!m) return;
 
   let id=decodeURIComponent(m[1]).trim();
-
   if(map[id]!==undefined){renderConcept(id);return;}
 
   const slug=id.replace(/\s+/g,"-");
@@ -222,6 +239,11 @@ function openFromHash(){
 
 window.addEventListener("hashchange",openFromHash);
 document.getElementById("search").addEventListener("input",renderList);
+
+/* EXPORT */
+function exportJSONLD(){window.open("sanasto.jsonld");}
+function exportTTL(){alert("TTL export not configured");}
+function exportRDF(){alert("RDF export not configured");}
 </script>
 
 </body>
