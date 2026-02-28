@@ -12,31 +12,35 @@ header{background:#fff;border-bottom:1px solid #e5e7eb;padding:12px 18px;display
 @media (max-width:800px){.layout{grid-template-columns:1fr;}}
 .panel{background:#fff;border:1px solid #e5e7eb;border-radius:10px;}
 .list{max-height:80vh;overflow:auto}
+.schemeHeader{padding:10px 12px;font-weight:700;background:#f9fafb;border-bottom:1px solid #eee}
 .item{padding:10px 12px;border-bottom:1px solid #eee}
 .item a{font-weight:600;text-decoration:none;color:#2563eb}
 .concept{background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:18px;}
 h1{margin:0 0 6px;font-size:24px}
 .section{margin-top:18px}
+table{width:100%;border-collapse:collapse}
+th,td{border-bottom:1px solid #eee;padding:8px;font-size:13px}
+th{background:#f9fafb;text-align:left}
 .link{color:#2563eb;text-decoration:none}
 .dropdown{position:relative;display:inline-block;margin-left:8px}
 .dropbtn{padding:6px 10px;border:1px solid #d1d5db;border-radius:6px;background:#fff;cursor:pointer}
-.dropdown-content{display:none;position:absolute;background:#fff;border:1px solid #d1d5db;border-radius:6px;min-width:180px;z-index:10;padding:6px;}
+.dropdown-content{display:none;position:absolute;background:#fff;border:1px solid #d1d5db;border-radius:6px;min-width:180px;z-index:10;padding:6px;right:0;}
 .dropdown:hover .dropdown-content{display:block}
 .dropdown-content div{padding:6px;cursor:pointer}
 .dropdown-content div:hover{background:#f3f4f6}
 .search{padding:6px 10px;border:1px solid #d1d5db;border-radius:6px;width:200px}
+.feedbackBox{margin-top:28px;padding-top:12px;border-top:1px solid #e5e7eb;}
+.feedbackHint{color:#6b7280;font-size:14px;margin-bottom:6px;}
 .infoBox{border:1px solid #e5e7eb;border-radius:6px;background:#f9fafb;padding:10px 12px;margin-top:6px;}
 .infoRow{margin-bottom:6px;}
 .infoLang{font-weight:600;margin-right:6px;}
-table{width:100%;border-collapse:collapse}
-th,td{border-bottom:1px solid #eee;padding:6px;font-size:13px;text-align:left}
-th{background:#f9fafb}
+.muted{color:#6b7280;font-size:13px;padding:10px 12px;}
 </style>
 </head>
 
 <body>
 <header>
-  <div>Sanasto</div>
+  <div id="title">Sanasto</div>
 
   <div>
     <input id="search" class="search" placeholder="Search">
@@ -44,16 +48,18 @@ th{background:#f9fafb}
     <div class="dropdown">
       <button class="dropbtn" id="langBtn">FI</button>
       <div class="dropdown-content">
-        <div onclick="setLang('fi')">Suomi</div>
-        <div onclick="setLang('sv')">Svenska</div>
-        <div onclick="setLang('en')">English</div>
+        <div onclick="setLang('fi')">Suomi (FI)</div>
+        <div onclick="setLang('sv')">Svenska (SV)</div>
+        <div onclick="setLang('en')">English (EN)</div>
       </div>
     </div>
 
     <div class="dropdown">
-      <button class="dropbtn">Export</button>
+      <button class="dropbtn" id="exportBtn">Export</button>
       <div class="dropdown-content">
-        <div onclick="exportJSONLD()">JSON-LD</div>
+        <div onclick="exportTTL()">SKOS Turtle (.ttl)</div>
+        <div onclick="exportRDF()">RDF/XML (.rdf)</div>
+        <div onclick="exportJSONLD()">JSON-LD (.jsonld)</div>
       </div>
     </div>
   </div>
@@ -67,198 +73,401 @@ th{background:#f9fafb}
 </div>
 
 <script>
+/* ===== UI translations ===== */
+const UI={
+  fi:{
+    selectConcept:"Valitse käsite",
+    terms:"Termit",
+    definition:"Määritelmä",
+    note:"Huomautus",
+    sources:"Lähteet",
+    related:"Liittyvät käsitteet",
+    uri:"URI",
+    lang:"Kieli",
+    term:"Termi",
+    type:"Tyyppi",
+    export:"Export",
+    noConcepts:"Ei käsitteitä valitulla kielellä.",
+    feedbackHint:"Voit antaa palautetta käsitteestä sanaston vastuuorganisaatiolle.",
+    feedbackLink:"Anna palautetta käsitteestä"
+  },
+  sv:{
+    selectConcept:"Välj begrepp",
+    terms:"Termer",
+    definition:"Definition",
+    note:"Anmärkning",
+    sources:"Källor",
+    related:"Relaterade begrepp",
+    uri:"URI",
+    lang:"Språk",
+    term:"Term",
+    type:"Typ",
+    export:"Export",
+    noConcepts:"Inga begrepp på valt språk.",
+    feedbackHint:"Du kan ge respons om begreppet.",
+    feedbackLink:"Ge respons"
+  },
+  en:{
+    selectConcept:"Select concept",
+    terms:"Terms",
+    definition:"Definition",
+    note:"Note",
+    sources:"Sources",
+    related:"Related concepts",
+    uri:"URI",
+    lang:"Language",
+    term:"Term",
+    type:"Type",
+    export:"Export",
+    noConcepts:"No concepts in selected language.",
+    feedbackHint:"You can give feedback.",
+    feedbackLink:"Give feedback"
+  }
+};
+
+/* ===== constants ===== */
 const SKOS="http://www.w3.org/2004/02/skos/core#";
-const BASE="https://teemualaluusua.github.io/sanasto1/#/concept/";
 const ISSUE_BASE="https://github.com/TeemuAlaluusua/sanasto1/issues/new";
 
-let concepts=[],map={},currentLang="fi";
+/* ===== state ===== */
+let db;
+let concepts=[];
+let schemes=[];
+let map={};
+let currentLang="fi";
 
+/* ===== helpers ===== */
 function toArray(v){return v==null?[]:(Array.isArray(v)?v:[v]);}
-function asId(x){return typeof x==="object"?x["@id"]||"":x||"";}
-function esc(s){return String(s||"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[m]));}
-
-function isConcept(o){
-  const t=toArray(o["@type"]).map(asId);
-  return t.includes("skos:Concept") || t.includes(SKOS+"Concept");
+function asId(x){
+  if(x==null) return "";
+  if(typeof x==="string") return x;
+  if(typeof x==="object") return x["@id"] || x["@value"] || "";
+  return "";
 }
+function escapeHtml(str){
+  return String(str||"").replace(/[&<>"']/g, s=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[s]));
+}
+function lastPart(uri){
+  const s=String(uri||"");
+  // split by / or #, remove empties
+  const parts=s.split(/[/#]/).filter(Boolean);
+  return parts.length?parts[parts.length-1]:"";
+}
+function normalizedTypes(obj){
+  return toArray(obj["@type"]).map(asId).filter(Boolean);
+}
+function hasType(obj, prefixed, fullUri){
+  const t=normalizedTypes(obj);
+  return t.includes(prefixed) || t.includes(fullUri);
+}
+function pickLangLiteral(val, lang){
+  const arr=toArray(val).map(v=>{
+    if(typeof v==="string") return {"@language":"", "@value":v};
+    return v;
+  }).filter(Boolean);
 
+  return arr.find(x=>x["@language"]===lang)?.["@value"]
+      || arr.find(x=>x["@language"]==="fi")?.["@value"]
+      || arr[0]?.["@value"]
+      || "";
+}
 function issueURL(label,uri){
   return ISSUE_BASE
-    +"?title="+encodeURIComponent("Palaute käsitteestä: "+label)
-    +"&body="+encodeURIComponent("Käsite: "+label+"\nURI: "+uri);
+    + "?title=" + encodeURIComponent("Palaute käsitteestä: " + label)
+    + "&body=" + encodeURIComponent("Käsite: " + label + "\nURI: " + uri);
 }
+function isHttpUrl(s){return /^https?:\/\//i.test(String(s||""));}
 
-/* LOAD */
+/* ===== load ===== */
+updateTopBar();
+
 fetch("./sanasto.jsonld")
 .then(r=>r.json())
 .then(j=>{
+  db=j;
   const graph=j["@graph"]||[];
 
-  concepts=graph.filter(isConcept).map(c=>{
-    const id=asId(c["@id"]).split("#/concept/").pop();
-    return{
-      id,
-      terms:extractTerms(c),
-      defs:extractDefs(c),
-      notes:extractNotes(c),
-      src:extractSources(c),
-      rel:extractRelated(c)
-    };
-  });
+  // Schemes
+  schemes = graph
+    .filter(x=>hasType(x,"skos:ConceptScheme",SKOS+"ConceptScheme"))
+    .map(s=>{
+      const sid = lastPart(asId(s["@id"]));
+      const label = pickLangLiteral(s["skos:prefLabel"], currentLang) || sid;
+      return { raw:s, id:sid, label };
+    });
+
+  // Concepts
+  concepts = graph
+    .filter(x=>hasType(x,"skos:Concept",SKOS+"Concept"))
+    .map(c=>{
+      const cid = asId(c["@id"]).split("#/concept/").pop();
+      const schemeUri = asId(toArray(c["skos:inScheme"])[0]);
+      const schemeId = lastPart(schemeUri);
+      return {
+        id: cid,
+        scheme: schemeId,
+        terms: extractTerms(c),
+        definitions: extractDefs(c),
+        notes: extractNotes(c),
+        sources: extractSources(c),
+        related: extractRelated(c)
+      };
+    });
 
   concepts.forEach((c,i)=>map[c.id]=i);
+
+  // If no schemes in data, create pseudo-scheme
+  if(schemes.length===0){
+    schemes=[{raw:null,id:"__all__",label:"Sanasto"}];
+    concepts=concepts.map(c=>({...c, scheme:"__all__"}));
+  } else {
+    // if concepts without scheme, bucket them
+    const missing = concepts.some(c=>!c.scheme);
+    if(missing){
+      schemes.push({raw:null,id:"__other__",label:"(Muut)"});
+      concepts=concepts.map(c=>({...c, scheme:c.scheme||"__other__"}));
+    }
+  }
 
   renderList();
   openFromHash();
 })
-.catch(()=>{
-  document.getElementById("list").innerHTML="Virhe: sanasto.jsonld ei lataudu";
+.catch(err=>{
+  console.error("Failed to load sanasto.jsonld", err);
+  document.getElementById("list").innerHTML =
+    `<div class="item">Virhe: sanasto.jsonld ei lataudu (katso Console)</div>`;
 });
 
 window.addEventListener("hashchange",openFromHash);
 document.getElementById("search").addEventListener("input",renderList);
 
+/* ===== topbar ===== */
+function updateTopBar(){
+  const t=UI[currentLang];
+  document.getElementById("exportBtn").textContent=t.export;
+  document.getElementById("view").textContent=t.selectConcept;
+}
+
+/* ===== language ===== */
 function setLang(l){
   currentLang=l;
   document.getElementById("langBtn").textContent=l.toUpperCase();
+  updateTopBar();
+
+  // update scheme labels per language
+  schemes = schemes.map(s=>({
+    ...s,
+    label: s.raw ? (pickLangLiteral(s.raw["skos:prefLabel"], currentLang) || s.label) : s.label
+  }));
+
   renderList();
   openFromHash();
 }
 
-function term(c){
-  return c.terms.find(t=>t.lang===currentLang) || c.terms[0];
+/* ===== language strict term selection =====
+   LIST: only concepts that HAVE currentLang label (no fallback)
+   VIEW: show currentLang if exists, else fallback to any available
+*/
+function termForList(c){
+  return (c.terms||[]).find(t=>t.lang===currentLang && t.type==="Preferred")
+      || (c.terms||[]).find(t=>t.lang===currentLang);
+}
+function termForView(c){
+  return (c.terms||[]).find(t=>t.lang===currentLang && t.type==="Preferred")
+      || (c.terms||[]).find(t=>t.lang===currentLang)
+      || (c.terms||[])[0];
 }
 
+/* ===== list (grouped by scheme) ===== */
 function renderList(){
-  const q=document.getElementById("search").value.toLowerCase();
+  const q=document.getElementById("search").value.toLowerCase().trim();
   const el=document.getElementById("list");
   el.innerHTML="";
 
-  concepts
-    .filter(c=>term(c)?.label?.toLowerCase().includes(q))
-    .sort((a,b)=>term(a).label.localeCompare(term(b).label,"fi"))
-    .forEach(c=>{
-      const d=document.createElement("div");
-      d.className="item";
-      d.innerHTML=`<a href="#/concept/${encodeURIComponent(c.id)}">${term(c).label}</a>`;
-      el.appendChild(d);
+  let anyShown=false;
+
+  schemes.forEach(s=>{
+    const items = concepts
+      .filter(c=>c.scheme===s.id)
+      .map(c=>{
+        const t=termForList(c);
+        return t ? {c, t} : null;
+      })
+      .filter(x=>x && x.t && x.t.label)
+      .filter(x=>x.t.label.toLowerCase().includes(q))
+      .sort((a,b)=>a.t.label.localeCompare(b.t.label, currentLang));
+
+    if(items.length===0) return;
+
+    anyShown=true;
+
+    const header=document.createElement("div");
+    header.className="schemeHeader";
+    header.textContent=s.label || s.id;
+    el.appendChild(header);
+
+    items.forEach(({c,t})=>{
+      const div=document.createElement("div");
+      div.className="item";
+      const a=document.createElement("a");
+      a.href="#/concept/"+encodeURIComponent(c.id);
+      a.textContent=t.label;
+      div.appendChild(a);
+      el.appendChild(div);
     });
+  });
+
+  if(!anyShown){
+    el.innerHTML = `<div class="muted">${escapeHtml(UI[currentLang].noConcepts)}</div>`;
+  }
 }
 
-/* CONCEPT VIEW */
+/* ===== concept view ===== */
 function renderConcept(id){
   const c=concepts[map[id]];
   if(!c)return;
 
-  const label=term(c).label;
-  const uri=BASE+encodeURIComponent(id);
+  const tUI=UI[currentLang];
+  const term=termForView(c);
+  const label=term?.label||id;
 
-  const termsRows=c.terms.map(t=>`
-    <tr><td>${t.lang}</td><td>${esc(t.label)}</td><td>${t.type}</td></tr>
+  const conceptURI = location.origin + location.pathname + "#/concept/" + encodeURIComponent(id);
+
+  const termsRows=(c.terms||[]).map(t=>`
+    <tr><td>${escapeHtml(t.lang)}</td><td>${escapeHtml(t.label)}</td><td>${escapeHtml(t.type||"")}</td></tr>
   `).join("");
 
-  const defs=c.defs.map(d=>`
-    <div class="infoRow"><span class="infoLang">${d.lang.toUpperCase()}</span>${esc(d.text)}</div>
+  const defs=(c.definitions||[]).map(d=>`
+    <div class="infoRow">
+      <span class="infoLang">${escapeHtml((d.lang||"").toUpperCase())}</span>
+      ${escapeHtml(d.text)}
+    </div>
   `).join("")||"—";
 
-  const notes=c.notes.map(n=>`
-    <div class="infoRow"><span class="infoLang">${n.lang.toUpperCase()}</span>${esc(n.text)}</div>
+  const notes=(c.notes||[]).map(n=>`
+    <div class="infoRow">
+      <span class="infoLang">${escapeHtml((n.lang||"").toUpperCase())}</span>
+      ${escapeHtml(n.text)}
+    </div>
   `).join("")||"—";
 
-  const src=c.src.map(s=>{
-    if(s.url){
-      return `<div><a class="link" href="${s.url}" target="_blank">${esc(s.label||s.url)}</a></div>`;
+  const src=(c.sources||[]).map(s=>{
+    const label = escapeHtml(s.label||"");
+    const url = s.url || "";
+    if(url){
+      return `<div><a class="link" href="${escapeHtml(url)}" target="_blank" rel="noopener">${label||escapeHtml(url)}</a></div>`;
     }
-    return `<div>${esc(s.label)}</div>`;
+    if(isHttpUrl(s.label)){
+      return `<div><a class="link" href="${escapeHtml(s.label)}" target="_blank" rel="noopener">${label}</a></div>`;
+    }
+    return `<div>${label}</div>`;
   }).join("")||"—";
 
-  const rel=c.rel.map(r=>{
+  const rel=(c.related||[]).map(r=>{
     const rc=concepts[map[r]];
-    const lbl=rc?term(rc).label:r;
-    return `<li><a class="link" href="#/concept/${encodeURIComponent(r)}">${lbl}</a></li>`;
+    const lbl=(rc ? (termForView(rc)?.label||r) : r);
+    return `<li><a class="link" href="#/concept/${encodeURIComponent(r)}">${escapeHtml(lbl)}</a></li>`;
   }).join("");
 
+  const feedbackURL = issueURL(label, conceptURI);
+
   document.getElementById("view").innerHTML=`
-    <h1>${label}</h1>
+    <h1>${escapeHtml(label)}</h1>
 
     <div class="section">
-      <b>URI</b><br>
-      <a class="link" href="${uri}">${uri}</a>
+      <b>${escapeHtml(tUI.uri)}</b><br>
+      <a class="link" href="${escapeHtml(conceptURI)}">${escapeHtml(conceptURI)}</a>
     </div>
 
     <div class="section">
-      <h3>Termit</h3>
+      <h3>${escapeHtml(tUI.terms)}</h3>
       <table>
-        <tr><th>Kieli</th><th>Termi</th><th>Tyyppi</th></tr>
+        <tr><th>${escapeHtml(tUI.lang)}</th><th>${escapeHtml(tUI.term)}</th><th>${escapeHtml(tUI.type)}</th></tr>
         ${termsRows}
       </table>
     </div>
 
     <div class="section">
-      <h3>Määritelmä</h3>
+      <h3>${escapeHtml(tUI.definition)}</h3>
       <div class="infoBox">${defs}</div>
     </div>
 
     <div class="section">
-      <h3>Huomautus</h3>
+      <h3>${escapeHtml(tUI.note)}</h3>
       <div class="infoBox">${notes}</div>
     </div>
 
     <div class="section">
-      <h3>Lähteet</h3>
+      <h3>${escapeHtml(tUI.sources)}</h3>
       <div class="infoBox">${src}</div>
     </div>
 
     <div class="section">
-      <h3>Liittyvät käsitteet</h3>
-      <ul>${rel}</ul>
+      <h3>${escapeHtml(tUI.related)}</h3>
+      <div class="infoBox"><ul>${rel}</ul></div>
     </div>
 
-    <div class="section">
-      <div class="infoBox">
-        Voit antaa palautetta käsitteestä sanaston vastuuorganisaatiolle.<br>
-        <a class="link" href="${issueURL(label,uri)}" target="_blank">
-          Anna palautetta käsitteestä ↗
-        </a>
-      </div>
+    <div class="feedbackBox">
+      <div class="feedbackHint">${escapeHtml(tUI.feedbackHint)}</div>
+      <a class="link" href="${escapeHtml(feedbackURL)}" target="_blank" rel="noopener">${escapeHtml(tUI.feedbackLink)} ↗</a>
     </div>
   `;
 }
 
+/* ===== hash routing (supports label-with-spaces -> slug) ===== */
 function openFromHash(){
-  const m=location.hash.match(/^#\/concept\/(.+)$/);
-  if(!m)return;
-  const id=decodeURIComponent(m[1]);
-  if(map[id]!==undefined) renderConcept(id);
+  const h=window.location.hash;
+  const m=h.match(/^#\/concept\/(.+)$/);
+  if(!m) return;
+
+  let id=decodeURIComponent(m[1]).trim();
+
+  if(map[id]!==undefined){ renderConcept(id); return; }
+
+  const slug=id.replace(/\s+/g,"-");
+  if(map[slug]!==undefined){ renderConcept(slug); return; }
+
+  console.warn("Concept not found:", id);
 }
 
-/* JSON-LD parsing */
+/* ===== JSON-LD parsing ===== */
 function extractTerms(c){
   const out=[];
-  toArray(c["skos:prefLabel"]).forEach(t=>out.push({lang:t["@language"],label:t["@value"],type:"Preferred"}));
-  toArray(c["skos:altLabel"]).forEach(t=>out.push({lang:t["@language"],label:t["@value"],type:"Alt"}));
+  toArray(c["skos:prefLabel"]).forEach(t=>{
+    if(t && t["@value"]) out.push({lang:t["@language"]||"",label:t["@value"],type:"Preferred"});
+  });
+  toArray(c["skos:altLabel"]).forEach(t=>{
+    if(t && t["@value"]) out.push({lang:t["@language"]||"",label:t["@value"],type:"Alt"});
+  });
   return out;
 }
 function extractDefs(c){
-  return toArray(c["skos:definition"]).map(d=>({lang:d["@language"],text:d["@value"]}));
+  return toArray(c["skos:definition"]).map(d=>({lang:d?.["@language"]||"",text:d?.["@value"]||""})).filter(x=>x.text);
 }
 function extractNotes(c){
-  return toArray(c["skos:note"]).map(n=>({lang:n["@language"],text:n["@value"]}));
+  return toArray(c["skos:note"]).map(n=>({lang:n?.["@language"]||"",text:n?.["@value"]||""})).filter(x=>x.text);
 }
 function extractSources(c){
-  return toArray(c["dcterms:source"]).map(s=>({
-    lang:s["@language"]||"",
-    label:s["@value"]||"",
-    url:s["@id"]||""
-  }));
+  return toArray(c["dcterms:source"]).map(s=>{
+    if(!s) return null;
+    // JSON-LD node might contain @id + @value
+    const url = (typeof s==="object" && s["@id"]) ? s["@id"] : "";
+    const label = (typeof s==="object" && s["@value"]) ? s["@value"] : (typeof s==="string" ? s : "");
+    const lang = (typeof s==="object" && s["@language"]) ? s["@language"] : "";
+    return {lang,label,url};
+  }).filter(Boolean);
 }
 function extractRelated(c){
-  return toArray(c["skos:related"]).map(u=>asId(u).split("/").pop());
+  return toArray(c["skos:related"])
+    .map(u=>asId(u))
+    .map(x=>x.split("#/concept/").pop())
+    .filter(Boolean);
 }
 
-function exportJSONLD(){
-  window.open("sanasto.jsonld","_blank");
-}
+/* ===== export placeholders ===== */
+function exportTTL(){}
+function exportRDF(){}
+function exportJSONLD(){ window.open("sanasto.jsonld","_blank"); }
 </script>
 </body>
 </html>
