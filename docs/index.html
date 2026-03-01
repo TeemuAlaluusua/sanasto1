@@ -146,6 +146,8 @@ fetch("./sanasto.jsonld")
 
   concepts.forEach((c,i)=>map[c.id]=i);
 
+  document.getElementById("view").textContent=UI[currentLang].select;
+
   renderList();
   openFromHash();
 });
@@ -154,7 +156,6 @@ function setLang(l){
   currentLang=l;
   document.getElementById("langBtn").textContent=l.toUpperCase();
   document.getElementById("view").textContent=UI[l].select;
-  document.getElementById("view").textContent=UI[currentLang].select;
   renderList();
 }
 
