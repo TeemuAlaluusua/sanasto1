@@ -66,14 +66,32 @@ th{background:#f9fafb;text-align:left}
 
 <div class="layout">
   <div class="panel"><div id="list" class="list"></div></div>
-  <div id="view" class="concept">Valitse käsite</div>
+  <div id="view" class="concept"></div>
 </div>
 
 <script>
 const UI={
-  fi:{terms:"Termit",lang:"Kieli",term:"Termi",type:"Tyyppi",def:"Määritelmä",note:"Huomautus",src:"Lähteet",rel:"Liittyvät käsitteet",fb:"Voit antaa palautetta käsitteestä",fbLink:"Anna palautetta käsitteestä"},
-  sv:{terms:"Termer",lang:"Språk",term:"Term",type:"Typ",def:"Definition",note:"Anmärkning",src:"Källor",rel:"Relaterade begrepp",fb:"Du kan ge respons",fbLink:"Ge respons"},
-  en:{terms:"Terms",lang:"Language",term:"Term",type:"Type",def:"Definition",note:"Note",src:"Sources",rel:"Related concepts",fb:"You can give feedback",fbLink:"Give feedback"}
+  fi:{
+    select:"Valitse käsite",
+    terms:"Termit",lang:"Kieli",term:"Termi",type:"Tyyppi",
+    def:"Määritelmä",note:"Huomautus",src:"Lähteet",
+    rel:"Liittyvät käsitteet",fb:"Voit antaa palautetta käsitteestä",
+    fbLink:"Anna palautetta käsitteestä"
+  },
+  sv:{
+    select:"Välj begrepp",
+    terms:"Termer",lang:"Språk",term:"Term",type:"Typ",
+    def:"Definition",note:"Anmärkning",src:"Källor",
+    rel:"Relaterade begrepp",fb:"Du kan ge respons",
+    fbLink:"Ge respons"
+  },
+  en:{
+    select:"Select concept",
+    terms:"Terms",lang:"Language",term:"Term",type:"Type",
+    def:"Definition",note:"Note",src:"Sources",
+    rel:"Related concepts",fb:"You can give feedback",
+    fbLink:"Give feedback"
+  }
 };
 
 const ISSUE_REPO="https://github.com/TeemuAlaluusua/sanasto1/issues/new";
@@ -135,8 +153,9 @@ fetch("./sanasto.jsonld")
 function setLang(l){
   currentLang=l;
   document.getElementById("langBtn").textContent=l.toUpperCase();
+  document.getElementById("view").textContent=UI[l].select;
+  document.getElementById("view").textContent=UI[currentLang].select;
   renderList();
-  openFromHash();
 }
 
 function term(c){
@@ -151,13 +170,12 @@ function renderList(){
   const groups={};
 
   concepts.forEach(c=>{
-    // FIX: fallback termi jos kieltä ei ole
-    const t=c.terms.find(t=>t.lang===currentLang) || c.terms[0];
-    if(!t) return;
-    if(!t.label.toLowerCase().includes(q)) return;
+   const t=c.terms.find(t=>t.lang===currentLang);
+   if(!t) return;
+   if(!t.label.toLowerCase().includes(q)) return;
 
-    if(!groups[c.scheme]) groups[c.scheme]=[];
-    groups[c.scheme].push(c);
+   if(!groups[c.scheme]) groups[c.scheme]=[];
+   groups[c.scheme].push(c);
   });
 
   Object.keys(groups).sort().forEach(scheme=>{
