@@ -60,7 +60,6 @@ th{background:#f9fafb;text-align:left}
         <div onclick="exportRDF()">RDF/XML</div>
       </div>
     </div>
-
   </div>
 </header>
 
@@ -108,6 +107,7 @@ const toArray=v=>v==null?[]:(Array.isArray(v)?v:[v]);
 const asId=x=>typeof x==="object"?x["@id"]||"":x||"";
 const esc=s=>String(s||"").replace(/[&<>"']/g,a=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[a]));
 
+/* LOAD */
 fetch("./sanasto.jsonld")
 .then(r=>r.json())
 .then(j=>{
@@ -126,19 +126,32 @@ fetch("./sanasto.jsonld")
       return{
         id,
 
-        // FIX: schemeId oikein (# eikä /)
         scheme: toArray(n["skos:inScheme"])
           .map(u=>asId(u))
           .map(u=>u.includes("#") ? u.split("#").pop() : u.split("/").pop())[0] || "default",
 
-        terms:toArray(n["skos:prefLabel"]).map(t=>({lang:t["@language"],label:t["@value"]})),
+        terms:[
+          ...toArray(n["skos:prefLabel"]).map(t=>({
+            lang:t["@language"],
+            label:t["@value"],
+            type:"Suositettava termi"
+          })),
+          ...toArray(n["skos:altLabel"]).map(t=>({
+            lang:t["@language"],
+            label:t["@value"],
+            type:"Synonyymi"
+          }))
+        ],
+
         defs:toArray(n["skos:definition"]).map(d=>({lang:d["@language"],text:d["@value"]})),
         notes:toArray(n["skos:note"]).map(d=>({lang:d["@language"],text:d["@value"]})),
+
         sources:toArray(n["dcterms:source"]).map(s=>({
           lang:s["@language"]||"",
           label:s["@value"]||"",
-          url:s["@id"]||""
+          url:s["@id"]||s["uri"]||""
         })),
+
         related:toArray(n["skos:related"])
           .map(u=>asId(u))
           .filter(u=>u.includes("#/concept/"))
@@ -155,6 +168,7 @@ fetch("./sanasto.jsonld")
   openFromHash();
 });
 
+/* LANG */
 function setLang(l){
   currentLang=l;
   document.getElementById("langBtn").textContent=l.toUpperCase();
@@ -162,10 +176,12 @@ function setLang(l){
   renderList();
 }
 
+/* TERM PICK */
 function term(c){
   return c.terms.find(t=>t.lang===currentLang) || c.terms[0];
 }
 
+/* LIST */
 function renderList(){
   const q=document.getElementById("search").value.toLowerCase();
   const el=document.getElementById("list");
@@ -174,12 +190,12 @@ function renderList(){
   const groups={};
 
   concepts.forEach(c=>{
-   const t=c.terms.find(t=>t.lang===currentLang);
-   if(!t) return;
-   if(!t.label.toLowerCase().includes(q)) return;
+    const t=c.terms.find(t=>t.lang===currentLang);
+    if(!t) return;
+    if(!t.label.toLowerCase().includes(q)) return;
 
-   if(!groups[c.scheme]) groups[c.scheme]=[];
-   groups[c.scheme].push(c);
+    if(!groups[c.scheme]) groups[c.scheme]=[];
+    groups[c.scheme].push(c);
   });
 
   Object.keys(groups).sort().forEach(scheme=>{
@@ -195,15 +211,12 @@ function renderList(){
         const div=document.createElement("div");
         div.className="item";
         const a=document.createElement("a");
-
-        // FIX: varma render klikkauksessa
         a.href="#/concept/"+encodeURIComponent(c.id);
         a.onclick=e=>{
           e.preventDefault();
           location.hash="#/concept/"+encodeURIComponent(c.id);
           renderConcept(c.id);
         };
-
         a.textContent=term(c).label;
         div.appendChild(a);
         el.appendChild(div);
@@ -211,6 +224,7 @@ function renderList(){
   });
 }
 
+/* VIEW */
 function renderConcept(id){
   const c=concepts[map[id]];
   if(!c) return;
@@ -222,36 +236,38 @@ function renderConcept(id){
     <tr>
       <td style="width:60px">${esc(tr.lang)}</td>
       <td>${esc(tr.label)}</td>
-      <td style="width:90px">${esc(tr.type||"Preferred")}</td>
+      <td style="width:120px">${esc(tr.type)}</td>
     </tr>
   `).join("");
 
-  const defs=c.defs.map(d=>`
+  const defs=c.defs.length ? c.defs.map(d=>`
     <div class="infoRow">
       <span class="infoLang">${d.lang.toUpperCase()}</span>
       ${esc(d.text)}
     </div>
-  `).join("")||"—";
+  `).join("") : "—";
 
-  const notes=c.notes.map(d=>`
+  const notes=c.notes.length ? c.notes.map(d=>`
     <div class="infoRow">
       <span class="infoLang">${d.lang.toUpperCase()}</span>
       ${esc(d.text)}
     </div>
-  `).join("")||"—";
+  `).join("") : "—";
 
-  const src=c.sources.map(s=>{
+  const srcList=c.sources.map(s=>{
     if(s.url){
       return `<div><a class="link" href="${esc(s.url)}" target="_blank">${esc(s.label)}</a></div>`;
     }
     return `<div>${esc(s.label)}</div>`;
-  }).join("")||"—";
+  });
+  const src=srcList.length?srcList.join(""):"—";
 
-  const rel=c.related.map(r=>{
+  const relList=c.related.map(r=>{
     const rc=concepts[map[r]];
     if(!rc) return "";
     return `<li><a class="link" href="#/concept/${encodeURIComponent(r)}">${esc(term(rc).label)}</a></li>`;
-  }).join("");
+  }).filter(Boolean);
+  const rel=relList.length?relList.join(""):"";
 
   const issueURL=ISSUE_REPO+"?title="+encodeURIComponent(label);
 
@@ -293,11 +309,16 @@ function renderConcept(id){
 
     <div class="feedbackBox">
       <div class="feedbackHint">${t.fb}</div>
-      <a class="link" href="${issueURL}" target="_blank">${t.fbLink} ↗</a>
+      <div>
+        <a class="link" href="${issueURL}" target="_blank">
+          ${t.fbLink} ↗
+        </a>
+      </div>
     </div>
   `;
 }
 
+/* HASH */
 function openFromHash(){
   const h=location.hash;
   const m=h.match(/^#\/concept\/(.+)$/);
@@ -313,6 +334,7 @@ function openFromHash(){
 window.addEventListener("hashchange",openFromHash);
 document.getElementById("search").addEventListener("input",renderList);
 
+/* EXPORT */
 function exportJSONLD(){window.open("sanasto.jsonld");}
 function exportTTL(){alert("TTL export not configured");}
 function exportRDF(){alert("RDF export not configured");}
