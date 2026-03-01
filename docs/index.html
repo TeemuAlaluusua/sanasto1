@@ -30,7 +30,6 @@ h1{margin:0 0 6px;font-size:24px}
 .feedbackBox{margin-top:24px;padding-top:12px;border-top:1px solid #e5e7eb}
 .feedbackHint{color:#6b7280;font-size:14px;margin-bottom:6px}
 
-/* ✔ palautettu termitaulukon layout */
 table{width:100%;border-collapse:collapse}
 th,td{border-bottom:1px solid #eee;padding:8px;font-size:13px}
 th{background:#f9fafb;text-align:left}
@@ -78,8 +77,6 @@ const UI={
 };
 
 const ISSUE_REPO="https://github.com/TeemuAlaluusua/sanasto1/issues/new";
-
-/* ✔ lisätty BASE_URI */
 const BASE_URI="https://teemualaluusua.github.io/sanasto1/#/concept/";
 
 let currentLang="fi";
@@ -90,7 +87,6 @@ const toArray=v=>v==null?[]:(Array.isArray(v)?v:[v]);
 const asId=x=>typeof x==="object"?x["@id"]||"":x||"";
 const esc=s=>String(s||"").replace(/[&<>"']/g,a=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[a]));
 
-/* LOAD */
 fetch("./sanasto.jsonld")
 .then(r=>r.json())
 .then(j=>{
@@ -109,10 +105,10 @@ fetch("./sanasto.jsonld")
       return{
         id,
 
-        /* ✔ schemeId palautettu */
+        // FIX: schemeId oikein (# eikä /)
         scheme: toArray(n["skos:inScheme"])
           .map(u=>asId(u))
-          .map(u=>u.split("/").pop())[0] || "default",
+          .map(u=>u.includes("#") ? u.split("#").pop() : u.split("/").pop())[0] || "default",
 
         terms:toArray(n["skos:prefLabel"]).map(t=>({lang:t["@language"],label:t["@value"]})),
         defs:toArray(n["skos:definition"]).map(d=>({lang:d["@language"],text:d["@value"]})),
@@ -136,7 +132,6 @@ fetch("./sanasto.jsonld")
   openFromHash();
 });
 
-/* LANG */
 function setLang(l){
   currentLang=l;
   document.getElementById("langBtn").textContent=l.toUpperCase();
@@ -148,7 +143,6 @@ function term(c){
   return c.terms.find(t=>t.lang===currentLang) || c.terms[0];
 }
 
-/* ✔ LIST — scheme grouping lisätty */
 function renderList(){
   const q=document.getElementById("search").value.toLowerCase();
   const el=document.getElementById("list");
@@ -157,7 +151,8 @@ function renderList(){
   const groups={};
 
   concepts.forEach(c=>{
-    const t=c.terms.find(t=>t.lang===currentLang);
+    // FIX: fallback termi jos kieltä ei ole
+    const t=c.terms.find(t=>t.lang===currentLang) || c.terms[0];
     if(!t) return;
     if(!t.label.toLowerCase().includes(q)) return;
 
@@ -178,7 +173,15 @@ function renderList(){
         const div=document.createElement("div");
         div.className="item";
         const a=document.createElement("a");
+
+        // FIX: varma render klikkauksessa
         a.href="#/concept/"+encodeURIComponent(c.id);
+        a.onclick=e=>{
+          e.preventDefault();
+          location.hash="#/concept/"+encodeURIComponent(c.id);
+          renderConcept(c.id);
+        };
+
         a.textContent=term(c).label;
         div.appendChild(a);
         el.appendChild(div);
@@ -186,7 +189,6 @@ function renderList(){
   });
 }
 
-/* VIEW */
 function renderConcept(id){
   const c=concepts[map[id]];
   if(!c) return;
@@ -194,7 +196,6 @@ function renderConcept(id){
   const t=UI[currentLang];
   const label=term(c)?.label||id;
 
-  /* ✔ termitaulukko sarakeleveydet */
   const termsRows=c.terms.map(tr=>`
     <tr>
       <td style="width:60px">${esc(tr.lang)}</td>
@@ -275,7 +276,6 @@ function renderConcept(id){
   `;
 }
 
-/* HASH */
 function openFromHash(){
   const h=location.hash;
   const m=h.match(/^#\/concept\/(.+)$/);
@@ -291,7 +291,6 @@ function openFromHash(){
 window.addEventListener("hashchange",openFromHash);
 document.getElementById("search").addEventListener("input",renderList);
 
-/* EXPORT */
 function exportJSONLD(){window.open("sanasto.jsonld");}
 function exportTTL(){alert("TTL export not configured");}
 function exportRDF(){alert("RDF export not configured");}
