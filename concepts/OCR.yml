@@ -1,0 +1,47 @@
+id: OCR
+status: Luonnos
+schemeId: 
+terms:
+- lang: fi
+  label: optinen merkinluku
+  type: Suositettava termi
+
+- lang: fi
+  label: optinen merkintunnistus
+  type: Suositettava termi
+
+- lang: fi
+  label: tekstintunnistus
+  type: Suositettava termi
+  
+- lang: en
+  label: optical character recognition
+  type: Suositettava termi
+
+- lang: en
+  label: OCR
+  type: Synonyymi
+  
+definitions:
+- lang: fi
+  text: koneellisesti kirjoitettua, tulostettua tai käsin kirjoitettua tekstiä sisältävien kuvien muuntaminen sähköisesti muokattavaan muotoon
+
+definitions:
+- lang: en
+  text: Conversion of images of typed, printed or handwritten text into machine-encoded text
+  
+notes: []
+
+sources:
+- lang: fi
+  label: 'ISO/IEC 22989:2023'
+  uri: 
+  
+relations:
+  broader: []
+  narrower: []
+  related: []
+  
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35
