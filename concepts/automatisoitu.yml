@@ -39,7 +39,7 @@ definitions:
 notes: []
 
 sources:
-- lang: fi
+- lang: 
   label: "ISO/IEC 22989:2023"
   uri:
   
