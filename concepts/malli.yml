@@ -1,0 +1,35 @@
+id: malli
+status: Luonnos
+schemeId: 
+terms:
+- lang: fi
+  label: malli
+  type: Suositettava termi
+  
+- lang: en
+  label: model
+  type: Suositettava termi
+  
+definitions:
+- lang: fi
+  text: fyysinen, matemaattinen tai muuten looginen esitys järjestelmästä, entiteetistä eli kohdeyksiköstä, ilmiöstä, prosessista tai datasta
+
+definitions:
+- lang: en
+  text: physical, mathematical or otherwise logical representation of a system, entity, phenomenon, process or data
+  
+notes: []
+
+sources:
+- lang: fi
+  label: 'ISO/IEC 22989:2023'
+  uri: 
+  
+relations:
+  broader: []
+  narrower: []
+  related: []
+  
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-02-24T17:35
