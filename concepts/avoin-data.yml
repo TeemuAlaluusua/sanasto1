@@ -406,3 +406,115 @@ relations:
 metadata:
   created: 2026-02-24T17
   modified: 2026-02-24T17:35
+
+  ---
+
+id: linkitetty data
+status: Luonnos
+schemeId: 
+terms:
+- lang: fi
+  label: linkitetty data
+  type: Suositettava termi
+- lang: en
+  label: linked data
+  type: Suositettava termi
+  
+definitions:
+- lang: fi
+  text: data, jossa on sisäisiä linkkejä tai hyperlinkkejä muihin datoihin
+- lang: en
+  text: data which make connections among data available
+
+notes:
+- lang: fi
+  text: Tyypillinen esimerkki suuresta linkitetystä tietovarannosta on DBPedia (https://www.dbpedia.org/), joka tarjoaa Wikipedian sisällön RDF -muodossa  
+- lang: en
+  text: A typical case of a large Linked Dataset is DBPedia (https://www.dbpedia.org/), which, essentially, makes the content of Wikipedia available in RDF.
+  
+sources:
+- lang: 
+  label: "ISO 5127:2022"
+  uri:
+
+relations:
+  broader: []
+  narrower: []
+  related: []
+
+metadata:
+  created: 2026-02-24T17
+  modified: 2026-02-24T17:35
+
+---
+
+id: avoin data
+status: Luonnos
+schemeId: 
+terms:
+- lang: fi
+  label: avoin data
+  type: Suositettava termi
+- lang: en
+  label: open data
+  type: Suositettava termi
+  
+definitions:
+- lang: fi
+  text: data, joka on tarjolla ja näkyvissä muille ja jota kuka tahansa saa vapaasti käyttää, kierrättää, julkaista uudelleen ja levittää edelleen
+- lang: en
+  text: data available/visible to others and that can be freely used, re-used, re-published and redistributed by anyone
+
+notes: []
+  
+sources:
+- lang: 
+  label: "ISO 5127:2022"
+  uri:
+
+relations:
+  broader: []
+  narrower: []
+  related: []
+
+metadata:
+  created: 2026-02-24T17
+  modified: 2026-02-24T17:35
+
+---
+
+id: metatieto
+status: Luonnos
+schemeId: 
+terms:
+- lang: fi
+  label: metatieto
+  type: Suositettava termi
+- lang: en
+  label: metadata
+  type: Suositettava termi
+  
+definitions:
+- lang: fi
+  text: dataa muusta datasta, dokumenteista, tai asiakirjoista, joka kuvaa niiden sisältöä, kontekstia, rakennetta, dataformaattia, provenienssia, tai niihin liitettyjä oikeuksia
+- lang: en
+  text: data about other data, documents, or records that describes their content, context, structure, data format, provenance, and/or rights attached to them
+
+notes: []
+  
+sources:
+- lang: 
+  label: "ISO 5127:2022"
+  uri:
+
+relations:
+  broader: []
+  narrower: []
+  related: []
+
+metadata:
+  created: 2026-02-24T17
+  modified: 2026-02-24T17:35
+
+---
+
