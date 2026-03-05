@@ -1,0 +1,33 @@
+id: tietue
+status: Luonnos
+schemeId: []
+
+terms:
+  - lang: fi
+    label: tietue
+    type: Suositettava termi
+  - lang: en
+    label: record
+    type: Suositettava termi
+
+definitions:
+  - lang: fi
+    text: "dokumentin osa tai dokumentti, joka sisältää rakenteellisen ja sisäisesti järjestetyn joukon itsenäistä mutta toisiinsa liittyvää dataa, joka koskee yhtä henkilöä tai muuta oliota ja joka on valittu ja esitetty tiettyä tarkoitusta varten"
+  - lang: en
+    text: "part of a document or document containing a structured and internally organized set of self-contained but related data on one person or other object, selected and presented for a predefined specific purpose"
+
+notes: []
+
+sources:
+  - lang:
+    label: "ISO 5127:2022"
+    url:
+
+relations:
+  broader: []
+  narrower: []
+  related: []
+
+metadata:
+  created: "2026-03-05T12:00"
+  modified: "2026-03-05T12:00"

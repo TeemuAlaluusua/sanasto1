@@ -1,0 +1,33 @@
+id: RDF-kolmikko
+status: Luonnos
+schemeId: []
+
+terms:
+  - lang: fi
+    label: RDF-kolmikko
+    type: Suositettava termi
+  - lang: en
+    label: triple
+    type: Suositettava termi
+
+definitions:
+  - lang: fi
+    text: "RDF:ssä käytetty lauseen esitystapa, joka koostuu vain ominaisuudesta, olion tunnuksesta, ja ominaisuuden arvosta, tässä järjestyksessä"
+  - lang: en
+    text: "representation of a statement used by RDF, consisting of just the property, the resource identifier, and the property value in that order"
+
+notes: []
+
+sources:
+  - lang:
+    label: "ISO 5127:2022"
+    url:
+
+relations:
+  broader: []
+  narrower: []
+  related: []
+
+metadata:
+  created: "2026-03-05T12:00"
+  modified: "2026-03-05T12:00"

@@ -1,25 +1,25 @@
-id: tunniste
+id: lokitiedosto
 status: Luonnos
 schemeId: []
 
 terms:
   - lang: fi
-    label: tunniste
+    label: lokitiedosto
     type: Suositettava termi
   - lang: en
-    label: tag
+    label: log file
     type: Suositettava termi
 
 definitions:
   - lang: fi
-    text: "merkkijono hakemistokirjauksessa, jota käytetään tunnistamaan kenttää tai siihen liittyvää datan kuvailukenttää"
+    text: "palvelimen automaattisesti luoma tiedosto, joka sisältää tietoa palvelimella tehdyistä toimenpiteistä"
   - lang: en
-    text: "character string in a directory entry used to identify a data field or an associated data description field"
+    text: "file automatically created by a server that maintains a record of its activities"
 
 notes: []
 
 sources:
-  - lang: 
+  - lang:
     label: "ISO 5127:2022"
     url:
 

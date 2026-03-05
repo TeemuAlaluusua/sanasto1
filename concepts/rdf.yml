@@ -1,0 +1,40 @@
+id: RDF
+status: Luonnos
+schemeId: []
+
+terms:
+  - lang: fi
+    label: RDF
+    type: Suositettava termi
+  - lang: en
+    label: RDF
+    type: Suositettava termi
+  - lang: en
+    label: resource description framework
+    type: Suositettava termi
+
+definitions:
+  - lang: fi
+    text: "viitekehys, jonka avulla luodaan loogisia kieliä, jotka ovat yhteentoimivia semanttisessa webissa"
+  - lang: en
+    text: "framework for constructing logical languages that can work together in the Semantic Web"
+
+notes: []
+  - lang: fi
+    text: "RDF:n ansiosta XML soveltuu myös datan eikä vain dokumenttien kuvaamiseen"
+  - lang: en
+    text: "A way of using XML for data rather than just documents"
+
+sources:
+  - lang:
+    label: "ISO 5127:2022"
+    url:
+
+relations:
+  broader: []
+  narrower: []
+  related: []
+
+metadata:
+  created: "2026-03-05T12:00"
+  modified: "2026-03-05T12:00"

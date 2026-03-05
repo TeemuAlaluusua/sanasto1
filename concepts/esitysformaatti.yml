@@ -1,0 +1,33 @@
+id: esitysformaatti
+status: Luonnos
+schemeId: []
+
+terms:
+  - lang: fi
+    label: esitysformaatti
+    type: Suositettava termi
+  - lang: en
+    label: presentation format
+    type: Suositettava termi
+
+definitions:
+  - lang: fi
+    text: "dataformaatti, jonka avulla digitaalinen data esitetään näyttöruudulla niin, että ihmiset pystyvät tulkitsemaan sitä"
+  - lang: en
+    text: "data format for the configuration of the display of digital data on the screen interface in a manner interpretable for human users"
+
+notes: []
+
+sources:
+  - lang:
+    label: "ISO 5127:2022"
+    url:
+
+relations:
+  broader: []
+  narrower: []
+  related: []
+
+metadata:
+  created: "2026-03-05T12:00"
+  modified: "2026-03-05T12:00"

@@ -1,34 +1,36 @@
-id: rfid
+id: RFID
 status: Luonnos
-schemeId: rakentamisen-tieto-ja-informaatiomallit
+schemeId: []
+
 terms:
-- lang: fi
-  label: RFID
-  type: Suositettava termi
-- lang: sv
-  label: ''
-  type: Suositettava termi
-- lang: en
-  label: radio frequency identification
-  type: Suositettava termi
+  - lang: fi
+    label: RFID
+    type: Suositettava termi
+  - lang: en
+    label: RFID
+    type: Suositettava termi
+  - lang: en
+    label: radio frequency identification
+    type: Suositettava termi
+
 definitions:
-- lang: fi
-  text: RFID-tunnistus (engl. radio frequency identification) on automaattisen tunnistamisen
-    ja seurannan tarkoituksiin käytettävä järjestelmä, jossa käytetään radiotaajuisia
-    sähkömagneettisia kenttiä tiedonsiirtoon esineisiin kiinnitetyistä tunnisteista.
-    RFID-tunniste on kohteeseen kiinnitettävä tarra, kortti, implantti tai vastaava
-    merkintä, joka sisältää antennin ja pienen mikropiirin. Tunnisteen sisältö voidaan
-    kirjoittaa ja lukea ilman kosketusta tai näköyhteyttä ja useampi tunniste voidaan
-    lukea samanaikaisesti. Lukuetäisyydet riippuvat käytettävästä taajuudesta, tehosta,
-    RFID-lukijan herkkyydestä ja antennin suuntakuviosta.
+  - lang: fi
+    text: "langaton radiotaajuinen tunnistusjärjestelmä, joka käyttää elektromagneettista kenttää siirtämään dataa aineelliseen objektiin kiinnitetystä tarrasta automaattista tunnistusta ja seurantaa varten"
+  - lang: en
+    text: "wireless non-contact system that uses radio-frequency electromagnetic fields to transfer data from a tag attached to an object, for the purposes of automatic identification and tracking"
+
 notes: []
+
 sources:
-- lang: fi
-  label: '[ISO 5127:2017](https://www.iso.org)'
+  - lang:
+    label: "ISO 5127:2022"
+    url:
+
 relations:
   broader: []
   narrower: []
   related: []
+
 metadata:
-  created: 2026-02-24T17:35
-  modified: 2026-02-24T17:35
+  created: "2026-03-05T12:00"
+  modified: "2026-03-05T12:00"

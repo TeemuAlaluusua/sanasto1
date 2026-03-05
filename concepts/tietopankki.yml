@@ -1,0 +1,36 @@
+id: tietopankki
+status: Luonnos
+schemeId: []
+
+terms:
+  - lang: fi
+    label: tietopankki
+    type: Suositettava termi
+  - lang: en
+    label: data repository
+    type: Suositettava termi
+  - lang: en
+    label: data bank
+    type: Suositettava termi
+
+definitions:
+  - lang: fi
+    text: "joukko tiedostoja tai tietokantoja, joilla on yhteinen varastointijärjestelmä, käsittelyjärjestelmä ja hakujärjestelmä"
+  - lang: en
+    text: "set of files or databases combined with a storage system, a processing system and a retrieval system"
+
+notes: []
+
+sources:
+  - lang:
+    label: "ISO 5127:2022"
+    url:
+
+relations:
+  broader: []
+  narrower: []
+  related: []
+
+metadata:
+  created: "2026-03-05T12:00"
+  modified: "2026-03-05T12:00"

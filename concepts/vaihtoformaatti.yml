@@ -1,0 +1,33 @@
+id: vaihtoformaatti
+status: Luonnos
+schemeId: []
+
+terms:
+  - lang: fi
+    label: vaihtoformaatti
+    type: Suositettava termi
+  - lang: en
+    label: exchange format
+    type: Suositettava termi
+
+definitions:
+  - lang: fi
+    text: "koneluettava dataformaatti, jonka avulla tieto esitetään sellaisessa muodossa, jossa sitä voidaan vaihtaa eri sovellusten välillä"
+  - lang: en
+    text: "machine-readable data format for representing information that is intended to facilitate exchange of the information between different applications"
+
+notes: []
+
+sources:
+  - lang: 
+    label: "ISO 5127:2022"
+    url:
+
+relations:
+  broader: []
+  narrower: []
+  related: []
+
+metadata:
+  created: "2026-03-05T12:00"
+  modified: "2026-03-05T12:00"

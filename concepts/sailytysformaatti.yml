@@ -1,0 +1,33 @@
+id: "säilytysformaatti"
+status: Luonnos
+schemeId: []
+
+terms:
+  - lang: fi
+    label: "säilytysformaatti"
+    type: Suositettava termi
+  - lang: en
+    label: "storage format"
+    type: Suositettava termi
+
+definitions:
+  - lang: fi
+    text: "dataformaatti, jossa digitaalista dataa säilytetään tietokoneella tai pitkäaikaiseen varastointiin tarkoitetussa tietopankissa"
+  - lang: en
+    text: "data format for the hosting of digital data in the main store of a computer or in a long-term storage data repository"
+
+notes: []
+
+sources:
+  - lang:
+    label: "ISO 5127:2022"
+    url:
+
+relations:
+  broader: []
+  narrower: []
+  related: []
+
+metadata:
+  created: "2026-03-05T12:00"
+  modified: "2026-03-05T12:00"

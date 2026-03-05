@@ -1,0 +1,43 @@
+id: mappaus
+status: Luonnos
+schemeId: []
+
+terms:
+  - lang: fi
+    label: vastaavuusmäärittely
+    type: Suositettava termi
+  - lang: fi
+    label: semanttinen mappaus
+    type: Suositettava termi
+  - lang: fi
+    label: mappaus
+    type: Suositettava termi
+  - lang: en
+    label: mapping
+    type: Suositettava termi
+
+definitions:
+  - lang: fi
+    text: "yhteen joukkoon kuuluvan elementin rinnastaminen toisen joukon elementtiin semanttisen vastaavuuden perusteella"
+  - lang: en
+    text: "assigning an element in one set to an element in another set through semantic correspondence"
+
+notes: []
+  - lang: fi
+    text: "Vastaavuusmäärittelyssä selvitetään kahden eri joukon elementtien väliset semanttiset vastaavuudet."
+  -lang: en
+    text: "It is the relation with the best semantic correspondence between an element in one set and an element in another set."
+
+sources:
+  - lang:
+    label: "ISO 5127:2022"
+    url:
+
+relations:
+  broader: []
+  narrower: []
+  related: []
+
+metadata:
+  created: "2026-03-05T12:00"
+  modified: "2026-03-05T12:00"

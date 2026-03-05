@@ -1,29 +1,33 @@
-id: kasitemalli
+id: käsitemalli
 status: Luonnos
-schemeId: rakentamisen-tieto-ja-informaatiomallit
+schemeId: []
+
 terms:
-- lang: fi
-  label: käsitemalli
-  type: Suositettava termi
-- lang: sv
-  label: begreppsmodel
-  type: Suositettava termi
-- lang: en
-  label: conceptual data model
-  type: Suositettava termi
+  - lang: fi
+    label: käsitemalli
+    type: Suositettava termi
+  - lang: en
+    label: conceptual schema
+    type: Suositettava termi
+
 definitions:
-- lang: fi
-  text: <a href="https://iri.suomi.fi/terminology/rymallit/c6">tietomalli</a>, joka kuvaa tiettyyn tarkoitukseen tarvittavat käsitetiedot ja käsitetietojen väliset suhteet yleisellä tasolla
-notes:
-- lang: fi
-  text: 'Käsitejärjestelmäkaavio: https://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg'
+  - lang: fi
+    text: "tietomalli, joka määrittelee kohdeympäristön käsitteet"
+  - lang: en
+    text: "model that defines concepts of a universe of discourse"
+
+notes: []
+
 sources:
-- lang: ''
-  label: https://iri.suomi.fi/terminology/rymallit/c12
+  - lang:
+    label: "ISO 5127:2022"
+    url:
+
 relations:
-  broader:
+  broader: []
   narrower: []
   related: []
+
 metadata:
-  created: 2025-12-23T14:08
-  modified: 2025-12-23T14:08
+  created: "2026-03-05T12:00"
+  modified: "2026-03-05T12:00"

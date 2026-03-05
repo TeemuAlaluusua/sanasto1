@@ -1,20 +1,20 @@
-id: tunniste
+id: käsiteskeema
 status: Luonnos
 schemeId: []
 
 terms:
   - lang: fi
-    label: tunniste
+    label: käsiteskeema
     type: Suositettava termi
   - lang: en
-    label: tag
+    label: conceptual schema
     type: Suositettava termi
 
 definitions:
   - lang: fi
-    text: "merkkijono hakemistokirjauksessa, jota käytetään tunnistamaan kenttää tai siihen liittyvää datan kuvailukenttää"
+    text: "käsitemallin muodollinen kuvailu"
   - lang: en
-    text: "character string in a directory entry used to identify a data field or an associated data description field"
+    text: "formal description of a conceptual model"
 
 notes: []
 

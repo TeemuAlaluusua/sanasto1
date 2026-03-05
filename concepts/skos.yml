@@ -1,25 +1,28 @@
-id: tunniste
+id: SKOS
 status: Luonnos
 schemeId: []
 
 terms:
   - lang: fi
-    label: tunniste
+    label: SKOS
     type: Suositettava termi
   - lang: en
-    label: tag
+    label: simple knowledge organization system
+    type: Suositettava termi
+  - lang: en
+    label: SKOS
     type: Suositettava termi
 
 definitions:
   - lang: fi
-    text: "merkkijono hakemistokirjauksessa, jota käytetään tunnistamaan kenttää tai siihen liittyvää datan kuvailukenttää"
+    text: "yleinen tietomalli, jonka avulla jaetaan ja linkitetään tietämysalkioita internetissä"
   - lang: en
-    text: "character string in a directory entry used to identify a data field or an associated data description field"
+    text: "common data model for sharing and linking knowledge items via the internet"
 
 notes: []
 
 sources:
-  - lang: 
+  - lang:
     label: "ISO 5127:2022"
     url:
 
