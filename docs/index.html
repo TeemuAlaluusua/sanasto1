@@ -243,14 +243,26 @@ function renderConcept(id){
   const label=term(c)?.label||id;
 
   const termsRows=[...c.terms]
-  .sort((a,b)=>a.lang===currentLang?-1:b.lang===currentLang?1:0)
+  .sort((a,b)=>{
+
+    if(a.lang!==b.lang){
+      return a.lang.localeCompare(b.lang);
+    }
+
+    if(a.type!==b.type){
+      return a.type.localeCompare(b.type);
+    }
+
+    return a.label.localeCompare(b.label);
+
+  })
   .map(tr=>`
-  <tr>
-    <td>${esc(tr.lang)}</td>
-    <td>${esc(tr.label)}</td>
-    <td>${esc(tr.type)}</td>
-  </tr>
-`).join("");
+    <tr>
+      <td style="width:60px">${esc(tr.lang)}</td>
+      <td>${esc(tr.label)}</td>
+      <td style="width:120px">${esc(tr.type)}</td>
+    </tr>
+  `).join("");
 
   const defs=c.defs.length ? `
 <table>
