@@ -96,8 +96,8 @@ const UI={
   }
 };
 
-const ISSUE_REPO="https://github.com/TeemuAlaluusua/sanasto/issues/new";
-const BASE_URI="https://teemualaluusua.github.io/sanasto/#/concept/";
+const ISSUE_REPO="https://github.com/TeemuAlaluusua/sanasto1/issues/new";
+const BASE_URI="https://teemualaluusua.github.io/sanasto1/#/concept/";
 
 let currentLang="fi";
 let concepts=[];
@@ -170,10 +170,20 @@ fetch("./sanasto.jsonld")
 
 /* LANG */
 function setLang(l){
-  currentLang=l;
-  document.getElementById("langBtn").textContent=l.toUpperCase();
-  document.getElementById("view").textContent=UI[l].select;
+  currentLang = l;
+
+  document.getElementById("langBtn").textContent = l.toUpperCase();
+
   renderList();
+
+  // jos käsite on auki -> renderöi uudelleen
+  const m = location.hash.match(/^#\/concept\/(.+)$/);
+  if(m){
+    const id = decodeURIComponent(m[1]);
+    renderConcept(id);
+  }else{
+    document.getElementById("view").textContent = UI[l].select;
+  }
 }
 
 /* TERM PICK */
@@ -232,27 +242,39 @@ function renderConcept(id){
   const t=UI[currentLang];
   const label=term(c)?.label||id;
 
-  const termsRows=c.terms.map(tr=>`
-    <tr>
-      <td style="width:60px">${esc(tr.lang)}</td>
-      <td>${esc(tr.label)}</td>
-      <td style="width:120px">${esc(tr.type)}</td>
-    </tr>
-  `).join("");
+  const termsRows=[...c.terms]
+  .sort((a,b)=>a.lang===currentLang?-1:b.lang===currentLang?1:0)
+  .map(tr=>`
+  <tr>
+    <td>${esc(tr.lang)}</td>
+    <td>${esc(tr.label)}</td>
+    <td>${esc(tr.type)}</td>
+  </tr>
+`).join("");
 
-  const defs=c.defs.length ? c.defs.map(d=>`
-    <div class="infoRow">
-      <span class="infoLang">${d.lang.toUpperCase()}</span>
-      ${esc(d.text)}
-    </div>
-  `).join("") : "—";
+  const defs=c.defs.length ? `
+<table>
+<tr><th>${t.lang}</th><th>${t.def}</th></tr>
+${c.defs.map(d=>`
+<tr>
+<td style="width:60px">${esc(d.lang)}</td>
+<td>${esc(d.text)}</td>
+</tr>
+`).join("")}
+</table>
+` : "—";
 
-  const notes=c.notes.length ? c.notes.map(d=>`
-    <div class="infoRow">
-      <span class="infoLang">${d.lang.toUpperCase()}</span>
-      ${esc(d.text)}
-    </div>
-  `).join("") : "—";
+  const notes=c.notes.length ? `
+<table>
+<tr><th>${t.lang}</th><th>${t.note}</th></tr>
+${c.notes.map(d=>`
+<tr>
+<td style="width:60px">${esc(d.lang)}</td>
+<td>${esc(d.text)}</td>
+</tr>
+`).join("")}
+</table>
+` : "—";
 
   const srcList=c.sources.map(s=>{
     if(s.url){
