@@ -2,5 +2,5 @@ schemes:
   - id: sanasto
     baseUri: https://teemualaluusua.github.io/sanasto1/
     status: []
-    prefLabel:[]
+    prefLabel: []
     languages: []
