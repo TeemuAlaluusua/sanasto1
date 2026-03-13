@@ -233,6 +233,7 @@ function renderList(){
 }
 
 /* VIEW */
+/* VIEW */
 function renderConcept(id){
   const c = concepts[map[id]];
   if(!c) return;
@@ -243,16 +244,20 @@ function renderConcept(id){
   const order = LANG_ORDER[currentLang] || ["fi","sv","en"];
 
   const termsRows = [...c.terms]
-  .sort((a,b)=>order.indexOf(a.lang) - order.indexOf(b.lang))
-  .map(tr=>`
-    <tr>
-    <td>${esc(tr.lang)}</td>
-    <td>${esc(tr.label)}</td>
-    <td>${esc(tr.type)}</td>
-  </tr>
+    .sort((a,b)=>{
+      const ai = order.indexOf(a.lang);
+      const bi = order.indexOf(b.lang);
+      return (ai === -1 ? 99 : ai) - (bi === -1 ? 99 : bi);
+    })
+    .map(tr=>`
+<tr>
+<td>${esc(tr.lang)}</td>
+<td>${esc(tr.label)}</td>
+<td>${esc(tr.type)}</td>
+</tr>
 `).join("");
 
-  const defs=c.defs.length ? `
+  const defs = c.defs.length ? `
 <table>
 <tr><th>${t.lang}</th><th>${t.def}</th></tr>
 ${c.defs.map(d=>`
@@ -264,7 +269,7 @@ ${c.defs.map(d=>`
 </table>
 ` : "—";
 
-  const notes=c.notes.length ? `
+  const notes = c.notes.length ? `
 <table>
 <tr><th>${t.lang}</th><th>${t.note}</th></tr>
 ${c.notes.map(d=>`
@@ -276,68 +281,70 @@ ${c.notes.map(d=>`
 </table>
 ` : "—";
 
-  const srcList=c.sources.map(s=>{
+  const srcList = c.sources.map(s=>{
     if(s.url){
       return `<div><a class="link" href="${esc(s.url)}" target="_blank">${esc(s.label)}</a></div>`;
     }
     return `<div>${esc(s.label)}</div>`;
   });
-  const src=srcList.length?srcList.join(""):"—";
 
-  const relList=c.related.map(r=>{
-    const rc=concepts[map[r]];
+  const src = srcList.length ? srcList.join("") : "—";
+
+  const relList = c.related.map(r=>{
+    const rc = concepts[map[r]];
     if(!rc) return "";
     return `<li><a class="link" href="#/concept/${encodeURIComponent(r)}">${esc(term(rc).label)}</a></li>`;
   }).filter(Boolean);
-  const rel=relList.length?relList.join(""):"";
 
-  const issueURL=ISSUE_REPO+"?title="+encodeURIComponent(label);
+  const rel = relList.length ? relList.join("") : "";
 
-  document.getElementById("view").innerHTML=`
-    <h1>${esc(label)}</h1>
+  const issueURL = ISSUE_REPO + "?title=" + encodeURIComponent(label);
 
-    <div class="section">
-      <b>URI</b><br>
-      <a class="link" href="${BASE_URI}${encodeURIComponent(id)}">${BASE_URI}${esc(id)}</a>
-    </div>
+  document.getElementById("view").innerHTML = `
+<h1>${esc(label)}</h1>
 
-    <div class="section">
-      <h3>${t.terms}</h3>
-      <table>
-        <tr><th>${t.lang}</th><th>${t.term}</th><th>${t.type}</th></tr>
-        ${termsRows}
-      </table>
-    </div>
+<div class="section">
+<b>URI</b><br>
+<a class="link" href="${BASE_URI}${encodeURIComponent(id)}">${BASE_URI}${esc(id)}</a>
+</div>
 
-    <div class="section">
-      <h3>${t.def}</h3>
-      <div class="infoBox">${defs}</div>
-    </div>
+<div class="section">
+<h3>${t.terms}</h3>
+<table>
+<tr><th>${t.lang}</th><th>${t.term}</th><th>${t.type}</th></tr>
+${termsRows}
+</table>
+</div>
 
-    <div class="section">
-      <h3>${t.note}</h3>
-      <div class="infoBox">${notes}</div>
-    </div>
+<div class="section">
+<h3>${t.def}</h3>
+<div class="infoBox">${defs}</div>
+</div>
 
-    <div class="section">
-      <h3>${t.src}</h3>
-      <div class="infoBox">${src}</div>
-    </div>
+<div class="section">
+<h3>${t.note}</h3>
+<div class="infoBox">${notes}</div>
+</div>
 
-    <div class="section">
-      <h3>${t.rel}</h3>
-      <div class="infoBox"><ul>${rel}</ul></div>
-    </div>
+<div class="section">
+<h3>${t.src}</h3>
+<div class="infoBox">${src}</div>
+</div>
 
-    <div class="feedbackBox">
-      <div class="feedbackHint">${t.fb}</div>
-      <div>
-        <a class="link" href="${issueURL}" target="_blank">
-          ${t.fbLink} ↗
-        </a>
-      </div>
-    </div>
-  `;
+<div class="section">
+<h3>${t.rel}</h3>
+<div class="infoBox"><ul>${rel}</ul></div>
+</div>
+
+<div class="feedbackBox">
+<div class="feedbackHint">${t.fb}</div>
+<div>
+<a class="link" href="${issueURL}" target="_blank">
+${t.fbLink} ↗
+</a>
+</div>
+</div>
+`;
 }
 
 /* HASH */
