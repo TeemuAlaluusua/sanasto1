@@ -241,6 +241,12 @@ function renderConcept(id){
   const t = UI[currentLang];
   const label = term(c)?.label || id;
 
+  const LANG_ORDER = {
+    fi:["fi","sv","en"],
+    sv:["sv","fi","en"],
+    en:["en","fi","sv"]
+  };
+
   const order = LANG_ORDER[currentLang] || ["fi","sv","en"];
 
   const termsRows = [...c.terms]
