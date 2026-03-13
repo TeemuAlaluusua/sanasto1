@@ -240,8 +240,9 @@ function renderConcept(id){
   const t=UI[currentLang];
   const label=term(c)?.label||id;
 
+  const order = LANG_ORDER[currentLang] || ["fi","sv","en"];
   const termsRows=[...c.terms]
-  .sort((a,b)=>a.lang===currentLang?-1:b.lang===currentLang?1:0)
+  .sort((a,b)=>order.indexOf(a.lang) - order.indexOf(b.lang))
   .map(tr=>`
     <tr>
     <td>${esc(tr.lang)}</td>
