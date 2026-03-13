@@ -94,6 +94,15 @@ const UI={
   }
 };
 
+const SCHEME_LABELS = {
+  sanasto: {
+    fi: "Sanasto",
+    sv: "Terminologi",
+    en: "Vocabulary"
+  }
+};
+
+
 const ISSUE_REPO="https://github.com/TeemuAlaluusua/sanasto1/issues/new";
 const BASE_URI="https://teemualaluusua.github.io/sanasto1/#/concept/";
 
@@ -210,7 +219,7 @@ function renderList(){
     const header=document.createElement("div");
     header.className="item";
     header.style.fontWeight="700";
-    header.textContent=scheme;
+    header.textContent = SCHEME_LABELS[scheme]?.[currentLang] || scheme;
     el.appendChild(header);
 
     groups[scheme]
