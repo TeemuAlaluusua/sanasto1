@@ -252,9 +252,14 @@ function renderList(){
   const groups={};
 
   concepts.forEach(c=>{
-    const t=c.terms.find(t=>t.lang===currentLang);
-    if(!t) return;
-    if(!t.label.toLowerCase().includes(q)) return;
+    const termsInLang = c.terms.filter(t=>t.lang===currentLang);
+
+    if(termsInLang.length===0) return;
+
+    const match = termsInLang.some(t =>
+    t.label.toLowerCase().includes(q));
+
+if(!match) return;
 
     if(!groups[c.scheme]) groups[c.scheme]=[];
     groups[c.scheme].push(c);
