@@ -50,7 +50,7 @@ th{background:#f9fafb;text-align:left}
 
 <header>
   <div>
-    <a href="#" onclick="location.hash='';renderHome();return false;" class="headerBtn">
+    <a href="#" onclick="location.hash='';renderHome();return false;" class="headerBtn" id="homeBtn">
 Etusivu
 </a>
   </div>
@@ -97,7 +97,8 @@ const UI={
     homeUsage:"Sanaston käyttö",
     homeScope:"Sanaston laajuus",
     homeFeedback:"Voit antaa palautetta sanastosta tai ehdottaa uusia käsitteitä.",
-    homeFeedbackBtn:"Anna palautetta sanastosta"
+    homeFeedbackBtn:"Anna palautetta sanastosta",
+    homeBtn:"Etusivu",
   },
   sv:{
     select:"Välj begrepp",
@@ -114,7 +115,8 @@ const UI={
     homeUsage:"Hur ordlistan används",
     homeScope:"Ordlistans omfattning",
     homeFeedback:"Du kan ge respons på ordlistan eller föreslå nya begrepp.",
-    homeFeedbackBtn:"Ge respons om ordlistan"
+    homeFeedbackBtn:"Ge respons om ordlistan",
+    homeBtn:"Hem",
   },
   en:{
     select:"Select concept",
@@ -131,7 +133,8 @@ const UI={
     homeUsage:"Using the glossary",
     homeScope:"Glossary scope",
     homeFeedback:"You can give feedback on the glossary or suggest new concepts.",
-    homeFeedbackBtn:"Give feedback on the glossary"
+    homeFeedbackBtn:"Give feedback on the glossary",
+    homeBtn:"Home",
   }
 };
 
@@ -221,6 +224,7 @@ function setLang(l){
   currentLang = l;
 
   document.getElementById("langBtn").textContent = l.toUpperCase();
+  document.getElementById("homeBtn").textContent = UI[l].homeBtn;
 
   renderList();
 
