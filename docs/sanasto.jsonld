@@ -102,7 +102,7 @@
       ],
       "dcterms:source": [
         {
-          "@value": "ISO/IEC 19762:2025 Information technology — Automatic identification and data capture techniques — Harmonized vocabulary"
+          "@value": "ISO/IEC 19762:2025. Information technology — Automatic identification and data capture techniques — Harmonized vocabulary"
         }
       ],
       "dcterms:created": {
@@ -184,10 +184,6 @@
           "@id": "https://wiki.buildingsmart.fi/fi/04_Julkaisut_ja_Standardit/YTV"
         }
       ],
-      "skos:related": [
-        "https://teemualaluusua.github.io/sanasto1/natiiviformaatti",
-        "https://teemualaluusua.github.io/sanasto1/natiivimalli"
-      ],
       "dcterms:created": {
         "@value": "2026-02-24T17:35",
         "@type": "xsd:dateTime"
@@ -262,22 +258,20 @@
           "@language": "fi"
         },
         {
+          "@value": "arvoverkko",
+          "@language": "fi"
+        },
+        {
           "@value": "värdekedja",
+          "@language": "sv"
+        },
+        {
+          "@value": "värdenätverk",
           "@language": "sv"
         },
         {
           "@value": "value chain",
           "@language": "en"
-        }
-      ],
-      "skos:altLabel": [
-        {
-          "@value": "arvoverkko",
-          "@language": "fi"
-        },
-        {
-          "@value": "värdenätverk",
-          "@language": "sv"
         },
         {
           "@value": "value network",
@@ -286,15 +280,29 @@
       ],
       "skos:definition": [
         {
-          "@value": "Arvoketju (engl. value chain) tarkoittaa tuotteen tai palvelun vaiheittaista\njalostumista valmiiksi tuotteeksi tai palveluksi siten, että jokainen vaihe\nlisää lopputuotteen tai -palvelun arvoa.\n",
+          "@value": "Toimintojen ja toimijoiden muodostama kokonaisuus,\njossa tuotteen tai palvelun arvo kasvaa vaiheittain.\n",
           "@language": "fi"
         },
         {
-          "@value": "En värdekedja avser den stegvisa förädlingen av en produkt eller tjänst till en\nfärdig produkt eller tjänst, där varje steg ökar slutproduktens eller\nslutresultatets värde.\n",
+          "@value": "Helhet av aktiviteter eller aktörer som skapar eller mottar värde i form\nav produkter eller tjänster.\n",
           "@language": "sv"
         },
         {
-          "@value": "A value chain refers to the stepwise transformation of a product or service\ninto a finished offering, where each stage adds value to the final product or\nservice.\n",
+          "@value": "Range of activities or parties that create or receive value in the form of products or services.\n",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Arvoverkosto tarkoittaa toimijoiden välisten suhteiden muodostamaa kokonaisuutta, jossa arvo syntyy useiden toimijoiden välisestä vuorovaikutuksesta ja vaihdannasta. Arvoverkostossa organisaatiot, ryhmät tai yksilöt tuottavat toisilleen sekä aineellista arvoa (esim. tuotteet, palvelut, raha) että aineetonta arvoa (esim. tieto, osaaminen, luottamus ja yhteistyö).\nToisin kuin arvoketju, arvoverkosto ei ole lineaarinen prosessi, vaan monisuuntainen ja dynaaminen verkosto, jossa toimijat ovat keskenään yhteydessä useilla eri tavoilla. Arvo syntyy toimijoiden välisissä suhteissa, yhteistyössä ja tiedonvaihdossa. Arvoverkosto voi muodostua esimerkiksi yritysten, julkisen sektorin toimijoiden, järjestöjen ja yksilöiden välisestä yhteistyöstä.\n",
+          "@language": "fi"
+        },
+        {
+          "@value": "Ett värdenätverk avser en helhet av relationer mellan aktörer där värde uppstår genom interaktion och utbyte mellan flera deltagare. I ett värdenätverk skapar organisationer, grupper eller individer både materiellt värde (t.ex. produkter, tjänster, pengar) och immateriellt värde (t.ex. information, kunskap, förtroende och samarbete) för varandra.\nTill skillnad från en värdekedja är ett värdenätverk inte en linjär process utan ett mångriktat och dynamiskt nätverk där aktörerna är förbundna med varandra på flera olika sätt. Värde uppstår genom relationer, samarbete och informationsutbyte mellan deltagarna. Ett värdenätverk kan till exempel bestå av samarbete mellan företag, aktörer inom den offentliga sektorn, organisationer och individer.\n",
+          "@language": "sv"
+        },
+        {
+          "@value": "A value network refers to a set of relationships between actors in which value is created through interaction and exchange among multiple participants. In a value network, organizations, groups, or individuals create both tangible value (e.g. products, services, money) and intangible value (e.g. information, knowledge, trust, and collaboration) for one another.\nUnlike a value chain, a value network is not a linear process but a multidirectional and dynamic network in which actors are connected in multiple ways. Value emerges through relationships, collaboration, and the exchange of information among participants. A value network may consist, for example, of cooperation between companies, public sector actors, organizations, and individuals.\n",
           "@language": "en"
         }
       ],
@@ -406,13 +414,17 @@
           "@language": "sv"
         },
         {
-          "@value": "Assembly-to-order",
+          "@value": "assemble-to-order",
           "@language": "en"
         }
       ],
       "skos:altLabel": [
         {
           "@value": "asiakasohjautuva kokoonpano",
+          "@language": "fi"
+        },
+        {
+          "@value": "tilauksesta kokoonpano",
           "@language": "fi"
         },
         {
@@ -426,15 +438,15 @@
       ],
       "skos:definition": [
         {
-          "@value": "Asiakasohjautuva kokoonpanolla tarkoitetaan tuotanto- ja toimitusstrategiaa, jossa tuote kootaan asiakkaan\ntilauksen jälkeen varastoiduista vakiokomponenteista tai\nosakokoonpanoista. Strategia yhdistää massatuotannon\ntehokkuuden ja asiakaskohtaisen konfiguroinnin joustavuuden.\nToimitusaika määräytyy komponentti- ja osakokoonpanovaraston\nsaatavuuden sekä kokoonpanoajan perusteella.\n",
+          "@value": "Tuotanto- ja toimitusstrategia, jossa tuote kootaan asiakkaan\ntilauksen jälkeen varastoiduista vakiokomponenteista tai\nosakokoonpanoista. Komponentit valmistetaan tai hankitaan\netukäteen, mutta lopullinen kokoonpano tehdään vasta\nasiakastilauksen perusteella. Toimitusaika määräytyy\nkomponentti- ja osakokoonpanovaraston saatavuuden sekä\nkokoonpanoajan mukaan.\n",
           "@language": "fi"
         },
         {
-          "@value": "Kundorderstyrd montering är en produktions- och leveransstrategi där produkten monteras efter\nkundorder från lagerhållna standardkomponenter eller delmontage.\nStrategin kombinerar effektiviteten i massproduktion med\nflexibiliteten i kundanpassad konfiguration. Leveranstiden beror\npå tillgången på komponent- och delmontagelager samt monteringstid.\n",
+          "@value": "Produktions- och leveransstrategi där produkten monteras efter\nkundorder från lagerhållna standardkomponenter eller\ndelmontage. Komponenterna tillverkas eller anskaffas i förväg,\nmen den slutliga monteringen sker först efter mottagen\nkundorder. Leveranstiden bestäms av tillgången på komponent-\noch delmontagelager samt monteringstiden.\n",
           "@language": "sv"
         },
         {
-          "@value": "Assembly-to-order (ATO) is a production and fulfilment strategy in\nwhich a product is assembled after receipt of a customer order\nfrom stocked standard components or subassemblies. The approach\ncombines the efficiency of mass production with the flexibility of\ncustomer-specific configuration. Lead time depends on the\navailability of components and subassemblies and the assembly time.\n",
+          "@value": "Production and fulfilment strategy in which a product is\nassembled after receipt of a customer order from stocked\nstandard components or subassemblies. Components are produced\nor procured in advance, while the final assembly is performed\nonly after the order is received. Lead time depends on the\navailability of components and subassemblies and the assembly\ntime.\n",
           "@language": "en"
         }
       ],
@@ -455,8 +467,8 @@
       ],
       "skos:related": [
         "https://teemualaluusua.github.io/sanasto1/asiakastilauksen-kytkeytymiskohta",
-        "https://teemualaluusua.github.io/sanasto1/mto",
         "https://teemualaluusua.github.io/sanasto1/mts",
+        "https://teemualaluusua.github.io/sanasto1/mto",
         "https://teemualaluusua.github.io/sanasto1/eto"
       ],
       "dcterms:created": {
@@ -464,7 +476,994 @@
         "@type": "xsd:dateTime"
       },
       "dcterms:modified": {
+        "@value": "2026-03-13T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/attribuutti",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "attribuutti",
+          "@language": "fi"
+        },
+        {
+          "@value": "attribut",
+          "@language": "sv"
+        },
+        {
+          "@value": "attribute",
+          "@language": "en"
+        }
+      ],
+      "skos:altLabel": [
+        {
+          "@value": "attribuuttitieto",
+          "@language": "fi"
+        },
+        {
+          "@value": "attributdata",
+          "@language": "sv"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "tietomallissa luokkaa luonnehtiva tai kuvaava ominaisuus\n",
+          "@language": "fi"
+        },
+        {
+          "@value": "egenskap i en informationsmodell som beskriver eller kännetecknar en klass\n",
+          "@language": "sv"
+        },
+        {
+          "@value": "characteristic in an information model that describes or characterizes a class\n",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Attribuutti on tietomallissa objektin määrittelyyn\nkuuluva rakenteellinen tietokenttä, joka kuvaa objektin ominaisuutta.\nAttribuutti on osa objektin luokan rakennetta ja sillä on ennalta\nmääritelty merkitys ja tietotyyppi. Esimerkkejä ovat nimi, tunnus,\nsijainti, tyyppi tai materiaali.\n\nTietomallinnuksessa attribuutti erotetaan usein ominaisuudesta\n(engl. property). Attribuutti on objektin luokan sisäinen,\nrakenteellinen kenttä, kun taas ominaisuus on yleensä erillinen,\nlaajennettava ominaisuustieto (esim. BIM-propertysetissä).\n",
+          "@language": "fi"
+        },
+        {
+          "@value": "Ett attribut är i en informationsmodell ett strukturellt\ndatafält som ingår i definitionen av ett objekt och beskriver en egenskap\nhos objektet. Attributet är en del av objektklassens struktur och har en\nfördefinierad betydelse och datatyp. Exempel är namn, identifierare,\nläge, typ eller material.\n\nI informationsmodellering skiljer man ofta mellan attribut och egenskap\n(eng. property). Ett attribut är ett internt, strukturellt fält i en\nobjektklass, medan en egenskap vanligtvis är en separat och utbyggbar\negenskapsuppgift (t.ex. i ett BIM-propertyset).\n",
+          "@language": "sv"
+        },
+        {
+          "@value": "An attribute is a structural data field in an information model that is\npart of the definition of an object and describes a characteristic of that\nobject. An attribute belongs to the structure of an object class and has a\npredefined meaning and data type. Examples include name, identifier,\nlocation, type, or material.\n\nIn information modelling, an attribute is often distinguished from a\nproperty. An attribute is an internal structural field of an object class,\nwhereas a property is typically a separate and extensible piece of\ndescriptive information (for example in a BIM property set).\n",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "RYHTI-sanasto",
+          "@language": "fi",
+          "@id": "https://ryhti.syke.fi/ohjeet-ja-tuki/ryhti-sanasto/"
+        },
+        {
+          "@value": "Sanastot.suomi.fi",
+          "@language": "fi",
+          "@id": "https://sanastot.suomi.fi/terminology/yti/concept/concept-24"
+        }
+      ],
+      "skos:broader": [
+        "https://teemualaluusua.github.io/sanasto1/objekti"
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/ominaisuus",
+        "https://teemualaluusua.github.io/sanasto1/attribuutin-arvo",
+        "https://teemualaluusua.github.io/sanasto1/tietokenttä"
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
         "@value": "2026-02-27T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/automatisoitu",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "automatisoitu",
+          "@language": "fi"
+        },
+        {
+          "@value": "automaattinen",
+          "@language": "fi"
+        },
+        {
+          "@value": "automaatio",
+          "@language": "fi"
+        },
+        {
+          "@value": "automatic",
+          "@language": "en"
+        },
+        {
+          "@value": "automation",
+          "@language": "en"
+        },
+        {
+          "@value": "automated",
+          "@language": "en"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "Prosessi tai järjestelmä, joka tietyissä olosuhteissa toimii ilman ihmisen puuttumista.\n",
+          "@language": "fi"
+        },
+        {
+          "@value": "process eller system som under angivna förhållanden fungerar utan mänsklig inblandning\n",
+          "@language": "sv"
+        },
+        {
+          "@value": "Pertaining to a process or system that, under specified conditions, functions without human intervention\n",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "ISO/IEC 22989:2023"
+        }
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/avoin-data",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "avoin data",
+          "@language": "fi"
+        },
+        {
+          "@value": "öppna data",
+          "@language": "sv"
+        },
+        {
+          "@value": "open data",
+          "@language": "en"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "data, joka on tarjolla muille ja jota kuka tahansa saa vapaasti\nkäyttää, kierrättää, julkaista uudelleen ja levittää edelleen.\n",
+          "@language": "fi"
+        },
+        {
+          "@value": "data som är tillgängliga för andra och som vem som helst fritt\nfår använda, återanvända, publicera på nytt och vidareförmedla.\n",
+          "@language": "sv"
+        },
+        {
+          "@value": "data that are available to others and that anyone may freely\nuse, reuse, republish and redistribute.\n",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "ISO 5127:2022",
+          "@language": "en"
+        }
+      ],
+      "skos:broader": [
+        "https://teemualaluusua.github.io/sanasto1/data"
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-14T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/bcf",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "BCF",
+          "@language": "fi"
+        },
+        {
+          "@value": "BCF",
+          "@language": "sv"
+        },
+        {
+          "@value": "BIM Collaboration Format",
+          "@language": "en"
+        }
+      ],
+      "skos:altLabel": [
+        {
+          "@value": "BIM Collaboration Format",
+          "@language": "fi"
+        },
+        {
+          "@value": "BIM Collaboration Format",
+          "@language": "sv"
+        },
+        {
+          "@value": "BCF",
+          "@language": "en"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "Standardi, jolla vaihdetaan tietoja IFC-tietoaineiston\nsisällöstä. Tietoja voidaan vaihtaa ZIP-tiedostossa\n(XML-muodossa) tai rajapinnan kautta (JSON-muodossa).\n",
+          "@language": "fi"
+        },
+        {
+          "@value": "Standard för att utbyta information om innehållet i ett\nIFC-dataset. Informationen kan utbytas i en ZIP-fil\n(XML-format) eller via ett API (JSON-format).\n",
+          "@language": "sv"
+        },
+        {
+          "@value": "Standard to exchange information about the contents inside\nan IFC dataset. Information can be exchanged in a ZIP file\n(XML) or through an API (JSON).\n",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "BCF:ää käytetään erityisesti tietomalliin liittyvien\nhavaintojen, kommenttien ja ongelmien välittämiseen eri\nBIM-ohjelmistojen välillä ilman, että itse tietomallia\ntarvitsee siirtää.\n",
+          "@language": "fi"
+        },
+        {
+          "@value": "BCF används särskilt för att förmedla observationer,\nkommentarer och problem kopplade till en informationsmodell\nmellan olika BIM-program utan att själva modellen behöver\növerföras.\n",
+          "@language": "sv"
+        },
+        {
+          "@value": "BCF is commonly used to communicate issues, comments and\nviewpoints related to a building information model without\nexchanging the model itself.\n",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "buildingSMART Terminology",
+          "@language": "en",
+          "@id": "https://user.buildingsmart.org/knowledge-base/terminology/"
+        }
+      ],
+      "skos:broader": [
+        "https://teemualaluusua.github.io/sanasto1/tiedonsiirtostandardi"
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/IFC",
+        "https://teemualaluusua.github.io/sanasto1/tietomalli",
+        "https://teemualaluusua.github.io/sanasto1/BIM"
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-14T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/big-data",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "Big Data",
+          "@language": "fi"
+        },
+        {
+          "@value": "stordata",
+          "@language": "sv"
+        },
+        {
+          "@value": "big data",
+          "@language": "en"
+        }
+      ],
+      "skos:altLabel": [
+        {
+          "@value": "massadata",
+          "@language": "fi"
+        },
+        {
+          "@value": "suuraineisto",
+          "@language": "fi"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "Laajoja ja monimuotoisia tietokokonaisuuksia, joiden käsittely,\ntallentaminen ja analysointi edellyttävät skaalautuvaa teknologiaa.\n",
+          "@language": "fi"
+        },
+        {
+          "@value": "Stora och mångsidiga datamängder vars lagring, bearbetning och\nanalys kräver skalbar teknik.\n",
+          "@language": "sv"
+        },
+        {
+          "@value": "Large and diverse datasets whose storage, processing and\nanalysis require scalable technologies.\n",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Big Dataa kuvataan usein niin sanotulla 4V-mallilla:\nmäärä (volume), monimuotoisuus (variety), nopeus (velocity)\nja vaihtelevuus (variability). Data voi olla rakenteista,\npuolirakenteista tai rakenteetonta, kuten tekstiä, kuvia,\nvideoita tai ääntä.\n",
+          "@language": "fi"
+        },
+        {
+          "@value": "Stordata beskrivs ofta genom den så kallade 4V-modellen:\nvolym, variation, hastighet och variabilitet. Data kan vara\nstrukturerad, semistrukturerad eller ostrukturerad.\n",
+          "@language": "sv"
+        },
+        {
+          "@value": "Big data is often characterized by the 4V model:\nvolume, variety, velocity and variability. Data may be\nstructured, semi-structured or unstructured.\n",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "ISO/IEC 30105-9:2023",
+          "@language": "en"
+        }
+      ],
+      "skos:broader": [
+        "https://teemualaluusua.github.io/sanasto1/data"
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/data-analytiikka",
+        "https://teemualaluusua.github.io/sanasto1/dataformaatti",
+        "https://teemualaluusua.github.io/sanasto1/tekoäly"
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-14T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/bom",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "tuoteosaluettelo",
+          "@language": "fi"
+        },
+        {
+          "@value": "materiaalilista",
+          "@language": "sv"
+        },
+        {
+          "@value": "bill of material",
+          "@language": "en"
+        }
+      ],
+      "skos:altLabel": [
+        {
+          "@value": "BOM",
+          "@language": "fi"
+        },
+        {
+          "@value": "BOM",
+          "@language": "sv"
+        },
+        {
+          "@value": "BOM",
+          "@language": "en"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "Luettelo kaikista osakokoonpanoista, osista ja/tai\nmateriaaleista, joita käytetään tuotteen valmistuksessa,\nmukaan lukien kunkin materiaalin määrä tuotteen\nvalmistamiseksi.\n",
+          "@language": "fi"
+        },
+        {
+          "@value": "Lista över alla delmonteringar, delar och/eller material\nsom används vid produktion av en produkt, inklusive den\nmängd av varje material som behövs för att tillverka\nprodukten.\n",
+          "@language": "sv"
+        },
+        {
+          "@value": "Listing of all the subassemblies, parts, and/or materials\nthat are used in the production of a product, including\nthe quantity of each material required to make a product.\n",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "ISO/TR 3151-1:2023(E)",
+          "@language": "en"
+        }
+      ],
+      "skos:narrower": [
+        "https://teemualaluusua.github.io/sanasto1/ebom",
+        "https://teemualaluusua.github.io/sanasto1/mbom"
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/kokoonpano",
+        "https://teemualaluusua.github.io/sanasto1/komponentti"
+      ],
+      "dcterms:created": {
+        "@value": "2026-03-14T00:00",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-14T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/dataformaatti",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "dataformaatti",
+          "@language": "fi"
+        },
+        {
+          "@value": "dataformat",
+          "@language": "sv"
+        },
+        {
+          "@value": "data format",
+          "@language": "en"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "datan ennalta määritelty järjestys tallennusmedialla",
+          "@language": "fi"
+        },
+        {
+          "@value": "förutbestämd ordning av data på ett datamedium",
+          "@language": "sv"
+        },
+        {
+          "@value": "predetermined arrangement of data on a data medium",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Dataformaatti määrittelee, miten data esitetään ja\njäsennetään tallennuksessa tai tiedonsiirrossa.\n",
+          "@language": "fi"
+        },
+        {
+          "@value": "Dataformat anger hur data representeras och struktureras\nvid lagring eller överföring.\n",
+          "@language": "sv"
+        },
+        {
+          "@value": "A data format specifies how data is represented and\nstructured for storage or transmission.\n",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "ISO 5127:2022",
+          "@language": "en"
+        }
+      ],
+      "dcterms:created": {
+        "@value": "2026-03-05T12:00",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-14T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/ebom",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "suunnittelun tuoteosaluettelo",
+          "@language": "fi"
+        },
+        {
+          "@value": "konstruktionsmateriallista",
+          "@language": "sv"
+        },
+        {
+          "@value": "engineering bill of material",
+          "@language": "en"
+        }
+      ],
+      "skos:altLabel": [
+        {
+          "@value": "eBOM",
+          "@language": "fi"
+        },
+        {
+          "@value": "eBOM",
+          "@language": "sv"
+        },
+        {
+          "@value": "eBOM",
+          "@language": "en"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "Luettelo osanumeroista ja kokoonpanoista, jotka muodostavat\nsuunnittelun mukaisen tuotteen kokoonpanorakenteen ja\nsisältävät esimerkiksi raaka-aineen mitat ja\nmateriaalimääritykset.\n",
+          "@language": "fi"
+        },
+        {
+          "@value": "Lista över artikelnummer och sammansättningar som utgör\nden konstruktionsmässiga produktkonfigurationen och som\ninnehåller uppgifter om råmaterialets dimensioner och\nmaterialspecifikationer.\n",
+          "@language": "sv"
+        },
+        {
+          "@value": "List of part numbers and assemblies that make up the\ndesign engineering configuration that contains the raw\nstock size and the material specification.\n",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "English definition adapted from ISO 10303-240:2005.\n",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "ISO/TR 3151-1:2023(E)",
+          "@language": "en"
+        }
+      ],
+      "skos:broader": [
+        "https://teemualaluusua.github.io/sanasto1/bom"
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/mbom",
+        "https://teemualaluusua.github.io/sanasto1/tuotteen suunnittelu"
+      ],
+      "dcterms:created": {
+        "@value": "2026-03-14T00:00",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-14T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/entiteetti",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "entiteetti",
+          "@language": "fi"
+        },
+        {
+          "@value": "entitet",
+          "@language": "sv"
+        },
+        {
+          "@value": "entity",
+          "@language": "en"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "jokin, joka voidaan tunnistaa yksikäsitteisesti",
+          "@language": "fi"
+        },
+        {
+          "@value": "något som kan identifieras entydigt",
+          "@language": "sv"
+        },
+        {
+          "@value": "something capable of being uniquely identified",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Entiteetit käsittävät aineelliset objektit, digitaaliset dokumentit,\nabstraktit kohteet (kuten ajat ja paikat), toimijat (luonnolliset ja\njuridiset henkilöt) sekä kaiken muun, mikä voidaan identifioida.\n",
+          "@language": "fi"
+        },
+        {
+          "@value": "Entiteter omfattar materiella objekt, digitala dokument,\nabstrakta företeelser (såsom tider och platser), aktörer\n(naturliga och juridiska personer) samt allt annat som kan\nidentifieras entydigt.\n",
+          "@language": "sv"
+        },
+        {
+          "@value": "Entities include material objects, electronic representations\nof content, abstract items (such as times and places), parties\n(human and corporate), as well as anything else that can be\nuniquely identified.\n",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "ISO 5127:2022",
+          "@language": "en"
+        }
+      ],
+      "dcterms:created": {
+        "@value": "2026-03-05T12:00",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-14T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/esitysformaatti",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "esitysformaatti",
+          "@language": "fi"
+        },
+        {
+          "@value": "presentationsformat",
+          "@language": "sv"
+        },
+        {
+          "@value": "presentation format",
+          "@language": "en"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "dataformaatti, jonka avulla digitaalinen data esitetään näyttöruudulla niin, että ihmiset pystyvät tulkitsemaan sitä",
+          "@language": "fi"
+        },
+        {
+          "@value": "dataformat som används för att presentera digital data på en skärm så att människor kan tolka informationen",
+          "@language": "sv"
+        },
+        {
+          "@value": "data format for the configuration of the display of digital data on the screen interface in a manner interpretable for human users",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Esitysformaatti määrittelee, miten digitaalinen tieto esitetään\nkäyttäjälle visuaalisessa käyttöliittymässä. Se voi sisältää esimerkiksi\ntekstin, taulukoiden, kuvien, karttojen tai muiden graafisten elementtien\nesitystavan. Esitysformaatti eroaa tallennusformaatista siinä, että se\nkeskittyy tiedon esittämiseen ihmiselle eikä sen tekniseen tallennukseen.\n",
+          "@language": "fi"
+        },
+        {
+          "@value": "Presentationsformat anger hur digital information visas för användaren\ni ett visuellt gränssnitt. Det kan omfatta till exempel hur text,\ntabeller, bilder, kartor eller andra grafiska element presenteras.\nPresentationsformat skiljer sig från lagringsformat genom att fokus\nligger på hur informationen presenteras för människor snarare än hur\nden lagras tekniskt.\n",
+          "@language": "sv"
+        },
+        {
+          "@value": "A presentation format defines how digital information is displayed to\nusers in a visual interface. It may include the presentation of text,\ntables, images, maps, or other graphical elements. A presentation\nformat differs from a storage format in that it focuses on how data is\npresented to humans rather than how it is technically stored.\n",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "ISO 5127:2022 Information and documentation — Foundation and vocabulary",
+          "@language": "en"
+        }
+      ],
+      "skos:broader": [
+        "https://teemualaluusua.github.io/sanasto1/dataformaatti"
+      ],
+      "dcterms:created": {
+        "@value": "2026-03-05T12:00",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-05T12:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/mbom",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "valmistuksen tuoteosaluettelo",
+          "@language": "fi"
+        },
+        {
+          "@value": "tillverkningsmateriallista",
+          "@language": "sv"
+        },
+        {
+          "@value": "manufacturing bill of material",
+          "@language": "en"
+        }
+      ],
+      "skos:altLabel": [
+        {
+          "@value": "mBOM",
+          "@language": "fi"
+        },
+        {
+          "@value": "mBOM",
+          "@language": "sv"
+        },
+        {
+          "@value": "mBOM",
+          "@language": "en"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "Luettelo kaikista osista, tarroista, pakkauksista ja\nkokoonpanoista, joita tarvitaan valmiin tuotteen\nvalmistamiseen ja toimittamiseen asiakkaalle.\n",
+          "@language": "fi"
+        },
+        {
+          "@value": "Lista över alla delar, etiketter, förpackningar och\nsammansättningar som krävs för att tillverka och leverera\nen färdig produkt till kunden.\n",
+          "@language": "sv"
+        },
+        {
+          "@value": "List of all the parts, labels, packaging, and assemblies\nrequired to build and ship a finished product to\ncustomers.\n",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Valmistuksen tuoteosaluettelo kuvaa tuotteen\nvalmistuksessa ja toimituksessa tarvittavat\nosat ja materiaalit (as-built). Se voi poiketa\nsuunnittelun tuoteosaluettelosta esimerkiksi\nvalmistusvaiheiden, pakkausten tai\ntuotantokohtaisten komponenttien vuoksi.\n",
+          "@language": "fi"
+        },
+        {
+          "@value": "Tillverkningsmateriallistan beskriver de delar\noch material som används vid tillverkning och\nleverans av produkten (as-built). Den kan skilja\nsig från konstruktionsmateriallistan på grund\nav produktionsprocesser, förpackningar eller\nproduktionsspecifika komponenter.\n",
+          "@language": "sv"
+        },
+        {
+          "@value": "A manufacturing bill of material describes the\ncomponents and materials used in manufacturing\nand delivery of the finished product (as-built).\nIt may differ from the engineering bill of\nmaterial due to manufacturing processes,\npackaging or production-specific components.\n",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "ISO/TR 3151-1:2023(E)",
+          "@language": "en"
+        }
+      ],
+      "skos:broader": [
+        "https://teemualaluusua.github.io/sanasto1/bom"
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/ebom",
+        "https://teemualaluusua.github.io/sanasto1/tuotanto"
+      ],
+      "dcterms:created": {
+        "@value": "2026-03-14T00:00",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-14T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/OCR",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "optinen merkkien tunnistus",
+          "@language": "fi"
+        },
+        {
+          "@value": "optisk teckenigenkänning",
+          "@language": "sv"
+        },
+        {
+          "@value": "optical character recognition",
+          "@language": "en"
+        }
+      ],
+      "skos:altLabel": [
+        {
+          "@value": "optinen merkinluku",
+          "@language": "fi"
+        },
+        {
+          "@value": "tekstintunnistus",
+          "@language": "fi"
+        },
+        {
+          "@value": "optisk teckenläsning",
+          "@language": "sv"
+        },
+        {
+          "@value": "OCR",
+          "@language": "en"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "Menetelmä, jossa koneellisesti kirjoitettua, tulostettua tai\nkäsin kirjoitettua tekstiä sisältävät kuvat muunnetaan\nkoneellisesti käsiteltäväksi tekstimuodoksi.\n",
+          "@language": "fi"
+        },
+        {
+          "@value": "Metod där bilder som innehåller maskinskriven, tryckt eller\nhandskriven text omvandlas till maskinläsbar text.\n",
+          "@language": "sv"
+        },
+        {
+          "@value": "Conversion of images of typed, printed or handwritten text\ninto machine-readable text.\n",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "OCR-teknologiaa käytetään esimerkiksi skannattujen asiakirjojen\ndigitoinnissa, arkistoinnissa ja tekstin automaattisessa\nkäsittelyssä.\n",
+          "@language": "fi"
+        },
+        {
+          "@value": "OCR-teknik används till exempel för digitalisering av skannade\ndokument, arkivering och automatisk behandling av text.\n",
+          "@language": "sv"
+        },
+        {
+          "@value": "OCR technology is commonly used for digitizing scanned\ndocuments and enabling automated processing of textual\ninformation.\n",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "ISO/IEC 22989:2023",
+          "@language": "en",
+          "@id": "https://www.iso.org/standard/74296.html"
+        }
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/kuvankäsittely",
+        "https://teemualaluusua.github.io/sanasto1/dokumenttien digitointi"
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-14T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/tietopankki",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "tietopankki",
+          "@language": "fi"
+        },
+        {
+          "@value": "databank",
+          "@language": "sv"
+        },
+        {
+          "@value": "data repository",
+          "@language": "en"
+        },
+        {
+          "@value": "data bank",
+          "@language": "en"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "joukko tiedostoja tai tietokantoja, joilla on yhteinen varastointijärjestelmä, käsittelyjärjestelmä ja hakujärjestelmä",
+          "@language": "fi"
+        },
+        {
+          "@value": "samling filer eller databaser som har ett gemensamt lagringssystem, behandlingssystem och söksystem",
+          "@language": "sv"
+        },
+        {
+          "@value": "set of files or databases combined with a storage system, a processing system and a retrieval system",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Tietopankki tarkoittaa järjestettyä kokonaisuutta, jossa tietoa\ntallennetaan, ylläpidetään ja haetaan yhtenäisen järjestelmän avulla.\nTermiä käytetään usein yleisnimityksenä järjestelmälle, joka kokoaa\nuseita tietokantoja tai tiedostoja yhteen hallittuun tietovarastoon.\n",
+          "@language": "fi"
+        },
+        {
+          "@value": "En databank är en organiserad helhet där information lagras, underhålls\noch hämtas med hjälp av ett enhetligt system. Termen används ofta som\nen allmän beteckning för ett system som samlar flera databaser eller\nfiler i ett gemensamt hanterat informationslager.\n",
+          "@language": "sv"
+        },
+        {
+          "@value": "A data repository or data bank refers to an organised collection in\nwhich information is stored, maintained and retrieved through a\nunified system. The term is often used as a general designation for a\nsystem that brings together several databases or files into a managed\ninformation storage environment.\n",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "ISO 5127:2022 Information and documentation — Foundation and vocabulary",
+          "@language": "en",
+          "@id": "https://www.iso.org/standard/59743.html"
+        }
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/tietovaranto",
+        "https://teemualaluusua.github.io/sanasto1/tietokanta",
+        "https://teemualaluusua.github.io/sanasto1/tietovarasto"
+      ],
+      "dcterms:created": {
+        "@value": "2026-03-05T12:00",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-05T12:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/ylävirta",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "ylävirta",
+          "@language": "fi"
+        },
+        {
+          "@value": "uppströms",
+          "@language": "sv"
+        },
+        {
+          "@value": "upstream",
+          "@language": "en"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "Toimitusketjun osa, joka kattaa vaiheet ja toimijat raaka-ainelähteistä ja toimittajista kokoonpanevaan tai tuottavaan yksikköön. Vastakohta alavirralle. Kutsutaan myös hankintapääksi tai hankintamarkkinoiksi.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Den del av leveranskedjan som omfattar skeden och aktörer från råvarukällor och leverantörer till den producerande eller monterande enheten. Motsats till nedströms.",
+          "@language": "sv"
+        },
+        {
+          "@value": "The part of a supply chain that includes the stages and actors from raw material sources and suppliers to the producing or assembling unit. The opposite of downstream.",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Termiä käytetään toimitusketjun tarkastelussa kuvaamaan virtausta kohti\ntuotantoa tai kokoonpanoa. Rakentamisen kontekstissa ylävirta voi tarkoittaa\nesimerkiksi materiaalien ja komponenttien toimitusketjua raaka-aineista\nelementtitehtaalle tai työmaalle.\n",
+          "@language": "fi"
+        },
+        {
+          "@value": "Termen används vid analys av leveranskedjor för att beskriva flödet mot\nproduktion eller montering. I byggsektorn kan uppströms till exempel\navse leveranskedjan för material och komponenter från råvaror till\nelementfabrik eller byggarbetsplats.\n",
+          "@language": "sv"
+        },
+        {
+          "@value": "The term is used in supply chain analysis to describe the flow towards\nproduction or assembly. In the construction context, upstream may refer\nto the supply chain of materials and components from raw materials to a\nprefabrication plant or construction site.\n",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "Logistiikan maailma -termisanasto (2025)",
+          "@language": "fi",
+          "@id": "https://www.logistiikanmaailma.fi/aineistot/sanastot/logistiikan-maailma-termisanasto/"
+        }
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/alavirta"
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-26T10:25:00",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-02-26T10:25:00",
         "@type": "xsd:dateTime"
       }
     }
