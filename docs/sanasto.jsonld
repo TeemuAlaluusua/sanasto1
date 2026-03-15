@@ -1540,6 +1540,275 @@
       }
     },
     {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/informaatio",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "informaatio",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "information",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "information",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "datan uudelleen tulkittavissa oleva sovitun muotoinen esitystapa, joka sopii tiedonsiirtoon, viestintään, tulkintaan tai käsittelyyn",
+          "@language": "fi"
+        },
+        {
+          "@value": "överenskommen form av data som kan tolkas på nytt och som lämpar sig för överföring, kommunikation, tolkning eller behandling",
+          "@language": "sv"
+        },
+        {
+          "@value": "agreed form of data that can be reinterpreted and that is suitable for transmission, communication, interpretation or processing",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Informaatiota voi käsitellä ihminen tai sitä voidaan käsitellä automaattisin menetelmin.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Information kan behandlas av människor eller automatiskt med tekniska metoder.",
+          "@language": "sv"
+        },
+        {
+          "@value": "Information may be processed by humans or automatically by technical means.",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "Suomi.fi-sanasto – EN 19650 käsitteet",
+          "@language": "fi",
+          "@id": "https://iri.suomi.fi/terminology/en19650/concept-17"
+        },
+        {
+          "@value": "ISO 19650-1:2019"
+        }
+      ],
+      "skos:broader": [
+        "https://teemualaluusua.github.io/sanasto1/data"
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/tieto",
+        "https://teemualaluusua.github.io/sanasto1/tietomalli"
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-14T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/informaatiomalli",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "informaatiomalli",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "informationsmodell",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "information model",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "tiettyä kohdetta kuvaava malli, jossa joukko tulkittavissa olevaa dataa on esitetty jäsennetyssä muodossa",
+          "@language": "fi"
+        },
+        {
+          "@value": "modell som beskriver ett visst objekt där en mängd tolkbar data presenteras i strukturerad form",
+          "@language": "sv"
+        },
+        {
+          "@value": "model describing a particular object in which a set of interpretable data is presented in a structured form",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Informaatiomalli on ihmisen tulkittavissa ja tietomallien mukaiselta osaltaan koneluettavassa muodossa.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Informationsmodellen är tolkbar för människor och i den del som följer datamodeller även maskinläsbar.",
+          "@language": "sv"
+        },
+        {
+          "@value": "An information model is interpretable by humans and, where it follows data models, also machine-readable.",
+          "@language": "en"
+        },
+        {
+          "@value": "Informaatiomalli voi sisältää esimerkiksi geometrisia malleja,\nluetteloita, tietokantoja, kirjallisia dokumentteja, kuvia,\nvideoleikkeitä ja äänitteitä. Geometrisia malleja voidaan\nesittää 2- tai 3-ulotteisina ja niihin sisältyy usein sijaintitietoa.\n",
+          "@language": "fi"
+        },
+        {
+          "@value": "En informationsmodell kan innehålla till exempel geometriska modeller,\nlistor, databaser, skriftliga dokument, bilder, videoklipp och\nljudinspelningar. Geometriska modeller kan presenteras i två eller\ntre dimensioner och innehåller ofta positionsinformation.\n",
+          "@language": "sv"
+        },
+        {
+          "@value": "An information model may include, for example, geometric models,\nlists, databases, textual documents, images, video clips and\naudio recordings. Geometric models may be represented in two or\nthree dimensions and often include spatial information.\n",
+          "@language": "en"
+        },
+        {
+          "@value": "SFS-EN ISO 19650 -standardissa informaatiomalli-käsitteen\nmääritelmässä viitataan informaatiokoosteeseen, koska määritelmä\non laadittu mallin muodostamisen näkökulmasta. Informaatiokooste\non nimetty pysyvä joukko informaatiota, joka on noudettavissa\ntiedoston, järjestelmän tai sovelluksen tallennushierarkiasta.\n",
+          "@language": "fi"
+        },
+        {
+          "@value": "I standarden SFS-EN ISO 19650 hänvisar definitionen av\ninformationsmodell till ett informationssammanhang\n(information container), eftersom definitionen är formulerad\nur perspektivet att skapa en modell. Ett informationssammanhang\när en namngiven beständig uppsättning information som kan hämtas\nfrån ett fil-, system- eller applikationsbaserat lagringshierarki.\n",
+          "@language": "sv"
+        },
+        {
+          "@value": "In the SFS-EN ISO 19650 standard the definition of an\ninformation model refers to an information container,\nbecause the definition is formulated from the perspective\nof creating the model. An information container is a named\npersistent set of information retrievable from a file,\nsystem or application storage hierarchy.\n",
+          "@language": "en"
+        },
+        {
+          "@value": "Käsitejärjestelmäkaavio:\nhttps://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg\n",
+          "@language": "fi"
+        },
+        {
+          "@value": "Begreppssystemdiagram:\nhttps://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg\n",
+          "@language": "sv"
+        },
+        {
+          "@value": "Concept system diagram:\nhttps://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg\n",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "ISO 19650 – RY-mallit sanasto",
+          "@language": "fi",
+          "@id": "https://iri.suomi.fi/terminology/rymallit/c15"
+        }
+      ],
+      "skos:broader": [
+        "https://teemualaluusua.github.io/sanasto1/tietomalli"
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/informaatio",
+        "https://teemualaluusua.github.io/sanasto1/tietomalli",
+        "https://teemualaluusua.github.io/sanasto1/tietomallinnus"
+      ],
+      "dcterms:created": {
+        "@value": "2025-12-23T14:08",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-14T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/informaatiomallinnus",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "informaatiomallinnus",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "informationsmodellering",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "information modeling",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "mallinnus, jonka tuloksena syntyy informaatiomalli",
+          "@language": "fi"
+        },
+        {
+          "@value": "modellering vars resultat är en informationsmodell",
+          "@language": "sv"
+        },
+        {
+          "@value": "modelling whose result is an information model",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Osa informaatiomallinnuksessa syntyvästä tiedosta on\nkoneluettavassa, tietomallien mukaisessa muodossa.\n",
+          "@language": "fi"
+        },
+        {
+          "@value": "En del av den information som skapas vid\ninformationsmodellering är maskinläsbar och\nföljer datamodeller.\n",
+          "@language": "sv"
+        },
+        {
+          "@value": "Part of the information produced in information\nmodelling is machine-readable and follows data models.\n",
+          "@language": "en"
+        },
+        {
+          "@value": "Käsitejärjestelmäkaavio:\nhttps://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg\n",
+          "@language": "fi"
+        },
+        {
+          "@value": "Begreppssystemdiagram:\nhttps://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg\n",
+          "@language": "sv"
+        },
+        {
+          "@value": "Concept system diagram:\nhttps://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg\n",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "Suomi.fi-sanasto – RY-mallit",
+          "@language": "fi",
+          "@id": "https://iri.suomi.fi/terminology/rymallit/c4"
+        }
+      ],
+      "skos:broader": [
+        "https://teemualaluusua.github.io/sanasto1/mallinnus"
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/informaatiomalli",
+        "https://teemualaluusua.github.io/sanasto1/tietomalli",
+        "https://teemualaluusua.github.io/sanasto1/tietomallinnus"
+      ],
+      "dcterms:created": {
+        "@value": "2025-12-23T14:08",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-14T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
       "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/iot",
       "@type": "skos:Concept",
       "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
