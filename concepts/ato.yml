@@ -18,7 +18,7 @@ terms:
   type: Lyhenne
 - lang: sv
   label: kundorderstyrd montering
-  type: Synonyymi
+  type: Suositettava termi
 
 - lang: en
   label: assemble-to-order

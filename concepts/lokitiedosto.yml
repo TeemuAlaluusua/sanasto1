@@ -1,58 +1,47 @@
-id: käsiteskeema
+id: lokitiedosto
 status: []
 schemeId: []
 
 terms:
   - lang: fi
-    label: käsiteskeema
+    label: lokitiedosto
     type: Suositettava termi
 
   - lang: sv
-    label: begreppsschema
+    label: loggfil
     type: Suositettava termi
 
   - lang: en
-    label: conceptual schema
+    label: log file
     type: Suositettava termi
 
 definitions:
   - lang: fi
-    text: |
-      Käsitemallin muodollinen kuvaus, joka esittää
-      kohdealueen käsitteet sekä niiden väliset
-      suhteet rakenteisessa muodossa.
+    text: "palvelimen automaattisesti luoma tiedosto, joka sisältää tietoa palvelimella tehdyistä toimenpiteistä"
 
   - lang: sv
-    text: |
-      Formell beskrivning av en begreppsmodell som
-      anger begreppen i ett visst område samt deras
-      inbördes relationer i strukturerad form.
+    text: "fil som automatiskt skapas av en server och som innehåller information om aktiviteter som utförs på servern"
 
   - lang: en
-    text: |
-      Formal description of a conceptual model that
-      specifies the concepts of a domain and the
-      relationships between them.
+    text: "file automatically created by a server that maintains a record of its activities"
 
 notes:
   - lang: fi
     text: |
-      Käsiteskeema esittää käsitemallin muodollisessa
-      muodossa ja toimii usein lähtökohtana
-      tietomallien ja tietojärjestelmien suunnittelulle.
+      Lokitiedostoja käytetään järjestelmien valvontaan,
+      virheiden jäljittämiseen ja tietoturvatapahtumien
+      analysointiin.
 
   - lang: sv
     text: |
-      Ett begreppsschema uttrycker en begreppsmodell
-      i formell form och används ofta som grund för
-      informationsmodeller och informationssystem.
+      Loggfiler används för övervakning av system,
+      felsökning och analys av säkerhetshändelser.
 
   - lang: en
     text: |
-      A conceptual schema expresses a conceptual
-      model in a formalized structure and may serve
-      as a basis for information models and
-      information systems.
+      Log files are commonly used for system monitoring,
+      troubleshooting and security auditing.
+
 
 sources:
   - lang: en
@@ -69,4 +58,4 @@ relations:
 
 metadata:
   created: "2026-03-05T12:00"
-  modified: "2026-03-14T00:00"
+  modified: "2026-03-15T00:00"

@@ -1,0 +1,54 @@
+id: informaatiovaatimus
+status: []
+schemeId: rakentamisen-tieto-ja-informaatiomallit
+
+terms:
+- lang: fi
+  label: informaatiovaatimus
+  type: Suositettava termi
+
+- lang: sv
+  label: informationskrav
+  type: Suositettava termi
+
+- lang: en
+  label: information requirement
+  type: Suositettava termi
+
+definitions:
+- lang: fi
+  text: vaatimus siitä, mitä tietoa tarvitaan, milloin ja missä muodossa se tuotetaan sekä kenelle se toimitetaan
+
+- lang: sv
+  text: krav som anger vilken information som behövs, när och i vilken form den ska produceras samt till vem den ska levereras
+
+- lang: en
+  text: requirement specifying what information is needed, when it is to be produced, in what form and to whom it is to be delivered
+
+notes: []
+
+sources:
+- lang: fi
+  label: Sanastot.suomi.fi
+  uri: https://iri.suomi.fi/terminology/en19650/concept-18
+- lang: en
+  label: EN ISO 19650-1:2018
+  uri: https://www.iso.org
+
+relations:
+  broader: []
+
+  narrower:
+  - organisaation informaatiovaatimus
+  - omaisuuden informaatiovaatimus
+  - projektin informaatiovaatimus
+  - vaiheen informaatiovaatimus
+  - tiedonvaihdon informaatiovaatimus
+
+  related:
+  - informaatiomalli
+  - tietomalli
+
+metadata:
+  created: 2026-02-24T17:35
+  modified: 2026-03-14T00:00

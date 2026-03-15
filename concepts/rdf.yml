@@ -4,14 +4,14 @@ schemeId: []
 
 terms:
   - lang: fi
-    label: Resource Description Framework
+    label: resource description framework
     type: Suositettava termi
   - lang: fi
     label: RDF
     type: Lyhenne
 
   - lang: sv
-    label: Resource Description Framework
+    label: resource description framework
     type: Suositettava termi
   - lang: sv
     label: RDF

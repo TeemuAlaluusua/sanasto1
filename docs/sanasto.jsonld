@@ -2845,6 +2845,76 @@
       }
     },
     {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/mom",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/rakentamisen-tieto-ja-informaatiomallit",
+      "skos:prefLabel": [
+        {
+          "@value": "tuotannon operatiivinen hallinta",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "operativ produktionsstyrning",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "manufacturing operations management",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:altLabel": [
+        {
+          "@value": "MOM",
+          "@language": "fi",
+          "termType": "Lyhenne"
+        },
+        {
+          "@value": "MOM",
+          "@language": "sv",
+          "termType": "Lyhenne"
+        },
+        {
+          "@value": "MOM",
+          "@language": "en",
+          "termType": "Lyhenne"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "tuotannon operatiivisten toimintojen hallintaa tukeva järjestelmien ja prosessien kokonaisuus",
+          "@language": "fi"
+        },
+        {
+          "@value": "helhet av system och processer för styrning och hantering av operativa produktionsaktiviteter",
+          "@language": "sv"
+        },
+        {
+          "@value": "set of systems and processes used to manage and control manufacturing operations",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "MOM yhdistää tuotannon suunnittelun, toteutuksen, seurannan ja analysoinnin tuotantoympäristössä.",
+          "@language": "fi"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "ISO/TR 3151-1:2023",
+          "@language": "en",
+          "@id": "https://www.iso.org/"
+        }
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/plm",
+        "https://teemualaluusua.github.io/sanasto1/mes"
+      ]
+    },
+    {
       "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/OCR",
       "@type": "skos:Concept",
       "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
@@ -2934,6 +3004,77 @@
         "@value": "2026-03-14T00:00",
         "@type": "xsd:dateTime"
       }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/plm",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/rakentamisen-tieto-ja-informaatiomallit",
+      "skos:prefLabel": [
+        {
+          "@value": "tuotteen elinkaaren hallinta",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "livscykelhantering för produkter",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "product lifecycle management",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:altLabel": [
+        {
+          "@value": "PLM",
+          "@language": "fi",
+          "termType": "Lyhenne"
+        },
+        {
+          "@value": "PLM",
+          "@language": "sv",
+          "termType": "Lyhenne"
+        },
+        {
+          "@value": "PLM",
+          "@language": "en",
+          "termType": "Lyhenne"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "tuotteeseen liittyvän tiedon hallintaa koko sen elinkaaren ajan",
+          "@language": "fi"
+        },
+        {
+          "@value": "hantering av information om en produkt under hela dess livscykel",
+          "@language": "sv"
+        },
+        {
+          "@value": "management of product-related information throughout the entire lifecycle of a product",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "PLM kattaa yleensä tuotesuunnittelun, valmistuksen, ylläpidon ja käytöstä poistamisen vaiheet.",
+          "@language": "fi"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "ISO/TR 3151-1:2023",
+          "@language": "en",
+          "@id": "https://www.iso.org/"
+        }
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/mom",
+        "https://teemualaluusua.github.io/sanasto1/bom",
+        "https://teemualaluusua.github.io/sanasto1/bop"
+      ]
     },
     {
       "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/RDF-kolmikko",
@@ -3948,6 +4089,77 @@
         "@value": "2026-02-26T10:25:00",
         "@type": "xsd:dateTime"
       }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/bop",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/rakentamisen-tieto-ja-informaatiomallit",
+      "skos:prefLabel": [
+        {
+          "@value": "valmistusprosessiluettelo",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "processlista för tillverkning",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "bill of process",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:altLabel": [
+        {
+          "@value": "BOP",
+          "@language": "fi",
+          "termType": "Lyhenne"
+        },
+        {
+          "@value": "BOP",
+          "@language": "sv",
+          "termType": "Lyhenne"
+        },
+        {
+          "@value": "BOP",
+          "@language": "en",
+          "termType": "Lyhenne"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "luettelo tuotteen valmistamiseen tarvittavista valmistusvaiheista ja prosesseista",
+          "@language": "fi"
+        },
+        {
+          "@value": "förteckning över de processer och arbetsmoment som krävs för att tillverka en produkt",
+          "@language": "sv"
+        },
+        {
+          "@value": "list of manufacturing processes and operations required to produce a product",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "BOP kuvaa tuotteen valmistusprosessin rakenteen ja täydentää usein BOM-luetteloa.",
+          "@language": "fi"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "ISO/TR 3151-1:2023",
+          "@language": "en",
+          "@id": "https://www.iso.org/"
+        }
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/bom",
+        "https://teemualaluusua.github.io/sanasto1/mom",
+        "https://teemualaluusua.github.io/sanasto1/plm"
+      ]
     }
   ]
 }

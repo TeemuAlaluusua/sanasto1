@@ -7,19 +7,19 @@ terms:
   label: BCF
   type: Lyhenne
 - lang: fi
-  label: BIM Collaboration Format
+  label: bim collaboration format
   type: Suositettava termi
 - lang: sv
   label: BCF
   type: Lyhenne
 - lang: sv
-  label: BIM Collaboration Format
+  label: bim collaboration format
   type: Suositettava termi
 - lang: en
   label: BCF
   type: Lyhenne
 - lang: en
-  label: BIM Collaboration Format
+  label: bim collaboration format
   type: Suositettava termi
 
 definitions:
