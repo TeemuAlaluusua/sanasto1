@@ -679,11 +679,11 @@
       "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
       "skos:prefLabel": [
         {
-          "@value": "BCF",
+          "@value": "BIM Collaboration Format",
           "@language": "fi"
         },
         {
-          "@value": "BCF",
+          "@value": "BIM Collaboration Format",
           "@language": "sv"
         },
         {
@@ -693,11 +693,11 @@
       ],
       "skos:altLabel": [
         {
-          "@value": "BIM Collaboration Format",
+          "@value": "BCF",
           "@language": "fi"
         },
         {
-          "@value": "BIM Collaboration Format",
+          "@value": "BCF",
           "@language": "sv"
         },
         {

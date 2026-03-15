@@ -5,22 +5,22 @@ schemeId: []
 terms:
 - lang: fi
   label: BCF
-  type: Suositettava termi
+  type: Lyhenne
 - lang: fi
   label: BIM Collaboration Format
-  type: Vieraskielinen termi
-- lang: sv
-  label: BCF
   type: Suositettava termi
 - lang: sv
-  label: BIM Collaboration Format
-  type: Utländsk term
-- lang: en
+  label: BCF
+  type: Lyhenne
+- lang: sv
   label: BIM Collaboration Format
   type: Suositettava termi
 - lang: en
   label: BCF
   type: Lyhenne
+- lang: en
+  label: BIM Collaboration Format
+  type: Suositettava termi
 
 definitions:
 - lang: fi
