@@ -7,6 +7,16 @@
   },
   "@graph": [
     {
+      "@id": "https://teemualaluusua.github.io/sanasto1/rakentamisen-tieto-ja-informaatiomallit",
+      "@type": "skos:ConceptScheme",
+      "skos:prefLabel": [
+        {
+          "@value": "rakentamisen-tieto-ja-informaatiomallit",
+          "@language": "fi"
+        }
+      ]
+    },
+    {
       "@id": "https://teemualaluusua.github.io/sanasto1/sanasto",
       "@type": "skos:ConceptScheme",
       "skos:prefLabel": [
@@ -1809,6 +1819,73 @@
       }
     },
     {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/informaatiovaatimus",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/rakentamisen-tieto-ja-informaatiomallit",
+      "skos:prefLabel": [
+        {
+          "@value": "informaatiovaatimus",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "informationskrav",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "information requirement",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "vaatimus siitä, mitä tietoa tarvitaan, milloin ja missä muodossa se tuotetaan sekä kenelle se toimitetaan",
+          "@language": "fi"
+        },
+        {
+          "@value": "krav som anger vilken information som behövs, när och i vilken form den ska produceras samt till vem den ska levereras",
+          "@language": "sv"
+        },
+        {
+          "@value": "requirement specifying what information is needed, when it is to be produced, in what form and to whom it is to be delivered",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "Sanastot.suomi.fi",
+          "@language": "fi",
+          "@id": "https://iri.suomi.fi/terminology/en19650/concept-18"
+        },
+        {
+          "@value": "EN ISO 19650-1:2018",
+          "@language": "en",
+          "@id": "https://www.iso.org"
+        }
+      ],
+      "skos:narrower": [
+        "https://teemualaluusua.github.io/sanasto1/organisaation informaatiovaatimus",
+        "https://teemualaluusua.github.io/sanasto1/omaisuuden informaatiovaatimus",
+        "https://teemualaluusua.github.io/sanasto1/projektin informaatiovaatimus",
+        "https://teemualaluusua.github.io/sanasto1/vaiheen informaatiovaatimus",
+        "https://teemualaluusua.github.io/sanasto1/tiedonvaihdon informaatiovaatimus"
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/informaatiomalli",
+        "https://teemualaluusua.github.io/sanasto1/tietomalli"
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-14T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
       "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/iot",
       "@type": "skos:Concept",
       "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
@@ -1891,6 +1968,96 @@
       ],
       "dcterms:created": {
         "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-14T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/kaavatietomalli",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "kaavatietomalli",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "plandatamodell",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "data model for land use plans",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "tietomalli, joka on tarkoitettu kaavan tietojen kuvaamiseen",
+          "@language": "fi"
+        },
+        {
+          "@value": "datamodell som är avsedd för att beskriva information i en plan",
+          "@language": "sv"
+        },
+        {
+          "@value": "data model intended for describing the information of a land use plan",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Valtakunnallinen kaavatietomalli koostuu kaavaa,\nkaavakohteita ja kaavamääräyksiä kuvaavista osista.\n",
+          "@language": "fi"
+        },
+        {
+          "@value": "Den nationella plandatamodellen består av delar\nsom beskriver planen, planobjekt och planbestämmelser.\n",
+          "@language": "sv"
+        },
+        {
+          "@value": "The national data model for land use plans consists\nof parts describing the plan, plan objects and\nplanning regulations.\n",
+          "@language": "en"
+        },
+        {
+          "@value": "Käsitejärjestelmäkaavio:\nhttps://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg\n",
+          "@language": "fi"
+        },
+        {
+          "@value": "Begreppssystemdiagram:\nhttps://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg\n",
+          "@language": "sv"
+        },
+        {
+          "@value": "Concept system diagram:\nhttps://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg\n",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "Suomi.fi-sanasto – RY-mallit",
+          "@language": "fi",
+          "@id": "https://iri.suomi.fi/terminology/rymallit/c10"
+        },
+        {
+          "@value": "Rakennetun ympäristön sanasto",
+          "@language": "fi",
+          "@id": "https://iri.suomi.fi/terminology/rakymp/c782"
+        }
+      ],
+      "skos:broader": [
+        "https://teemualaluusua.github.io/sanasto1/tietomalli"
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/kaava",
+        "https://teemualaluusua.github.io/sanasto1/kaavamääräys",
+        "https://teemualaluusua.github.io/sanasto1/kaavakohde"
+      ],
+      "dcterms:created": {
+        "@value": "2025-12-23T14:08",
         "@type": "xsd:dateTime"
       },
       "dcterms:modified": {
@@ -2113,6 +2280,103 @@
       },
       "dcterms:modified": {
         "@value": "2026-03-15T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/lupamalli",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "lupamalli",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "informationsmodell för byggnadslov",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "information model for building permit",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "rakennuskohteen informaatiomalli, joka sisältää ne suunnitelmamallin tiedot, joita tarvitaan rakentamislupaprosessin aikana",
+          "@language": "fi"
+        },
+        {
+          "@value": "informationsmodell för ett byggnadsobjekt som innehåller de uppgifter ur en projekteringsmodell som behövs under bygglovsprocessen",
+          "@language": "sv"
+        },
+        {
+          "@value": "information model of a building asset containing the information from the design model required during the building permit process",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Rakentamislupahakemuksessa ei välttämättä toimiteta\nerityissuunnitelmia, mutta niitä voidaan edellyttää\ntoimitettavaksi rakentamislupaprosessin aikana ennen\nrakennustyön aloittamista.\n",
+          "@language": "fi"
+        },
+        {
+          "@value": "Särskilda projekteringshandlingar behöver inte alltid\nlämnas in tillsammans med bygglovsansökan, men de kan\nkrävas under bygglovsprocessen innan byggarbetet påbörjas.\n",
+          "@language": "sv"
+        },
+        {
+          "@value": "Detailed discipline design documents may not always be\nsubmitted with the building permit application, but they\nmay be required during the permit process before\nconstruction work begins.\n",
+          "@language": "en"
+        },
+        {
+          "@value": "Lupamallin tulee noudattaa rakentamisen lupapäätösten\ntietomallia. Lupamalli voidaan toimittaa esimerkiksi\nSFS-EN ISO 16739-1 -standardin mukaisessa IFC-muodossa\n(Industry Foundation Classes).\n",
+          "@language": "fi"
+        },
+        {
+          "@value": "Informationsmodellen för bygglov ska följa datamodellen\nför bygglovsbeslut. Den kan till exempel levereras i\nIFC-format enligt standarden SFS-EN ISO 16739-1.\n",
+          "@language": "sv"
+        },
+        {
+          "@value": "The building permit information model shall follow the\ndata model for building permit decisions. It may be\ndelivered for example in IFC format according to\nSFS-EN ISO 16739-1 (Industry Foundation Classes).\n",
+          "@language": "en"
+        },
+        {
+          "@value": "Käsitejärjestelmäkaavio:\nhttps://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg\n",
+          "@language": "fi"
+        },
+        {
+          "@value": "Begreppssystemdiagram:\nhttps://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg\n",
+          "@language": "sv"
+        },
+        {
+          "@value": "Concept system diagram:\nhttps://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg\n",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "Suomi.fi-sanasto – RY-mallit",
+          "@language": "fi",
+          "@id": "https://iri.suomi.fi/terminology/rymallit/c18"
+        }
+      ],
+      "skos:broader": [
+        "https://teemualaluusua.github.io/sanasto1/rakennuskohteen informaatiomalli"
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/suunnitelmamalli",
+        "https://teemualaluusua.github.io/sanasto1/rakentamislupa",
+        "https://teemualaluusua.github.io/sanasto1/IFC"
+      ],
+      "dcterms:created": {
+        "@value": "2025-12-23T14:08",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-14T00:00",
         "@type": "xsd:dateTime"
       }
     },
