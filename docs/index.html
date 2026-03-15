@@ -297,7 +297,16 @@ if(!match) return;
           location.hash="#/concept/"+encodeURIComponent(c.id);
           renderConcept(c.id);
         };
-        a.textContent=term(c).label;
+        const mainTerm = term(c).label;
+
+        const abbr = c.terms.find(t =>
+          t.lang === currentLang && t.type === "Lyhenne"
+        );
+
+        a.textContent = abbr
+          ? `${mainTerm} (${abbr.label})`
+          : mainTerm;
+
         div.appendChild(a);
         el.appendChild(div);
       });
