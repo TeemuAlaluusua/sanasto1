@@ -137,7 +137,7 @@
           "termType": "Suositettava termi"
         },
         {
-          "@value": "Native format",
+          "@value": "native format",
           "@language": "en",
           "termType": "Suositettava termi"
         }
@@ -446,6 +446,11 @@
           "termType": "Suositettava termi"
         },
         {
+          "@value": "kundorderstyrd montering",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
           "@value": "assemble-to-order",
           "@language": "en",
           "termType": "Suositettava termi"
@@ -466,11 +471,6 @@
           "@value": "ATO",
           "@language": "sv",
           "termType": "Lyhenne"
-        },
-        {
-          "@value": "kundorderstyrd montering",
-          "@language": "sv",
-          "termType": "Synonyymi"
         },
         {
           "@value": "ATO",
@@ -739,17 +739,17 @@
       "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
       "skos:prefLabel": [
         {
-          "@value": "BIM Collaboration Format",
+          "@value": "bim collaboration format",
           "@language": "fi",
           "termType": "Suositettava termi"
         },
         {
-          "@value": "BIM Collaboration Format",
+          "@value": "bim collaboration format",
           "@language": "sv",
           "termType": "Suositettava termi"
         },
         {
-          "@value": "BIM Collaboration Format",
+          "@value": "bim collaboration format",
           "@language": "en",
           "termType": "Suositettava termi"
         }
@@ -1444,52 +1444,98 @@
       }
     },
     {
-      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/GTIN-tunnus",
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/eto",
       "@type": "skos:Concept",
       "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
       "skos:prefLabel": [
         {
-          "@value": "GTIN-tunnus",
+          "@value": "asiakasohjautuva tuotesuunnittelu",
           "@language": "fi",
           "termType": "Suositettava termi"
         },
         {
-          "@value": "kansainvälinen tuotenumero",
-          "@language": "fi",
+          "@value": "kundorderstyrd konstruktion",
+          "@language": "sv",
           "termType": "Suositettava termi"
         },
         {
-          "@value": "GTIN",
-          "@language": "en",
-          "termType": "Suositettava termi"
-        },
-        {
-          "@value": "Global Trade Item Number",
+          "@value": "engineer-to-order",
           "@language": "en",
           "termType": "Suositettava termi"
         }
       ],
+      "skos:altLabel": [
+        {
+          "@value": "ETO",
+          "@language": "fi",
+          "termType": "Lyhenne"
+        },
+        {
+          "@value": "ETO",
+          "@language": "sv",
+          "termType": "Lyhenne"
+        },
+        {
+          "@value": "ETO",
+          "@language": "en",
+          "termType": "Lyhenne"
+        }
+      ],
       "skos:definition": [
         {
-          "@value": "standardi koodin ainutkertainen numero, jota käytetään kansainvälisesti tunnistamaan tuotteita ja pakkauksia",
+          "@value": "tuotantomenetelmä, jossa tuote suunnitellaan ja valmistetaan asiakaskohtaisen tilauksen perusteella",
           "@language": "fi"
         },
         {
-          "@value": "unique number from a standard code used internationally to identify products and packaging units",
+          "@value": "produktionsmetod där produkten konstrueras och tillverkas utifrån en kundspecifik beställning",
+          "@language": "sv"
+        },
+        {
+          "@value": "production strategy in which a product is designed and manufactured based on a specific customer order",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "ETO-mallissa asiakastilauksen kytkentäpiste sijaitsee\ntuotesuunnitteluvaiheessa. Tuotteet ovat yleensä\nasiakaskohtaisesti kustomoituja, mikä johtaa\npidempiin toimitusaikoihin ja korkeampiin\ntuotantokustannuksiin.\n",
+          "@language": "fi"
+        },
+        {
+          "@value": "I ETO-modellen ligger kundorderpunkten i\nkonstruktionsfasen. Produkterna är vanligtvis\nkundanpassade, vilket ofta innebär längre\nleveranstider och högre produktionskostnader.\n",
+          "@language": "sv"
+        },
+        {
+          "@value": "In the ETO model the customer order decoupling\npoint occurs in the design phase. Products are\ntypically customised, which often results in\nlonger lead times and higher production costs.\n",
           "@language": "en"
         }
       ],
       "dcterms:source": [
         {
-          "@value": "ISO 5127:2022"
+          "@value": "Alaluusua, 2023",
+          "@language": "fi",
+          "@id": "https://aaltodoc.aalto.fi/server/api/core/bitstreams/d55ffacc-a2d7-414b-8f8c-313dff01e984/content"
+        },
+        {
+          "@value": "Peltokorpi, 2020",
+          "@language": "fi",
+          "@id": "https://www.aalto.fi/sites/default/files/2020-11/Loppuraportti_Tuotetiedon%20hallinta%20ja%20hyo%CC%88dynta%CC%88minen_2.11.2020_0.pdf"
         }
       ],
+      "skos:broader": [
+        "https://teemualaluusua.github.io/sanasto1/tuotantomenetelmä"
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/dto",
+        "https://teemualaluusua.github.io/sanasto1/mto",
+        "https://teemualaluusua.github.io/sanasto1/ato",
+        "https://teemualaluusua.github.io/sanasto1/mto"
+      ],
       "dcterms:created": {
-        "@value": "2026-03-05T12:00",
+        "@value": "2026-02-24T17:35",
         "@type": "xsd:dateTime"
       },
       "dcterms:modified": {
-        "@value": "2026-03-05T12:00",
+        "@value": "2026-03-14T00:00",
         "@type": "xsd:dateTime"
       }
     },
@@ -2288,12 +2334,12 @@
       "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
       "skos:prefLabel": [
         {
-          "@value": "Resource Description Framework",
+          "@value": "resource description framework",
           "@language": "fi",
           "termType": "Suositettava termi"
         },
         {
-          "@value": "Resource Description Framework",
+          "@value": "resource description framework",
           "@language": "sv",
           "termType": "Suositettava termi"
         },
@@ -2481,6 +2527,79 @@
       },
       "dcterms:modified": {
         "@value": "2026-03-05T12:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/skeema",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "skeema",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "schema",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "schema",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "rakennekuvaus, jonka mukaisella sanastolla voidaan kuvailla sillä tarkkuudella, että myös tietokoneet ymmärtävät sen",
+          "@language": "fi"
+        },
+        {
+          "@value": "strukturdefinition vars vokabulär gör det möjligt att beskriva information med sådan precision att även datorer kan tolka den",
+          "@language": "sv"
+        },
+        {
+          "@value": "structural specification that defines a vocabulary enabling information to be described with sufficient precision for computer interpretation",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "looginen suunnitelma, jossa esitetään metatietoelementtien väliset yhteydet\nyleensä määrittämällä säännöt metatietojen käytölle ja hallinnalle erityisesti\nsemantiikan, syntaksin ja arvojen valinnaisuuden (pakollisuusasteen) osalta\n",
+          "@language": "fi"
+        },
+        {
+          "@value": "logical plan showing the relationships between metadata elements, normally\nthrough establishing rules for the use and management of metadata specifically\nas regards the semantics, the syntax and the optionality (obligation level) of values\n",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "Sanastot.fi – Yrityksen digitalous",
+          "@language": "fi",
+          "@id": "https://iri.suomi.fi/terminology/yritysdigi/concept-2021"
+        },
+        {
+          "@value": "ISO 23081-1:2006",
+          "@language": "en",
+          "@id": "https://www.iso.org/"
+        }
+      ],
+      "skos:narrower": [
+        "https://teemualaluusua.github.io/sanasto1/käsiteskeema",
+        "https://teemualaluusua.github.io/sanasto1/metatietoskeema"
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/tietomalli"
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-14T00:00",
         "@type": "xsd:dateTime"
       }
     },
@@ -2708,6 +2827,155 @@
       },
       "dcterms:modified": {
         "@value": "2026-03-05T12:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/tietomalli",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "tietomalli",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "datamodell",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "data model",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "malli, joka kuvaa tiedot ja tietojen väliset suhteet rakenteisessa muodossa",
+          "@language": "fi"
+        },
+        {
+          "@value": "modell som beskriver data och relationerna mellan data i strukturerad form",
+          "@language": "sv"
+        },
+        {
+          "@value": "model that describes data and the relationships between data in a structured form",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Käsitejärjestelmäkaavio:\nhttps://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg\n",
+          "@language": "fi"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "Suomi.fi-sanasto – RY-mallit",
+          "@language": "fi",
+          "@id": "https://iri.suomi.fi/terminology/rymallit/c6"
+        },
+        {
+          "@value": "Yhteentoimivuusalusta (YTI)",
+          "@language": "fi",
+          "@id": "https://iri.suomi.fi/terminology/yti/concept-22"
+        },
+        {
+          "@value": "Rakennetun ympäristön sanasto",
+          "@language": "fi",
+          "@id": "https://iri.suomi.fi/terminology/rakymp/c97"
+        }
+      ],
+      "skos:broader": [
+        "https://teemualaluusua.github.io/sanasto1/malli"
+      ],
+      "skos:narrower": [
+        "https://teemualaluusua.github.io/sanasto1/käsitemalli",
+        "https://teemualaluusua.github.io/sanasto1/looginen tietomalli",
+        "https://teemualaluusua.github.io/sanasto1/fyysinen tietomalli"
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/skeema",
+        "https://teemualaluusua.github.io/sanasto1/ontologia",
+        "https://teemualaluusua.github.io/sanasto1/metatietoskeema"
+      ],
+      "dcterms:created": {
+        "@value": "2025-12-23T14:08",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-14T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/tietomallinnus",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "tietomallinnus",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "datamodellering",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "data modeling",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "mallinnus, jonka tuloksena syntyy tietomalli",
+          "@language": "fi"
+        },
+        {
+          "@value": "modellering vars resultat är en datamodell",
+          "@language": "sv"
+        },
+        {
+          "@value": "modelling whose result is a data model",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Tietomallinnus on yleensä vaiheittain etenevä prosessi.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Käsitejärjestelmäkaavio:\nhttps://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg\n",
+          "@language": "fi"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "Suomi.fi-sanasto – RY-mallit",
+          "@language": "fi",
+          "@id": "https://iri.suomi.fi/terminology/rymallit/c2"
+        }
+      ],
+      "skos:broader": [
+        "https://teemualaluusua.github.io/sanasto1/mallinnus"
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/tietomalli",
+        "https://teemualaluusua.github.io/sanasto1/käsitemalli",
+        "https://teemualaluusua.github.io/sanasto1/skeema"
+      ],
+      "dcterms:created": {
+        "@value": "2025-12-23T14:08",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-14T00:00",
         "@type": "xsd:dateTime"
       }
     },
