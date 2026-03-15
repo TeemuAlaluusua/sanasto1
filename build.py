@@ -61,17 +61,17 @@ for f in list(concept_dir.glob("*.yml")) + list(concept_dir.glob("*.yaml")):
     alt = []
 
     if c.get("terms"):
-    for t in c["terms"]:
-        lit = {
-            "@value": t["label"],
-            "@language": t["lang"],
-            "termType": t.get("type")
-        }
+        for t in c["terms"]:
+            lit = {
+                "@value": t["label"],
+                "@language": t["lang"],
+                "termType": t.get("type")
+            }
 
-        if t.get("type") == "Suositettava termi":
-            pref.append(lit)
-        else:
-            alt.append(lit)
+            if t.get("type") == "Suositettava termi":
+                pref.append(lit)
+            else:
+                alt.append(lit)
 
     if c.get("prefLabel"):
         for lang, text in c["prefLabel"].items():

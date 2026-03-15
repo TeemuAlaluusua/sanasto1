@@ -23,15 +23,18 @@
       "skos:prefLabel": [
         {
           "@value": "alavirta",
-          "@language": "fi"
+          "@language": "fi",
+          "termType": "Suositettava termi"
         },
         {
           "@value": "nedströms",
-          "@language": "sv"
+          "@language": "sv",
+          "termType": "Suositettava termi"
         },
         {
           "@value": "downstream",
-          "@language": "en"
+          "@language": "en",
+          "termType": "Suositettava termi"
         }
       ],
       "skos:definition": [
@@ -71,21 +74,25 @@
       "skos:prefLabel": [
         {
           "@value": "alfanumeerinen",
-          "@language": "fi"
+          "@language": "fi",
+          "termType": "Suositettava termi"
         },
         {
           "@value": "alfanumerisk",
-          "@language": "sv"
+          "@language": "sv",
+          "termType": "Suositettava termi"
         },
         {
           "@value": "alphanumeric",
-          "@language": "en"
+          "@language": "en",
+          "termType": "Suositettava termi"
         }
       ],
       "skos:altLabel": [
         {
           "@value": "aakkosnumeerinen",
-          "@language": "fi"
+          "@language": "fi",
+          "termType": "Synonyymi"
         }
       ],
       "skos:definition": [
@@ -121,41 +128,50 @@
       "skos:prefLabel": [
         {
           "@value": "alkuperäisformaatti",
-          "@language": "fi"
+          "@language": "fi",
+          "termType": "Suositettava termi"
         },
         {
           "@value": "nativt format",
-          "@language": "sv"
+          "@language": "sv",
+          "termType": "Suositettava termi"
         },
         {
           "@value": "Native format",
-          "@language": "en"
+          "@language": "en",
+          "termType": "Suositettava termi"
         }
       ],
       "skos:altLabel": [
         {
           "@value": "natiiviformaatti",
-          "@language": "fi"
+          "@language": "fi",
+          "termType": "Synonyymi"
         },
         {
           "@value": "natiivimalli",
-          "@language": "fi"
+          "@language": "fi",
+          "termType": "Synonyymi"
         },
         {
           "@value": "ursprungsformat",
-          "@language": "sv"
+          "@language": "sv",
+          "termType": "Synonyymi"
         },
         {
           "@value": "nativt filformat",
-          "@language": "sv"
+          "@language": "sv",
+          "termType": "Synonyymi"
         },
         {
           "@value": "native file format",
-          "@language": "en"
+          "@language": "en",
+          "termType": "Synonyymi"
         },
         {
           "@value": "proprietary format",
-          "@language": "en"
+          "@language": "en",
+          "termType": "Synonyymi"
         }
       ],
       "skos:definition": [
@@ -200,29 +216,35 @@
       "skos:prefLabel": [
         {
           "@value": "anturi",
-          "@language": "fi"
+          "@language": "fi",
+          "termType": "Suositettava termi"
         },
         {
           "@value": "sensor",
-          "@language": "sv"
+          "@language": "sv",
+          "termType": "Suositettava termi"
         },
         {
           "@value": "sensor",
-          "@language": "en"
+          "@language": "en",
+          "termType": "Suositettava termi"
         }
       ],
       "skos:altLabel": [
         {
           "@value": "sensori",
-          "@language": "fi"
+          "@language": "fi",
+          "termType": "Synonyymi"
         },
         {
           "@value": "givare",
-          "@language": "sv"
+          "@language": "sv",
+          "termType": "Synonyymi"
         },
         {
           "@value": "transducer",
-          "@language": "en"
+          "@language": "en",
+          "termType": "Synonyymi"
         }
       ],
       "skos:definition": [
@@ -255,27 +277,33 @@
       "skos:prefLabel": [
         {
           "@value": "arvoketju",
-          "@language": "fi"
+          "@language": "fi",
+          "termType": "Suositettava termi"
         },
         {
           "@value": "arvoverkko",
-          "@language": "fi"
+          "@language": "fi",
+          "termType": "Suositettava termi"
         },
         {
           "@value": "värdekedja",
-          "@language": "sv"
+          "@language": "sv",
+          "termType": "Suositettava termi"
         },
         {
           "@value": "värdenätverk",
-          "@language": "sv"
+          "@language": "sv",
+          "termType": "Suositettava termi"
         },
         {
           "@value": "value chain",
-          "@language": "en"
+          "@language": "en",
+          "termType": "Suositettava termi"
         },
         {
           "@value": "value network",
-          "@language": "en"
+          "@language": "en",
+          "termType": "Suositettava termi"
         }
       ],
       "skos:definition": [
@@ -333,33 +361,40 @@
       "skos:prefLabel": [
         {
           "@value": "asiakastilauksen kytkeytymiskohta",
-          "@language": "fi"
+          "@language": "fi",
+          "termType": "Suositettava termi"
         },
         {
           "@value": "kundorderpunkt",
-          "@language": "sv"
+          "@language": "sv",
+          "termType": "Suositettava termi"
         },
         {
           "@value": "customer order decoupling point",
-          "@language": "en"
+          "@language": "en",
+          "termType": "Suositettava termi"
         }
       ],
       "skos:altLabel": [
         {
           "@value": "tilauskytkentäpiste",
-          "@language": "fi"
+          "@language": "fi",
+          "termType": "Synonyymi"
         },
         {
           "@value": "tilauksen kytkeytymispiste",
-          "@language": "fi"
+          "@language": "fi",
+          "termType": "Synonyymi"
         },
         {
           "@value": "kundorderkopplingspunkt",
-          "@language": "sv"
+          "@language": "sv",
+          "termType": "Synonyymi"
         },
         {
           "@value": "order penetration point",
-          "@language": "en"
+          "@language": "en",
+          "termType": "Synonyymi"
         }
       ],
       "skos:definition": [
@@ -407,33 +442,40 @@
       "skos:prefLabel": [
         {
           "@value": "ATO",
-          "@language": "fi"
+          "@language": "fi",
+          "termType": "Suositettava termi"
         },
         {
           "@value": "ATO",
-          "@language": "sv"
+          "@language": "sv",
+          "termType": "Suositettava termi"
         },
         {
           "@value": "assemble-to-order",
-          "@language": "en"
+          "@language": "en",
+          "termType": "Suositettava termi"
         }
       ],
       "skos:altLabel": [
         {
           "@value": "asiakasohjautuva kokoonpano",
-          "@language": "fi"
+          "@language": "fi",
+          "termType": "Synonyymi"
         },
         {
           "@value": "tilauksesta kokoonpano",
-          "@language": "fi"
+          "@language": "fi",
+          "termType": "Synonyymi"
         },
         {
           "@value": "kundorderstyrd montering",
-          "@language": "sv"
+          "@language": "sv",
+          "termType": "Synonyymi"
         },
         {
           "@value": "ATO",
-          "@language": "en"
+          "@language": "en",
+          "termType": "Synonyymi"
         }
       ],
       "skos:definition": [
@@ -487,25 +529,30 @@
       "skos:prefLabel": [
         {
           "@value": "attribuutti",
-          "@language": "fi"
+          "@language": "fi",
+          "termType": "Suositettava termi"
         },
         {
           "@value": "attribut",
-          "@language": "sv"
+          "@language": "sv",
+          "termType": "Suositettava termi"
         },
         {
           "@value": "attribute",
-          "@language": "en"
+          "@language": "en",
+          "termType": "Suositettava termi"
         }
       ],
       "skos:altLabel": [
         {
           "@value": "attribuuttitieto",
-          "@language": "fi"
+          "@language": "fi",
+          "termType": "Synonyymi"
         },
         {
           "@value": "attributdata",
-          "@language": "sv"
+          "@language": "sv",
+          "termType": "Synonyymi"
         }
       ],
       "skos:definition": [
@@ -572,27 +619,33 @@
       "skos:prefLabel": [
         {
           "@value": "automatisoitu",
-          "@language": "fi"
+          "@language": "fi",
+          "termType": "Suositettava termi"
         },
         {
           "@value": "automaattinen",
-          "@language": "fi"
+          "@language": "fi",
+          "termType": "Suositettava termi"
         },
         {
           "@value": "automaatio",
-          "@language": "fi"
+          "@language": "fi",
+          "termType": "Suositettava termi"
         },
         {
           "@value": "automatic",
-          "@language": "en"
+          "@language": "en",
+          "termType": "Suositettava termi"
         },
         {
           "@value": "automation",
-          "@language": "en"
+          "@language": "en",
+          "termType": "Suositettava termi"
         },
         {
           "@value": "automated",
-          "@language": "en"
+          "@language": "en",
+          "termType": "Suositettava termi"
         }
       ],
       "skos:definition": [
@@ -630,15 +683,18 @@
       "skos:prefLabel": [
         {
           "@value": "avoin data",
-          "@language": "fi"
+          "@language": "fi",
+          "termType": "Suositettava termi"
         },
         {
           "@value": "öppna data",
-          "@language": "sv"
+          "@language": "sv",
+          "termType": "Suositettava termi"
         },
         {
           "@value": "open data",
-          "@language": "en"
+          "@language": "en",
+          "termType": "Suositettava termi"
         }
       ],
       "skos:definition": [
@@ -680,29 +736,35 @@
       "skos:prefLabel": [
         {
           "@value": "BIM Collaboration Format",
-          "@language": "fi"
+          "@language": "fi",
+          "termType": "Suositettava termi"
         },
         {
           "@value": "BIM Collaboration Format",
-          "@language": "sv"
+          "@language": "sv",
+          "termType": "Suositettava termi"
         },
         {
           "@value": "BIM Collaboration Format",
-          "@language": "en"
+          "@language": "en",
+          "termType": "Suositettava termi"
         }
       ],
       "skos:altLabel": [
         {
           "@value": "BCF",
-          "@language": "fi"
+          "@language": "fi",
+          "termType": "Lyhenne"
         },
         {
           "@value": "BCF",
-          "@language": "sv"
+          "@language": "sv",
+          "termType": "Lyhenne"
         },
         {
           "@value": "BCF",
-          "@language": "en"
+          "@language": "en",
+          "termType": "Lyhenne"
         }
       ],
       "skos:definition": [
@@ -764,25 +826,30 @@
       "skos:prefLabel": [
         {
           "@value": "Big Data",
-          "@language": "fi"
+          "@language": "fi",
+          "termType": "Suositettava termi"
         },
         {
           "@value": "stordata",
-          "@language": "sv"
+          "@language": "sv",
+          "termType": "Suositettava termi"
         },
         {
           "@value": "big data",
-          "@language": "en"
+          "@language": "en",
+          "termType": "Suositettava termi"
         }
       ],
       "skos:altLabel": [
         {
           "@value": "massadata",
-          "@language": "fi"
+          "@language": "fi",
+          "termType": "Synonyymi"
         },
         {
           "@value": "suuraineisto",
-          "@language": "fi"
+          "@language": "fi",
+          "termType": "Synonyymi"
         }
       ],
       "skos:definition": [
@@ -843,29 +910,35 @@
       "skos:prefLabel": [
         {
           "@value": "tuoteosaluettelo",
-          "@language": "fi"
+          "@language": "fi",
+          "termType": "Suositettava termi"
         },
         {
           "@value": "materiaalilista",
-          "@language": "sv"
+          "@language": "sv",
+          "termType": "Suositettava termi"
         },
         {
           "@value": "bill of material",
-          "@language": "en"
+          "@language": "en",
+          "termType": "Suositettava termi"
         }
       ],
       "skos:altLabel": [
         {
           "@value": "BOM",
-          "@language": "fi"
+          "@language": "fi",
+          "termType": "Lyhenne"
         },
         {
           "@value": "BOM",
-          "@language": "sv"
+          "@language": "sv",
+          "termType": "Lyhenne"
         },
         {
           "@value": "BOM",
-          "@language": "en"
+          "@language": "en",
+          "termType": "Lyhenne"
         }
       ],
       "skos:definition": [
@@ -912,15 +985,18 @@
       "skos:prefLabel": [
         {
           "@value": "dataformaatti",
-          "@language": "fi"
+          "@language": "fi",
+          "termType": "Suositettava termi"
         },
         {
           "@value": "dataformat",
-          "@language": "sv"
+          "@language": "sv",
+          "termType": "Suositettava termi"
         },
         {
           "@value": "data format",
-          "@language": "en"
+          "@language": "en",
+          "termType": "Suositettava termi"
         }
       ],
       "skos:definition": [
@@ -973,29 +1049,35 @@
       "skos:prefLabel": [
         {
           "@value": "suunnittelun tuoteosaluettelo",
-          "@language": "fi"
+          "@language": "fi",
+          "termType": "Suositettava termi"
         },
         {
           "@value": "konstruktionsmateriallista",
-          "@language": "sv"
+          "@language": "sv",
+          "termType": "Suositettava termi"
         },
         {
           "@value": "engineering bill of material",
-          "@language": "en"
+          "@language": "en",
+          "termType": "Suositettava termi"
         }
       ],
       "skos:altLabel": [
         {
           "@value": "eBOM",
-          "@language": "fi"
+          "@language": "fi",
+          "termType": "Lyhenne"
         },
         {
           "@value": "eBOM",
-          "@language": "sv"
+          "@language": "sv",
+          "termType": "Lyhenne"
         },
         {
           "@value": "eBOM",
-          "@language": "en"
+          "@language": "en",
+          "termType": "Lyhenne"
         }
       ],
       "skos:definition": [
@@ -1047,15 +1129,18 @@
       "skos:prefLabel": [
         {
           "@value": "entiteetti",
-          "@language": "fi"
+          "@language": "fi",
+          "termType": "Suositettava termi"
         },
         {
           "@value": "entitet",
-          "@language": "sv"
+          "@language": "sv",
+          "termType": "Suositettava termi"
         },
         {
           "@value": "entity",
-          "@language": "en"
+          "@language": "en",
+          "termType": "Suositettava termi"
         }
       ],
       "skos:definition": [
@@ -1108,15 +1193,18 @@
       "skos:prefLabel": [
         {
           "@value": "esitysformaatti",
-          "@language": "fi"
+          "@language": "fi",
+          "termType": "Suositettava termi"
         },
         {
           "@value": "presentationsformat",
-          "@language": "sv"
+          "@language": "sv",
+          "termType": "Suositettava termi"
         },
         {
           "@value": "presentation format",
-          "@language": "en"
+          "@language": "en",
+          "termType": "Suositettava termi"
         }
       ],
       "skos:definition": [
@@ -1172,29 +1260,35 @@
       "skos:prefLabel": [
         {
           "@value": "valmistuksen tuoteosaluettelo",
-          "@language": "fi"
+          "@language": "fi",
+          "termType": "Suositettava termi"
         },
         {
           "@value": "tillverkningsmateriallista",
-          "@language": "sv"
+          "@language": "sv",
+          "termType": "Suositettava termi"
         },
         {
           "@value": "manufacturing bill of material",
-          "@language": "en"
+          "@language": "en",
+          "termType": "Suositettava termi"
         }
       ],
       "skos:altLabel": [
         {
           "@value": "mBOM",
-          "@language": "fi"
+          "@language": "fi",
+          "termType": "Lyhenne"
         },
         {
           "@value": "mBOM",
-          "@language": "sv"
+          "@language": "sv",
+          "termType": "Lyhenne"
         },
         {
           "@value": "mBOM",
-          "@language": "en"
+          "@language": "en",
+          "termType": "Lyhenne"
         }
       ],
       "skos:definition": [
@@ -1254,33 +1348,40 @@
       "skos:prefLabel": [
         {
           "@value": "optinen merkkien tunnistus",
-          "@language": "fi"
+          "@language": "fi",
+          "termType": "Suositettava termi"
         },
         {
           "@value": "optisk teckenigenkänning",
-          "@language": "sv"
+          "@language": "sv",
+          "termType": "Suositettava termi"
         },
         {
           "@value": "optical character recognition",
-          "@language": "en"
+          "@language": "en",
+          "termType": "Suositettava termi"
         }
       ],
       "skos:altLabel": [
         {
           "@value": "optinen merkinluku",
-          "@language": "fi"
+          "@language": "fi",
+          "termType": "Synonyymi"
         },
         {
           "@value": "tekstintunnistus",
-          "@language": "fi"
+          "@language": "fi",
+          "termType": "Synonyymi"
         },
         {
           "@value": "optisk teckenläsning",
-          "@language": "sv"
+          "@language": "sv",
+          "termType": "Synonyymi"
         },
         {
           "@value": "OCR",
-          "@language": "en"
+          "@language": "en",
+          "termType": "Lyhenne"
         }
       ],
       "skos:definition": [
@@ -1338,19 +1439,23 @@
       "skos:prefLabel": [
         {
           "@value": "tietopankki",
-          "@language": "fi"
+          "@language": "fi",
+          "termType": "Suositettava termi"
         },
         {
           "@value": "databank",
-          "@language": "sv"
+          "@language": "sv",
+          "termType": "Suositettava termi"
         },
         {
           "@value": "data repository",
-          "@language": "en"
+          "@language": "en",
+          "termType": "Suositettava termi"
         },
         {
           "@value": "data bank",
-          "@language": "en"
+          "@language": "en",
+          "termType": "Suositettava termi"
         }
       ],
       "skos:definition": [
@@ -1409,15 +1514,18 @@
       "skos:prefLabel": [
         {
           "@value": "ylävirta",
-          "@language": "fi"
+          "@language": "fi",
+          "termType": "Suositettava termi"
         },
         {
           "@value": "uppströms",
-          "@language": "sv"
+          "@language": "sv",
+          "termType": "Suositettava termi"
         },
         {
           "@value": "upstream",
-          "@language": "en"
+          "@language": "en",
+          "termType": "Suositettava termi"
         }
       ],
       "skos:definition": [
