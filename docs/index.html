@@ -84,7 +84,11 @@ Etusivu
 const UI={
   fi:{
     select:"Valitse käsite",
-    terms:"Termit",lang:"Kieli",term:"Termi",type:"Tyyppi",
+    terms:"Termit",lang:"Kieli",term:"Termi",type:"Tyyppi",termType:{
+      "Suositettava termi":"Suositettava termi",
+      "Synonyymi":"Synonyymi",
+      "Lyhenne":"Lyhenne"
+    },
     def:"Määritelmä",note:"Huomautus",src:"Lähteet",
     rel:"Liittyvät käsitteet",
     fb:"Voit antaa palautetta käsitteestä sanaston vastuuorganisaatiolle.",
@@ -102,7 +106,11 @@ const UI={
   },
   sv:{
     select:"Välj begrepp",
-    terms:"Termer",lang:"Språk",term:"Term",type:"Typ",
+    terms:"Termer",lang:"Språk",term:"Term",type:"Typ",termType:{
+      "Suositettava termi":"Rekommenderad term",
+      "Synonyymi":"Synonym",
+      "Lyhenne":"Förkortning"
+    },
     def:"Definition",note:"Anmärkning",src:"Källor",
     rel:"Relaterade begrepp",
     fb:"Du kan ge respons om begreppet till terminologins ansvariga organisation.",
@@ -120,7 +128,11 @@ const UI={
   },
   en:{
     select:"Select concept",
-    terms:"Terms",lang:"Language",term:"Term",type:"Type",
+    terms:"Terms",lang:"Language",term:"Term",type:"Type",termType:{
+      "Suositettava termi":"Preferred term",
+      "Synonyymi":"Synonym",
+      "Lyhenne":"Abbreviation"
+    },
     def:"Definition",note:"Note",src:"Sources",
     rel:"Related concepts",
     fb:"You can give feedback on the concept to the terminology owner.",
@@ -183,15 +195,16 @@ fetch("./sanasto.jsonld")
 
         terms:[
           ...toArray(n["skos:prefLabel"]).map(t=>({
-            lang:t["@language"],
-            label:t["@value"],
-            type:"Suositettava termi"
-          })),
+          lang:t["@language"],
+          label:t["@value"],
+          type:t.termType || "Suositettava termi"
+        })),
+
           ...toArray(n["skos:altLabel"]).map(t=>({
-            lang:t["@language"],
-            label:t["@value"],
-            type:"Synonyymi"
-          }))
+          lang:t["@language"],
+          label:t["@value"],
+          type:t.termType || "Synonyymi"
+        }))
         ],
 
         defs:toArray(n["skos:definition"]).map(d=>({lang:d["@language"],text:d["@value"]})),
@@ -365,7 +378,7 @@ function renderConcept(id){
 <tr>
 <td>${esc(tr.lang)}</td>
 <td>${esc(tr.label)}</td>
-<td>${esc(tr.type)}</td>
+<td>${esc(UI[currentLang].termType[tr.type] || tr.type)}</td>
 </tr>
 `).join("");
 
