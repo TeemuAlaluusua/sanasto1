@@ -1323,6 +1323,74 @@
       }
     },
     {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/eir",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "informaation vaihdon vaatimukset",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "krav för informationsutbyte",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "exchange information requirements",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:altLabel": [
+        {
+          "@value": "EIR",
+          "@language": "fi",
+          "termType": "Lyhenne"
+        },
+        {
+          "@value": "EIR",
+          "@language": "sv",
+          "termType": "Lyhenne"
+        },
+        {
+          "@value": "EIR",
+          "@language": "en",
+          "termType": "Lyhenne"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "Informaation vaihdon vaatimukset suhteessa toimeksiantoon.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Krav för informationsutbyte i förhållande till uppdraget.",
+          "@language": "sv"
+        },
+        {
+          "@value": "Information exchange requirements in relation to the assignment.",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "Suomi.fi-sanasto – EN 19650 käsitteet",
+          "@language": "fi",
+          "@id": "https://iri.suomi.fi/terminology/en19650/concept-22"
+        }
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
       "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/entiteetti",
       "@type": "skos:Concept",
       "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
@@ -1894,7 +1962,7 @@
     {
       "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/informaatiovaatimus",
       "@type": "skos:Concept",
-      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/rakentamisen-tieto-ja-informaatiomallit",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
       "skos:prefLabel": [
         {
           "@value": "informaatiovaatimus",
@@ -2847,7 +2915,7 @@
     {
       "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/mom",
       "@type": "skos:Concept",
-      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/rakentamisen-tieto-ja-informaatiomallit",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
       "skos:prefLabel": [
         {
           "@value": "tuotannon operatiivinen hallinta",
@@ -3006,9 +3074,180 @@
       }
     },
     {
-      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/plm",
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/air",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "omaisuuskohteen informaatiovaatimukset",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "informationskrav för tillgång",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "asset information requirements",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:altLabel": [
+        {
+          "@value": "AIR",
+          "@language": "fi",
+          "termType": "Lyhenne"
+        },
+        {
+          "@value": "AIR",
+          "@language": "sv",
+          "termType": "Lyhenne"
+        },
+        {
+          "@value": "AIR",
+          "@language": "en",
+          "termType": "Lyhenne"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "Omaisuuskohteen informaatiovaatimukset kuvaavat informaatiovaatimukset suhteessa omaisuuskohteen käyttöön. Omaisuuskohteen informaatiovaatimuksissa (AIR) esitetään omaisuuskohteen informaation tuottamiseen tarvittavat liikkeenjohdolliset, kaupalliset ja tekniset näkökohdat.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Informationskrav för en tillgång beskriver informationskraven i förhållande till användningen av tillgången. I tillgångens informationskrav (AIR) anges de ledningsmässiga, kommersiella och tekniska aspekter som behövs för att producera information om tillgången.",
+          "@language": "sv"
+        },
+        {
+          "@value": "Asset information requirements describe the information requirements in relation to the use of an asset. The asset information requirements (AIR) present the managerial, commercial and technical aspects required to produce information about the asset.",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "EN/ISO 19650:2018",
+          "@language": "fi",
+          "@id": "https://www.iso.org/standard/68078.html"
+        },
+        {
+          "@value": "Suomi.fi-sanasto EN 19650",
+          "@language": "fi",
+          "@id": "https://iri.suomi.fi/terminology/en19650/concept-20"
+        }
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/omaisuuskohteen-informaatiomalli",
       "@type": "skos:Concept",
       "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/rakentamisen-tieto-ja-informaatiomallit",
+      "skos:prefLabel": [
+        {
+          "@value": "omaisuuskohteen informaatiomalli",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "tillgångsinformationsmodell",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "asset information model",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:altLabel": [
+        {
+          "@value": "AIM",
+          "@language": "fi",
+          "termType": "Lyhenne"
+        },
+        {
+          "@value": "AIM",
+          "@language": "sv",
+          "termType": "Lyhenne"
+        },
+        {
+          "@value": "AIM",
+          "@language": "en",
+          "termType": "Lyhenne"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "rakennuskohteen informaatiomalli, joka sisältää rakennuskohteen käyttö- ja ylläpitovaiheen aikana tarvittavat tiedot",
+          "@language": "fi"
+        },
+        {
+          "@value": "informationsmodell för byggnadsobjekt som innehåller de uppgifter som behövs under byggnadsobjektets användnings- och underhållsskede",
+          "@language": "sv"
+        },
+        {
+          "@value": "information model of a built asset that contains the information required during the use and maintenance phase of the built asset",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Käsitejärjestelmäkaavio: https://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg",
+          "@language": "fi"
+        },
+        {
+          "@value": "Omaisuuskohteen informaatiomallin sisältö perustuu usein projektin informaatiomalliin, johon kuuluvat esimerkiksi suunnitelma- ja toteumamallin tiedot.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Omaisuuskohteen informaatiomalli tukee omaisuudenhallintaa.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Innehållet i tillgångsinformationsmodellen baseras ofta på projektets informationsmodell, som till exempel omfattar uppgifter från planerings- och genomförandemodeller.",
+          "@language": "sv"
+        },
+        {
+          "@value": "Tillgångsinformationsmodellen stödjer förvaltningen av tillgångar.",
+          "@language": "sv"
+        },
+        {
+          "@value": "The content of the asset information model is often based on the project information model, which includes for example information from design and as-built models.",
+          "@language": "en"
+        },
+        {
+          "@value": "The asset information model supports asset management.",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "RY-mallit sanasto",
+          "@language": "fi",
+          "@id": "https://iri.suomi.fi/terminology/rymallit/c25"
+        }
+      ],
+      "dcterms:created": {
+        "@value": "2025-12-23T14:08",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2025-12-23T14:08",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/plm",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
       "skos:prefLabel": [
         {
           "@value": "tuotteen elinkaaren hallinta",
@@ -3075,6 +3314,123 @@
         "https://teemualaluusua.github.io/sanasto1/bom",
         "https://teemualaluusua.github.io/sanasto1/bop"
       ]
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/rakennus",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "rakennus",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "byggnad",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "building",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "paikallaan pysyväksi tarkoitettu, omalla sisäänkäynnillä varustettu, katettu ja ulkoseinien rajaama rakennuskohde",
+          "@language": "fi"
+        },
+        {
+          "@value": "byggnadsobjekt som är avsett att stå permanent på platsen, försett med egen ingång, täckt och avgränsat av ytterväggar",
+          "@language": "sv"
+        },
+        {
+          "@value": "built asset intended to remain in place, provided with its own entrance, covered and enclosed by external walls",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Toisistaan erillään olevat rakennukset ovat aina itsenäisiä rakennuksia. Kaikki itsenäiset rakennukset eivät kuitenkaan ole erillään muista rakennuksista esimerkiksi kadun varteen rakennettaessa. Esimerkiksi rivitalot, paritalot ja kerrostalot ovat itsenäisiä rakennuksia.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Rakennus on fyysinen kokonaisuus. Rakennusta koskevaa tietoa voidaan esittää rakennuskohdetietueessa.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Rakennuksen olosuhteiden ja mitoituksen tulisi pääasiallisesti mahdollistaa ihmisten toiminta ainakin osassa rakennuksen tiloista.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Käsitejärjestelmäkaavio: https://sanastokeskus.fi/suomi.fi/rymallit/tietomalli.svg",
+          "@language": "fi"
+        },
+        {
+          "@value": "Rakennuksen ulkovaipan sisäpuolella on sisätiloja. Rakennuksen ulkovaipan rajapintaan rajautuu välittömästi rakennuksen yhteydessä olevia ja rakennukseen kuuluvia ulkotiloja, kuten parvekkeet, terassit, katokset, lavat jne.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Sisäänkäynnillä tarkoitetaan ovea tai aukkoa, josta on kulku rakennukseen sen ulkopuolelta.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Byggnader som är åtskilda från varandra är alltid självständiga byggnader. Alla självständiga byggnader är dock inte nödvändigtvis separerade från andra byggnader, till exempel vid byggande längs en gata. Till exempel radhus, parhus och höghus är självständiga byggnader.",
+          "@language": "sv"
+        },
+        {
+          "@value": "En byggnad är en fysisk helhet. Information om byggnaden kan presenteras i en byggnadsobjektpost.",
+          "@language": "sv"
+        },
+        {
+          "@value": "Byggnadens förhållanden och dimensionering bör huvudsakligen möjliggöra mänsklig verksamhet åtminstone i en del av byggnadens utrymmen.",
+          "@language": "sv"
+        },
+        {
+          "@value": "Innanför byggnadens ytterhölje finns inomhusutrymmen. Vid ytterhöljets gräns finns omedelbart utomhusutrymmen som hör till byggnaden och är i direkt anslutning till den, såsom balkonger, terrasser, skärmtak, plattformar osv.",
+          "@language": "sv"
+        },
+        {
+          "@value": "Med ingång avses en dörr eller öppning genom vilken man kan komma in i byggnaden utifrån.",
+          "@language": "sv"
+        },
+        {
+          "@value": "Buildings that are separate from each other are always independent buildings. However, not all independent buildings are physically separated from others, for example when built along a street. Row houses, semi-detached houses and apartment buildings are examples of independent buildings.",
+          "@language": "en"
+        },
+        {
+          "@value": "A building is a physical entity. Information concerning a building can be represented in a built asset record.",
+          "@language": "en"
+        },
+        {
+          "@value": "The conditions and dimensions of a building should primarily enable human activity at least in part of the building’s spaces.",
+          "@language": "en"
+        },
+        {
+          "@value": "Inside the building envelope there are interior spaces. At the boundary of the building envelope there are outdoor spaces directly associated with the building, such as balconies, terraces, canopies, platforms etc.",
+          "@language": "en"
+        },
+        {
+          "@value": "An entrance means a door or opening that provides access to the building from outside.",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "RY-mallit sanasto",
+          "@language": "fi",
+          "@id": "https://iri.suomi.fi/terminology/rymallit/c27"
+        }
+      ],
+      "dcterms:created": {
+        "@value": "2025-12-23T14:08",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-16T14:08",
+        "@type": "xsd:dateTime"
+      }
     },
     {
       "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/RDF-kolmikko",
@@ -4093,7 +4449,7 @@
     {
       "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/bop",
       "@type": "skos:Concept",
-      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/rakentamisen-tieto-ja-informaatiomallit",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
       "skos:prefLabel": [
         {
           "@value": "valmistusprosessiluettelo",
