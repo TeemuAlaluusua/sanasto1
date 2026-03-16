@@ -829,7 +829,7 @@
       "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
       "skos:prefLabel": [
         {
-          "@value": "Big Data",
+          "@value": "suurdata",
           "@language": "fi",
           "termType": "Suositettava termi"
         },
@@ -872,7 +872,7 @@
       ],
       "skos:note": [
         {
-          "@value": "Big Dataa kuvataan usein niin sanotulla 4V-mallilla:\nmäärä (volume), monimuotoisuus (variety), nopeus (velocity)\nja vaihtelevuus (variability). Data voi olla rakenteista,\npuolirakenteista tai rakenteetonta, kuten tekstiä, kuvia,\nvideoita tai ääntä.\n",
+          "@value": "Suurdataa kuvataan usein niin sanotulla 4V-mallilla:\nmäärä (volume), monimuotoisuus (variety), nopeus (velocity)\nja vaihtelevuus (variability). Data voi olla rakenteista,\npuolirakenteista tai rakenteetonta, kuten tekstiä, kuvia,\nvideoita tai ääntä.\n",
           "@language": "fi"
         },
         {
