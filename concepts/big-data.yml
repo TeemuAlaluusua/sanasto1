@@ -4,7 +4,7 @@ schemeId: []
 
 terms:
 - lang: fi
-  label: Big Data
+  label: suurdata
   type: Suositettava termi
 - lang: fi
   label: massadata
@@ -36,7 +36,7 @@ definitions:
 notes:
 - lang: fi
   text: |
-    Big Dataa kuvataan usein niin sanotulla 4V-mallilla:
+    Suurdataa kuvataan usein niin sanotulla 4V-mallilla:
     määrä (volume), monimuotoisuus (variety), nopeus (velocity)
     ja vaihtelevuus (variability). Data voi olla rakenteista,
     puolirakenteista tai rakenteetonta, kuten tekstiä, kuvia,
