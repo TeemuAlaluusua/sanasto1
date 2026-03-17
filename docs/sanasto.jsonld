@@ -7,6 +7,16 @@
   },
   "@graph": [
     {
+      "@id": "https://teemualaluusua.github.io/sanasto1/rakentamisen-tieto-ja-informaatiomallit",
+      "@type": "skos:ConceptScheme",
+      "skos:prefLabel": [
+        {
+          "@value": "rakentamisen-tieto-ja-informaatiomallit",
+          "@language": "fi"
+        }
+      ]
+    },
+    {
       "@id": "https://teemualaluusua.github.io/sanasto1/sanasto",
       "@type": "skos:ConceptScheme",
       "skos:prefLabel": [
@@ -432,6 +442,66 @@
       },
       "dcterms:modified": {
         "@value": "2026-02-27T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/assosiaatio",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "assosiaatio",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "association",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "association",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "tietomallissa kahden luokan välillä oleva ei-hierarkkinen asiayhteys",
+          "@language": "fi"
+        },
+        {
+          "@value": "ett icke-hierarkiskt samband mellan två klasser i en datamodell",
+          "@language": "sv"
+        },
+        {
+          "@value": "non-hierarchical relationship between two classes in a data model",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "Yhteentoimivuusalustan sanasto",
+          "@language": "fi",
+          "@id": "https://iri.suomi.fi/terminology/yti/concept-23"
+        }
+      ],
+      "skos:broader": [
+        "https://teemualaluusua.github.io/sanasto1/tietomalli"
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/luokka",
+        "https://teemualaluusua.github.io/sanasto1/attribuutti",
+        "https://teemualaluusua.github.io/sanasto1/käsiteskeema",
+        "https://teemualaluusua.github.io/sanasto1/looginen tietomalli"
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-17T00:00",
         "@type": "xsd:dateTime"
       }
     },
@@ -981,6 +1051,77 @@
         "@value": "2026-03-14T00:00",
         "@type": "xsd:dateTime"
       }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/bop",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "valmistusprosessiluettelo",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "processlista för tillverkning",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "bill of process",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:altLabel": [
+        {
+          "@value": "BOP",
+          "@language": "fi",
+          "termType": "Lyhenne"
+        },
+        {
+          "@value": "BOP",
+          "@language": "sv",
+          "termType": "Lyhenne"
+        },
+        {
+          "@value": "BOP",
+          "@language": "en",
+          "termType": "Lyhenne"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "luettelo tuotteen valmistamiseen tarvittavista valmistusvaiheista ja prosesseista",
+          "@language": "fi"
+        },
+        {
+          "@value": "förteckning över de processer och arbetsmoment som krävs för att tillverka en produkt",
+          "@language": "sv"
+        },
+        {
+          "@value": "list of manufacturing processes and operations required to produce a product",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "BOP kuvaa tuotteen valmistusprosessin rakenteen ja täydentää usein BOM-luetteloa.",
+          "@language": "fi"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "ISO/TR 3151-1:2023",
+          "@language": "en",
+          "@id": "https://www.iso.org/"
+        }
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/bom",
+        "https://teemualaluusua.github.io/sanasto1/mom",
+        "https://teemualaluusua.github.io/sanasto1/plm"
+      ]
     },
     {
       "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/cde",
@@ -2107,6 +2248,100 @@
       }
     },
     {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/iri",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "internationalized resource identifier",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "internationalized resource identifier",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "internationalized resource identifier",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:altLabel": [
+        {
+          "@value": "IRI",
+          "@language": "fi",
+          "termType": "Lyhenne"
+        },
+        {
+          "@value": "IRI",
+          "@language": "sv",
+          "termType": "Lyhenne"
+        },
+        {
+          "@value": "IRI",
+          "@language": "en",
+          "termType": "Lyhenne"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "merkkijonosta muodostuva tunnus, joka yksikäsitteisesti yksilöi tietyn verkkoresurssin noudattaen sovittua syntaksia ja kattaa URI-tunnusta laajemman merkkivalikoiman",
+          "@language": "fi"
+        },
+        {
+          "@value": "a global identifier in the context of the World Wide Web which builds on the Uniform Resource Identifier (URI) protocol by expanding the set of permitted characters",
+          "@language": "en"
+        },
+        {
+          "@value": "en global identifierare i World Wide Web som bygger på URI-protokollet (Uniform Resource Identifier) genom att utöka uppsättningen tillåtna tecken",
+          "@language": "sv"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "IRI-tunnistetta käytetään tyypillisesti World Wide Webin verkkoresurssien yksilöimisessä.",
+          "@language": "fi"
+        },
+        {
+          "@value": "IRI-identifierare används typiskt för att identifiera webbresurser på World Wide Web.",
+          "@language": "sv"
+        },
+        {
+          "@value": "A string of characters that unambiguously identifies a particular resource. To guarantee uniformity, all IRIs follow a predefined set of syntax rules, but also maintain extensibility through a separately defined hierarchical naming scheme.",
+          "@language": "en"
+        },
+        {
+          "@value": "While URIs are limited to a subset of the US-ASCII character set, IRIs may additionally contain most characters from the Universal Character Set, including Chinese, Japanese, Korean, and Cyrillic characters.",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "Yhteentoimivuusalustan sanasto",
+          "@language": "fi",
+          "@id": "https://iri.suomi.fi/terminology/yti/concept-98"
+        }
+      ],
+      "skos:broader": [
+        "https://teemualaluusua.github.io/sanasto1/URI"
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/linkitetty data",
+        "https://teemualaluusua.github.io/sanasto1/RDF",
+        "https://teemualaluusua.github.io/sanasto1/nimiavaruus"
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-17T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
       "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/kaavatietomalli",
       "@type": "skos:Concept",
       "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
@@ -2343,6 +2578,264 @@
       }
     },
     {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/koodisto",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "koodisto",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "kodlista",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "codelist",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "kokoelma tiettyä käyttötarkoitusta varten määriteltyjä koodeja tai luettelo luokan ominaisuuden sallituista arvoista",
+          "@language": "fi"
+        },
+        {
+          "@value": "Value domain including a code for each permissible value / Complete set of data element values of a coded simple data element",
+          "@language": "en"
+        },
+        {
+          "@value": "värdemängd som innehåller en kod för varje tillåtet värde / fullständig uppsättning värden för ett kodat dataelement",
+          "@language": "sv"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Koodisto määrittelee sallitut arvot tietylle tietoelementille ja toimii\ntiedon validoinnin ja yhdenmukaisuuden varmistamisen välineenä.\n",
+          "@language": "fi"
+        },
+        {
+          "@value": "En kodlista definierar tillåtna värden för ett visst dataelement och fungerar\nsom ett medel för att säkerställa datavalidering och enhetlighet.\n",
+          "@language": "sv"
+        },
+        {
+          "@value": "A codelist defines the permissible values for a specific data element and\nserves as a means to ensure data validation and consistency.\n",
+          "@language": "en"
+        },
+        {
+          "@value": "Koodistoja käytetään erityisesti tietomalleissa ja rajapinnoissa, joissa\ntietosisältö esitetään ennalta määriteltyjen arvojen avulla.\n",
+          "@language": "fi"
+        },
+        {
+          "@value": "Kodlistor används särskilt i datamodeller och gränssnitt där informationsinnehåll\nrepresenteras med hjälp av fördefinierade värden.\n",
+          "@language": "sv"
+        },
+        {
+          "@value": "Codelists are particularly used in data models and interfaces where\ninformation content is represented using predefined values.\n",
+          "@language": "en"
+        },
+        {
+          "@value": "Koodisto eroaa luokituksesta siten, että koodisto määrittelee sallitut arvot,\nkun taas luokitus kuvaa käsitteellistä ryhmittelyä.\n",
+          "@language": "fi"
+        },
+        {
+          "@value": "En kodlista skiljer sig från en klassificering genom att den definierar\ntillåtna värden, medan en klassificering beskriver en begreppsmässig\nindelning.\n",
+          "@language": "sv"
+        },
+        {
+          "@value": "A codelist differs from a classification in that it defines permissible\nvalues, whereas a classification describes a conceptual grouping.\n",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "Yhteentoimivuusalustan sanasto",
+          "@language": "fi",
+          "@id": "https://iri.suomi.fi/terminology/yti/concept-11"
+        },
+        {
+          "@value": "ISO 19136",
+          "@language": "en",
+          "@id": "https://www.iso.org/"
+        },
+        {
+          "@value": "ISO 9735-1:2002",
+          "@language": "en",
+          "@id": "https://www.iso.org/"
+        }
+      ],
+      "skos:broader": [
+        "https://teemualaluusua.github.io/sanasto1/tietomääritys"
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/luokitus",
+        "https://teemualaluusua.github.io/sanasto1/sanasto",
+        "https://teemualaluusua.github.io/sanasto1/tietomalli",
+        "https://teemualaluusua.github.io/sanasto1/metatieto"
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-17T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/käsitteellinen-tietomalli",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "käsitteellinen tietomalli",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "konceptuell datamodell",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "conceptual model",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:altLabel": [
+        {
+          "@value": "käsitemalli",
+          "@language": "fi",
+          "termType": "Synonyymi"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "tietomalli, joka kuvaa tarkastelun kohteena olevat kohdemaailman käsitteet ja niiden väliset suhteet",
+          "@language": "fi"
+        },
+        {
+          "@value": "Model that defines concepts of a universe of discourse",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "Yhteentoimivuusalustan sanasto",
+          "@language": "fi",
+          "@id": "https://iri.suomi.fi/terminology/yti/concept-65"
+        },
+        {
+          "@value": "ISO 19101",
+          "@language": "en",
+          "@id": "https://www.iso.org/"
+        }
+      ],
+      "skos:broader": [
+        "https://teemualaluusua.github.io/sanasto1/tietomalli"
+      ],
+      "skos:narrower": [
+        "https://teemualaluusua.github.io/sanasto1/looginen tietomalli"
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/käsiteskeema",
+        "https://teemualaluusua.github.io/sanasto1/luokka",
+        "https://teemualaluusua.github.io/sanasto1/ontologia",
+        "https://teemualaluusua.github.io/sanasto1/tietomallinnus"
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-17T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/linkitetty-data",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "linkitetty data",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "länkade data",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "linked data",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "rakenteinen data, joka on yhdistetty useiden tietoaineistojen sisältämään dataan linkkien avulla",
+          "@language": "fi"
+        },
+        {
+          "@value": "strukturerade data som har kombinerats med data i andra datauppsättningar med hjälp av länkar",
+          "@language": "sv"
+        },
+        {
+          "@value": "structured data that is connected to the data in several datasets with the help of links",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Linkitetty data voi olla avointa dataa, jolloin sitä kutsutaan avoimeksi linkitetyksi dataksi.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Länkade data kan vara öppna data, och kallas i sådant fall länkade öppna data.",
+          "@language": "sv"
+        },
+        {
+          "@value": "Linked data can be open data, in which case it is referred to as linked open data.",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "Yhteentoimivuusalustan sanasto",
+          "@language": "fi",
+          "@id": "https://iri.suomi.fi/terminology/yti/concept-7"
+        },
+        {
+          "@value": "ISO 5127:2017",
+          "@language": "en",
+          "@id": "https://www.iso.org"
+        }
+      ],
+      "skos:broader": [
+        "https://teemualaluusua.github.io/sanasto1/data"
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/RDF",
+        "https://teemualaluusua.github.io/sanasto1/URI",
+        "https://teemualaluusua.github.io/sanasto1/ontologia",
+        "https://teemualaluusua.github.io/sanasto1/semanttinen web"
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-17T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
       "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/lokitiedosto",
       "@type": "skos:Concept",
       "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
@@ -2411,6 +2904,292 @@
       },
       "dcterms:modified": {
         "@value": "2026-03-15T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/lokitieto",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "lokitieto",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "loggdata",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "log data",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "tietojärjestelmän muistiin automaattisesti kirjautuva tapahtumatieto",
+          "@language": "fi"
+        },
+        {
+          "@value": "händelseinformation som automatiskt registreras i ett informationssystems minne",
+          "@language": "sv"
+        },
+        {
+          "@value": "event information that is automatically recorded in the memory of an information system",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "Yhteentoimivuusalustan sanasto",
+          "@language": "fi",
+          "@id": "https://iri.suomi.fi/terminology/yti/concept-59"
+        },
+        {
+          "@value": "ISO 26430-4:2009",
+          "@language": "fi",
+          "@id": "https://www.iso.org/"
+        }
+      ],
+      "skos:broader": [
+        "https://teemualaluusua.github.io/sanasto1/tieto"
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/lokitiedosto",
+        "https://teemualaluusua.github.io/sanasto1/tietoturva",
+        "https://teemualaluusua.github.io/sanasto1/tapahtumatieto"
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-17T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/looginen-tietomalli",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "looginen tietomalli",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "logisk datamodell",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "logical data model",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "tietomalli, joka kuvaa tiedot ja tietorakenteet loogisella tasolla",
+          "@language": "fi"
+        },
+        {
+          "@value": "datamodell som beskriver data och datastrukturer på en logisk nivå",
+          "@language": "sv"
+        },
+        {
+          "@value": "data model that describes data and data structures at a logical level",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Looginen tietomalli kuvaa tarkastelun kohteena olevat luokat, niiden väliset assosiaatiot (suhteet) ja luokkiin sisältyvät attribuutit.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Looginen tietomalli on käsitemallista tarkemmalle tasolle viety kuvaus.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Den logiska datamodellen beskriver de klasser som analyseras, relationerna (associationerna) mellan dem samt de attribut som ingår i klasserna.",
+          "@language": "sv"
+        },
+        {
+          "@value": "Den logiska datamodellen är en mer detaljerad beskrivning än en begreppsmodell.",
+          "@language": "sv"
+        },
+        {
+          "@value": "The logical data model describes the classes under consideration, the associations (relationships) between them, and the attributes contained within the classes.",
+          "@language": "en"
+        },
+        {
+          "@value": "The logical data model is a more detailed representation than a conceptual model.",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "Yhteentoimivuusalustan sanasto",
+          "@language": "fi",
+          "@id": "https://iri.suomi.fi/terminology/yti/concept-73"
+        }
+      ],
+      "skos:broader": [
+        "https://teemualaluusua.github.io/sanasto1/tietomalli"
+      ],
+      "skos:narrower": [
+        "https://teemualaluusua.github.io/sanasto1/fyysinen tietomalli"
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/käsitemalli",
+        "https://teemualaluusua.github.io/sanasto1/käsiteskeema",
+        "https://teemualaluusua.github.io/sanasto1/luokka",
+        "https://teemualaluusua.github.io/sanasto1/attribuutti"
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-17T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/luokitus",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "luokitus",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:altLabel": [
+        {
+          "@value": "klassificering",
+          "@language": "sv",
+          "termType": "Synonyymi"
+        },
+        {
+          "@value": "classification",
+          "@language": "en",
+          "termType": "Synonyymi"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "looginen järjestelmä, jossa asiat tai esineet on jaettu luokkiin niiden yhteisten tunnusmerkkien ja eroavaisuuksien mukaisesti",
+          "@language": "fi"
+        },
+        {
+          "@value": "logiskt system där saker eller objekt delas in i klasser enligt deras gemensamma kännetecken och skillnader",
+          "@language": "sv"
+        },
+        {
+          "@value": "logical system in which things or objects are divided into classes according to their shared characteristics and differences",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "Yhteentoimivuusalustan sanasto",
+          "@language": "fi",
+          "@id": "https://iri.suomi.fi/terminology/yti/concept-17"
+        }
+      ],
+      "skos:broader": [
+        "https://teemualaluusua.github.io/sanasto1/tietomääritys"
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/luokka",
+        "https://teemualaluusua.github.io/sanasto1/ontologia",
+        "https://teemualaluusua.github.io/sanasto1/sanasto",
+        "https://teemualaluusua.github.io/sanasto1/koodisto"
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-17T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/luokka",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "luokka",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "klass",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "class",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "attribuuteista koostuva reaalimaailman kohteen vastine tietomallissa",
+          "@language": "fi"
+        },
+        {
+          "@value": "en motsvarighet i en datamodell till ett verkligt objekt som består av attribut",
+          "@language": "sv"
+        },
+        {
+          "@value": "representation in a data model of a real-world object composed of attributes",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Description of a set of objects that share the same properties, constraints, and semantics",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "Yhteentoimivuusalustan sanasto",
+          "@language": "fi",
+          "@id": "https://iri.suomi.fi/terminology/yti/concept-25"
+        },
+        {
+          "@value": "UML 2.1.2 (modified)",
+          "@language": "en",
+          "@id": "https://www.omg.org/spec/UML/2.1.2/"
+        }
+      ],
+      "skos:broader": [
+        "https://teemualaluusua.github.io/sanasto1/tietomalli"
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/attribuutti",
+        "https://teemualaluusua.github.io/sanasto1/objekti",
+        "https://teemualaluusua.github.io/sanasto1/entiteetti",
+        "https://teemualaluusua.github.io/sanasto1/käsiteskeema"
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-17T00:00",
         "@type": "xsd:dateTime"
       }
     },
@@ -2838,6 +3617,80 @@
       }
     },
     {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/metatieto",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "metatieto",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "metadata",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "metadata",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "tieto, joka kuvaa aineiston kontekstia, sisältöä tai rakennetta sekä ohjaa ja dokumentoi sen käsittelyä ja hallintaa",
+          "@language": "fi"
+        },
+        {
+          "@value": "information som beskriver ett materials kontext, innehåll eller struktur samt styr och dokumenterar dess hantering och förvaltning",
+          "@language": "sv"
+        },
+        {
+          "@value": "information that describes the context, content or structure of a resource and guides and documents its processing and management",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Metatieto on tietoa tiedosta.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Metadata är data om data.",
+          "@language": "sv"
+        },
+        {
+          "@value": "Metadata is data about data.",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "Yhteentoimivuusalustan sanasto",
+          "@language": "fi",
+          "@id": "https://iri.suomi.fi/terminology/yti/concept-76"
+        }
+      ],
+      "skos:broader": [
+        "https://teemualaluusua.github.io/sanasto1/tieto"
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/metatietoskeema",
+        "https://teemualaluusua.github.io/sanasto1/tietomääritys",
+        "https://teemualaluusua.github.io/sanasto1/tietomalli",
+        "https://teemualaluusua.github.io/sanasto1/tietue"
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-17T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
       "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/metatietoskeema",
       "@type": "skos:Concept",
       "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
@@ -2973,6 +3826,94 @@
       ]
     },
     {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/nimiavaruus",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "nimiavaruus",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:altLabel": [
+        {
+          "@value": "namnrymd",
+          "@language": "sv",
+          "termType": "Synonyymi"
+        },
+        {
+          "@value": "namespace",
+          "@language": "en",
+          "termType": "Synonyymi"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "nimeämiseen tietyssä asia- tai toimintayhteydessä käytettävissä olevien elementtien joukko",
+          "@language": "fi"
+        },
+        {
+          "@value": "mängd av element som används för namngivning inom ett visst sak- eller verksamhetssammanhang",
+          "@language": "sv"
+        },
+        {
+          "@value": "set of elements available for naming within a specific context or domain of activity",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Elementit voivat olla esimerkiksi nimiä, sanoja tai teknisiä termejä.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Yhden nimiavaruuden sisällä yhdellä nimellä saa olla vain yksi merkitys, mutta eri nimiavaruuksissa samaa nimeä voi käyttää eri merkityksissä.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Elementen kan till exempel vara namn, ord eller tekniska termer.",
+          "@language": "sv"
+        },
+        {
+          "@value": "Inom en och samma namnrymd får ett namn endast ha en betydelse, men i olika namnrymder kan samma namn användas med olika betydelser.",
+          "@language": "sv"
+        },
+        {
+          "@value": "Elements can be, for example, names, words or technical terms.",
+          "@language": "en"
+        },
+        {
+          "@value": "Within a single namespace, a name can have only one meaning, but in different namespaces the same name can be used with different meanings.",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "Yhteentoimivuusalustan sanasto",
+          "@language": "fi",
+          "@id": "https://iri.suomi.fi/terminology/yti/concept-30"
+        }
+      ],
+      "skos:broader": [
+        "https://teemualaluusua.github.io/sanasto1/tietomääritys"
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/tunniste",
+        "https://teemualaluusua.github.io/sanasto1/URI",
+        "https://teemualaluusua.github.io/sanasto1/ontologia",
+        "https://teemualaluusua.github.io/sanasto1/skeema"
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-17T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
       "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/OCR",
       "@type": "skos:Concept",
       "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
@@ -3060,6 +4001,79 @@
       },
       "dcterms:modified": {
         "@value": "2026-03-14T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/oikeudellinen-yhteentoimivuus",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "oikeudellinen yhteentoimivuus",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "rättslig interoperabilitet",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "legal interoperability",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "yhteentoimivuus, joka mahdollistaa tiedonsiirrot eri lainsäädännöllisten alueiden välillä ilman, että asiaankuuluvaa lainsäädäntöä rikotaan",
+          "@language": "fi"
+        },
+        {
+          "@value": "interoperabilitet som gör det möjligt att överföra information mellan områden med olika lagstiftning utan att relevanta lagar bryts",
+          "@language": "sv"
+        },
+        {
+          "@value": "form of interoperability that enables data transfers between different legislative regions without violating any pertinent legislation",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Oikeudellinen yhteentoimivuus liittyy erityisesti tietojärjestelmissä käsiteltävien tietojen luonteeseen ja tapoihin, joilla tietoja kerätään, järjestetään ja siirretään.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Rättslig interoperabilitet anknyter speciellt till information i informationssystem samt till informationens art och hur man samlar in, ordnar och överför informationen.",
+          "@language": "sv"
+        },
+        {
+          "@value": "Legal interoperability is connected especially to the nature of the data that is contained in the information systems and how this data is collected, arranged and transferred.",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "Yhteentoimivuusalustan sanasto",
+          "@language": "fi",
+          "@id": "https://iri.suomi.fi/terminology/yti/concept-71"
+        }
+      ],
+      "skos:broader": [
+        "https://teemualaluusua.github.io/sanasto1/yhteentoimivuus"
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/tekninen yhteentoimivuus",
+        "https://teemualaluusua.github.io/sanasto1/semanttinen yhteentoimivuus",
+        "https://teemualaluusua.github.io/sanasto1/organisatorinen yhteentoimivuus"
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-17T00:00",
         "@type": "xsd:dateTime"
       }
     },
@@ -3231,6 +4245,140 @@
       },
       "dcterms:modified": {
         "@value": "2025-12-23T14:08",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/ontologia",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "ontologia",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "ontologi",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "ontology",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "koneen ja ihmisen tulkittavissa oleva, yhteisesti sovittu, täsmällinen kuvaus sovellusalueen käsitteistä ja näiden välisistä suhteista",
+          "@language": "fi"
+        },
+        {
+          "@value": "Representation of a set of concepts within a domain and the relationships between those concepts",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "Yhteentoimivuusalustan sanasto",
+          "@language": "fi",
+          "@id": "https://iri.suomi.fi/terminology/yti/concept-40"
+        },
+        {
+          "@value": "ISO 5127:2017",
+          "@language": "en",
+          "@id": "https://www.iso.org/"
+        }
+      ],
+      "skos:broader": [
+        "https://teemualaluusua.github.io/sanasto1/käsiteskeema"
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/käsitemalli",
+        "https://teemualaluusua.github.io/sanasto1/tietomalli",
+        "https://teemualaluusua.github.io/sanasto1/RDF",
+        "https://teemualaluusua.github.io/sanasto1/semanttinen web"
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-17T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/organisatorinen-yhteentoimivuus",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "organisatorinen yhteentoimivuus",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "organisatorisk interoperabilitet",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "organisational interoperability",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "yhteentoimivuus, joka mahdollistaa organisaatioiden yhteisesti sovittujen päämäärien tavoittelun niitä tukevien käytäntöjen avulla",
+          "@language": "fi"
+        },
+        {
+          "@value": "interoperabilitet som gör det möjligt för organisationer att uppnå gemensamt överenskomna mål genom metoder som stöder dessa mål",
+          "@language": "sv"
+        },
+        {
+          "@value": "form of interoperability that enables organisations to achieve commonly agreed objectives through practices that support those objectives",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Organisatorinen yhteentoimivuus liittyy erityisesti tietoprosessien järjestämiseen siten, että tietoa tuotetaan ja jaetaan sovittua päämäärää parhaiten edistävällä tavalla. Sovittu päämäärä voi olla esimerkiksi yhteisesti tuotettava palvelu.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Organisatorisk interoperabilitet avser särskilt organiseringen av informationsprocesser så att information produceras och delas på ett sätt som bäst stöder det överenskomna målet. Målet kan till exempel vara en gemensamt producerad tjänst.",
+          "@language": "sv"
+        },
+        {
+          "@value": "Organisational interoperability is particularly related to the organisation of information processes so that information is produced and shared in a way that best supports the agreed objective. The objective may be, for example, a jointly delivered service.",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "Yhteentoimivuusalustan sanasto",
+          "@language": "fi",
+          "@id": "https://iri.suomi.fi/terminology/yti/concept-70"
+        }
+      ],
+      "skos:broader": [
+        "https://teemualaluusua.github.io/sanasto1/yhteentoimivuus"
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/tekninen yhteentoimivuus",
+        "https://teemualaluusua.github.io/sanasto1/semanttinen yhteentoimivuus",
+        "https://teemualaluusua.github.io/sanasto1/oikeudellinen yhteentoimivuus"
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-17T00:00",
         "@type": "xsd:dateTime"
       }
     },
@@ -3698,6 +4846,146 @@
       }
     },
     {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/sanasto",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "sanasto",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "ordlista",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "terminology",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:altLabel": [
+        {
+          "@value": "glossary",
+          "@language": "en",
+          "termType": "Synonyymi"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "jossakin kielessä tai ympäristössä käytettyjen sanojen tai termien luettelo sekä muiden kyseisen luettelon käyttötarkoituksen kannalta oleellisten tietojen muodostama kokonaisuus",
+          "@language": "fi"
+        },
+        {
+          "@value": "helhet som omfattar en förteckning över godkända ord eller termer i ett visst språk eller sammanhang samt andra uppgifter som är väsentliga för användningen av förteckningen",
+          "@language": "sv"
+        },
+        {
+          "@value": "entity that contains a list of words or terms that are used in a certain language or environment as well as other pertinent information that is needed for the purposes of the list in question",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Sanastot voivat sisältää esimerkiksi määritelmiä, esimerkkejä tai kuvauksia termien keskinäisistä suhteista.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Ordlistor kan till exempel innehålla definitioner, exempel eller beskrivningar av inbördes förhållanden mellan termer.",
+          "@language": "sv"
+        },
+        {
+          "@value": "A glossary can contain e.g. definitions, examples or descriptions of the interrelationships between its terms.",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "Yhteentoimivuusalustan sanasto",
+          "@language": "fi",
+          "@id": "https://iri.suomi.fi/terminology/yti/concept-72"
+        }
+      ],
+      "skos:broader": [
+        "https://teemualaluusua.github.io/sanasto1/tietomääritys"
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/termi",
+        "https://teemualaluusua.github.io/sanasto1/käsite",
+        "https://teemualaluusua.github.io/sanasto1/määritelmä",
+        "https://teemualaluusua.github.io/sanasto1/tietomalli"
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-17T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/semanttinen-yhteentoimivuus",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "semanttinen yhteentoimivuus",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "semantisk interoperabilitet",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "semantic interoperability",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "yhteentoimivuus, joka mahdollistaa tiedon siirtämisen ja käsittelyn tavalla, jossa tiedon merkitys säilyy muuttumattomana ja ymmärrettävänä kaikille osapuolille",
+          "@language": "fi"
+        },
+        {
+          "@value": "interoperabilitet som gör det möjligt att överföra och behandla information så att dess innebörd bevaras oförändrad och begriplig för alla parter",
+          "@language": "sv"
+        },
+        {
+          "@value": "form of interoperability that enables the transfer and processing of data in a way that retains the meaning of the data so that it remains unchanged and understandable for all parties",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "Yhteentoimivuusalustan sanasto",
+          "@language": "fi",
+          "@id": "https://iri.suomi.fi/terminology/yti/concept-27"
+        }
+      ],
+      "skos:broader": [
+        "https://teemualaluusua.github.io/sanasto1/yhteentoimivuus"
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/tekninen yhteentoimivuus",
+        "https://teemualaluusua.github.io/sanasto1/organisatorinen yhteentoimivuus",
+        "https://teemualaluusua.github.io/sanasto1/oikeudellinen yhteentoimivuus"
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-17T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
       "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/skeema",
       "@type": "skos:Concept",
       "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
@@ -3851,6 +5139,79 @@
       },
       "dcterms:modified": {
         "@value": "2026-03-05T12:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/tekninen-yhteentoimivuus",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "tekninen yhteentoimivuus",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "teknisk interoperabilitet",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "technical interoperability",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "yhteentoimivuus, joka mahdollistaa tietotekniikan avulla tehtävät tiedonsiirrot",
+          "@language": "fi"
+        },
+        {
+          "@value": "interoperabilitet som gör det möjligt att överföra information med hjälp av informationsteknik",
+          "@language": "sv"
+        },
+        {
+          "@value": "form of interoperability that enables the transfer of data via information technology",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Tekninen yhteentoimivuus liittyy tekniseen, laitteista ja ohjelmista koostuvaan osaan tietojärjestelmiä. Teknisellä yhteentoimivuudella saavutettavat edut ovat rajallisia, jos tietojärjestelmien välillä ei ole semanttista, organisatorista tai oikeudellista yhteentoimivuutta.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Teknisk interoperabilitet hänför sig till den tekniska delen av informationssystem, dvs. hårdvara och programvara. Fördelarna med teknisk interoperabilitet är begränsade om det inte finns semantisk, organisatorisk eller juridisk interoperabilitet mellan informationssystemen.",
+          "@language": "sv"
+        },
+        {
+          "@value": "Technical interoperability is connected to the technical part of information systems, i.e. hardware and software. However, the benefits of technical interoperability are limited if there is no semantic, organisational or legal interoperability between the information systems.",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "Yhteentoimivuusalustan sanasto",
+          "@language": "fi",
+          "@id": "https://iri.suomi.fi/terminology/yti/concept-42"
+        }
+      ],
+      "skos:broader": [
+        "https://teemualaluusua.github.io/sanasto1/yhteentoimivuus"
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/semanttinen yhteentoimivuus",
+        "https://teemualaluusua.github.io/sanasto1/organisatorinen yhteentoimivuus",
+        "https://teemualaluusua.github.io/sanasto1/oikeudellinen yhteentoimivuus"
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-17T00:00",
         "@type": "xsd:dateTime"
       }
     },
@@ -4147,6 +5508,76 @@
       }
     },
     {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/tietomääritys",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "tietomääritys",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "informationsspecifikation",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "information specification",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "tiedon täsmällinen kuvaus koodistona, sanastona tai tietomallina",
+          "@language": "fi"
+        },
+        {
+          "@value": "noggrann beskrivning av information som kodsystem, terminologi eller datamodell",
+          "@language": "sv"
+        },
+        {
+          "@value": "precise description of information as a code list, vocabulary or data model",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Tietomääritys-käsitettä käytetään yläkäsitteenä erilaisista tietokuvauksista.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Begreppet informationsspecifikation används som ett överordnat begrepp för olika typer av informationsbeskrivningar.",
+          "@language": "sv"
+        },
+        {
+          "@value": "The concept of information specification is used as a general concept for different types of information descriptions.",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "Yhteentoimivuusalustan sanasto",
+          "@language": "fi",
+          "@id": "https://iri.suomi.fi/terminology/yti/concept-55"
+        }
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/tietomalli",
+        "https://teemualaluusua.github.io/sanasto1/sanasto",
+        "https://teemualaluusua.github.io/sanasto1/koodisto"
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-17T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
       "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/tietopankki",
       "@type": "skos:Concept",
       "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
@@ -4218,6 +5649,57 @@
       },
       "dcterms:modified": {
         "@value": "2026-03-05T12:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/tietoturva",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "Tietoturva",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "informationssäkerhet",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "information security",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "Tietoturvalla (engl. information security) tarkoitetaan fyysistä ja digitaalista\ntiedon suojaamista. Fyysinen suojaaminen voi pitää sisällään toimenpiteitä, jotka\nsuojaavat tietokoneita varastavalta murtovarkaalta. Digitaalinen suojaaminen eli\nkyberturvallisuus (engl. cyber security) tarkoittaa suojautumista verkon kautta\ntulevilta hyökkäyksiltä ja tietomurroilta. Tietoturvalla on kolme päätavoitetta:\nTiedon luottamuksellisuuden, eheyden ja saatavuuden varmistaminen.\n\n1 Luottamuksellisuus (engl. confidentiality) tarkoittaa, ettei tieto saa vuotaa\nulkopuolisille.\n\n2 Eheys (engl. integrity) tarkoittaa, että järjestelmät ovat luotettavia ja että\ntieto säilyy muuttumattomana ja on ajantasaisesti varmuuskopioitu.\n\n3 Saatavuus (engl. availability) tarkoittaa pääsyä tietoon silloin, kun sitä tarvitaan.\n",
+          "@language": "fi"
+        },
+        {
+          "@value": "Informationssäkerhet avser skydd av information både fysiskt och digitalt. Fysiskt skydd kan omfatta åtgärder som skyddar datorer mot stöld. Digitalt skydd, det vill säga cybersäkerhet, avser skydd mot attacker och dataintrång via nätverk. Informationssäkerhet har tre huvudmål: att säkerställa informationens konfidentialitet, integritet och tillgänglighet.\n\n1 Konfidentialitet innebär att information inte får spridas till obehöriga.\n\n2 Integritet innebär att system är tillförlitliga och att informationen förblir oförändrad samt är korrekt säkerhetskopierad.\n\n3 Tillgänglighet innebär att information är åtkomlig när den behövs.\n",
+          "@language": "sv"
+        },
+        {
+          "@value": "Information security refers to the protection of information both physically and digitally. Physical protection may include measures that protect computers from theft. Digital protection, i.e. cybersecurity, refers to protection against attacks and data breaches via networks. Information security has three main objectives: ensuring the confidentiality, integrity and availability of information.\n\n1 Confidentiality means that information must not be disclosed to unauthorized parties.\n\n2 Integrity means that systems are reliable and that information remains unaltered and is properly backed up.\n\n3 Availability means that information is accessible when needed.\n",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "ISO/IEC 27000:2020",
+          "@language": "fi",
+          "@id": "https://www.iso.org/"
+        }
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-17T17:35",
         "@type": "xsd:dateTime"
       }
     },
@@ -4297,6 +5779,108 @@
       }
     },
     {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/uri",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "URI",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "Uniform Resource Identifier",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "URI",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "Uniform Resource Identifier",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "URI",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "Uniform Resource Identifier",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "merkkijonosta muodostuva tunnus, joka yksikäsitteisesti yksilöi tietyn verkkoresurssin noudattaen sovittua syntaksia",
+          "@language": "fi"
+        },
+        {
+          "@value": "en teckensträng som entydigt identifierar en specifik nätverksresurs enligt en överenskommen syntax",
+          "@language": "sv"
+        },
+        {
+          "@value": "a global identifier in the context of the World Wide Web",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "URI-tunnistetta käytetään tyypillisesti World Wide Webin verkkoresurssien yksilöimisessä.",
+          "@language": "fi"
+        },
+        {
+          "@value": "URI on verkossa olevan sisällön yksilöllinen tunniste. URI:lle on määritetty muoto,\njoka toimii samalla tavalla kuin URL. URI-muodossa määritellään sisällön muoto\n(esim. ”http:” verkkosivulle tai ”mailto:” sähköpostille) ja sisällön sijainti\n(esim. ”ym.fi” verkkosivulle tai sähköpostiosoite). URI-muodon tarkoituksena on\nilmaista mistä ja missä muodossa haettu tieto löytyy. Tietomallin sisällöissä\nURI-muoto viittaa usein liitetiedostojen sijaintiin palvelimella.\n",
+          "@language": "fi"
+        },
+        {
+          "@value": "URI används vanligtvis för att identifiera resurser på World Wide Web.",
+          "@language": "sv"
+        },
+        {
+          "@value": "URI är en unik identifierare för innehåll på nätet. URI har ett definierat format\nsom liknar URL. I URI-formatet anges innehållets typ (t.ex. ”http:” för webbsidor\neller ”mailto:” för e-post) och dess plats. Syftet med URI är att ange var och i\nvilken form information finns. I informationsmodeller används URI ofta för att\nreferera till bilagors placering på en server.\n",
+          "@language": "sv"
+        },
+        {
+          "@value": "URI is typically used to identify resources on the World Wide Web.",
+          "@language": "en"
+        },
+        {
+          "@value": "A URI is a unique identifier for content on the web. It follows a defined format\nsimilar to a URL. A URI specifies both the type of the resource (e.g. “http:” or\n“mailto:”) and its location. The purpose of a URI is to indicate where and in\nwhat form information can be found. In data models, URIs often refer to the\nlocation of attachments on a server.\n",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "Yhteentoimivuusalustan sanasto",
+          "@language": "fi",
+          "@id": "https://iri.suomi.fi/terminology/yti/concept-32"
+        },
+        {
+          "@value": "RYHTI-sanasto",
+          "@language": "fi",
+          "@id": "https://ryhti.syke.fi/ohjeet-ja-tuki/ryhti-sanasto/"
+        }
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/url",
+        "https://teemualaluusua.github.io/sanasto1/tunniste",
+        "https://teemualaluusua.github.io/sanasto1/yksilöintitieto"
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-17T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
       "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/vaihtoformaatti",
       "@type": "skos:Concept",
       "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
@@ -4369,6 +5953,606 @@
       }
     },
     {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/valintalista",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "Valintalista",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "valbar lista",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "pick list",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "Valintalista on digitaalisen graafisen käyttöliittymän elementti, joka tarjoaa käyttäjälle mahdollisuuden valita vaihtoehtoja, kuten termejä valmiilta listalta.",
+          "@language": "fi"
+        },
+        {
+          "@value": "En vallista är ett element i ett digitalt grafiskt användargränssnitt som ger användaren möjlighet att välja alternativ, såsom termer, från en fördefinierad lista.",
+          "@language": "sv"
+        },
+        {
+          "@value": "A pick list is an element of a digital graphical user interface that allows the user to select options, such as terms, from a predefined list.",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "ISO 5127:2017",
+          "@language": "fi",
+          "@id": "https://www.iso.org/"
+        }
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/versio",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "Versio",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "version",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "version",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "Tietosisällöt, joilla on sama käyttötarkoitus, mutta eri voimassaoloaika ja joiden sisältö voi poiketa toisistaan. Versio on yksittäisen sanaston, koodiston tai tietomallin uusi tai vanha versio. Niiden voimassaolon alkamis- ja päättymispäivämäärät poikkeavat toisistaan. Tyypillisesti uusi versio korvaa vanhan version.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Informationsinnehåll med samma användningsändamål men med olika giltighetstid och vars innehåll kan skilja sig från varandra. En version är en ny eller gammal version av ett enskilt begreppssystem, kodsystem eller informationsmodell. Deras giltighetsperioder börjar och slutar vid olika tidpunkter. Vanligtvis ersätter en ny version den gamla versionen.",
+          "@language": "sv"
+        },
+        {
+          "@value": "Information contents that have the same purpose of use but different validity periods and whose content may differ from each other. A version is a new or old version of a specific terminology, code system or data model. Their validity start and end dates differ. Typically, a new version replaces the old version.",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "Sanastot",
+          "@language": "fi",
+          "@id": "https://sanastot.suomi.fi/"
+        }
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/vertailuanalysointi",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "Vertailuanalysointi",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "benchmarking",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "benchmarking",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "Vertailuanalysointi tarkoittaa oman toiminnan vertaamista toisten toimintaan, usein parhaaseen vastaavaan käytäntöön. Vertailuanalysoinnin perusidea on toisilta oppiminen ja oman toiminnan kyseenalaistaminen.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Benchmarking innebär att jämföra den egna verksamheten med andras verksamhet, ofta med bästa motsvarande praxis. Grundidén med benchmarking är att lära av andra och att ifrågasätta den egna verksamheten.",
+          "@language": "sv"
+        },
+        {
+          "@value": "Benchmarking refers to comparing one's own activities with those of others, often with the best corresponding practices. The basic idea of benchmarking is learning from others and questioning one's own operations.",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "ISO/IEC 29155-1:2011",
+          "@language": "fi",
+          "@id": "https://www.iso.org/"
+        }
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/xbrl",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "XBRL",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "eXtensible Business Reporting Language",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "XBRL",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "eXtensible Business Reporting Language",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "XBRL",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "eXtensible Business Reporting Language",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "kuvauskieli, jolla taloudelliset tiedot kuvataan sähköisessä ja rakenteisessa muodossa",
+          "@language": "fi"
+        },
+        {
+          "@value": "beskrivningsspråk för att uttrycka finansiell information i elektronisk och strukturerad form",
+          "@language": "sv"
+        },
+        {
+          "@value": "open international standard for digital business reporting",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "XBRL pohjautuu XML-kieleen (Extensible Markup Language), joka on metakieli rakenteellisten kuvauskielten kehittämiseksi. XML:llä saadaan aikaan dokumentteja, joiden rakenne on erotettu sen tietosisällöstä.",
+          "@language": "fi"
+        },
+        {
+          "@value": "XBRL:ää hallinnoi kansainvälinen voittoa tavoittelematon organisaatio XBRL International.",
+          "@language": "fi"
+        },
+        {
+          "@value": "XBRL bygger på XML (Extensible Markup Language), som är ett metaspråk för att utveckla strukturerade beskrivningsspråk. Med XML kan man skapa dokument där strukturen är åtskild från informationsinnehållet.",
+          "@language": "sv"
+        },
+        {
+          "@value": "XBRL förvaltas av en global ideell organisation, XBRL International.",
+          "@language": "sv"
+        },
+        {
+          "@value": "XBRL is based on XML (Extensible Markup Language), which is a meta-language for developing structured description languages. XML enables documents where the structure is separated from the content.",
+          "@language": "en"
+        },
+        {
+          "@value": "XBRL is managed by a global not for profit consortium, XBRL International.",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "Yhteentoimivuusalustan sanasto",
+          "@language": "fi",
+          "@id": "https://iri.suomi.fi/terminology/yti/concept-43"
+        }
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/xml",
+        "https://teemualaluusua.github.io/sanasto1/tietomalli",
+        "https://teemualaluusua.github.io/sanasto1/raportointi"
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-17T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/ydintieto",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "ydintieto",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "masterdata",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "master data",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "organisaation toimintaan liittyvää kohdetta kuvaava tieto, jota useampi organisaation prosessi tai toiminto tarvitsee tai hyödyntää",
+          "@language": "fi"
+        },
+        {
+          "@value": "information som beskriver ett objekt kopplat till organisationens verksamhet och som används eller behövs av flera processer eller funktioner inom organisationen",
+          "@language": "sv"
+        },
+        {
+          "@value": "the authoritative, most accurate data that is available about key business entities, used to establish the context for business transactions and transactional data",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Organisaation masterdataa voivat olla esimerkiksi asiakkaita, toimittajia, yhteistyökumppaneita, tuotteita, palveluita tai toimipaikkoja koskevat tiedot. Tavallisesti master data on hitaasti muuttuvaa ja sen tarve on pitkäaikaista.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Organisationens masterdata kan till exempel omfatta uppgifter om kunder, leverantörer, samarbetspartner, produkter, tjänster eller verksamhetsställen. Masterdata förändras vanligtvis långsamt och används under lång tid.",
+          "@language": "sv"
+        },
+        {
+          "@value": "Master data in an organization may include information about customers, suppliers, partners, products, services or locations. Master data is typically slowly changing and used over a long period.",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "Yhteentoimivuusalustan sanasto",
+          "@language": "fi",
+          "@id": "https://iri.suomi.fi/terminology/yti/concept-58"
+        }
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/tieto",
+        "https://teemualaluusua.github.io/sanasto1/tietomalli"
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-17T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/yhteentoimivuus",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "yhteentoimivuus",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "interoperabilitet",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "interoperability",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "toimintaan liittyvien toimijoiden, prosessien ja tietojärjestelmien kyky toimia ja viestiä keskenään sellaisella tavalla tai siinä laajuudessa, että ne voivat rutiininomaisesti käyttää ja ymmärtää toistensa tietoja",
+          "@language": "fi"
+        },
+        {
+          "@value": "förmåga hos aktörer, processer och informationssystem som är kopplade till en verksamhet att fungera och kommunicera med varandra på ett sådant sätt eller i sådan omfattning att de rutinmässigt kan använda och förstå varandras information",
+          "@language": "sv"
+        },
+        {
+          "@value": "ability of actors, processes and information systems that are connected to an activity to act and communicate together in such a way or scope that they can routinely use and understand each other's data",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Yhteentoimivuus voi olla luonteeltaan teknistä, semanttista, organisatorista tai oikeudellista.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Interoperabilitet kan vara teknisk, semantisk, organisatorisk eller juridisk till sin natur.",
+          "@language": "sv"
+        },
+        {
+          "@value": "Interoperability can be technical, semantic, organisational or legal in nature.",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "Yhteentoimivuusalustan sanasto",
+          "@language": "fi",
+          "@id": "https://iri.suomi.fi/terminology/yti/concept-9"
+        },
+        {
+          "@value": "ISO/IEC 22123-1:2023",
+          "@language": "en",
+          "@id": "https://www.iso.org/standard/82758.html"
+        }
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-17T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/yhteentoimivuusalusta",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "yhteentoimivuusalusta",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "interoperabilitetsplattform",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "interoperability platform",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:altLabel": [
+        {
+          "@value": "FI-Platform",
+          "@language": "fi",
+          "termType": "Synonyymi"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "sanastoista, koodistoista ja tietomalleista sekä niiden käyttöön ja muokkaukseen tarkoitetuista työkaluista muodostuva kokonaisuus, jonka tarkoituksena on edistää yhteentoimivuutta",
+          "@language": "fi"
+        },
+        {
+          "@value": "helhet bestående av terminologier, kodsystem och informationsmodeller samt verktyg för deras användning och redigering, vars syfte är att främja interoperabilitet",
+          "@language": "sv"
+        },
+        {
+          "@value": "a set consisting of vocabularies, code lists and data models as well as tools for their use and maintenance, intended to promote interoperability",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Suomen Digi- ja väestötietoviraston (DVV) ylläpitämä yhteentoimivuusalusta on kokoelma\ntyökaluja, joiden käyttö on vapaata ja avointa. Työkaluilla voidaan laatia sanastoja,\nkoodistoja ja loogisia tietomalleja, joita voidaan jakaa eri toimijoiden kesken.\nPalvelu on tarkoitettu niin julkisille kuin yksityisille toimijoille. Palvelun\ntarkoitus on vähentää päällekkäistä työtä, kun jo kertaalleen määriteltyjä\nkokonaisuuksia voi hyödyntää uusien projektikokonaisuuksien pohjalla.\n",
+          "@language": "fi"
+        },
+        {
+          "@value": "Interoperabilitetsplattformen som upprätthålls av Myndigheten för digitalisering och befolkningsdata i Finland (DVV) är en samling verktyg som är fritt och öppet tillgängliga.\nMed verktygen kan man skapa terminologier, kodsystem och logiska datamodeller\nsom kan delas mellan olika aktörer. Tjänsten är avsedd för både offentliga och\nprivata aktörer. Syftet med tjänsten är att minska överlappande arbete genom att\nredan definierade helheter kan återanvändas som grund för nya projekt.\n",
+          "@language": "sv"
+        },
+        {
+          "@value": "The interoperability platform maintained by the Digital and Population Data Services Agency of Finland (DVV) is a collection of tools that are freely and openly available.\nThe tools can be used to create vocabularies, code lists and logical data models\nthat can be shared between different stakeholders. The service is intended for\nboth public and private actors. Its purpose is to reduce overlapping work by\nenabling previously defined entities to be reused as a basis for new projects.\n",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "Yhteentoimivuusalustan sanasto",
+          "@language": "fi",
+          "@id": "https://iri.suomi.fi/terminology/yti/concept-8"
+        }
+      ],
+      "dcterms:created": {
+        "@value": "2026-03-17T00:00",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-17T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/yksilöinti",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "Yksilöinti",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "Identifiering",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "Identification",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "Toimijan, kohteen tai tietomallin objektin yksiselitteinen tunnistaminen ja erottaminen muista samaan joukkoon kuuluvista.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Entydig identifiering av en aktör, ett objekt eller ett objekt i en informationsmodell samt särskiljning från andra som tillhör samma mängd.",
+          "@language": "sv"
+        },
+        {
+          "@value": "Unambiguous identification of an actor, an object or an object in an information model and distinguishing it from others belonging to the same set.",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Yksilöinti toteutetaan liittämällä kohteeseen yksilöintitieto, kuten tunnus, koodi tai globaalitunniste (esim. GUID). Rakentamisen tietomalleissa yksilöinti mahdollistaa objektien elinkaaren aikaisen viittauksen, jäljitettävyyden ja tiedonhallinnan.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Identifiering genomförs genom att koppla en identifieringsuppgift till objektet, såsom en beteckning, kod eller global identifierare (t.ex. GUID). I byggandets informationsmodeller möjliggör identifiering livscykelbaserad referens, spårbarhet och informationshantering av objekt.",
+          "@language": "sv"
+        },
+        {
+          "@value": "Identification is implemented by associating identifying information with the object, such as an identifier, code or global identifier (e.g. GUID). In construction information models, identification enables lifecycle referencing, traceability and information management of objects.",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "Suomi.fi-sanastot: Yritysdigi – yksilöinti",
+          "@language": "fi",
+          "@id": "https://sanastot.suomi.fi/terminology/yritysdigi/concept/concept-2065"
+        }
+      ],
+      "skos:broader": [
+        "https://teemualaluusua.github.io/sanasto1/tunnistaminen"
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/yksilöintitieto",
+        "https://teemualaluusua.github.io/sanasto1/tunniste",
+        "https://teemualaluusua.github.io/sanasto1/GUID",
+        "https://teemualaluusua.github.io/sanasto1/tietomalliobjekti"
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-17T10:55:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/yksilöintitieto",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/rakentamisen-tieto-ja-informaatiomallit",
+      "skos:prefLabel": [
+        {
+          "@value": "Yksilöintitieto",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "Identifieringsuppgift",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "Identifying information",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "Tieto tai tietojoukko, jonka avulla toimija, kohde tai tietomallin objekti voidaan yksiselitteisesti tunnistaa ja erottaa muista.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Uppgift eller uppsättning uppgifter med vilka en aktör, ett objekt eller ett objekt i en informationsmodell kan identifieras entydigt och särskiljas från andra.",
+          "@language": "sv"
+        },
+        {
+          "@value": "Information or a set of information by which an actor, an object or an object in an information model can be uniquely identified and distinguished from others.",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Yksilöintitieto voi olla yksittäinen tunniste (esim. tunnus, koodi, GUID) tai tunnisteiden yhdistelmä. Rakentamisen tietomalleissa yksilöintitieto liitetään esimerkiksi rakennusosiin, järjestelmiin, tiloihin ja laitteisiin elinkaaren aikaisen jäljitettävyyden ja hallinnan varmistamiseksi.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Identifieringsuppgifter kan vara en enskild identifierare (t.ex. beteckning, kod, GUID) eller en kombination av identifierare. I byggandets informationsmodeller kopplas identifieringsuppgifter till exempel till byggnadsdelar, system, utrymmen och utrustning för att säkerställa spårbarhet och hantering under livscykeln.",
+          "@language": "sv"
+        },
+        {
+          "@value": "Identifying information can consist of a single identifier (e.g. identifier, code, GUID) or a combination of identifiers. In construction information models, identifying information is associated for example with building elements, systems, spaces and equipment to ensure lifecycle traceability and management.",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "Suomi.fi-sanastot: Yritysdigi – yksilöintitieto",
+          "@language": "fi",
+          "@id": "https://sanastot.suomi.fi/terminology/yritysdigi/concept/concept-2062"
+        }
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-02-27T10:48:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
       "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/ylävirta",
       "@type": "skos:Concept",
       "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
@@ -4435,77 +6619,6 @@
         "@value": "2026-02-26T10:25:00",
         "@type": "xsd:dateTime"
       }
-    },
-    {
-      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/bop",
-      "@type": "skos:Concept",
-      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
-      "skos:prefLabel": [
-        {
-          "@value": "valmistusprosessiluettelo",
-          "@language": "fi",
-          "termType": "Suositettava termi"
-        },
-        {
-          "@value": "processlista för tillverkning",
-          "@language": "sv",
-          "termType": "Suositettava termi"
-        },
-        {
-          "@value": "bill of process",
-          "@language": "en",
-          "termType": "Suositettava termi"
-        }
-      ],
-      "skos:altLabel": [
-        {
-          "@value": "BOP",
-          "@language": "fi",
-          "termType": "Lyhenne"
-        },
-        {
-          "@value": "BOP",
-          "@language": "sv",
-          "termType": "Lyhenne"
-        },
-        {
-          "@value": "BOP",
-          "@language": "en",
-          "termType": "Lyhenne"
-        }
-      ],
-      "skos:definition": [
-        {
-          "@value": "luettelo tuotteen valmistamiseen tarvittavista valmistusvaiheista ja prosesseista",
-          "@language": "fi"
-        },
-        {
-          "@value": "förteckning över de processer och arbetsmoment som krävs för att tillverka en produkt",
-          "@language": "sv"
-        },
-        {
-          "@value": "list of manufacturing processes and operations required to produce a product",
-          "@language": "en"
-        }
-      ],
-      "skos:note": [
-        {
-          "@value": "BOP kuvaa tuotteen valmistusprosessin rakenteen ja täydentää usein BOM-luetteloa.",
-          "@language": "fi"
-        }
-      ],
-      "dcterms:source": [
-        {
-          "@value": "ISO/TR 3151-1:2023",
-          "@language": "en",
-          "@id": "https://www.iso.org/"
-        }
-      ],
-      "skos:related": [
-        "https://teemualaluusua.github.io/sanasto1/bom",
-        "https://teemualaluusua.github.io/sanasto1/mom",
-        "https://teemualaluusua.github.io/sanasto1/plm"
-      ]
     }
   ]
 }
