@@ -1,0 +1,47 @@
+enkoodaus
+dekoodaus
+
+ISO 23247-1:2021(E)
+
+
+3.1.4
+entity
+anything (physical or non-physical) having a distinct existence
+
+
+3.1.5
+Internet of Things
+IoT
+infrastructure of interconnected entities, people, systems and information resources together with
+services which processes and reacts to information from the physical and virtual world
+
+3.1.7
+physical element
+thing that has material existence
+
+3.1.10
+universally unique identifier
+UUID
+computer-generated identification that, for practical purposes, is unique
+
+
+3.2.3
+digital twin
+<manufacturing> fit for purpose digital representation (3.2.2) of an observable manufacturing element
+with synchronization between the element and its digital representation
+
+3.2.4
+manufacturing process
+set of processes in manufacturing involving a flow and/or transformation of material, information,
+energy, control, or any other element in a manufacturing area
+
+
+CAD computer aided design
+CAI computer aided inspection
+CAM computer aided manufacturing
+CNC computerized numerical control
+
+4.4.7
+Product
+A product is an output of a manufacturing process. Depending on the manufacturing process stage,
+from a business perspective, a product can be classified as an intermediate product or an end product.

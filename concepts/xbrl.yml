@@ -4,25 +4,25 @@ schemeId: []
 
 terms:
 - lang: fi
-  label: XBRL
+  label: eXtensible Business Reporting Language
   type: Suositettava termi
 - lang: fi
-  label: eXtensible Business Reporting Language
-  type: Suositettava termi
-
-- lang: sv
   label: XBRL
-  type: Suositettava termi
+  type: Lyhenne
+
 - lang: sv
   label: eXtensible Business Reporting Language
   type: Suositettava termi
-
-- lang: en
+- lang: sv
   label: XBRL
-  type: Suositettava termi
+  type: Lyhenne
+
 - lang: en
   label: eXtensible Business Reporting Language
   type: Suositettava termi
+- lang: en
+  label: XBRL
+  type: Lyhenne
 
 definitions:
 - lang: fi
