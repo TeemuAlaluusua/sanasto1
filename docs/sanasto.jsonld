@@ -7,16 +7,6 @@
   },
   "@graph": [
     {
-      "@id": "https://teemualaluusua.github.io/sanasto1/rakentamisen-tieto-ja-informaatiomallit",
-      "@type": "skos:ConceptScheme",
-      "skos:prefLabel": [
-        {
-          "@value": "rakentamisen-tieto-ja-informaatiomallit",
-          "@language": "fi"
-        }
-      ]
-    },
-    {
       "@id": "https://teemualaluusua.github.io/sanasto1/sanasto",
       "@type": "skos:ConceptScheme",
       "skos:prefLabel": [
@@ -6490,7 +6480,7 @@
     {
       "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/yksilöintitieto",
       "@type": "skos:Concept",
-      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/rakentamisen-tieto-ja-informaatiomallit",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
       "skos:prefLabel": [
         {
           "@value": "Yksilöintitieto",
