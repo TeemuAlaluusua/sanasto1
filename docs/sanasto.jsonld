@@ -7,6 +7,16 @@
   },
   "@graph": [
     {
+      "@id": "https://teemualaluusua.github.io/sanasto1/rakentamisen-tieto-ja-informaatiomallit",
+      "@type": "skos:ConceptScheme",
+      "skos:prefLabel": [
+        {
+          "@value": "rakentamisen-tieto-ja-informaatiomallit",
+          "@language": "fi"
+        }
+      ]
+    },
+    {
       "@id": "https://teemualaluusua.github.io/sanasto1/sanasto",
       "@type": "skos:ConceptScheme",
       "skos:prefLabel": [
@@ -968,6 +978,149 @@
       }
     },
     {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/bitti",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "bitti",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "bit",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "binary digit",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:altLabel": [
+        {
+          "@value": "bit",
+          "@language": "en",
+          "termType": "Synonyymi"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "Bitti on informaatioteoriassa informaation määrän mitta ja tietotekniikassa tiedon tai tietovuon pienin käsiteltävä osa. Sähköisen tiedon pienin yksikkö on bitti (b), yksi merkki, joka voi saada arvon 1 tai 0.",
+          "@language": "fi"
+        },
+        {
+          "@value": "En bit är inom informationsteori ett mått på informationsmängd och inom datateknik den minsta enheten av data eller dataflöde som kan behandlas. Den minsta enheten för elektronisk information är bit (b), en symbol som kan anta värdet 1 eller 0.",
+          "@language": "sv"
+        },
+        {
+          "@value": "A bit is, in information theory, a unit of information and, in computing, the smallest unit of data or data stream that can be processed. The smallest unit of electronic information is the bit (b), a symbol that can take the value 1 or 0.",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "EN 1556:1998",
+          "@language": "fi",
+          "@id": "https://sales.sfs.fi/fi/index/tuotteet/SFS/CEN/ID2/1/246564.html.stx"
+        },
+        {
+          "@value": "ISO/IEC 19762-1:2025",
+          "@language": "fi",
+          "@id": "https://www.iso.org/"
+        }
+      ],
+      "skos:broader": [
+        "https://teemualaluusua.github.io/sanasto1/tieto"
+      ],
+      "skos:narrower": [
+        "https://teemualaluusua.github.io/sanasto1/tavu"
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/data",
+        "https://teemualaluusua.github.io/sanasto1/koodi"
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-17T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/bittitavu",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "bittitavu",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "byte",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "byte",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:altLabel": [
+        {
+          "@value": "tavu",
+          "@language": "fi",
+          "termType": "Synonyymi"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "Tavu on tietotekniikassa käytettävä mittayksikkö sellaiselle tallennuskapasiteetille, joka on riippumaton tallennetun datan tyypistä. Bitin jälkeen seuraavaksi pienin yksikkö on tavu (t), joka on kahdeksan bittiä, eli esimerkiksi merkkijono 00010101.",
+          "@language": "fi"
+        },
+        {
+          "@value": "En byte är en måttenhet inom datateknik för lagringskapacitet som är oberoende av typen av lagrad data. Näst efter biten är byten den minsta enheten och motsvarar åtta bitar, till exempel bitsekvensen 00010101.",
+          "@language": "sv"
+        },
+        {
+          "@value": "A byte is a unit of storage capacity in computing that is independent of the type of stored data. The byte is the next smallest unit after the bit and consists of eight bits, for example the bit sequence 00010101.",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "EN 1556:1998",
+          "@language": "fi",
+          "@id": "https://sales.sfs.fi/fi/index/tuotteet/SFS/CEN/ID2/1/246564.html.stx"
+        },
+        {
+          "@value": "ISO/IEC 19762-1:2025",
+          "@language": "fi",
+          "@id": "https://www.iso.org/"
+        }
+      ],
+      "skos:broader": [
+        "https://teemualaluusua.github.io/sanasto1/bitti"
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/data",
+        "https://teemualaluusua.github.io/sanasto1/tallennuskapasiteetti"
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-17T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
       "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/bom",
       "@type": "skos:Concept",
       "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
@@ -1196,6 +1349,66 @@
       },
       "dcterms:modified": {
         "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/data",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "data",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "data",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "data",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "Datalla tarkoitetaan informaation uudelleen tulkittavissa olevaa esitystapaa virallistetulla tavalla, joka soveltuu viestintään, tulkintaan tai käsittelyyn.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Data avser en formaliserad representation av information som kan tolkas på nytt och som lämpar sig för kommunikation, tolkning eller behandling.",
+          "@language": "sv"
+        },
+        {
+          "@value": "Data refers to a formalized representation of information that can be reinterpreted and is suitable for communication, interpretation or processing.",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "ISO 5127:2017",
+          "@language": "fi",
+          "@id": "https://www.iso.org/"
+        }
+      ],
+      "skos:broader": [
+        "https://teemualaluusua.github.io/sanasto1/informaatio"
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/metatieto",
+        "https://teemualaluusua.github.io/sanasto1/tietue",
+        "https://teemualaluusua.github.io/sanasto1/tietomalli",
+        "https://teemualaluusua.github.io/sanasto1/tiedonhallinta"
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-17T00:00",
         "@type": "xsd:dateTime"
       }
     },
@@ -1444,6 +1657,93 @@
       }
     },
     {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/edi",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/rakentamisen-tieto-ja-informaatiomallit",
+      "skos:prefLabel": [
+        {
+          "@value": "electronic data interchange",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "electronic data interchange",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "electronic data interchange",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:altLabel": [
+        {
+          "@value": "EDI",
+          "@language": "fi",
+          "termType": "Lyhenne"
+        },
+        {
+          "@value": "EDI",
+          "@language": "sv",
+          "termType": "Lyhenne"
+        },
+        {
+          "@value": "EDI",
+          "@language": "en",
+          "termType": "Lyhenne"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "standardoitu tekniikka, jota käytetään organisaatioiden välisten tietojärjestelmien kommunikointiin",
+          "@language": "fi"
+        },
+        {
+          "@value": "standardiserad teknik som används för kommunikation mellan informationssystem i olika organisationer",
+          "@language": "sv"
+        },
+        {
+          "@value": "standardized technique used for communication between information systems of different organizations",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "EDI yhdistetään yleensä EDIFACT-sanomaformaattiin. Suurin osa esimerkiksi\nkaupan, tukkukaupan, teollisuuden ja kuljetusalan sanomista on EDIFACT-standardin mukaisia sanomia.\n",
+          "@language": "fi"
+        },
+        {
+          "@value": "EDI kopplas vanligtvis till EDIFACT-meddelandeformatet. En stor del av\nmeddelandena inom handel, grossisthandel, industri och transport följer EDIFACT-standarden.\n",
+          "@language": "sv"
+        },
+        {
+          "@value": "EDI is commonly associated with the EDIFACT message format. A large share of\nmessages in trade, wholesale, industry and transport sectors follow the EDIFACT standard.\n",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "Sanastot.suomi.fi",
+          "@language": "fi",
+          "@id": "https://iri.suomi.fi/terminology/yritysdigi/concept-2003"
+        },
+        {
+          "@value": "ISO/IEC 19762-1:2025",
+          "@language": "en",
+          "@id": "https://www.iso.org"
+        }
+      ],
+      "dcterms:created": {
+        "@value": "2026-03-17T00:00",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-17T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
       "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/eir",
       "@type": "skos:Concept",
       "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
@@ -1572,6 +1872,40 @@
       },
       "dcterms:modified": {
         "@value": "2026-03-14T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/erp",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "enterprise resource planning",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:altLabel": [
+        {
+          "@value": "en",
+          "@language": "sv",
+          "termType": "Lyhenne"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "toiminnanohjausjärjestelmä on yrityksen tietojärjestelmä, joka integroi eri toimintoja, esimerkiksi tuotantoa,\\ \\ jakelua, varastonhallintaa, laskutusta ja kirjanpitoa. \\n\\n**Lähteet:**\\n[ISO\\ \\ 16100-1:2009](https://www.iso.org)\\n[Logistiikan maailma -termisanasto:2025](https://www.logistiikanmaailma.fi/aineistot/sanastot/logistiikan-maailma-termisanasto/)\"",
+          "@language": "fi"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@language": "fi"
+        }
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
         "@type": "xsd:dateTime"
       }
     },
@@ -1735,6 +2069,66 @@
       },
       "dcterms:modified": {
         "@value": "2026-03-14T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/formaatti",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "formaatti",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "dataformat",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "data format",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "datan esitysmuoto jonkin määritellyn enkoodaustavan mukaisesti",
+          "@language": "fi"
+        },
+        {
+          "@value": "datas representationsform enligt en definierad kodningsmetod",
+          "@language": "sv"
+        },
+        {
+          "@value": "representation of data according to a defined encoding method",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "Helsingin yliopisto:2024",
+          "@language": "fi",
+          "@id": "https://wiki.helsinki.fi/xwiki/bin/view/stemmatology/Data%20formats/"
+        }
+      ],
+      "skos:broader": [
+        "https://teemualaluusua.github.io/sanasto1/tietomääritys"
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/dataformaatti",
+        "https://teemualaluusua.github.io/sanasto1/vaihtoformaatti",
+        "https://teemualaluusua.github.io/sanasto1/säilytysformaatti",
+        "https://teemualaluusua.github.io/sanasto1/enkoodaus"
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-17T00:00",
         "@type": "xsd:dateTime"
       }
     },
@@ -2564,6 +2958,92 @@
       },
       "dcterms:modified": {
         "@value": "2026-03-14T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/koneluettavuus",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "koneluettavuus",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "maskinläsbarhet",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "machine readability",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "tieto on rakenteistettu systemaattiseen muotoon siten, että kone pystyy tulkitsemaan, käsittelemään ja siirtämään sitä tietojenkäsittelyjärjestelmään ilman käyttäjän toimenpiteitä",
+          "@language": "fi"
+        },
+        {
+          "@value": "information är strukturerad i en systematisk form så att en maskin kan tolka, bearbeta och överföra den till ett informationssystem utan användarens åtgärder",
+          "@language": "sv"
+        },
+        {
+          "@value": "information is structured in a systematic form so that a machine can interpret, process and transfer it into an information system without user intervention",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Koneluettavia tekniikoita ovat esimerkiksi lineaariset (1D) viivakoodit,\nkaksiulotteiset symbolit, magneettijuovakortit, RFID, biometria ja\noptinen kirjaintunnistus.\n",
+          "@language": "fi"
+        },
+        {
+          "@value": "Maskinläsbara tekniker är till exempel linjära (1D) streckkoder,\ntvådimensionella symboler, magnetremskort, RFID, biometriska metoder\noch optisk teckenigenkänning.\n",
+          "@language": "sv"
+        },
+        {
+          "@value": "Machine-readable technologies include, for example, linear (1D) barcodes,\ntwo-dimensional symbols, magnetic stripe cards, RFID, biometrics and\noptical character recognition.\n",
+          "@language": "en"
+        },
+        {
+          "@value": "Tiedot esitetään tyypillisesti tietovirrassa ennalta määritellyissä\npaikoissa (kentissä), jolloin tietokoneohjelma voi tulkita ne.\n",
+          "@language": "fi"
+        },
+        {
+          "@value": "Uppgifterna presenteras vanligtvis i en dataström på fördefinierade\nplatser (fält), vilket gör att ett datorprogram kan tolka dem.\n",
+          "@language": "sv"
+        },
+        {
+          "@value": "Data is typically presented in a data stream in predefined positions\n(fields), enabling a computer program to interpret it.\n",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "ISO/IEC 19762-1:2025",
+          "@language": "fi",
+          "@id": "https://www.iso.org/"
+        }
+      ],
+      "skos:broader": [
+        "https://teemualaluusua.github.io/sanasto1/data"
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/tietomalli",
+        "https://teemualaluusua.github.io/sanasto1/metatieto",
+        "https://teemualaluusua.github.io/sanasto1/tiedonhallinta",
+        "https://teemualaluusua.github.io/sanasto1/automaatio"
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-17T00:00",
         "@type": "xsd:dateTime"
       }
     },
@@ -5279,6 +5759,64 @@
       }
     },
     {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/tiedonhallinta",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "tiedonhallinta",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "datahantering",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "data management",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "Tiedonhallinta on kattotermi, joka sisältää datan hyödyntämiseen liittyvän kehityksen, hallinnan, operaatiot sekä käytännöt koko tiedon elinkaaren ajan. Alueelle kuuluvat mm. datastrategia, data governance, käsitteiden mallintaminen, tietovarastointi, turvallisuusasiat, tietoarkkitehtuuri, talletusratkaisut ja tietojen laatu.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Datahantering är ett paraplybegrepp som omfattar utveckling, styrning, operativa aktiviteter och praxis kopplade till användning av data under hela dess livscykel. Området omfattar bland annat datastrategi, data governance, begreppsmodellering, datalagring, säkerhetsaspekter, informationsarkitektur, lagringslösningar och datakvalitet.",
+          "@language": "sv"
+        },
+        {
+          "@value": "Data management is an umbrella term that includes development, governance, operations and practices related to the use of data throughout its lifecycle. The area includes, among others, data strategy, data governance, conceptual modeling, data storage, security aspects, information architecture, storage solutions and data quality.",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "Ympäristöministeriö, RASTI-projekti: 2019",
+          "@language": "fi",
+          "@id": "https://rastiprojekti.com/wp-content/uploads/2019/02/RASTI-strategia-v1.pdf"
+        }
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/tietomalli",
+        "https://teemualaluusua.github.io/sanasto1/tietomallinnus",
+        "https://teemualaluusua.github.io/sanasto1/tietovarasto",
+        "https://teemualaluusua.github.io/sanasto1/tietoturva",
+        "https://teemualaluusua.github.io/sanasto1/data governance"
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-17T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
       "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/tietokanta",
       "@type": "skos:Concept",
       "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
@@ -5769,6 +6307,82 @@
       }
     },
     {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/uda",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "käyttäjän määrittelemä attribuutti",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "användardefinierat attribut",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "user defined attribute",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:altLabel": [
+        {
+          "@value": "UDA",
+          "@language": "fi",
+          "termType": "Lyhenne"
+        },
+        {
+          "@value": "UDA",
+          "@language": "sv",
+          "termType": "Lyhenne"
+        },
+        {
+          "@value": "UDA",
+          "@language": "en",
+          "termType": "Lyhenne"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "käyttäjän määrittelemällä attribuutilla tarkoitetaan suunnitteluohjelmistoissa mallin objekteille talletettavaa liitännäistietoa (metatieto).",
+          "@language": "fi"
+        },
+        {
+          "@value": "Med UDA avses tilläggsinformation (metadata) som lagras för modellobjekt i designprogramvara.",
+          "@language": "sv"
+        },
+        {
+          "@value": "A user defined attribute (UDA) refers to additional information (metadata) stored for model objects in design software.",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "BEC:2023",
+          "@language": "fi",
+          "@id": "https://www.elementtisuunnittelu.fi/Download/23982/BEC2012%20Elementtisuunnittelun%20mallinnusohje_v110.pdf"
+        }
+      ],
+      "skos:broader": [
+        "https://teemualaluusua.github.io/sanasto1/attribuutti"
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/metatieto",
+        "https://teemualaluusua.github.io/sanasto1/tietomalli",
+        "https://teemualaluusua.github.io/sanasto1/objekti"
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-17T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
       "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/uri",
       "@type": "skos:Concept",
       "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
@@ -6101,18 +6715,8 @@
       "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
       "skos:prefLabel": [
         {
-          "@value": "XBRL",
-          "@language": "fi",
-          "termType": "Suositettava termi"
-        },
-        {
           "@value": "eXtensible Business Reporting Language",
           "@language": "fi",
-          "termType": "Suositettava termi"
-        },
-        {
-          "@value": "XBRL",
-          "@language": "sv",
           "termType": "Suositettava termi"
         },
         {
@@ -6121,14 +6725,26 @@
           "termType": "Suositettava termi"
         },
         {
-          "@value": "XBRL",
-          "@language": "en",
-          "termType": "Suositettava termi"
-        },
-        {
           "@value": "eXtensible Business Reporting Language",
           "@language": "en",
           "termType": "Suositettava termi"
+        }
+      ],
+      "skos:altLabel": [
+        {
+          "@value": "XBRL",
+          "@language": "fi",
+          "termType": "Lyhenne"
+        },
+        {
+          "@value": "XBRL",
+          "@language": "sv",
+          "termType": "Lyhenne"
+        },
+        {
+          "@value": "XBRL",
+          "@language": "en",
+          "termType": "Lyhenne"
         }
       ],
       "skos:definition": [
