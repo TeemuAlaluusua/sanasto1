@@ -12,6 +12,9 @@ terms:
 - lang: fi
   label: tekstintunnistus
   type: Synonyymi
+- lang: fi
+  label: OCR
+  type: Lyhenne
 
 - lang: sv
   label: optisk teckenigenkänning
@@ -19,6 +22,9 @@ terms:
 - lang: sv
   label: optisk teckenläsning
   type: Synonyymi
+- lang: sv
+  label: OCR
+  type: Lyhenne
 
 - lang: en
   label: optical character recognition

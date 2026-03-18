@@ -7,6 +7,16 @@
   },
   "@graph": [
     {
+      "@id": "https://teemualaluusua.github.io/sanasto1/rakentamisen-tieto-ja-informaatiomallit",
+      "@type": "skos:ConceptScheme",
+      "skos:prefLabel": [
+        {
+          "@value": "rakentamisen-tieto-ja-informaatiomallit",
+          "@language": "fi"
+        }
+      ]
+    },
+    {
       "@id": "https://teemualaluusua.github.io/sanasto1/sanasto",
       "@type": "skos:ConceptScheme",
       "skos:prefLabel": [
@@ -1467,6 +1477,146 @@
       }
     },
     {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/digitalisaatio",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "digitalisaatio",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "digital transformation",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "digital transformation",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "toimintakulttuurin systeeminen muutos, jossa digitaalisia teknologioita hyödynnetään toiminnan tehostamiseksi ja kehittämiseksi",
+          "@language": "fi"
+        },
+        {
+          "@value": "systemisk förändring av verksamhetskultur där digital teknik används för att effektivisera och utveckla verksamheten",
+          "@language": "sv"
+        },
+        {
+          "@value": "systemic change of operational culture in which digital technologies are used to improve and transform activities",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Digitalisaatio perustuu usein datan hyödyntämiseen ja analysointiin.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Digital transformation baseras ofta på användning och analys av data.",
+          "@language": "sv"
+        },
+        {
+          "@value": "Digital transformation is often based on the use and analysis of data.",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "ISO/IEC TS 30105-9:2023",
+          "@language": "en",
+          "@id": "https://www.iso.org/"
+        }
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/data",
+        "https://teemualaluusua.github.io/sanasto1/tiedonhallinta",
+        "https://teemualaluusua.github.io/sanasto1/tietojärjestelmä"
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-17T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/digitointi",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "digitointi",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "digitalisering",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "digitization",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "prosessi, jossa analoginen aineisto muunnetaan digitaaliseen muotoon",
+          "@language": "fi"
+        },
+        {
+          "@value": "process där analogt material omvandlas till digital form",
+          "@language": "sv"
+        },
+        {
+          "@value": "process of converting analogue material into digital form",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Digitointi mahdollistaa aineiston tietoteknisen käsittelyn, tallennuksen ja siirron.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Digitalisering möjliggör databehandling, lagring och överföring av materialet.",
+          "@language": "sv"
+        },
+        {
+          "@value": "Digitization enables computational processing, storage and transfer of the material.",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "ISO 5127:2017",
+          "@language": "en",
+          "@id": "https://www.iso.org/"
+        }
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/digitalisaatio",
+        "https://teemualaluusua.github.io/sanasto1/data",
+        "https://teemualaluusua.github.io/sanasto1/koneluettavuus"
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-17T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
       "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/dto",
       "@type": "skos:Concept",
       "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
@@ -2196,6 +2346,98 @@
       }
     },
     {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/idm",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "tiedon toimitusohje",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "informationsleveransmanual",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "information delivery manual",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:altLabel": [
+        {
+          "@value": "IDM",
+          "@language": "fi",
+          "termType": "Lyhenne"
+        },
+        {
+          "@value": "IDM",
+          "@language": "sv",
+          "termType": "Lyhenne"
+        },
+        {
+          "@value": "IDM",
+          "@language": "en",
+          "termType": "Lyhenne"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "SFS-EN ISO 29481-1 -standardin mukainen menettely, jolla kuvataan informaatiotuotannon prosessit ja sisältövaatimukset tiettyyn käyttötarkoitukseen tuotettavalle informaatiolle",
+          "@language": "fi"
+        },
+        {
+          "@value": "metod enligt SFS-EN ISO 29481-1 för att beskriva processer för informationsproduktion och innehållskrav för information som tas fram för ett visst användningsändamål",
+          "@language": "sv"
+        },
+        {
+          "@value": "method according to SFS-EN ISO 29481-1 for describing information production processes and content requirements for information produced for a specific purpose",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "IDM-määrittely jakautuu kolmeen osioon: käyttötapaus, prosessit ja\ntiedonvaihdon vaatimukset (Use Case, Process Definition, Exchange Requirement).\n",
+          "@language": "fi"
+        },
+        {
+          "@value": "IDM-definitionen delas in i tre delar: användningsfall, processer och\nkrav på informationsutbyte (Use Case, Process Definition, Exchange Requirement).\n",
+          "@language": "sv"
+        },
+        {
+          "@value": "IDM is divided into three parts: use case, process definition and\nexchange requirements.\n",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "Ympäristöministeriö – Yleiset tietomallivaatimukset 2022",
+          "@language": "fi",
+          "@id": "https://rastiprojekti.com/wp-content/uploads/2019/02/RASTI-strategia-v1.pdf"
+        },
+        {
+          "@value": "SFS-EN ISO 29481-1",
+          "@language": "en",
+          "@id": "https://www.iso.org/"
+        }
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/eir",
+        "https://teemualaluusua.github.io/sanasto1/tietomalli",
+        "https://teemualaluusua.github.io/sanasto1/tiedonvaihto"
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-17T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
       "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/informaatio",
       "@type": "skos:Concept",
       "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
@@ -2716,6 +2958,79 @@
       }
     },
     {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/it",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/rakentamisen-tieto-ja-informaatiomallit",
+      "skos:prefLabel": [
+        {
+          "@value": "tietotekniikka",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "informationsteknik",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "information technology",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:altLabel": [
+        {
+          "@value": "IT",
+          "@language": "fi",
+          "termType": "Lyhenne"
+        },
+        {
+          "@value": "IT",
+          "@language": "sv",
+          "termType": "Lyhenne"
+        },
+        {
+          "@value": "IT",
+          "@language": "en",
+          "termType": "Lyhenne"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "tietokoneiden ja tietoliikennejärjestelmien käyttö tiedon tallentamiseen, käsittelyyn ja siirtämiseen",
+          "@language": "fi"
+        },
+        {
+          "@value": "användning av datorer och datakommunikationssystem för att lagra, behandla och överföra information",
+          "@language": "sv"
+        },
+        {
+          "@value": "use of computers and telecommunications systems for storing, processing and transmitting information",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "ISO/IEC 30071-1:2019",
+          "@language": "en",
+          "@id": "https://www.iso.org/"
+        }
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/data",
+        "https://teemualaluusua.github.io/sanasto1/tietojärjestelmä",
+        "https://teemualaluusua.github.io/sanasto1/tiedonhallinta"
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-17T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
       "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/kaavatietomalli",
       "@type": "skos:Concept",
       "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
@@ -3027,6 +3342,76 @@
         "https://teemualaluusua.github.io/sanasto1/metatieto",
         "https://teemualaluusua.github.io/sanasto1/tiedonhallinta",
         "https://teemualaluusua.github.io/sanasto1/automaatio"
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-17T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/koneoppiminen",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/rakentamisen-tieto-ja-informaatiomallit",
+      "skos:prefLabel": [
+        {
+          "@value": "koneoppiminen",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "maskininlärning",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "machine learning",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "tietojenkäsittelytieteen osa-alue, jossa järjestelmä oppii datasta ja parantaa suorituskykyään tehtävässä ilman eksplisiittistä ohjelmointia",
+          "@language": "fi"
+        },
+        {
+          "@value": "delområde inom datavetenskap där ett system lär sig från data och förbättrar sin prestanda i en uppgift utan explicit programmering",
+          "@language": "sv"
+        },
+        {
+          "@value": "field of study in which a system learns from data and improves its performance on a task without being explicitly programmed",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Koneoppiminen hyödyntää tilastollisia ja laskennallisia menetelmiä.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Maskininlärning använder statistiska och beräkningsmässiga metoder.",
+          "@language": "sv"
+        },
+        {
+          "@value": "Machine learning uses statistical and computational methods.",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "ISO/IEC 22989:2023",
+          "@language": "en",
+          "@id": "https://www.iso.org/"
+        }
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/data",
+        "https://teemualaluusua.github.io/sanasto1/tekoäly",
+        "https://teemualaluusua.github.io/sanasto1/analytiikka"
       ],
       "dcterms:created": {
         "@value": "2026-02-24T17:35",
@@ -4077,6 +4462,83 @@
       }
     },
     {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/mes",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "tuotannonohjausjärjestelmä",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "produktionsstyrningssystem",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "manufacturing execution system",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:altLabel": [
+        {
+          "@value": "MES",
+          "@language": "fi",
+          "termType": "Lyhenne"
+        },
+        {
+          "@value": "MES",
+          "@language": "sv",
+          "termType": "Lyhenne"
+        },
+        {
+          "@value": "MES",
+          "@language": "en",
+          "termType": "Lyhenne"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "järjestelmä haluttujen tuotteiden tai palvelujen tuottamiseen, mukaan lukien laadunvalvonta, dokumenttien hallinta, tuotannonohjaus, keskeneräisen tuotannon seuranta, yksityiskohtainen tuotteen reititys ja seuranta, työraportointi, resurssien ja uudelleentyöstön hallinta, tuotannon mittaus ja tiedonkeruu",
+          "@language": "fi"
+        },
+        {
+          "@value": "system för att producera önskade produkter eller tjänster, inklusive kvalitetskontroll, dokumenthantering, produktionsstyrning, uppföljning av arbete under produktion, detaljerad produktdirigering och spårning, arbetsrapportering, hantering av resurser och omarbete samt produktionsmätning och datainsamling",
+          "@language": "sv"
+        },
+        {
+          "@value": "system for producing the desired products or services, including quality control, document management, plant floor dispatching, work-in-process tracking, detailed product routing and tracking, labour reporting, resource and rework management, production measurement and data collection",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "ISO 16100-1:2009, 3.14",
+          "@language": "en",
+          "@id": "https://www.iso.org/"
+        },
+        {
+          "@value": "ISO/TR 3151-1:2023,3.1.7",
+          "@language": "en",
+          "@id": "https://www.iso.org/"
+        }
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/erp",
+        "https://teemualaluusua.github.io/sanasto1/plm"
+      ],
+      "dcterms:created": {
+        "@value": "2026-03-17T00:00",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-17T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
       "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/metatieto",
       "@type": "skos:Concept",
       "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
@@ -4406,9 +4868,19 @@
           "termType": "Synonyymi"
         },
         {
+          "@value": "OCR",
+          "@language": "fi",
+          "termType": "Lyhenne"
+        },
+        {
           "@value": "optisk teckenläsning",
           "@language": "sv",
           "termType": "Synonyymi"
+        },
+        {
+          "@value": "OCR",
+          "@language": "sv",
+          "termType": "Lyhenne"
         },
         {
           "@value": "OCR",
@@ -4912,6 +5384,83 @@
         "https://teemualaluusua.github.io/sanasto1/bom",
         "https://teemualaluusua.github.io/sanasto1/bop"
       ]
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/property-set",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "ominaisuusjoukko",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "egenskapsuppsättning",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "property set",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:altLabel": [
+        {
+          "@value": "Pset",
+          "@language": "en",
+          "termType": "Lyhenne"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "joukko ominaisuuksia, jotka liitetään tiettyyn objektiin tai objektityyppiin",
+          "@language": "fi"
+        },
+        {
+          "@value": "uppsättning egenskaper som kopplas till ett visst objekt eller en objekttyp",
+          "@language": "sv"
+        },
+        {
+          "@value": "set of properties assigned to a specific object or object type",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Ominaisuusjoukko voi olla standardoitu tai projektikohtaisesti määritelty.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Egenskapsuppsättningen kan vara standardiserad eller projektspecifik.",
+          "@language": "sv"
+        },
+        {
+          "@value": "A property set can be standardized or defined for a specific project.",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "buildingSMART Terminology",
+          "@language": "en",
+          "@id": "https://user.buildingsmart.org/knowledge-base/terminology/"
+        }
+      ],
+      "skos:related": [
+        "https://teemualaluusua.github.io/sanasto1/tietomalli",
+        "https://teemualaluusua.github.io/sanasto1/attribuutti",
+        "https://teemualaluusua.github.io/sanasto1/objekti"
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-17T00:00",
+        "@type": "xsd:dateTime"
+      }
     },
     {
       "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/rakennus",
