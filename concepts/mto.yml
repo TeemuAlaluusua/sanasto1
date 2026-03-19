@@ -18,15 +18,15 @@ terms:
     label: MTO
     type: Lyhenne
   - lang: en
-    label: Make-to-order
+    label: make-to-order
     type: Suositettava termi
 definitions:
   - lang: fi
-    text: MTO-tuotantomuoto, jossa tuotteet valmistetaan asiakaskohtaisten tilausten perusteella ennalta määriteltyjen tuotesuunnitelmien mukaisesti.
+    text: Tuotantomuoto, jossa tuotteet valmistetaan asiakaskohtaisten tilausten perusteella ennalta määriteltyjen tuotesuunnitelmien mukaisesti.
   - lang: sv
-    text: MTO-produktionsform där produkter tillverkas utifrån kundspecifika beställningar enligt fördefinierade produktplaner.
+    text: Produktionsform där produkter tillverkas utifrån kundspecifika beställningar enligt fördefinierade produktplaner.
   - lang: en
-    text: Production strategy (MTO) in which products are manufactured based on customer-specific orders according to predefined product designs.
+    text: Production strategy in which products are manufactured based on customer-specific orders according to predefined product designs.
 notes:
   - lang: fi
     text: |

@@ -18,7 +18,7 @@ terms:
     label: MTS
     type: Lyhenne
   - lang: en
-    label: Make-to-stock
+    label: make-to-stock
     type: Suositettava termi
 definitions:
   - lang: fi

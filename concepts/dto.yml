@@ -18,7 +18,7 @@ terms:
   type: Lyhenne
 
 - lang: en
-  label: design to order
+  label: design-to-order
   type: Suositettava termi
 - lang: en
   label: DTO

@@ -1622,7 +1622,7 @@
           "termType": "Suositettava termi"
         },
         {
-          "@value": "design to order",
+          "@value": "design-to-order",
           "@language": "en",
           "termType": "Suositettava termi"
         }
@@ -4923,7 +4923,7 @@
           "termType": "Suositettava termi"
         },
         {
-          "@value": "Make-to-order",
+          "@value": "make-to-order",
           "@language": "en",
           "termType": "Suositettava termi"
         }
@@ -4947,15 +4947,15 @@
       ],
       "skos:definition": [
         {
-          "@value": "MTO-tuotantomuoto, jossa tuotteet valmistetaan asiakaskohtaisten tilausten perusteella ennalta määriteltyjen tuotesuunnitelmien mukaisesti.",
+          "@value": "Tuotantomuoto, jossa tuotteet valmistetaan asiakaskohtaisten tilausten perusteella ennalta määriteltyjen tuotesuunnitelmien mukaisesti.",
           "@language": "fi"
         },
         {
-          "@value": "MTO-produktionsform där produkter tillverkas utifrån kundspecifika beställningar enligt fördefinierade produktplaner.",
+          "@value": "Produktionsform där produkter tillverkas utifrån kundspecifika beställningar enligt fördefinierade produktplaner.",
           "@language": "sv"
         },
         {
-          "@value": "Production strategy (MTO) in which products are manufactured based on customer-specific orders according to predefined product designs.",
+          "@value": "Production strategy in which products are manufactured based on customer-specific orders according to predefined product designs.",
           "@language": "en"
         }
       ],
@@ -5017,7 +5017,7 @@
           "termType": "Suositettava termi"
         },
         {
-          "@value": "Make-to-stock",
+          "@value": "make-to-stock",
           "@language": "en",
           "termType": "Suositettava termi"
         }
