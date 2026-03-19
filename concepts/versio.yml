@@ -4,7 +4,7 @@ schemeId: []
 
 terms:
 - lang: fi
-  label: Versio
+  label: versio
   type: Suositettava termi
 
 - lang: sv
@@ -29,8 +29,8 @@ notes: []
 
 sources:
 - lang: fi
-  label: Sanastot
-  uri: https://sanastot.suomi.fi/
+  label: Sanastot,suomi.fi
+  uri: https://iri.suomi.fi/terminology/yti/concept-16
 
 relations:
   broader: []
