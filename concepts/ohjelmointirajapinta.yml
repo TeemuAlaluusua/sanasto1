@@ -3,7 +3,7 @@ status: []
 schemeId: []
 terms:
   - lang: fi
-    label: Ohjelmointirajapinta
+    label: ohjelmointirajapinta
     type: Suositettava termi
   - lang: fi
     label: API
@@ -18,7 +18,7 @@ terms:
     label: API
     type: Lyhenne
   - lang: en
-    label: Application programming interface
+    label: application programming interface
     type: Suositettava termi
   - lang: en
     label: API

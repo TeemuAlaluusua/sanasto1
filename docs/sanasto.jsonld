@@ -5510,7 +5510,7 @@
       "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
       "skos:prefLabel": [
         {
-          "@value": "Ohjelmointirajapinta",
+          "@value": "ohjelmointirajapinta",
           "@language": "fi",
           "termType": "Suositettava termi"
         },
@@ -5520,7 +5520,7 @@
           "termType": "Suositettava termi"
         },
         {
-          "@value": "Application programming interface",
+          "@value": "application programming interface",
           "@language": "en",
           "termType": "Suositettava termi"
         }
