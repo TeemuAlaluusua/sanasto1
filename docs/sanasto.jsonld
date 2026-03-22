@@ -3106,6 +3106,71 @@
       }
     },
     {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/juurisyy",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "juurisyy",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "grundorsak",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "root cause",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "Häiriön tai ongelman taustalla oleva alkuperäinen syy.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Den ursprungliga orsaken bakom en störning eller ett problem.",
+          "@language": "sv"
+        },
+        {
+          "@value": "The original cause underlying a disturbance or problem.",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Juurisyy viittaa ongelman perimmäiseen syyhyn, jonka poistaminen estää ongelman toistumisen.\n",
+          "@language": "fi"
+        },
+        {
+          "@value": "Grundorsak avser den bakomliggande orsaken till ett problem, vars eliminering förhindrar att problemet upprepas.\n",
+          "@language": "sv"
+        },
+        {
+          "@value": "Root cause refers to the underlying cause of a problem, the elimination of which prevents recurrence.\n",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "ISO/IEC/IEEE 24765:2017",
+          "@language": "fi",
+          "@id": "https://www.iso.org/"
+        }
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-19T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
       "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/kaavatietomalli",
       "@type": "skos:Concept",
       "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
@@ -3338,6 +3403,71 @@
       },
       "dcterms:modified": {
         "@value": "2026-03-14T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/komponentti",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "komponentti",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "komponent",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "component",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "Yksi kokonaisuuden osa.",
+          "@language": "fi"
+        },
+        {
+          "@value": "En del av en helhet.",
+          "@language": "sv"
+        },
+        {
+          "@value": "One of the parts of a system, process, or machine.",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Rakennuskohteen komponentit ovat joko rakennusosia tai tuoteosia.\nRakennusosat valmistetaan pääosin työmaalla, kun taas tuoteosat ovat valmiita ostettavia tuotteita, jotka asennetaan.\n",
+          "@language": "fi"
+        },
+        {
+          "@value": "Komponenter i en byggnad utgörs av byggdelar eller produktdelar.\nByggdelar tillverkas huvudsakligen på plats, medan produktdelar är färdiga produkter som installeras.\n",
+          "@language": "sv"
+        },
+        {
+          "@value": "In construction, components can be building elements or product elements.\nBuilding elements are mainly assembled on site, while product elements are pre-manufactured items that are installed.\n",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "Cambridge Dictionary",
+          "@language": "en",
+          "@id": "https://dictionary.cambridge.org/dictionary/english/component"
+        }
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-19T00:00",
         "@type": "xsd:dateTime"
       }
     },
@@ -7526,6 +7656,76 @@
       }
     },
     {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/tuotetieto",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "tuotetieto",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "produktdata",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "product data",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "Tuotetta koskevan tiedon esittäminen muodollisella tavalla, joka soveltuu ihmisten tai tietokoneiden välitettäväksi, tulkittavaksi tai käsiteltäväksi.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Formell representation av information om en produkt som kan överföras, tolkas eller behandlas av människor eller datorer.",
+          "@language": "sv"
+        },
+        {
+          "@value": "Formal representation of information about a product suitable for communication, interpretation or processing by humans or computers.",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "Rakennusalalla tuotetieto kattaa laajasti tuotteisiin liittyvän tiedon, kuten esitteet, tekniset ja toiminnalliset ominaisuudet, suunnitelmat, asennus-, käyttö- ja huolto-ohjeet, tuoterakenteet, osaluettelot, testaustulokset, ympäristövaikutukset sekä turvallisuusnäkökohdat.\nTuotteisiin liittyvä tieto voidaan jakaa vakiotietoihin, instanssitietoihin ja prosessitietoihin.\n",
+          "@language": "fi"
+        },
+        {
+          "@value": "Inom byggsektorn omfattar produktdata ett brett spektrum av produktrelaterad information, såsom broschyrer, tekniska och funktionella egenskaper, ritningar, installations-, drift- och underhållsanvisningar, produktstrukturer, stycklistor, testresultat, miljöpåverkan samt säkerhetsaspekter.\nProduktinformation kan delas in i standarddata, instansdata och processdata.\n",
+          "@language": "sv"
+        },
+        {
+          "@value": "In the construction sector, product data covers a wide range of product-related information such as brochures, technical and functional properties, designs, installation, operation and maintenance instructions, product structures, bills of materials, test results, environmental impacts and safety aspects.\nProduct-related information can be divided into standard data, instance data and process data.\n",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "Peltokorpi 2020",
+          "@language": "fi",
+          "@id": "https://www.aalto.fi/sites/default/files/2020-11/Loppuraportti_Tuotetiedon%20hallinta%20ja%20hyo%CC%88dynta%CC%88minen_2.11.2020_0.pdf"
+        },
+        {
+          "@value": "ISO 10303-1:1994",
+          "@language": "fi",
+          "@id": "https://www.iso.org"
+        }
+      ],
+      "dcterms:created": {
+        "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-19T00:00",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
       "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/ubl",
       "@type": "skos:Concept",
       "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
@@ -7923,6 +8123,87 @@
       },
       "dcterms:modified": {
         "@value": "2026-02-24T17:35",
+        "@type": "xsd:dateTime"
+      }
+    },
+    {
+      "@id": "https://teemualaluusua.github.io/sanasto1/#/concept/vdc",
+      "@type": "skos:Concept",
+      "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
+      "skos:prefLabel": [
+        {
+          "@value": "virtuaalinen suunnittelu ja rakentaminen",
+          "@language": "fi",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "virtuell projektering och byggande",
+          "@language": "sv",
+          "termType": "Suositettava termi"
+        },
+        {
+          "@value": "Virtual design and construction",
+          "@language": "en",
+          "termType": "Suositettava termi"
+        }
+      ],
+      "skos:altLabel": [
+        {
+          "@value": "VDC",
+          "@language": "fi",
+          "termType": "Lyhenne"
+        },
+        {
+          "@value": "VDC",
+          "@language": "sv",
+          "termType": "Lyhenne"
+        },
+        {
+          "@value": "VDC",
+          "@language": "en",
+          "termType": "Lyhenne"
+        }
+      ],
+      "skos:definition": [
+        {
+          "@value": "Toimintatapa (VDC), jossa rakennushanketta ja sen toteutusprosessia tarkastellaan virtuaalisesti rakennustietomallien avulla ennen toteutusta.",
+          "@language": "fi"
+        },
+        {
+          "@value": "Arbetssätt (VDC) där byggprojekt och dess genomförandeprocess analyseras virtuellt med hjälp av byggnadsinformationsmodeller före utförande.",
+          "@language": "sv"
+        },
+        {
+          "@value": "Practice (VDC) of using building information modeling to virtually analyze a construction project and its process before execution.",
+          "@language": "en"
+        }
+      ],
+      "skos:note": [
+        {
+          "@value": "VDC perustuu rakennustietomallien hyödyntämiseen ensimmäisenä simulaationa rakennusprosessista.\nSuunnittelijat ja rakentajat testaavat sekä tuotetta että rakentamisprosessia virtuaalisesti ennen työmaan toteutusta.\nMenetelmässä tarkastellaan monialaisia suorituskykymalleja, jotka kattavat tilat, työprosessit, toimitusketjut ja projektiorganisaation.\nTavoitteena on tunnistaa ja poistaa rajoitteita sekä parantaa hankkeen suorituskykyä ja lopputulosta.\n",
+          "@language": "fi"
+        },
+        {
+          "@value": "VDC bygger på användning av byggnadsinformationsmodeller som en första simulering av byggprocessen.\nProjektörer och byggare testar både produkt och process virtuellt före genomförandet.\nMetoden omfattar integrerade tvärdisciplinära prestandamodeller som inkluderar anläggningar, arbetsprocesser, leveranskedjor och projektteam.\nSyftet är att identifiera och eliminera begränsningar samt förbättra projektets resultat och den färdiga anläggningen.\n",
+          "@language": "sv"
+        },
+        {
+          "@value": "VDC uses building information modeling as a first-run study of the construction process.\nDesigners and builders test both the product and the construction process virtually before field execution.\nIt involves integrated multidisciplinary performance models of facilities, work processes, supply chains, and project teams.\nThe goal is to identify and remove constraints and improve project performance and outcomes.\n",
+          "@language": "en"
+        }
+      ],
+      "dcterms:source": [
+        {
+          "@value": "BIM Handbook, Fourth Edition – A Guide to Building Information Modeling for Owners, Designers, Engineers, Contractors, and Facility Managers (Sacks, Lee, Burdi, Bolpagni)",
+          "@language": "en"
+        }
+      ],
+      "dcterms:created": {
+        "@value": "2026-03-19T00:00",
+        "@type": "xsd:dateTime"
+      },
+      "dcterms:modified": {
+        "@value": "2026-03-22T00:00",
         "@type": "xsd:dateTime"
       }
     },

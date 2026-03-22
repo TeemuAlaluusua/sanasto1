@@ -3,14 +3,23 @@ status: Luonnos
 schemeId: rakentamisen-tieto-ja-informaatiomallit
 terms:
 - lang: fi
+  label: Industry Foundation Classes
+  type: Suositettava termi
+- lang: fi
   label: IFC
+  type: Lyhenne
+- lang: sv
+  label: Industry Foundation Classes
   type: Suositettava termi
 - lang: sv
-  label: ''
-  type: Suositettava termi
+  label: IFC
+  type: Lyhenne
 - lang: en
   label: Industry Foundation Classes
   type: Suositettava termi
+- lang: en
+  label: IFC
+  type: Lyhenne
 definitions:
 - lang: fi
   text: IFC (engl. Industry Foundation Classes) on rakennusalan kansainvälinen standardi
