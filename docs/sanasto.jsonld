@@ -8264,7 +8264,7 @@
       "skos:inScheme": "https://teemualaluusua.github.io/sanasto1/sanasto",
       "skos:prefLabel": [
         {
-          "@value": "Vertailuanalysointi",
+          "@value": "vertailuanalysointi",
           "@language": "fi",
           "termType": "Suositettava termi"
         },
